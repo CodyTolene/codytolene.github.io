@@ -1,8 +1,6 @@
 ## Cody Tolene's Personal Website ([View](https://www.codytolene.com))
 
-
-### Information
-Current stack:
+### Current stack
 - [Angular](https://angular.io/) (v7.2.0)
 - [Bootstrap](https://getbootstrap.com/) (v4.3.1)
 - [Fastly](https://www.fastly.com/)
