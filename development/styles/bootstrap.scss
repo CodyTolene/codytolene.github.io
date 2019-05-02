@@ -1,0 +1,31 @@
+@import 'palette.scss';
+
+$body-bg: $theme_dark_gray;
+$body-color: $theme_dark_gray;
+$theme-colors: ( "primary": $theme_light_green, "dark": $theme_light_gray );
+$font-family-base: 'Prosto One', cursive;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+/* Button Overrides */
+.btn-primary {
+    color: $black;
+    font-weight: bold;
+    background-color: $theme_light_green_light_tint;
+    border: 1px solid $theme_dark_green;
+
+    &:hover {
+        color: $black;
+        background-color: $theme_light_green;
+        text-shadow: 0 0 3px $theme_light_green_dark_tint;
+    }
+
+    &:focus,
+    &:active,
+    &:visited,
+    &:not(:disabled):not(.disabled):active:focus {
+        color: $black;
+        outline: none;
+        box-shadow: none;
+    }
+}

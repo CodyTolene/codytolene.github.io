@@ -1,0 +1,10 @@
+@import 'palette.scss';
+
+body {
+    background-color: $theme_dark_gray;
+    color: $white;
+
+    a {
+        color: $theme_light_green;
+    }
+}

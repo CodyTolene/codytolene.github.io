@@ -1,0 +1,77 @@
+{
+  "name": "cody_tolene",
+  "description": "Cody Tolene's Personal Website",
+  "author": "Cody Tolene",
+  "version": "1.0.0",
+  "license": "AGPL-3.0",
+  "homepage": "https://www.codytolene.com",
+  "keywords": [
+    "Cody Tolene",
+    "Cody",
+    "Tolene"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodyTolene/codytolene.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodyTolene/codytolene.github.io/issues"
+  },
+  "contributors": [
+    "Cody Tolene (https://www.codytolene.com)"
+  ],
+  "scripts": {
+    "ac": "gulp Auto-Compile",
+    "ngdev": "npm run ngdev --prefix development/angular",
+    "ngprod": "npm run ngprod --prefix development/angular"
+  },
+  "dependencies": {
+    "@angular/animations": "~7.2.0",
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/forms": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/router": "~7.2.0",
+    "bootstrap": "4.3.1",
+    "core-js": "^2.5.4",
+    "jquery": "3.4.0",
+    "popper.js": "1.15.0",
+    "rxjs": "~6.3.3",
+    "tslib": "^1.9.0",
+    "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+    "@angular/cli": "~7.3.8",
+    "@angular/compiler-cli": "~7.2.0",
+    "@angular/language-service": "~7.2.0",
+    "@angular-devkit/build-angular": "~0.13.0",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~4.5.0",
+    "del": "3.0.0",
+    "gulp": "4.0.0",
+    "gulp-cli": "2.0.1",
+    "gulp-concat": "2.6.1",
+    "gulp-cssmin": "0.2.0",
+    "gulp-less": "4.0.0",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.0.2",
+    "gulp-uglify": "3.0.2",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "node-sass": "^4.11.0",
+    "protractor": "~5.4.0",
+    "tar": "4.4.8",
+    "tslint": "~5.11.0",
+    "ts-node": "~7.0.0",
+    "typescript": "~3.2.2"
+  }
+}

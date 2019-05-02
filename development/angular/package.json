@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "ngdev": "ng build --vendor-chunk=false --source-map --watch",
+    "ngprod": "ng build --prod --extractCss=false --delete-output-path --output-hashing=none --build-optimizer"
+  }
+}
