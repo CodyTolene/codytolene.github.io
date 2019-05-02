@@ -16,8 +16,6 @@ Current stack:
 - [Webpack](https://webpack.js.org/)
 - [Zone.js](https://github.com/angular/zone.js/)
 
-Below I will explain how to compile this repository for your own GitHub Pages.
-
 ### Getting Started
 #### Web application build setup
 Install [Node.js](https://nodejs.org/en/) and run the following at project root:
