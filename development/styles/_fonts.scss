@@ -1,0 +1,14 @@
+// _partial: Fonts
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/google/montserrat/Montserrat-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Just Another Hand';
+    src: url('../fonts/google/justanotherhand/JustAnotherHand-Regular.ttf') format('truetype');
+}
+
+$font-family-montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
+$font-family-justanotherhand: 'Just Another Hand', Helvetica, Arial, sans-serif;
