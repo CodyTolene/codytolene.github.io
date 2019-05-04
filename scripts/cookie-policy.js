@@ -15,7 +15,7 @@ window.addEventListener("load", function(){
         "message": "This website uses cookies to ensure you get the best experience possible.",
         "dismiss": "Got It!",
         "link": "Learn more",
-        "href": "/cookie-policy.html"
+        "href": "/cookie-policy"
       }
     })
 });
