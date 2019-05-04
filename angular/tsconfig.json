@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "../../assets/angular/dist/out-tsc",
+    "outDir": "../www/angular/dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "module": "es2015",

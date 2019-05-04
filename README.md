@@ -1,6 +1,48 @@
 ## Cody Tolene's Personal Website ([View](https://www.codytolene.com))
+### About
+This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites 'www' folder to be consumed by the web application. These compilations consist of both development and production builds. The development builds output '.dev' files for site testing and debugging while the production builds output '.min' files for final release.
 
-### Technologies Used
+### Getting Started
+#### Workspace Setup
+Install [Node.js](https://nodejs.org/en/) and run the following at project root:
+```
+npm install
+```
+
+### Compile SCSS/JS Global Files (npm)
+#### From 'styles/\*\*/\*.scss' to 'www/styles/\*\*/\*.<min/dev>.css'.
+#### From 'scripts/\*\*/\*.js' to 'www/scripts/\*\*/\*.<min/dev>.js'.
+##### Single Builds
+Run the following to initiate a single **DEVELOPMENT** build:
+```
+npm run dev
+```
+Run the following to initiate a single **PRODUCTION** build:
+```
+npm run prd
+```
+##### Auto-Compile Builds
+Run the following to initiate an auto-compiled **DEVELOPMENT** build with a **WATCH**:
+```
+npm run devac
+```
+Run the following to initiate an auto-compiled **PRODUCTION** build with a **WATCH**:
+```
+npm run prdac
+```
+
+### Compile Angular (v7.2.0) using Angular CLI (v7.3.8)
+#### From 'angular' to 'www/angular/dist'.
+Run the following to initiate an auto-compiled **DEVELOPMENT** build with a **WATCH**:
+```
+npm run ngdev
+```
+Run the following to initiate a single **PRODUCTION** build:
+```
+npm run ngprd
+```
+
+### Resources & Technologies Used
 - [Angular](https://angular.io/) (v7.2.0)
 - [Angular CLI](https://cli.angular.io/) (v7.3.8)
 - [Bootstrap](https://getbootstrap.com/) (v4.3.1)
@@ -21,29 +63,3 @@
 - [Varnish](http://varnish-cache.org/)
 - [Webpack](https://webpack.js.org/)
 - [Zone.js](https://github.com/angular/zone.js/)
-
-### Getting Started
-#### Web application build setup
-Install [Node.js](https://nodejs.org/en/) and run the following at project root:
-```
-npm install
-```
-
-### Auto Compile SCSS/JS Global Files
-#### Use NPM to auto-compile site assets (Gulp)
-From 'development/scripts/\*\*/\*.js' to 'assets/scripts/global.min.js'.
-
-From 'development/styles/\*\*/\*.scss' to 'assets/styles/global.min.css'.
-```
-npm run ac
-```
-
-### Angular (v7.2.0)
-#### Use Angular CLI (v7.3.8) to compile the Angular application
-From 'development/angular' to 'assets/angular/dist'.
-
-For both production and development builds. Development build is auto compiled.
-```
-npm run ngdev
-npm run ngprod
-```

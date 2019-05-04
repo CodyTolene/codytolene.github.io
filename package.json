@@ -21,9 +21,12 @@
     "Cody Tolene (https://www.codytolene.com)"
   ],
   "scripts": {
-    "ac": "gulp Auto-Compile",
-    "ngdev": "npm run ngdev --prefix development/angular",
-    "ngprod": "npm run ngprod --prefix development/angular"
+    "dev": "gulp Development",
+    "prd": "gulp Production",
+    "devac": "gulp Auto-Compile-Development",
+    "prdac": "gulp Auto-Compile-Production",
+    "ngdev": "npm run ngdev --prefix angular",
+    "ngprd": "npm run ngprod --prefix angular"
   },
   "dependencies": {
     "@angular/animations": "~7.2.0",
