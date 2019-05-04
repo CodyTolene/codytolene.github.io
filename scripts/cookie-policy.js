@@ -13,6 +13,8 @@ window.addEventListener("load", function(){
       "theme": "classic",
       "content": {
         "message": "This website uses cookies to ensure you get the best experience possible.",
+        "dismiss": "Got It!",
+        "link": "Learn more",
         "href": "/cookie-policy.html"
       }
     })
