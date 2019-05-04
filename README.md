@@ -8,6 +8,8 @@ Install [Node.js](https://nodejs.org/en/) and run the following at project root:
 npm install
 ```
 
+
+
 ### Compile SCSS/JS Global Files (npm)
 Compile all files within "styles/\*\*/\*.scss" into "www/styles/\*\*/\*.<min/dev>.css".
 
@@ -31,6 +33,8 @@ Run the following to initiate an auto-compiled **production** build with a **wat
 npm run prdac
 ```
 
+
+
 ### Compile Angular (v7.2.0) using Angular CLI (v7.3.8)
 Compile all files within "angular" to "www/angular/dist".
 
@@ -42,6 +46,14 @@ Run the following to initiate a single **production** build:
 ```
 npm run ngprd
 ```
+
+
+
+### Important Notes
+- When testing the site using development builds, you will have to update the ".html" file(s) JavaScript and CSS imports to be ".dev" instead of ".min". Ignore vendor folder files, they are static.
+- I recommend using VS Code over Visual Studio for this repo's workspace.
+- If you're using VS Code, I recommend installing the extension "LIve Server" for a quick spin-up of the site.
+- You are welcome to use this repo/sites code for setting up your own GitHub Pages website. Happy coding!
 
 ## Resources & Technologies Used
 - [Angular](https://angular.io/) (v7.2.0)
