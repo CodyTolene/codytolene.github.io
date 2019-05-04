@@ -80,3 +80,7 @@ npm run ngprd
 - [Varnish](http://varnish-cache.org/)
 - [Webpack](https://webpack.js.org/)
 - [Zone.js](https://github.com/angular/zone.js/)
+
+## Special Thanks
+- [Cookie Consent](https://github.com/insites/cookieconsent)
+
