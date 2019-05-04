@@ -54,7 +54,7 @@ npm run ngprd
 ## Important Notes
 - When testing the site using development builds, you will have to update the ".html" file(s) JavaScript and CSS imports to be ".dev" instead of ".min". Ignore vendor folder files, they are static.
 - I recommend using VS Code over Visual Studio for this repo's workspace.
-- If you're using VS Code, install the extension "Live Server" to spin-up of the site; very useful for quick builds.
+- If you're using VS Code, install the extension "Live Server" to quickly spin-up up the site; very useful for rapid prototyping.
 - You are welcome to use this repo/site code for setting up your own GitHub Pages website. Happy coding!
 
 
