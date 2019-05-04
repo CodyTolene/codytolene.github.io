@@ -1,18 +1,18 @@
 # Cody Tolene's Personal Website ([View](https://www.codytolene.com))
 ### About
-This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites "www" folder to be consumed by the web application. These compilations consist of both development and production builds. The development builds output development files for site testing and debugging while the production builds output minified and/or uglified files for final release.
+This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites "www" folder to be consumed by the web application. Mentioned compiles consist of automated development and production builds which output files for either site testing and debugging or final release.
 
 
 
 ## Workspace Setup
-Install [Node.js](https://nodejs.org/en/) and run the following at project root:
+Install [Node.js](https://nodejs.org/en/) and run the following at project root using a CLI:
 ```
 npm install
 ```
 
 
 
-## Compile SCSS/JS Global Files (npm)
+## Compile Site SCSS/JS Files (NPM/Gulp)
 Compile all files within "styles/\*\*/\*.scss" into "www/styles/\*\*/\*.<min/dev>.css".
 
 Compile all files within "scripts/\*\*/\*.js" into "www/scripts/\*\*/\*.<min/dev>.js".
@@ -37,7 +37,7 @@ npm run prdac
 
 
 
-## Compile Angular (v7.2.0) using Angular CLI (v7.3.8)
+## Compile Site Angular (v7.2.0) using Angular CLI (v7.3.8)
 Compile all files within "angular" to "www/angular/dist".
 
 Run the following to initiate an auto-compiled **development** build with a **watch**:
