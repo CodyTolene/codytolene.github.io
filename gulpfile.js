@@ -11,7 +11,7 @@ sass.compiler = require('node-sass');
 /**
  * COMPILE SCRIPTS
  * 
- * This function takes all JS within '~/scripts' and compile them into '~/www/scripts/dist'.
+ * This function takes all JS within '~/scripts' and compiles them into '~/www/scripts/dist'.
  * 
  * Files will be suffixed with '.dev' or '.min' depending on 'isProduction'.
  * if(!isProduction) = On completion, your site scripts are ready to be tested using development files (!minified & !uglified).
@@ -35,7 +35,7 @@ async function compileNewScripts(isProduction) {
 /**
  * COMPILE STYLES
  * 
- * This function takes all SCSS within '~/styles' and compile them into '~/www/styles/dist'.
+ * This function takes all SCSS within '~/styles' and compiles them into '~/www/styles/dist'.
  * 
  * Files will be suffixed with '.dev' or '.min' depending on 'isProduction'.
  * if(!isProduction) = On completion, your site styles are ready to be tested using development files (!minified).
