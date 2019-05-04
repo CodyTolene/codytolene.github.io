@@ -2,7 +2,9 @@
 ### About
 This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites "www" folder to be consumed by the web application. These compilations consist of both development and production builds. The development builds output ".dev" files for site testing and debugging while the production builds output ".min" files for final release.
 
-### Workspace Setup
+
+
+## Workspace Setup
 Install [Node.js](https://nodejs.org/en/) and run the following at project root:
 ```
 npm install
@@ -10,7 +12,7 @@ npm install
 
 
 
-### Compile SCSS/JS Global Files (npm)
+## Compile SCSS/JS Global Files (npm)
 Compile all files within "styles/\*\*/\*.scss" into "www/styles/\*\*/\*.<min/dev>.css".
 
 Compile all files within "scripts/\*\*/\*.js" into "www/scripts/\*\*/\*.<min/dev>.js".
@@ -35,7 +37,7 @@ npm run prdac
 
 
 
-### Compile Angular (v7.2.0) using Angular CLI (v7.3.8)
+## Compile Angular (v7.2.0) using Angular CLI (v7.3.8)
 Compile all files within "angular" to "www/angular/dist".
 
 Run the following to initiate an auto-compiled **development** build with a **watch**:
@@ -49,11 +51,11 @@ npm run ngprd
 
 
 
-### Important Notes
+## Important Notes
 - When testing the site using development builds, you will have to update the ".html" file(s) JavaScript and CSS imports to be ".dev" instead of ".min". Ignore vendor folder files, they are static.
 - I recommend using VS Code over Visual Studio for this repo's workspace.
-- If you're using VS Code, I recommend installing the extension "LIve Server" for a quick spin-up of the site.
-- You are welcome to use this repo/sites code for setting up your own GitHub Pages website. Happy coding!
+- If you're using VS Code, install the extension "Live Server" to spin-up of the site; very useful for quick builds.
+- You are welcome to use this repo/site code for setting up your own GitHub Pages website. Happy coding!
 
 ## Resources & Technologies Used
 - [Angular](https://angular.io/) (v7.2.0)
