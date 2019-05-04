@@ -9,8 +9,9 @@ npm install
 ```
 
 ### Compile SCSS/JS Global Files (npm)
-- Compile all files within "styles/\*\*/\*.scss" into "www/styles/\*\*/\*.<min/dev>.css".
-- Compile all files within "scripts/\*\*/\*.js" into "www/scripts/\*\*/\*.<min/dev>.js".
+Compile all files within "styles/\*\*/\*.scss" into "www/styles/\*\*/\*.<min/dev>.css".
+
+Compile all files within "scripts/\*\*/\*.js" into "www/scripts/\*\*/\*.<min/dev>.js".
 #### Single Builds
 Run the following to initiate a single **development** build:
 ```
@@ -31,7 +32,8 @@ npm run prdac
 ```
 
 ### Compile Angular (v7.2.0) using Angular CLI (v7.3.8)
-- Compile all files within "angular" to "www/angular/dist".
+Compile all files within "angular" to "www/angular/dist".
+
 Run the following to initiate an auto-compiled **development** build with a **watch**:
 ```
 npm run ngdev
