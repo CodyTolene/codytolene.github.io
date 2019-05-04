@@ -1,4 +1,3 @@
-/// <binding ProjectOpened='Auto-Compile' />
 'use-strict';
 
 var gulp = require('gulp');
@@ -63,7 +62,7 @@ async function compileNewStyles(isProduction) {
  * 
  * This function removes all previously compiled JavaScript '.dev' and '.min' files from '~/www/scripts/dist'.
  */
-async function removeOldScripts(isProduction) {
+async function removeOldScripts() {
     console.log(`${await getCurrentTime()} Deleting all '.min' & '.dev' files within '~/www/scripts/dist'`);
     return await del([
         'www/scripts/dist/**/*.js'
@@ -75,7 +74,7 @@ async function removeOldScripts(isProduction) {
  * 
  * This function removes all previously compiled CSS '.dev' and '.min' files from '~/www/styles/dist'.
  */
-async function removeOldStyles(isProduction) {
+async function removeOldStyles() {
     console.log(`${await getCurrentTime()} Deleting all '.min' & '.dev' files within '~/www/styles/dist'`);
     return await del([
         'www/styles/dist/**/*.css'
@@ -99,9 +98,9 @@ async function getCurrentTime() {
 gulp.task('Development', async function() {
     console.log(`${await getCurrentTime()} Development task initiated. See 'gulpfile.js' for process definitions.`);
     return await [ 
-        await removeOldScripts(false), 
+        await removeOldScripts(), 
         await compileNewScripts(false),
-        await removeOldStyles(false), 
+        await removeOldStyles(),
         await compileNewStyles(false)
     ];
 });
@@ -112,9 +111,9 @@ gulp.task('Development', async function() {
 gulp.task('Production', async function() {
     console.log(`${await getCurrentTime()} Production task initiated. See 'gulpfile.js' for process definitions.`);
     return await [ 
-        await removeOldScripts(true), 
+        await removeOldScripts(), 
         await compileNewScripts(true),
-        await removeOldStyles(true), 
+        await removeOldStyles(), 
         await compileNewStyles(true)
     ];
 });
@@ -124,8 +123,8 @@ gulp.task('Production', async function() {
  */
 gulp.task('Auto-Compile-Development', async function() {
     console.log(`${await getCurrentTime()} Auto-Compile-Development task initiated. See 'gulpfile.js' for process definitions.`);
-    gulp.watch(['scripts/**/*.js'], async function () { return await [ await removeOldScripts(false), await compileNewScripts(false) ];});
-    gulp.watch(['styles/**/*.scss'], async function () { return await [ await removeOldStyles(false), await compileNewStyles(false) ];});
+    gulp.watch(['scripts/**/*.js'], async function () { return await [ await removeOldScripts(), await compileNewScripts(false) ];});
+    gulp.watch(['styles/**/*.scss'], async function () { return await [ await removeOldStyles(), await compileNewStyles(false) ];});
 });
 
  /**
@@ -133,6 +132,6 @@ gulp.task('Auto-Compile-Development', async function() {
  */
 gulp.task('Auto-Compile-Production', async function() {
     console.log(`${await getCurrentTime()} Auto-Compile-Production task initiated. See 'gulpfile.js' for process definitions.`);
-    gulp.watch(['scripts/**/*.js'], async function () { return await [ await removeOldScripts(true), await compileNewScripts(true) ];});
-    gulp.watch(['styles/**/*.scss'], async function () { return await [ await removeOldStyles(true), await compileNewStyles(true) ];});
+    gulp.watch(['scripts/**/*.js'], async function () { return await [ await removeOldScripts(), await compileNewScripts(true) ];});
+    gulp.watch(['styles/**/*.scss'], async function () { return await [ await removeOldStyles(), await compileNewStyles(true) ];});
 });
