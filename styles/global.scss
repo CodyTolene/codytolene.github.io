@@ -21,11 +21,12 @@ body {
 
 // Cookie consent overrides
 a {
-    // Cookie policy href link color override
+    // Basic href link
     &.cc-link {
         color: $theme_light_green !important;
     }
 
+    // Button
     &.cc-btn {
         color: $black !important;
         font-weight: bold;
