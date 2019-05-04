@@ -94,6 +94,9 @@ async function getCurrentTime() {
 
 /**
  * DEVELOPMENT RUN (SINGLE)
+ * 
+ * CLI:
+ * $gulp Development
  */
 gulp.task('Development', async function() {
     console.log(`${await getCurrentTime()} Development task initiated. See 'gulpfile.js' for process definitions.`);
@@ -107,6 +110,9 @@ gulp.task('Development', async function() {
 
 /**
  * PRODUCTION RUN (SINGLE)
+ * 
+ * CLI:
+ * $gulp Production
  */
 gulp.task('Production', async function() {
     console.log(`${await getCurrentTime()} Production task initiated. See 'gulpfile.js' for process definitions.`);
@@ -120,6 +126,9 @@ gulp.task('Production', async function() {
 
  /**
  * DEVELOPMENT RUN (AUTO-COMPILED)
+ * 
+ * CLI:
+ * $gulp Auto-Compile-Development
  */
 gulp.task('Auto-Compile-Development', async function() {
     console.log(`${await getCurrentTime()} Auto-Compile-Development task initiated. See 'gulpfile.js' for process definitions.`);
@@ -129,6 +138,9 @@ gulp.task('Auto-Compile-Development', async function() {
 
  /**
  * PRODUCTION RUN (AUTO-COMPILED)
+ * 
+ * CLI:
+ * $gulp Auto-Compile-Production
  */
 gulp.task('Auto-Compile-Production', async function() {
     console.log(`${await getCurrentTime()} Auto-Compile-Production task initiated. See 'gulpfile.js' for process definitions.`);
