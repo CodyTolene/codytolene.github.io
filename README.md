@@ -1,6 +1,6 @@
 # Cody Tolene's Personal Website ([View](https://www.codytolene.com))
 ### About
-This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites "www" folder to be consumed by the web application. These compilations consist of both development and production builds. The development builds output ".dev" files for site testing and debugging while the production builds output ".min" files for final release.
+This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites "www" folder to be consumed by the web application. These compilations consist of both development and production builds. The development builds output development files for site testing and debugging while the production builds output minified and/or uglified files for final release.
 
 
 
@@ -56,6 +56,8 @@ npm run ngprd
 - I recommend using VS Code over Visual Studio for this repo's workspace.
 - If you're using VS Code, install the extension "Live Server" to spin-up of the site; very useful for quick builds.
 - You are welcome to use this repo/site code for setting up your own GitHub Pages website. Happy coding!
+
+
 
 ## Resources & Technologies Used
 - [Angular](https://angular.io/) (v7.2.0)
