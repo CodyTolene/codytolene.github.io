@@ -83,6 +83,3 @@ npm run ngprd
 - [x] [Webpack](https://webpack.js.org/)
 - [x] [Zone.js](https://github.com/angular/zone.js/)
 
-## Special Thanks
-
-
