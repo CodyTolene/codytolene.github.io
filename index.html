@@ -1,6 +1,7 @@
 ﻿<!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -9,70 +10,231 @@
     <title>Home - Cody Tolene</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="www/styles/dist/bootstrap.min.css" rel="stylesheet" />
-    <link href="www/styles/dist/bootstrapoverrides.min.css" rel="stylesheet" />
+    <link href="www/styles/dist/homepage.min.css" rel="stylesheet" />
     <link href="www/styles/dist/fontawesome.min.css" rel="stylesheet" />
     <link href="www/styles/dist/global.min.css" rel="stylesheet" />
-    <link href="www/styles/vendor/cookieconsent.min.css" rel="stylesheet" />
-    <script type="text/javascript"  src="www/scripts/dist/analytics.min.js"></script>
+    <script type="text/javascript" src="www/scripts/dist/analytics.min.js"></script>
     <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-42346076-7"></script>
     <base href="/">
 </head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center pt-5">
-                <h2>
-                    Welcome to Cody's Website
-                </h2>
-                <p>
-                    - Under Construction -
-                </p>
-                <div>
-                    <a class="link" 
-                       href="/angular"
-                       target="_self"
-                       title="Angular"
-                       aria-label="Navigate to Cody's Angular page.">
-                        <i class="fab fa-angular" alt="Angular"></i>
-                    </a>
-                    <a class="link" 
-                       href="/react"
-                       target="_self"
-                       title="React"
-                       aria-label="Navigate to Cody's React page.">
-                        <i class="fab fa-react" alt="React"></i>
-                    </a>
-                    <a class="link" 
-                       href="/development-blog"
-                       target="_self"
-                       title="Development Blog"
-                       aria-label="Navigate to Cody's Development page.">
-                        <i class="fab fa-dev" alt="Development"></i>
-                    </a>
-                    <a class="link" 
-                       href="https://github.com/CodyTolene"
-                       target="_blank" 
-                       rel="nofollow noopener noreferrer"
-                       title="GitHub"
-                       aria-label="Navigate to Cody's GitHub page.">
-                        <i class="fab fa-github" alt="GitHub"></i>
-                    </a>
-                    <a class="link" 
-                       href="https://www.linkedin.com/in/codytolene/"
-                       target="_blank" 
-                       rel="nofollow noopener noreferrer"
-                       title="LinkedIn"
-                       aria-label="Navigate to Cody's LinkedIn page.">
-                        <i class="fab fa-linkedin" alt="LinkedIn"></i>
-                    </a>
+
+<body id="page-top">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Cody Tolene</a>
+            <button class="btn btn-primary navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="my-carousel">
+        <div id="homepageCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#homepageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#homepageCarousel" data-slide-to="1"></li>
+                <li data-target="#homepageCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- PARTICLES.JS -->
+                    <div id="particles-js">
+                        <div class="intro-text">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="intro-heading text-uppercase">Software<br />Developer</div>
+                                    <div class="intro-body">The sky is the limit.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- VIDEO -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video width="320" height="240" loop autoplay>
+                            <source src="www/videos/Love-Coding.webm" type="video/webm">
+                            <img class="img-fluid" src="www/videos/Love-Coding.jpg" />
+                        </video>
+                        <div class="intro-text it-video">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="intro-heading text-uppercase">Tech<br />Enthusiast</div>
+                                    <div class="intro-body">Always learning.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- VIDEO -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video width="320" height="240" loop autoplay>
+                            <source src="www/videos/Words.webm" type="video/webm">
+                            <img class="img-fluid" src="www/videos/Words.jpg" />
+                        </video>
+                        <div class="intro-text it-video">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="intro-heading text-uppercase">Website<br />Developer</div>
+                                    <div class="intro-body">Full-Stack ASP.NET Developer.</div>
+                                </div>
+                            </div>
+                            <!-- 
+                             <div class="row">
+                                 <div class="col-12 text-center">
+                                     <a class="btn btn-outline-primary btn-xl js-scroll-trigger pl-3 pr-3" 
+                                         href="#services">
+                                         Learn More
+                                     </a>
+                                 </div>
+                             </div> 
+                             -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">Under Construction</h3>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="bg-light section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase text-dark">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">Under Construction</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h3 class="section-subheading text-muted">Under Construction</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="resume" class="bg-light section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase text-dark">R&eacute;sum&eacute;</h2>
+                    <h3 class="section-subheading text-muted">Under Construction</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Contact</h2>
+                    <h3 class="section-subheading text-muted">Under Construction</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Cody Tolene</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/codytolene" target="_blank" rel="nofollow noopener noreferrer"
+                                title="Twitter" aria-label="Navigate to Cody's Twitter page.">
+                                <i class="fab fa-twitter" alt="Twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/CodyTolene" target="_blank" rel="nofollow noopener noreferrer"
+                                title="GitHub" aria-label="Navigate to Cody's GitHub page.">
+                                <i class="fab fa-github" alt="GitHub"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/codytolene/" target="_blank"
+                                rel="nofollow noopener noreferrer" title="LinkedIn"
+                                aria-label="Navigate to Cody's LinkedIn page.">
+                                <i class="fab fa-linkedin" alt="LinkedIn"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <a class="float-right" href="/cookie-policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="www/scripts/vendor/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="www/scripts/vendor/jqueryeasing/1.4.1/jquery.easing.min.js"></script>
     <script type="text/javascript" src="www/scripts/vendor/popper.js/1.15.0/popper.min.js"></script>
     <script type="text/javascript" src="www/scripts/vendor/bootstrap/4.3.1/bootstrap.min.js"></script>
     <script type="text/javascript" src="www/scripts/vendor/cookieconsent/3.1.0/cookieconsent.min.js"></script>
     <script type="text/javascript" src="www/scripts/dist/cookie-policy.min.js"></script>
+    <script type="text/javascript" src="www/scripts/vendor/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="www/scripts/dist/homepage.min.js"></script>
 </body>
+
 </html>

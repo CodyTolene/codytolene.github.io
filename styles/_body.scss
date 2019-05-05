@@ -1,0 +1,35 @@
+// _partial: Body
+
+body {
+    background-color: $theme_dark_gray;
+    color: $white;
+    font-family: $font-family-montserrat;
+
+    a {
+        color: $theme_light_green;
+
+        &.link {
+            font-size: 3em;
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+
+    .section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        min-height: 300px;
+        background-color: $theme_mid_gray;
+    }
+}
+
+@media(min-width:768px) {
+    body {
+        .section {
+            min-height: 750px;
+        }
+    }
+}
+  

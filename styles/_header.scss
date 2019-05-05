@@ -1,0 +1,68 @@
+// _partial: Header
+@import 'Fonts';
+@import 'Palette';
+
+header.my-carousel {
+  text-align: center;
+  color: white;
+  //background-color: $theme_mid_gray;
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+
+  .carousel-inner {
+    max-height: 900px;
+
+    video {
+      width: 100%;
+      max-height: 100%;
+      opacity: 0.5;
+    }
+
+    .it-video {
+      top: 41% !important;
+    }
+  
+    .intro-text {
+      position: absolute;
+      top: 45%;
+      right: 50%;
+      transform: translate(50%,-50%);
+      color: $white;
+      max-width: 90%;
+      padding: 1em 2em;
+      background: rgba(255, 255, 255, 0.1);
+      font-family: 'Open Sans', sans-serif;
+  
+      .intro-heading {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 50px;
+        font-family: $font-family-montserrat;
+        font-weight: 900;
+        //margin-bottom: 25px;
+      }
+
+      .intro-body {
+        font-size: 22px;
+        color: $theme_light_green_light_tint;
+        font-family: $font-family-montserrat;
+        //margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media(max-width:768px) {
+  header.my-carousel {
+    margin-top: 78px !important;
+
+    .carousel-inner {
+      .intro-text {
+        top: 50%;
+      }
+    }
+  }
+}

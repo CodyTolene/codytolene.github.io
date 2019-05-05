@@ -10,5 +10,18 @@
     src: url('../../fonts/google/justanotherhand/JustAnotherHand-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Anton';
+    src: url('../../fonts/google/anton/Anton-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Bungee';
+    src: url('../../fonts/google/bungee/Bungee-Regular.ttf')  format('truetype');
+}
+
+
 $font-family-montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
 $font-family-justanotherhand: 'Just Another Hand', Helvetica, Arial, sans-serif;
+$font-family-anton: 'Anton', sans-serif;
+$font-family-bungee: 'Bungee', cursive;

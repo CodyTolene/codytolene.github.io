@@ -1,0 +1,38 @@
+// _partial: CookieConsent
+@import 'Palette';
+
+// Main
+@import '../node_modules/cookieconsent/build/cookieconsent.min';
+
+// Cookie consent overrides
+a {
+    // Basic href link
+    &.cc-link {
+        color: $theme_light_green !important;
+    }
+
+    // Button
+    &.cc-btn {
+        color: $black !important;
+        font-weight: bold;
+        background-color: $theme_light_green_light_tint !important;
+        border: 1px solid $theme_dark_green;
+        font-family: $font-family-montserrat;
+
+        &:hover {
+            color: $black;
+            background-color: $theme_light_green !important;
+            text-shadow: 0 0 3px $theme_light_green_dark_tint !important;
+            text-decoration: none !important
+        }
+
+        &:focus,
+        &:active,
+        &:visited,
+        &:not(:disabled):not(.disabled):active:focus {
+            color: $black;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
