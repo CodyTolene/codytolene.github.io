@@ -12,6 +12,10 @@ header.my-carousel {
   background-position: center center;
   background-size: cover;
 
+  #particles-js {
+    min-height: 250px;
+  }
+
   .carousel-inner {
     max-height: 900px;
 
@@ -63,6 +67,14 @@ header.my-carousel {
       .intro-text {
         top: 50%;
       }
+    }
+  }
+}
+
+@media(min-width:768px) {
+  header.my-carousel {
+    #particles-js {
+      min-height: 800px;
     }
   }
 }
