@@ -14,7 +14,8 @@ header.my-carousel {
 
   #particles-js {
     min-height: 250px;
-    background: url('../../images/Astronomy.webp');
+    background: url('../../images/carousel/Astronomy_1920x1280.webp');
+    background: url('../../images/carousel/Astronomy_1920x1280.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -74,10 +75,12 @@ header.my-carousel {
 
       .carousel-control-prev {
         left: 0;
+        top: 0;
       }
 
       .carousel-control-next {
         right: 15px;
+        top: 0;
       }
     }
   }
