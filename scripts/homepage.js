@@ -7,7 +7,7 @@
 (function($) {
   "use strict";
 
-  var navHeight = 72; // px
+  var navHeight = 54; // px
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
