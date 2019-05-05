@@ -74,3 +74,13 @@
 particlesJS.load('particles-js', 'www/scripts/vendor/particles.js/2.0.0/particles.json', function() {
   //console.log('Particles.js config loaded');
 });
+
+/**
+ * Make sure the homepage videos are auto-playing
+ */
+(function($) {
+  "use strict";
+
+  document.getElementById('video-1').play();
+  document.getElementById('video-2').play();
+})(jQuery);
