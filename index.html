@@ -62,8 +62,8 @@
                 <li data-target="#homepageCarousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
+                <!-- SLIDE ONE: GALAXY -->
                 <div class="carousel-item active">
-                    <!-- PARTICLES.JS -->
                     <div id="particles-js">
                         <div class="intro-text">
                             <div class="row">
@@ -77,12 +77,6 @@
                                 <div class="col-sm-12 col-md-10">
                                     <div class="intro-heading text-uppercase">Software<br />Engineer</div>
                                     <div class="intro-body">The sky is the limit.</div>
-                                    <!-- <div class="row">
-                                        <div class="col-12 text-center">
-                                            <i class="pause fas fa-pause-circle" style="visibility: visible"></i>
-                                            <i class="play fas fa-play-circle" style="visibility: hidden"></i>
-                                        </div>
-                                    </div>  -->
                                 </div>
                                 <div class="col-md-1 d-none d-md-block">
                                     <a class="carousel-control-next pt-5" href="#homepageCarousel" role="button"
@@ -95,15 +89,51 @@
                         </div>
                     </div>
                 </div>
+                <!-- SLIDE TWO: VIDEO -->
                 <div class="carousel-item">
-                    <!-- VIDEO -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video width="320" height="240" loop autoplay muted id="video-2">
+                            <source src="www/videos/Words.webm" type="video/webm">
+                            <source src="www/videos/Words.mp4" type="video/mp4">
+                            <picture>
+                                <source srcset="www/images/carousel/Words.webp" type="image/webp">
+                                <source srcset="www/images/carousel/Words.jpg" type="image/jpeg">
+                                <img src="www/images/carousel/Words.jpg" alt="Programming Screen Two">
+                            </picture>
+                        </video>
+                        <div class="intro-text it-video">
+                            <div class="row">
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-prev pt-5" href="#homepageCarousel" role="button"
+                                        data-slide="prev">
+                                        <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-10">
+                                    <div class="intro-heading text-uppercase">Website<br />Developer</div>
+                                    <div class="intro-body">Full-Stack ASP.NET Specialist.</div>
+                                </div>
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-next pt-5" href="#homepageCarousel" role="button"
+                                        data-slide="next">
+                                        <span class="fas fa-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SLIDE THREE: VIDEO -->
+                <div class="carousel-item">
                     <div class="embed-responsive embed-responsive-16by9">
                         <video width="320" height="240" loop autoplay muted id="video-1">
                             <source src="www/videos/Love-Coding.webm" type="video/webm">
                             <source src="www/videos/Love-Coding.mp4" type="video/mp4">
                             <picture>
                                 <source srcset="www/images/carousel/Love-Coding.webp" type="image/webp">
-                                <source srcset="www/images/carousel/Love-Coding.jpg" type="image/jpeg"> 
+                                <source srcset="www/images/carousel/Love-Coding.jpg" type="image/jpeg">
                                 <img src="www/images/carousel/Love-Coding.jpg" alt="Programming Screen One">
                             </picture>
                         </video>
@@ -131,52 +161,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <!-- VIDEO -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video width="320" height="240" loop autoplay muted id="video-2">
-                            <source src="www/videos/Words.webm" type="video/webm">
-                            <source src="www/videos/Words.mp4" type="video/mp4">
-                            <picture>
-                                <source srcset="www/images/carousel/Words.webp" type="image/webp">
-                                <source srcset="www/images/carousel/Words.jpg" type="image/jpeg"> 
-                                <img src="www/images/carousel/Words.jpg" alt="Programming Screen Two">
-                            </picture>
-                        </video>
-                        <div class="intro-text it-video">
-                            <div class="row">
-                                <div class="col-md-1 d-none d-md-block">
-                                    <a class="carousel-control-prev pt-5" href="#homepageCarousel" role="button"
-                                        data-slide="prev">
-                                        <span class="fas fa-chevron-left" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                </div>
-                                <div class="col-sm-12 col-md-10">
-                                    <div class="intro-heading text-uppercase">Website<br />Developer</div>
-                                    <div class="intro-body">Full-Stack ASP.NET Specialist.</div>
-                                </div>
-                                <div class="col-md-1 d-none d-md-block">
-                                    <a class="carousel-control-next pt-5" href="#homepageCarousel" role="button"
-                                        data-slide="next">
-                                        <span class="fas fa-chevron-right" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- 
-                             <div class="row">
-                                 <div class="col-12 text-center">
-                                     <a class="btn btn-outline-primary btn-xl js-scroll-trigger pl-3 pr-3" 
-                                         href="#services">
-                                         Learn More
-                                     </a>
-                                 </div>
-                             </div> 
-                             -->
-                        </div>
-                    </div>
-                </div>
             </div>
             <a class="carousel-control-prev d-md-none" href="#homepageCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -194,7 +178,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h1 class="section-heading text-uppercase text-white">Services</h1>
                     <h3 class="section-subheading text-muted">Under Construction</h3>
                 </div>
             </div>
@@ -206,7 +190,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase text-dark">Portfolio</h2>
+                    <h1 class="section-heading text-uppercase text-black">Portfolio</h1>
                     <h3 class="section-subheading text-muted">Under Construction</h3>
                 </div>
             </div>
@@ -218,7 +202,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h1 class="section-heading text-uppercase text-white">About</h1>
                     <h3 class="section-subheading text-muted">Under Construction</h3>
                 </div>
             </div>
@@ -230,10 +214,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="section-heading text-uppercase" style="color: black;">
+                    <h1 class="section-heading text-uppercase text-black">
                         R&eacute;sum&eacute;
-                        </h2>
-                        <!-- <h3 class="section-subheading text-muted">Under Construction</h3> -->
+                    </h1>
+                    <h3>Find out what I've worked with over the years</h3>
                 </div>
             </div>
             <div class="row mt-md-5">
@@ -354,7 +338,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Contact</h2>
+                    <h2 class="section-heading text-uppercase text-white">Contact</h2>
                     <h3 class="section-subheading text-muted">Under Construction</h3>
                 </div>
             </div>
