@@ -14,6 +14,11 @@ header.my-carousel {
 
   #particles-js {
     min-height: 250px;
+    background: url('../../images/Astronomy.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
   }
 
   .carousel-inner {
@@ -54,6 +59,24 @@ header.my-carousel {
         color: $theme_light_green_light_tint;
         font-family: $font-family-montserrat;
         //margin-bottom: 25px;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        top: 35%;
+        color: $theme_light_green;
+        font-size: 2em;
+      }
+
+      .carousel-control-prev {
+        left: 0;
+      }
+
+      .carousel-control-next {
+        right: 15px;
       }
     }
   }

@@ -63,9 +63,6 @@ npm run ngprd
 - [x] [Angular](https://angular.io/) (v7.2.0)
 - [x] [Angular CLI](https://cli.angular.io/) (v7.3.8)
 - [x] [Bootstrap](https://getbootstrap.com/) (v4.3.1)
-- [x] [Bootstrap Agency](https://github.com/BlackrockDigital/startbootstrap-agency)
-- [x] [Cookie Consent](https://github.com/insites/cookieconsent)
-- [x] [Coverr](https://coverr.co)
 - [x] [Fastly](https://www.fastly.com/)
 - [x] [Font Awesome](https://fontawesome.com/)
 - [x] [GitHub Pages](https://pages.github.com/)
@@ -86,3 +83,8 @@ npm run ngprd
 - [x] [Webpack](https://webpack.js.org/)
 - [x] [Zone.js](https://github.com/angular/zone.js/)
 
+## Additional Thanks
+- [Bootstrap Agency](https://github.com/BlackrockDigital/startbootstrap-agency) (Theme Inspiration)
+- [Cookie Consent](https://github.com/insites/cookieconsent) (Cookie Policy Popup Library)
+- [Coverr](https://coverr.co) (Motion Video Headers)
+- [Kai Pilger](https://www.pexels.com/@kaip) (Outer Space Image)

@@ -9,10 +9,10 @@
     <meta name="author" content="Cody Tolene" />
     <title>Home - Cody Tolene</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="www/styles/dist/bootstrap.min.css" rel="stylesheet" />
-    <link href="www/styles/dist/homepage.min.css" rel="stylesheet" />
-    <link href="www/styles/dist/fontawesome.min.css" rel="stylesheet" />
-    <link href="www/styles/dist/global.min.css" rel="stylesheet" />
+    <link href="www/styles/dist/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="www/styles/dist/homepage.min.css" rel="stylesheet" type="text/css" />
+    <link href="www/styles/dist/fontawesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="www/styles/dist/global.min.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="www/scripts/dist/analytics.min.js"></script>
     <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-42346076-7"></script>
     <base href="/">
@@ -53,7 +53,7 @@
 
     <!-- HEADER -->
     <header class="my-carousel">
-        <div id="homepageCarousel" class="carousel slide" data-ride="carousel">
+        <div id="homepageCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
             <ol class="carousel-indicators">
                 <li data-target="#homepageCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#homepageCarousel" data-slide-to="1"></li>
@@ -65,9 +65,21 @@
                     <div id="particles-js">
                         <div class="intro-text">
                             <div class="row">
-                                <div class="col-12">
-                                    <div class="intro-heading text-uppercase">Software<br />Developer</div>
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
+                                        <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-10">
+                                    <div class="intro-heading text-uppercase">Software<br />Engineer</div>
                                     <div class="intro-body">The sky is the limit.</div>
+                                </div>
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
+                                        <span class="fas fa-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -82,9 +94,21 @@
                         </video>
                         <div class="intro-text it-video">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
+                                        <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-10">
                                     <div class="intro-heading text-uppercase">Tech<br />Enthusiast</div>
                                     <div class="intro-body">Always learning.</div>
+                                </div>
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
+                                        <span class="fas fa-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -99,9 +123,21 @@
                         </video>
                         <div class="intro-text it-video">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
+                                        <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-10">
                                     <div class="intro-heading text-uppercase">Website<br />Developer</div>
-                                    <div class="intro-body">Full-Stack ASP.NET Developer.</div>
+                                    <div class="intro-body">Full-Stack ASP.NET Specialist.</div>
+                                </div>
+                                <div class="col-md-1 d-none d-md-block">
+                                    <a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
+                                        <span class="fas fa-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
                             </div>
                             <!-- 
@@ -118,11 +154,11 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev d-md-none" href="#homepageCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next d-md-none" href="#homepageCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -165,7 +201,7 @@
         </div>
     </section>
 
-    <!-- TEAM -->
+    <!-- RESUME -->
     <section id="resume" class="bg-light section">
         <div class="container">
             <div class="row">
