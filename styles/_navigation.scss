@@ -18,8 +18,11 @@
 
     .navbar-brand {
       color: $theme_light_green_light_tint;
-      font-family: $font-family-justanotherhand;
-      font-size: 2em !important;
+      font-family: $font-family-bungee;
+      //font-family: $font-family-justanotherhand;
+      //font-family: $font-family-montserrat;
+      //font-size: 2em !important;
+      //font-weight: 900;
 
       &.active,
       &:active,
