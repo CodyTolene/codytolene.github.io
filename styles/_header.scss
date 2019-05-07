@@ -4,7 +4,7 @@
 
 header.my-carousel {
   text-align: center;
-  color: white;
+  color: $typography_white;
   //background-color: $theme_mid_gray;
   background-color: $black;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ header.my-carousel {
       top: 45%;
       right: 50%;
       transform: translate(50%,-50%);
-      color: $white;
+      color: $typography_white;
       max-width: 90%;
       padding: 1em 2em;
       background: rgba(255, 255, 255, 0.1);
@@ -58,7 +58,7 @@ header.my-carousel {
 
       .intro-body {
         font-size: 22px;
-        color: $theme_light_green_light_tint;
+        color: $typography_light_green;
         font-family: $font-family-montserrat;
         //margin-bottom: 25px;
       }
@@ -69,7 +69,7 @@ header.my-carousel {
         display: inline-block;
         position: relative;
         top: 35%;
-        color: $theme_light_green;
+        color: $typography_green;
         font-size: 2em;
       }
 

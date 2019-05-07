@@ -2,11 +2,11 @@
 
 body {
     background-color: $theme_dark_gray;
-    color: $white;
+    color: $typography_white;
     font-family: $font-family-montserrat;
 
     a {
-        color: $theme_light_green;
+        color: $typography_green;
 
         &.link {
             font-size: 3em;
@@ -17,8 +17,20 @@ body {
         }
     }
 
+    .text-white {
+        color: $typography_white !important;
+    }
+
     .text-black {
-        color: $black;
+        color: $typography_black !important;
+    }
+
+    .text-light-gray {
+        color: $typography_light_gray !important;
+    }
+
+    .no-underline {
+        text-decoration: none !important;
     }
 
     .section {
@@ -26,6 +38,14 @@ body {
         padding-bottom: 25px;
         min-height: 300px;
         background-color: $theme_mid_gray;
+
+        .service-logo {
+            font-size: 175px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
 

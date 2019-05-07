@@ -4,13 +4,13 @@
 /* Button Overrides */
 .btn-primary,
 .navbar-toggler {
-    color: $black !important;
+    color: $typography_black !important;
     font-weight: bold;
     background-color: $theme_light_green_light_tint;
     border: 1px solid $theme_dark_green;
 
     &:hover {
-        color: $black;
+        color: $typography_black;
         background-color: $theme_light_green;
         text-shadow: 0 0 3px $theme_light_green_dark_tint;
     }
@@ -19,7 +19,7 @@
     &:active,
     &:visited,
     &:not(:disabled):not(.disabled):active:focus {
-        color: $black;
+        color: $typography_black;
         outline: none;
         box-shadow: none;
     }

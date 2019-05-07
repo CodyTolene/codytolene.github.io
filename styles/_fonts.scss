@@ -20,8 +20,51 @@
     src: url('../../fonts/google/bungee/Bungee-Regular.ttf')  format('truetype');
 }
 
+@font-face {
+    font-family: "netcore";
+    src:url("../../fonts/netcore/netcore.eot");
+    src:url("../../fonts/netcore/netcore.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/netcore/netcore.woff") format("woff"),
+        url("../../fonts/netcore/netcore.ttf") format("truetype"),
+        url("../../fonts/netcore/netcore.svg#1557188824") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
 
 $font-family-montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
 $font-family-justanotherhand: 'Just Another Hand', Helvetica, Arial, sans-serif;
 $font-family-anton: 'Anton', sans-serif;
 $font-family-bungee: 'Bungee', cursive;
+
+// Icons
+
+[data-icon]:before {
+  font-family: "netcore" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "netcore" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-net-core:before {
+  content: "\61";
+}

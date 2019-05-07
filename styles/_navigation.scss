@@ -17,7 +17,7 @@
     // }
 
     .navbar-brand {
-      color: $theme_light_green_light_tint;
+      color: $typography_light_green;
       font-family: $font-family-bungee;
       //font-family: $font-family-justanotherhand;
       //font-family: $font-family-montserrat;
@@ -28,7 +28,7 @@
       &:active,
       &:focus,
       &:hover {
-        color: darken($theme_light_green_light_tint, 10%);
+        color: darken($typography_light_green, 10%);
       }
     }
 
@@ -39,12 +39,12 @@
           font-weight: 400;
           padding: 0.75em 0;
           letter-spacing: 1px;
-          color: white;
+          color: $typography_white;
           font-family: $font-family-montserrat;
 
           &.active,
           &:hover {
-            color: $theme_light_green_light_tint;
+            color: $typography_light_green;
           }
         }
       }
