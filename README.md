@@ -2,18 +2,22 @@
 ### About
 This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites "www" folder to be consumed by the web application. Mentioned compiles consist of automated development and production builds which output files for either site testing and debugging or final release.
 
-- Add your custom JavaScript to the "scripts" folder and they will compile to www/scripts/dist with ".min" or ".dev" depending on the build you run.
-- Add your custom SASS styles to the "styles" folder and they will compile to www/styles/dist with ".min" or ".dev" depending on your build you run.
-- Add vendor javascript to www/scripts/vendor folder.
-- Add vendor styles to www/styles/vendor folder OR pull them in with SASS includes to be compiled into www/styles/dist.
 
 
-
-## Workspace Setup
+## Prerequisites
 Install [Node.js](https://nodejs.org/en/) and run the following at project root using a CLI:
 ```
 npm install
 ```
+
+
+
+## Development
+I tried to set this up to be as agile as possible for the fastest results. Follow the development strategies below and you'll be auto compiling your code in no time:
+- Add your custom JavaScript to the "scripts" folder and they will compile to www/scripts/dist with ".min" or ".dev" depending on the build you run.
+- Add your custom SASS styles to the "styles" folder and they will compile to www/styles/dist with ".min" or ".dev" depending on your build you run.
+- Add vendor JavaScript to www/scripts/vendor folder.
+- Add vendor styles to www/styles/vendor folder OR pull them in with SASS includes to be compiled into www/styles/dist.
 
 
 
@@ -66,10 +70,13 @@ Happy coding!
 
 
 
-## Resources & Technologies Used
+## Resources, References & Technologies Used
 - [x] [Angular](https://angular.io/) (v7.2.0)
 - [x] [Angular CLI](https://cli.angular.io/) (v7.3.8)
 - [x] [Bootstrap](https://getbootstrap.com/) (v4.3.1)
+- [x] [Bootstrap Agency](https://github.com/BlackrockDigital/startbootstrap-agency) (Theme Inspiration)
+- [x] [Cookie Consent](https://github.com/insites/cookieconsent) (Cookie Policy Popup Library)
+- [x] [Coverr](https://coverr.co) (Motion Video Headers)
 - [x] [Fastly](https://www.fastly.com/)
 - [x] [Font Awesome](https://fontawesome.com/)
 - [x] [GitHub Pages](https://pages.github.com/)
@@ -79,6 +86,7 @@ Happy coding!
 - [x] [Gulp.js](https://gulpjs.com/)
 - [x] [JavaScript](https://www.javascript.com/)
 - [x] [jQuery](https://jquery.com/) (v3.4.0)
+- [x] [Kai Pilger](https://www.pexels.com/@kaip) (Outer Space Image)
 - [x] [Node.js](https://nodejs.org/en/)
 - [x] [Particles.js](https://github.com/VincentGarreau/particles.js/)
 - [ ] [React](https://reactjs.org/)
@@ -90,8 +98,3 @@ Happy coding!
 - [x] [Webpack](https://webpack.js.org/)
 - [x] [Zone.js](https://github.com/angular/zone.js/)
 
-## Additional Thanks
-- [Bootstrap Agency](https://github.com/BlackrockDigital/startbootstrap-agency) (Theme Inspiration)
-- [Cookie Consent](https://github.com/insites/cookieconsent) (Cookie Policy Popup Library)
-- [Coverr](https://coverr.co) (Motion Video Headers)
-- [Kai Pilger](https://www.pexels.com/@kaip) (Outer Space Image)
