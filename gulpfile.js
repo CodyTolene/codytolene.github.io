@@ -1,3 +1,4 @@
+/// <binding ProjectOpened='Auto-Compile-Production' />
 'use-strict';
 
 var gulp = require('gulp');

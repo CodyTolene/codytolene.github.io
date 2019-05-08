@@ -2,6 +2,11 @@
 ### About
 This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks and resources. Using the NPM & Gulp tasks I've set up within, I compile the application code from the corresponding root folders into the sites "www" folder to be consumed by the web application. Mentioned compiles consist of automated development and production builds which output files for either site testing and debugging or final release.
 
+- Add your custom JavaScript to the "scripts" folder and they will compile to www/scripts/dist with ".min" or ".dev" depending on the build you run.
+- Add your custom SASS styles to the "styles" folder and they will compile to www/styles/dist with ".min" or ".dev" depending on your build you run.
+- Add vendor javascript to www/scripts/vendor folder.
+- Add vendor styles to www/styles/vendor folder OR pull them in with SASS includes to be compiled into www/styles/dist.
+
 
 
 ## Workspace Setup
@@ -52,10 +57,12 @@ npm run ngprd
 
 
 ## Important Notes
-- When testing the site using development builds, you will have to update the ".html" file(s) JavaScript and CSS imports to be ".dev" instead of ".min". Ignore vendor folder files, they are static.
-- I recommend using VS Code over Visual Studio for this repo's workspace.
-- If you're using VS Code, install the extension "Live Server" to quickly spin-up up the site; very useful for rapid prototyping.
-- You are welcome to use this repo/site code for setting up your own GitHub Pages website. Happy coding!
+- When testing the site using development builds, you will have to update the ".html" file(s) JavaScript and CSS imports to be ".dev" instead of ".min". This only applies to scripts and styles compiled from the "scripts" and "styles" folders.
+- If you're using Visual Studio, run the site with IISExpress for quick testing.
+- If you're using VS Code, install the extension "Live Server" for quick testing.
+- You are welcome to use this repo/site code for setting up your own GitHub Pages website. 
+
+Happy coding!
 
 
 
