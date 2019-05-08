@@ -79,6 +79,7 @@ Happy coding!
 - [x] [Coverr](https://coverr.co) (Motion Video Headers)
 - [x] [Fastly](https://www.fastly.com/)
 - [x] [Font Awesome](https://fontawesome.com/)
+- [x] [GitHub Corners](https://github.com/tholman/github-corners)
 - [x] [GitHub Pages](https://pages.github.com/)
 - [x] [Google Analytics](https://analytics.google.com/analytics/web/)
 - [x] [Google Fonts](https://fonts.google.com/)
