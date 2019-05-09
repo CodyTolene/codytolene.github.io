@@ -1,4 +1,5 @@
 // _partial: CookieConsent
+@import 'Typography';
 @import 'Palette';
 
 // Main
@@ -8,19 +9,19 @@
 a {
     // Basic href link
     &.cc-link {
-        color: $typography_green !important;
+        color: $theme_light_green !important;
     }
 
     // Button
     &.cc-btn {
-        color: $typography_black !important;
+        color: $black !important;
         font-weight: bold;
         background-color: $theme_light_green_light_tint !important;
         border: 1px solid $theme_dark_green;
         font-family: $font-family-montserrat;
 
         &:hover {
-            color: $typography_black;
+            color: $black;
             background-color: $theme_light_green !important;
             text-shadow: 0 0 3px $theme_light_green_dark_tint !important;
             text-decoration: none !important
@@ -30,7 +31,7 @@ a {
         &:active,
         &:visited,
         &:not(:disabled):not(.disabled):active:focus {
-            color: $typography_black;
+            color: $black;
             outline: none;
             box-shadow: none;
         }

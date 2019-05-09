@@ -1,36 +1,38 @@
 // _partial: Body
+@import 'Typography';
+@import 'Palette';
 
 body {
     background-color: $theme_dark_gray;
-    color: $typography_white;
+    color: $white;
     font-family: $font-family-montserrat;
 
+    .text-white {
+        color: $white !important;
+    }
+
+    .text-black {
+        color: $black !important;
+    }
+
+    .text-light-gray {
+        color: $theme_light_gray_light_tint !important;
+    }
+
     a {
-        color: $typography_green;
+        color: $theme_light_green;
+
+        &.no-underline {
+            text-decoration: none !important;
+        }
 
         &.link {
             font-size: 3em;
 
-            &:hover{
+            &:hover {
                 text-decoration: none;
             }
         }
-    }
-
-    .text-white {
-        color: $typography_white !important;
-    }
-
-    .text-black {
-        color: $typography_black !important;
-    }
-
-    .text-light-gray {
-        color: $typography_light_gray !important;
-    }
-
-    .no-underline {
-        text-decoration: none !important;
     }
 
     .section {

@@ -15,7 +15,7 @@ npm install
 ## Development
 I tried to set this up to be as agile as possible for the fastest results. Follow the development strategies below and you'll be auto compiling your code in no time:
 - Add your custom JavaScript to the "scripts" folder and they will compile to www/scripts/dist with ".min" or ".dev" depending on the build you run.
-- Add your custom SASS styles to the "styles" folder and they will compile to www/styles/dist with ".min" or ".dev" depending on your build you run.
+- Add your custom SASS styles to the "styles" folder and they will compile to www/styles/dist with ".min" or ".dev" depending on the build you run.
 - Add vendor JavaScript to www/scripts/vendor folder.
 - Add vendor styles to www/styles/vendor folder OR pull them in with SASS includes to be compiled into www/styles/dist.
 

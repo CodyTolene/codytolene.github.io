@@ -1,7 +1,17 @@
 // _partial: Footer
+@import 'Typography';
+@import 'Palette';
 
 footer {
     padding-top: 15px;
     padding-bottom: 5px;
     background-color: $theme_dark_gray !important;
+
+    ul {
+        li {
+            a {
+
+            }
+        }
+    }
 }

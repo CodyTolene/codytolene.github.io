@@ -29,15 +29,9 @@
         url("../../fonts/netcore/netcore.svg#1557188824") format("svg");
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-
-$font-family-montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
-$font-family-justanotherhand: 'Just Another Hand', Helvetica, Arial, sans-serif;
-$font-family-anton: 'Anton', sans-serif;
-$font-family-bungee: 'Bungee', cursive;
-
-// Icons
+// Font Icons
 
 [data-icon]:before {
   font-family: "netcore" !important;

@@ -1,16 +1,17 @@
 // _partial: BootstrapOverrides
+@import 'Typography';
 @import 'Palette';
 
 /* Button Overrides */
 .btn-primary,
 .navbar-toggler {
-    color: $typography_black !important;
+    color: $black !important;
     font-weight: bold;
     background-color: $theme_light_green_light_tint;
     border: 1px solid $theme_dark_green;
 
     &:hover {
-        color: $typography_black;
+        color: $black;
         background-color: $theme_light_green;
         text-shadow: 0 0 3px $theme_light_green_dark_tint;
     }
@@ -19,7 +20,7 @@
     &:active,
     &:visited,
     &:not(:disabled):not(.disabled):active:focus {
-        color: $typography_black;
+        color: $black;
         outline: none;
         box-shadow: none;
     }
