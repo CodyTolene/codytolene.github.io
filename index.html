@@ -289,6 +289,7 @@
     <section id="services"
              class="section">
         <div class="container">
+            <!-- SERVICES: HEAD -->
             <div class="row pt-4">
                 <div class="col-lg-12 text-center">
                     <h1 class="section-heading text-uppercase text-white">
@@ -299,7 +300,9 @@
                     </h3>
                 </div>
             </div>
+            <!-- SERVICES: ROW 1 -->
             <div class="row mt-md-5">
+                <!-- ASP.NET -->
                 <div class="col-md-4 text-center">
                     <a href="/net"
                        class="service-logo"
@@ -318,13 +321,62 @@
                         <h2>Microsoft ASP.NET</h2>
                     </a>
                     <p>
-                        Microsofts server-side web application frameworks ASP.NET 4 and ASP.NET Core
-                        are an absolute pleasure to work with. I've crafted my career around this technology and
-                        it's become a part of who I am over several years of development. Considered the latest and
-                        greatest in web technology, there's nothing more satisfying than spinning up a cloud-hosted
-                        website with ASP.NET Core using scalable Docker containers.
+                        Microsofts server-side web application framework ASP.NET Core is the underlying 
+                        service that drives a website. I've crafted my career around ASP.NET technology 
+                        and its become a part of whom I am over several years of development. All in 
+                        all ASP.NET has been an absolute pleasure to work with.
                     </p>
                 </div>
+                <!-- DOCKER -->
+                <div class="col-md-4 text-center">
+                    <a href="/angular"
+                       class="service-logo"
+                       aria-label="View Cody Tolene's Angular page"
+                       title="View Cody Tolene's Angular page"
+                       target="_self">
+                        <i class="fab fa-docker"></i>
+                    </a>
+                    <a href="/angular"
+                       class="no-underline"
+                       aria-label="View Cody Tolene's Angular page"
+                       title="View Cody Tolene's Angular page"
+                       target="_self">
+                        <h2>Docker</h2>
+                    </a>
+                    <p>
+                        Docker is a useful tool that I use to wrap up web applications into containers 
+                        before deploying them to a cloud host. Docker containers are, in a sense, mini 
+                        computers that house and serve websites. These websites can be scaled up 
+                        rapidly to meet demand or scaled down to save resources.
+                    </p>
+                </div>
+                <!-- CLOUD -->
+                <div class="col-md-4 text-center">
+                    <a href="/react"
+                       class="service-logo"
+                       aria-label="View Cody Tolene's React page"
+                       title="View Cody Tolene's React page"
+                       target="_self">
+                        <i class="fas fa-cloud"></i>
+                    </a>
+                    <a href="/react"
+                       class="no-underline"
+                       aria-label="View Cody Tolene's React page"
+                       title="View Cody Tolene's React page"
+                       target="_self">
+                        <h2>Cloud Services</h2>
+                    </a>
+                    <p>
+                        Cloud computing is not a new technology, but how it works with web applications 
+                        has significantly improved over the past few years. Using the cloud, you're able 
+                        to use tools such as scalable container services, giving you greater control over 
+                        how your website is scaled and distributed.
+                    </p>
+                </div>
+            </div>
+            <!-- SERVICES: ROW 2 -->
+            <div class="row mt-md-5">
+                <!-- ANGULAR -->
                 <div class="col-md-4 text-center">
                     <a href="/angular"
                        class="service-logo"
@@ -342,11 +394,11 @@
                     </a>
                     <p>
                         Developing with Angular is so much fun. I've used Angular since the early days of AngularJS and
-                        watched the framework evolve into its own platform. Even though Google's transition from AngularJS
-                        to Angular2 was a bit bumpy, the latest framework brings typescript and object-oriented programming
-                        to the front end along with many nice, polished features. You can't help but love it.
+                        watched the framework evolve into its own platform. Angular is an MVC framework utilizing TypeScript 
+                        which gives us developers a powerful toolset to build superior, interactive applications.
                     </p>
                 </div>
+                <!-- REACT -->
                 <div class="col-md-4 text-center">
                     <a href="/react"
                        class="service-logo"
@@ -363,13 +415,37 @@
                         <h2>Facebook React</h2>
                     </a>
                     <p>
-                        React is a great library that likes to compete with my first love, Angular. Being relatively new to
-                        React, I was surprised to see how easy the framework was to use and incorporate into my projects.
-                        Even though React lacks a model and controller for more complex interactions (without Flux), it's
-                        a great go-to for quick front-end view builds; much more fun than just writing plain HTML!
+                        React is another great library that I like to incorporate into my projects when Angular is too much
+                        power for the needs of the application. React lacks the MC in MVC (without plugins) but it's
+                        a great go-to for quick, reusable UI components. I prefer Angular over a plugged React for SPA's.
+                    </p>
+                </div>
+                <!-- HTML5/CSS3 -->
+                <div class="col-md-4 text-center">
+                    <a href="/net"
+                       class="service-logo"
+                       aria-label="View Cody Tolene's ASP.NET page"
+                       title="View Cody Tolene's ASP.NET page"
+                       target="_self">
+                        <div style="font-size: 150px; padding-top: 37px;">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                    </a>
+                    <a href="/net"
+                       class="no-underline"
+                       aria-label="View Cody Tolene's ASP.NET page"
+                       title="View Cody Tolene's ASP.NET page"
+                       target="_self">
+                        <h2>HTML5 / CSS3</h2>
+                    </a>
+                    <p>
+                        Ah, good old HTML and CSS. We all know or have at least heard of this technology (unless you live 
+                        under a rock) but I feel it's still worth mentioning as it's the basic skill of any web developer. 
+                        I always design my landing pages with a mobile first approach and with pixel perfect precision!
                     </p>
                 </div>
             </div>
+            <!-- SERVICES: FOOT -->
             <div class="row mt-5 mb-5">
                 <div class="col-12 text-center pt-3">
                     <h3 class="text-light-gray">Reach out and say hello!</h3>
@@ -433,6 +509,12 @@
                          class="img-fluid align-self-center" />
                 </div>
                 <div class="col-md-6 mt-5 mt-md-0">
+                    <!--
+                    <h4 class="text-light-gray">Get to know me</h4>
+                    <p class="text-white">
+                        Sentence
+                    </p>
+                    -->
                     <h4 class="text-light-gray">A few fun facts about myself</h4>
                     <p class="text-white">
                         I live off of Starbucks coffee, my favorite number is
@@ -442,7 +524,7 @@
                            title="View Ouroboros Wikipedia entry"
                            target="_blank">
                             8
-                        </a>, 
+                        </a>,
                         I'm a
                         <a href="http://dnd.wizards.com"
                            rel="noreferrer nofollow noopener"
@@ -450,7 +532,7 @@
                            title="Visit Dungeons & Dragons website"
                            target="_blank">
                             Dungeon Master
-                        </a>, 
+                        </a>,
                         I hunt and I fish, I enjoy playing video games
                         with my wife and kids, I have an inquisitive mind for
                         <a href="https://en.wikipedia.org/wiki/Quantum_mechanics"
@@ -459,7 +541,7 @@
                            title="View Quantum Mechanics Wikipedia entry"
                            target="_blank">
                             physics
-                        </a>, 
+                        </a>,
                         I'd like to live in a beautifully simple homestead in the countryside
                         someday, my favorite food is spaghetti, my favorite video game series is
                         <a href="https://www.zelda.com/"
@@ -468,8 +550,8 @@
                            title="Visit Zelda website"
                            target="_blank">
                             Zelda
-                        </a>, 
-                        and I could binge watch 
+                        </a>,
+                        and I could binge watch
                         <a href="https://en.wikipedia.org/wiki/Fullmetal_Alchemist"
                            rel="noreferrer nofollow noopener"
                            aria-label="View the Fullmetal Alchemist Wikipedia entry"
