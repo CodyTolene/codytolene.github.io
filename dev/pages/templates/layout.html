@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="{{ metaDesc }}" />
+    <meta name="keywords" content="{{ metaKeyw }}" />
+    <meta name="author" content="Cody Tolene" />
+    <meta name="robots" content="all" />
+    <title>{{ pageTitle }} | Cody Tolene</title>
+    <!-- STYLES -->
+    {% include "partials/styles.html" %}
+    <!-- GOOGLE TAG MANAGER -->
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-42346076-7"></script>
+</head>
+<body id="page-top">
+    <!-- GITHUB CALLOUT -->
+    {% if activeTitle == 'index' %}{% include 'partials/github.html' %}{% endif %}
+    <!-- NAVBAR -->
+    {% include "partials/navbar.html" %}
+    <!-- CONTENT -->
+    {% block content %}{% endblock %}
+    <!-- FOOTER -->
+    {% include "partials/footer.html" %}
+    <!-- SCROLL-TOP -->
+    {% include "partials/scroll-top.html" %}
+    <!-- SCRIPTS -->
+    {% include "partials/scripts.html" %}
+</body>
+</html>

@@ -1,0 +1,675 @@
+﻿{% extends "layout.html" %}
+{% set pageTitle = "Home" %}
+{% set activeTitle = "index" %}
+{% set metaDesc = "Cody Tolene's Personal Website" %}
+{% set metaKeyw = "Cody, Tolene, Portfolio, Resume, Personal, Website" %}
+
+{% block content %}
+<!-- HEADER -->
+<header class="header-carousel">
+    <div id="homepageCarousel"
+         class="carousel slide"
+         data-ride="carousel"
+         data-interval="1000000">
+        <ol class="carousel-indicators">
+            <li data-target="#homepageCarousel"
+                data-slide-to="0"
+                class="active"></li>
+            <li data-target="#homepageCarousel"
+                data-slide-to="1"></li>
+            <li data-target="#homepageCarousel"
+                data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <!-- SLIDE ONE: GALAXY -->
+            <div class="carousel-item active">
+                <div id="particles-js">
+                    <div class="intro-text">
+                        <div class="row">
+                            <div class="col-md-1 d-none d-md-block">
+                                <a class="carousel-control-prev pt-5"
+                                   href="#homepageCarousel"
+                                   role="button"
+                                   data-slide="prev">
+                                    <span class="fas fa-chevron-left"
+                                          aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </div>
+                            <div class="col-sm-12 col-md-10">
+                                <div class="intro-heading text-uppercase">Software<br />Engineer</div>
+                                <div class="intro-body">The sky is the limit.</div>
+                            </div>
+                            <div class="col-md-1 d-none d-md-block">
+                                <a class="carousel-control-next pt-5"
+                                   href="#homepageCarousel"
+                                   role="button"
+                                   data-slide="next">
+                                    <span class="fas fa-chevron-right"
+                                          aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SLIDE TWO: VIDEO -->
+            <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video width="320"
+                           height="240"
+                           loop
+                           autoplay
+                           muted
+                           id="video-2">
+                        <source src="videos/Words.webm"
+                                type="video/webm">
+                        <source src="videos/Words.mp4"
+                                type="video/mp4">
+                    </video>
+                    <div class="intro-text it-video">
+                        <div class="row">
+                            <div class="col-md-1 d-none d-md-block">
+                                <a class="carousel-control-prev pt-5"
+                                   href="#homepageCarousel"
+                                   role="button"
+                                   data-slide="prev">
+                                    <span class="fas fa-chevron-left"
+                                          aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </div>
+                            <div class="col-sm-12 col-md-10">
+                                <div class="intro-heading text-uppercase">Website<br />Developer</div>
+                                <div class="intro-body">Full-Stack ASP.NET Specialist.</div>
+                            </div>
+                            <div class="col-md-1 d-none d-md-block">
+                                <a class="carousel-control-next pt-5"
+                                   href="#homepageCarousel"
+                                   role="button"
+                                   data-slide="next">
+                                    <span class="fas fa-chevron-right"
+                                          aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SLIDE THREE: VIDEO -->
+            <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video width="320"
+                           height="240"
+                           loop
+                           autoplay
+                           muted
+                           id="video-1">
+                        <source src="videos/Love-Coding.webm"
+                                type="video/webm">
+                        <source src="videos/Love-Coding.mp4"
+                                type="video/mp4">
+                    </video>
+                    <div class="intro-text it-video">
+                        <div class="row">
+                            <div class="col-md-1 d-none d-md-block">
+                                <a class="carousel-control-prev pt-5"
+                                   href="#homepageCarousel"
+                                   role="button"
+                                   data-slide="prev">
+                                    <span class="fas fa-chevron-left"
+                                          aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </div>
+                            <div class="col-sm-12 col-md-10">
+                                <div class="intro-heading text-uppercase">Tech<br />Enthusiast</div>
+                                <div class="intro-body">Always learning.</div>
+                            </div>
+                            <div class="col-md-1 d-none d-md-block">
+                                <a class="carousel-control-next pt-5"
+                                   href="#homepageCarousel"
+                                   role="button"
+                                   data-slide="next">
+                                    <span class="fas fa-chevron-right"
+                                          aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev d-md-none"
+           href="#homepageCarousel"
+           role="button"
+           data-slide="prev">
+            <span class="fas fa-chevron-left"
+                  aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next d-md-none"
+           href="#homepageCarousel"
+           role="button"
+           data-slide="next">
+            <span class="fas fa-chevron-right"
+                  aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services"
+         class="section">
+    <div class="container">
+        <!-- SERVICES: HEAD -->
+        <div class="row pt-4">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading text-uppercase">Services</h1>
+                <h3 class="section-subheading text-muted text-light-gray">
+                    From the back end to the front end, website development is my specialty.
+                </h3>
+            </div>
+        </div>
+        <!-- SERVICES: ROW ONE -->
+        <div class="row mt-md-5">
+            <!-- ASP.NET -->
+            <div class="col-md-4 text-center">
+                <a href="https://dotnet.microsoft.com/"
+                   class="service-logo"
+                   aria-label="View Microsoft ASP.NET website"
+                   title="View Microsoft ASP.NET page"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <div style="font-size: 150px; padding-top: 37px;">
+                        <i class="icon-net-core"></i>
+                    </div>
+                </a>
+                <a href="https://dotnet.microsoft.com/"
+                   class="no-underline"
+                   aria-label="View Microsoft ASP.NET website"
+                   title="View Microsoft ASP.NET page"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <h2>Microsoft ASP.NET</h2>
+                </a>
+                <p>
+                    Microsofts server-side web application framework ASP.NET Core is the underlying
+                    service that drives a website. I've crafted my career around ASP.NET technology
+                    and its become a part of whom I am over several years of development. All in
+                    all ASP.NET has been an absolute pleasure to work with.
+                </p>
+            </div>
+            <!-- DOCKER -->
+            <div class="col-md-4 text-center">
+                <a href="https://www.docker.com/"
+                   class="service-logo"
+                   aria-label="View Docker website"
+                   title="View Docker website"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <i class="fab fa-docker"></i>
+                </a>
+                <a href="https://www.docker.com/"
+                   class="no-underline"
+                   aria-label="View Docker website"
+                   title="View Docker website"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <h2>Docker</h2>
+                </a>
+                <p>
+                    Docker is a useful tool that I use to wrap up web applications into containers
+                    before deploying them to a cloud host. Docker containers are, in a sense, mini
+                    computers that house and serve websites. These websites can be scaled up
+                    rapidly to meet demand or scaled down to save resources.
+                </p>
+            </div>
+            <!-- CLOUD -->
+            <div class="col-md-4 text-center">
+                <a href="https://azure.microsoft.com/"
+                   class="service-logo"
+                   aria-label="View Microsoft Azure website"
+                   title="View Microsoft Azure website"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <i class="fas fa-cloud"></i>
+                </a>
+                <a href="https://azure.microsoft.com/"
+                   class="no-underline"
+                   aria-label="View Microsoft Azure website"
+                   title="View Microsoft Azure website"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <h2>Cloud Services</h2>
+                </a>
+                <p>
+                    Cloud computing is not a new technology, but how it works with web applications
+                    has significantly improved over the past few years. Using the cloud, you're able
+                    to use tools such as scalable container services, giving you greater control over
+                    how your website is scaled and distributed.
+                </p>
+            </div>
+        </div>
+        <!-- SERVICES: ROW TWO -->
+        <div class="row mt-md-5">
+            <!-- ANGULAR -->
+            <div class="col-md-4 text-center">
+                <a href="/angular"
+                   class="service-logo"
+                   aria-label="View Cody Tolene's Angular page"
+                   title="View Cody Tolene's Angular page"
+                   target="_self">
+                    <i class="fab fa-angular"></i>
+                </a>
+                <a href="/angular"
+                   class="no-underline"
+                   aria-label="View Cody Tolene's Angular page"
+                   title="View Cody Tolene's Angular page"
+                   target="_self">
+                    <h2>Google Angular</h2>
+                </a>
+                <p>
+                    Developing with Angular is so much fun. I've used Angular since the early days of AngularJS and
+                    watched the framework evolve into its own platform. Angular is an MVC framework utilizing TypeScript
+                    which gives us developers a powerful toolset to build superior, interactive applications.
+                </p>
+            </div>
+            <!-- REACT -->
+            <div class="col-md-4 text-center">
+                <a href="/react"
+                   class="service-logo"
+                   aria-label="View Cody Tolene's React page"
+                   title="View Cody Tolene's React page"
+                   target="_self">
+                    <i class="fab fa-react"></i>
+                </a>
+                <a href="/react"
+                   class="no-underline"
+                   aria-label="View Cody Tolene's React page"
+                   title="View Cody Tolene's React page"
+                   target="_self">
+                    <h2>Facebook React</h2>
+                </a>
+                <p>
+                    React is another great library that I like to incorporate into my projects when Angular is too much
+                    power for the needs of the application. React lacks the MC in MVC (without plugins) but it's
+                    a great go-to for quick, reusable UI components. I prefer Angular over a plugged React for SPA's.
+                </p>
+            </div>
+            <!-- HTML5/CSS3 -->
+            <div class="col-md-4 text-center">
+                <a href="https://en.wikipedia.org/wiki/HTML5"
+                   class="service-logo"
+                   aria-label="View HTML5 Wikipedia entry"
+                   title="View HTML5 Wikipedia entry"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <i class="fab fa-html5"></i>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/HTML5"
+                   class="no-underline"
+                   aria-label="View HTML5 Wikipedia entry"
+                   title="View HTML5 Wikipedia entry"
+                   rel="nofollow noreferrer noopener"
+                   target="_blank">
+                    <h2>HTML5 / CSS3</h2>
+                </a>
+                <p>
+                    Ah, good old HTML and CSS. We all know or have at least heard of this technology (unless you live
+                    under a rock) but I feel it's still worth mentioning as it's the basic skill of any web developer.
+                    I always design my landing pages with a mobile first approach and with pixel perfect precision!
+                </p>
+            </div>
+        </div>
+        <!-- SERVICES: FOOT -->
+        <div class="row mt-5 mb-5">
+            <div class="col-12 text-center pt-3">
+                <h3 class="text-light-gray">Reach out and say hello!</h3>
+                <a href="#contact"
+                   class="btn btn-lg btn-outline-theme scroll-trigger mt-3">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about"
+         class="section bg-light text-dark">
+    <div class="container pt-4">
+        <!-- ABOUT: HEAD-->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading text-uppercase text-black">About</h1>
+                <h3 class="section-subheading text-muted">Hey there, I'm Cody. It's nice to meet you!</h3>
+            </div>
+        </div>
+        <!-- ABOUT: ROW ONE -->
+        <div class="row mt-5">
+            <!-- IMAGE MOBILE -->
+            <div class="col-lg-6 pb-5 d-lg-none text-center">
+                <img src="images/ct/cody.png"
+                     class="img-fluid align-self-center"
+                     style="max-height: 450px;" />
+            </div>
+            <!-- INFO -->
+            <div class="col-lg-6 pt-md-3">
+                <h4 class="text-black">My story as a developer</h4>
+                <p>
+                    Since beginning my journey in software development over 15 years ago, I've had the pleasure of
+                    working with a vast amount of technologies from game and mobile development to full stack web
+                    design. During this time I've become accustom to a wide variety of development concepts and
+                    strategies that have allowed me to become an effective developer across many technologies.
+                </p>
+                <p>
+                    With that said, full stack web development has been my main focus for the past half a decade
+                    and it's what I've decided to build my career on. From the back-end to the front-end, I'm very
+                    passionate about web design in all aspects and I continue to push new boundaries with it every
+                    day. Keeping up with latest and greatest in web innovation and technology, I'm always eager to
+                    apply new concepts and functionality that is both fun for me to develop and great for the consumer.
+                </p>
+            </div>
+            <!-- IMAGE PC -->
+            <div class="col-md-6 pt-3 d-none d-lg-block text-center">
+                <img src="images/ct/cody.png"
+                     class="img-fluid align-self-center"
+                     style="max-height: 450px;" />
+            </div>
+        </div>
+        <!-- ABOUT: FOOT -->
+        <div class="row mt-5 mb-5">
+            <div class="col-12 text-center pt-0 pt-md-5">
+                <h3>
+                    You have one life, you work hard, you gain xp, you level up.<br />
+                    <i class="fas fa-gamepad mt-4 text-black" style="font-size: 3em;">
+                    </i>
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume"
+         class="section">
+    <div class="container pt-4">
+        <!-- RESUME: HEAD -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading text-uppercase">R&eacute;sum&eacute;</h1>
+                <h3 class="section-subheading text-light-gray">Find out what I've worked with over the years</h3>
+            </div>
+        </div>
+        <!-- RESUME: ROW ONE -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <h2>Technologies</h2>
+            </div>
+            <div class="col-md-8 pt-2">
+                <div class="row">
+                    <div class="col-sm">
+                        <h5>My development bliss</h5>
+                        <ul>
+                            <li>Microsoft C#</li>
+                            <li>TypeScript / JavaScript</li>
+                            <li>Google AngularJS / Angular (v2-7+)</li>
+                            <li>ASP.NET 4 / ASP.NET Core</li>
+                            <li>Microsoft Azure Platform</li>
+                            <li>Google Cloud Platform</li>
+                            <li>Microsoft IIS</li>
+                            <li>Transact SQL / MySQL</li>
+                            <li>Git</li>
+                            <li>Node.js</li>
+                            <li>Gulp / Grunt / Webpack</li>
+                            <li>Bootstrap 3 & 4</li>
+                            <li>Docker</li>
+                            <li>HTML5</li>
+                            <li>CSS3 / LESS / SASS</li>
+                            <li>VS Pro / VS Code</li>
+                            <li>Postman / Fiddler</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm">
+                        <h5>Other Experience</h5>
+                        <ul>
+                            <li>C++, AS3, VB</li>
+                            <li>Agile Workflows</li>
+                            <li>Amazon Web Services (EC2)</li>
+                            <li>Kubernetes (limited)</li>
+                            <li>Linux</li>
+                            <li>DotNetNuke (DNN)</li>
+                            <li>Wordpress (limited)</li>
+                            <li>NoSQL (limited)</li>
+                            <li>Microsoft Suite (Excel, Word, et al.)</li>
+                            <li>Adobe Suite (Photoshop, Illustrator, Flash/Animate, et al.)</li>
+                            <li>Unity 3D (game development)</li>
+                            <li>3DS Max (limited)</li>
+                            <li>React (limited)</li>
+                            <li>Windows Software Development</li>
+                            <li>Batch Script / PowerShell Task Automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- RESUME: ROW TWO -->
+        <div class="row mt-md-5">
+            <div class="col-md-4">
+                <h2>Work Experience</h2>
+            </div>
+            <div class="col-md-8 pt-2">
+                <div class="row pb-2">
+                    <div class="col-12">
+                        <h5>Full Stack Web Development Specialist</h5>
+                        <a href="https://www.ricelake.com"
+                           rel="noreferrer nofollow noopener"
+                           aria-label="Visit Rice Lake Weighing System's Website"
+                           title="Visit Rice Lake Weighing System's Website"
+                           target="_blank">
+                            Rice Lake Weighing Systems
+                        </a>,
+                        Rice Lake, WI. <strong>May 2015 - June 2019</strong>
+                        <p>
+                            <!--Test sentence.-->
+                        </p>
+                    </div>
+                </div>
+                <div class="row pt-2 pb-2">
+                    <div class="col-12">
+                        <h5>Computer & Network Support Services</h5>
+                        <a href="https://en.wikipedia.org/wiki/Freelancer"
+                           rel="noreferrer nofollow noopener"
+                           aria-label="View freelancer Wikipedia entry"
+                           title="View freelancer Wikipedia entry"
+                           target="_blank">
+                            Freelancer
+                        </a>,
+                        Rice Lake, WI. <strong>2012 - 2015</strong>
+                        <p>
+                            <!--Test sentence.-->
+                        </p>
+                    </div>
+                </div>
+                <div class="row pt-2 pb-2">
+                    <div class="col-12">
+                        <h5>Data Analyst</h5>
+                        <a href="https://www.crossmark.com/"
+                           rel="noreferrer nofollow noopener"
+                           aria-label="Visit Crossmark's Website"
+                           title="Visit Crossmark's Website"
+                           target="_blank">
+                            Crossmark
+                        </a>,
+                        Varied, WI. <strong>2009 - 2011</strong>
+                        <p>
+                            <!--Test sentence.-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- RESUME: ROW THREE -->
+        <div class="row mt-md-5">
+            <div class="col-md-4">
+                <h2>Education</h2>
+            </div>
+            <div class="col-md-8 pt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Bachelor of Science in Game & Simulation Programming</h5>
+                        <a href="https://www.devry.edu/"
+                           rel="noreferrer nofollow noopener"
+                           aria-label="Visit DeVry University's Website"
+                           title="Visit DeVry University's Website"
+                           target="_blank">
+                            DeVry University
+                        </a>,
+                        Chicago, IL. <strong>2008 - 2014</strong>
+                        <p>
+                            <!--Test sentence.-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- RESUME: FOOT-->
+        <div class="row mt-5 mb-5">
+            <div class="col-12 text-center pt-0 pt-md-5">
+                <h3 class="text-light-gray">
+                    Thank you for having a look, friend!<br />
+                    <i class="fas fa-code text-white mt-4" style="font-size: 3em;">
+                    </i>
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact"
+         class="section bg-light text-dark">
+    <div class="container">
+        <!-- CONTACT: HEAD-->
+        <div class="row pt-4">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading text-uppercase text-black">Contact</h1>
+                <h3 class="section-subheading text-muted">Drop me a line, I'd love to hear from you!</h3>
+            </div>
+        </div>
+        <!-- CONTACT: ROW ONE -->
+        <div class="row mt-5 mb-2 text-center">
+            <!-- TWITTER -->
+            <div class="col-md-4">
+                <a href="https://twitter.com/codytolene"
+                   class="service-logo"
+                   aria-label="Navigate to Cody Tolene's Twitter page."
+                   title="Navigate to Cody Tolene's Twitter page."
+                   target="_blank"
+                   rel="nofollow noopener noreferrer">
+                    <i class="fab fa-twitter" alt="Twitter"></i>
+                </a>
+                <a href="https://twitter.com/codytolene"
+                   class="no-underline"
+                   aria-label="Navigate to Cody Tolene's Twitter page."
+                   title="Navigate to Cody Tolene's Twitter page."
+                   target="_blank"
+                   rel="nofollow noopener noreferrer">
+                    <h2>Twitter</h2>
+                </a>
+                <p>
+                    Follow me on Twitter!
+                </p>
+            </div>
+            <!-- GITHUB -->
+            <div class="col-md-4">
+                <a href="https://github.com/CodyTolene"
+                   class="service-logo"
+                   aria-label="Navigate to Cody Tolene's GitHub profile page."
+                   title="Navigate to Cody Tolene's GitHub profile page."
+                   target="_blank"
+                   rel="nofollow noopener noreferrer">
+                    <i class="fab fa-github" alt="GitHub"></i>
+                </a>
+                <a href="https://github.com/CodyTolene"
+                   class="no-underline"
+                   aria-label="Navigate to Cody Tolene's GitHub profile page."
+                   title="Navigate to Cody Tolene's GitHub profile page."
+                   target="_blank"
+                   rel="nofollow noopener noreferrer">
+                    <h2>GitHub</h2>
+                </a>
+                <p>
+                    Fork me on GitHub!
+                </p>
+            </div>
+            <!-- LINKEDIN -->
+            <div class="col-md-4">
+                <a href="https://www.linkedin.com/in/codytolene/"
+                   class="service-logo"
+                   aria-label="Navigate to Cody Tolene's LinkedIn profile page."
+                   title="Navigate to Cody Tolene's LinkedIn profile page."
+                   target="_blank"
+                   rel="nofollow noopener noreferrer">
+                    <i class="fab fa-linkedin" alt="LinkedIn"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/codytolene/"
+                   class="no-underline"
+                   aria-label="Navigate to Cody Tolene's LinkedIn profile page."
+                   title="Navigate to Cody Tolene's LinkedIn profile page."
+                   target="_blank"
+                   rel="nofollow noopener noreferrer">
+                    <h2>LinkedIn</h2>
+                </a>
+                <p>
+                    Send me a connection request on LinkedIn!
+                </p>
+            </div>
+        </div>
+        <!-- CONTACT: ROW TWO-->
+        <div class="row mt-5 mb-5 text-center">
+            <!-- EMAIL -->
+            <div class="col-md-6">
+                <a href="email:webmaster@codytolene.com"
+                   class="service-logo"
+                   aria-label="Click to send an email using your email client"
+                   title="Click to send an email using your email client">
+                    <i class="fas fa-envelope-open-text"></i>
+                </a>
+                <a href="email:webmaster@codytolene.com"
+                   class="no-underline"
+                   aria-label="Click to send an email using your email client"
+                   title="Click to send an email using your email client">
+                    <h2>webmaster@codytolene.com</h2>
+                </a>
+                <p>
+                    Send me an email and I'll follow up with you as soon as possible.
+                </p>
+            </div>
+            <!-- PHONE -->
+            <div class="col-md-6">
+                <a href="tel:7155013915"
+                   class="service-logo"
+                   aria-label="Click to call Cody Tolene"
+                   title="Click to call Cody Tolene">
+                    <i class="fas fa-phone-square"></i>
+                </a>
+                <a href="tel:7155013915"
+                   class="no-underline"
+                   aria-label="Click to call Cody Tolene"
+                   title="Click to call Cody Tolene">
+                    <h2>(715) 501-3915</h2>
+                </a>
+                <p>
+                    If I'm not available to answer please leave a message.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

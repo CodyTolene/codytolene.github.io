@@ -1,84 +1,119 @@
-/// <binding ProjectOpened='Auto-Compile-Production' />
+/// <binding ProjectOpened='Auto-Compile' />
 'use-strict';
 
-var gulp = require('gulp');
 var concat = require('gulp-concat');
+var del = require('del');
+var gulp = require('gulp');
+var prettyHtml = require('gulp-pretty-html');
+var removeEmptyLines = require('gulp-remove-empty-lines');
+var nunjucksRender = require('gulp-nunjucks-render');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var del = require('del');
 sass.compiler = require('node-sass');
+
+/**
+ * VENDOR SCRIPT INCLUDES
+ * 
+ * List here all vendor Javascript files you would like to include into the production compilation.
+ */
+var vendorScripts = [
+    'node_modules/jquery/dist/jquery.min.js',               // jQuery                               // MIT
+    'node_modules/jquery.easing/jquery.easing.min.js',      // jQuery Easing                        // BSD - Must include copyright in source
+    'node_modules/jquery-parallax.js/parallax.min.js',      // jQuery Parallax                      // MIT
+    'node_modules/popper.js/dist/umd/popper.min.js',        // Popper (Bootstrap dependency)        // MIT
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',      // Bootstrap                            // MIT
+    'node_modules/mdbootstrap/js/mdb.min.js',               // Material Design Bootstrap Free  
+    'node_modules/cookieconsent/build/cookieconsent.min.js',// MIT
+    'node_modules/particles.js/particles.js'                // MIT
+];
 
 /**
  * COMPILE SCRIPTS
  * 
- * This function takes all JS within '~/scripts' and compiles them into '~/www/scripts/dist'.
- * 
- * Files will be suffixed with '.dev' or '.min' depending on 'isProduction'.
- * if(!isProduction) = On completion, your site scripts are ready to be tested using development files (!minified & !uglified).
- * if(isProduction)  = On completion, your site scripts will be production ready (minified & uglified).
+ * This function takes all JS within '~/dev/scripts' and compiles them into '~/docs/scripts'.
+ * On completion, site scripts will be production ready (minified & uglified).
  */
-async function compileNewScripts(isProduction) {
-    console.log(`${await getCurrentTime()} Compiling '~/scripts' into 'www/scripts/dist' suffixed with '.${isProduction ? 'min' : 'dev'}'.`);
-    if(isProduction){
-        return await gulp.src('scripts/**/*.js')
-            .pipe(uglify({ compress: true, mangle: true })
-                .on('error', function (e) { console.log(e); }))
-            .pipe(rename({ suffix: '.min' }))
-            .pipe(gulp.dest('www/scripts/dist'));
-    } else {
-        return await gulp.src('scripts/**/*.js')
-            .pipe(rename({ suffix: '.dev' }))
-            .pipe(gulp.dest('www/scripts/dist'));
-    }
+async function compileNewScripts() {
+    console.log(`${await getCurrentTime()} Compiling '.js' files within '~/dev/scripts' to '~/docs/scripts' suffixed with '.min'.`);
+    return await gulp.src('dev/scripts/**/*.js')
+        .pipe(uglify({ compress: true, mangle: true })
+            .on('error', function (e) { console.log(e); }))
+        .pipe(concat('global.min.js'))
+        .pipe(gulp.dest('docs/scripts'));
+}
+
+/**
+ * COPY VENDOR SCRIPTS
+ * 
+ * This function takes all vendor scripts within the vendorScripts string array and copys them into '~/docs/scripts'.
+ */
+async function copyVendorScripts() {
+    console.log(`${await getCurrentTime()} Copying vendor '.js' files within vendorArray to '~/docs/scripts'.`);
+    return await gulp.src(vendorScripts)
+        .pipe(concat('vendor.min.js'))
+        .pipe(gulp.dest('docs/scripts'));
 }
 
 /**
  * COMPILE STYLES
  * 
- * This function takes all SCSS within '~/styles' and compiles them into '~/www/styles/dist'.
- * 
- * Files will be suffixed with '.dev' or '.min' depending on 'isProduction'.
- * if(!isProduction) = On completion, your site styles are ready to be tested using development files (!minified).
- * if(isProduction)  = On completion, your site styles will be production ready (minified).
+ * This function takes all SCSS within '~/dev/styles' and compiles them into '~/docs/styles'.
+ * On completion, site styles will be production ready (minified).
  */
-async function compileNewStyles(isProduction) {
-    console.log(`${await getCurrentTime()} Compiling '~/styles' into 'www/styles/dist' suffixed with '.${isProduction ? 'min' : 'dev'}'.`);
-    if(isProduction){
-        return await gulp.src('styles/**/*.scss')
-            .pipe(sass({ outputStyle: 'compressed' })
-                .on('error', sass.logError))
-            .pipe(rename({ suffix: '.min' }))
-            .pipe(gulp.dest('www/styles/dist'));
-    } else {
-        return await gulp.src('styles/**/*.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(rename({ suffix: '.dev' }))
-            .pipe(gulp.dest('www/styles/dist'));
-    }
+async function compileNewStyles() {
+    console.log(`${await getCurrentTime()} Compiling '.scss' files within '~/dev/styles' to '~/docs/styles' suffixed with '.min'.`);
+    return await gulp.src('dev/styles/**/*.scss')
+        .pipe(sass({ outputStyle: 'compressed' })
+            .on('error', sass.logError))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('docs/styles'));
+}
+
+/**
+ * COMPILE HTML (Nunjucks)
+ * 
+ * Take all files within '~/dev/pages' and compile them into '~/docs'
+ */
+async function compileMarkup() {
+    console.log(`${await getCurrentTime()} Compiling '.html' files within '~/dev/pages' to '~/docs'.`);
+    return await gulp.src('dev/pages/*.html')
+        .pipe(nunjucksRender({
+            path: ['dev/pages/templates']
+        }).on('error', function (e) { console.log(e); }))
+        .pipe(prettyHtml({
+            preserve_newlines: true,
+            max_preserve_newlines: 0,
+            end_with_newline: true,
+            wrap_attributes: 'auto'
+        }))
+        .pipe(removeEmptyLines({
+            removeComments: true
+        }))
+        .pipe(gulp.dest('docs'));
 }
 
 /**
  * REMOVE OLD SCRIPTS
  * 
- * This function removes all previously compiled JavaScript '.dev' and '.min' files from '~/www/scripts/dist'.
+ * This function removes all previously compiled JavaScript files from '~/docs/scripts'.
  */
 async function removeOldScripts() {
-    console.log(`${await getCurrentTime()} Deleting all '.min' & '.dev' files within '~/www/scripts/dist'`);
+    console.log(`${await getCurrentTime()} Deleting all '.js' files within '~/docs/scripts'`);
     return await del([
-        'www/scripts/dist/**/*.js'
+        'docs/scripts/**/*.js'
     ]);
 }
 
 /**
  * REMOVE OLD STYLES
  * 
- * This function removes all previously compiled CSS '.dev' and '.min' files from '~/www/styles/dist'.
+ * This function removes all previously compiled CSS files from '~/docs/styles'.
  */
 async function removeOldStyles() {
-    console.log(`${await getCurrentTime()} Deleting all '.min' & '.dev' files within '~/www/styles/dist'`);
+    console.log(`${await getCurrentTime()} Deleting all '.css' files within '~/docs/styles'`);
     return await del([
-        'www/styles/dist/**/*.css'
+        'docs/styles/**/*.css'
     ]);
 }
 
@@ -87,64 +122,35 @@ async function removeOldStyles() {
  * Returns [HH:MM:SS]
  */
 async function getCurrentTime() {
-    var currentdate = new Date(); 
+    var currentdate = new Date();
     return await '[' + (currentdate.getHours() < 10 ? '0' + currentdate.getHours() : currentdate.getHours()) +
-                 ':' + (currentdate.getMinutes() < 10 ? '0' + currentdate.getMinutes() : currentdate.getMinutes()) + 
-                 ':' + (currentdate.getSeconds() < 10 ? '0' + currentdate.getSeconds() : currentdate.getSeconds()) + ']';
+        ':' + (currentdate.getMinutes() < 10 ? '0' + currentdate.getMinutes() : currentdate.getMinutes()) +
+        ':' + (currentdate.getSeconds() < 10 ? '0' + currentdate.getSeconds() : currentdate.getSeconds()) + ']';
 }
 
 /**
- * DEVELOPMENT RUN (SINGLE)
- * 
- * CLI:
- * $gulp Development
+ * Compile
+ * CLI: $gulp Compile
  */
-gulp.task('Development', async function() {
-    console.log(`${await getCurrentTime()} Development task initiated. See 'gulpfile.js' for process definitions.`);
-    return await [ 
-        await removeOldScripts(), 
-        await compileNewScripts(false),
+gulp.task('Compile', async function () {
+    console.log(`${await getCurrentTime()} Compile task initiated. See 'gulpfile.js' for process definitions.`);
+    return await [
+        await compileMarkup(),
+        await removeOldScripts(),
+        await compileNewScripts(),
+        await copyVendorScripts(),
         await removeOldStyles(),
-        await compileNewStyles(false)
+        await compileNewStyles()
     ];
 });
 
 /**
- * PRODUCTION RUN (SINGLE)
- * 
- * CLI:
- * $gulp Production
+ * Auto-Compile
+ * CLI: $gulp Auto-Compile
  */
-gulp.task('Production', async function() {
-    console.log(`${await getCurrentTime()} Production task initiated. See 'gulpfile.js' for process definitions.`);
-    return await [ 
-        await removeOldScripts(), 
-        await compileNewScripts(true),
-        await removeOldStyles(), 
-        await compileNewStyles(true)
-    ];
-});
-
- /**
- * DEVELOPMENT RUN (AUTO-COMPILED)
- * 
- * CLI:
- * $gulp Auto-Compile-Development
- */
-gulp.task('Auto-Compile-Development', async function() {
-    console.log(`${await getCurrentTime()} Auto-Compile-Development task initiated. See 'gulpfile.js' for process definitions.`);
-    gulp.watch(['scripts/**/*.js'], async function () { return await [ await removeOldScripts(), await compileNewScripts(false) ];});
-    gulp.watch(['styles/**/*.scss'], async function () { return await [ await removeOldStyles(), await compileNewStyles(false) ];});
-});
-
- /**
- * PRODUCTION RUN (AUTO-COMPILED)
- * 
- * CLI:
- * $gulp Auto-Compile-Production
- */
-gulp.task('Auto-Compile-Production', async function() {
-    console.log(`${await getCurrentTime()} Auto-Compile-Production task initiated. See 'gulpfile.js' for process definitions.`);
-    gulp.watch(['scripts/**/*.js'], async function () { return await [ await removeOldScripts(), await compileNewScripts(true) ];});
-    gulp.watch(['styles/**/*.scss'], async function () { return await [ await removeOldStyles(), await compileNewStyles(true) ];});
+gulp.task('Auto-Compile', async function () {
+    console.log(`${await getCurrentTime()} Auto-Compile task initiated. See 'gulpfile.js' for process definitions.`);
+    gulp.watch(['dev/scripts/**/*.js'], async function () { return await [await removeOldScripts(), await compileNewScripts(), await copyVendorScripts()]; });
+    gulp.watch(['dev/styles/**/*.scss'], async function () { return await [await removeOldStyles(), await compileNewStyles()]; });
+    gulp.watch(['dev/pages/**/*.html'], async function () { return await compileMarkup(); });
 });

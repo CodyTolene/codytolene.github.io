@@ -1,0 +1,23 @@
+﻿/**
+ * Bootstrap
+*/
+
+@import 'Typography';
+@import 'Palette';
+
+$body-bg: $theme_dark_gray;
+$body-color: $theme_dark_gray;
+$theme-colors: ( "primary": $theme_light_green, "dark": $theme_light_gray );
+$font-family-base: 'Prosto One', cursive;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Includes
+
+.pt-100 {
+    padding-top: 100px !important;
+}
+
+.pt-200 {
+    padding-top: 200px !important;
+}

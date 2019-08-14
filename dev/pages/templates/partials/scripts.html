@@ -1,0 +1,13 @@
+﻿
+<!-- VENDOR SCRIPTS -->
+<script type="text/javascript" src="scripts/vendor.min.js"></script>
+<!-- GLOBAL SCRIPS -->
+<script type="text/javascript" src="scripts/global.min.js"></script>
+<!-- CONDITIONAL SCRIPTS -->
+{% if activeTitle == 'angular' %}
+<script type="text/javascript" src="angular/dist/runtime.js"></script>
+<script type="text/javascript" src="angular/dist/es2015-polyfills.js" nomodule></script>
+<script type="text/javascript" src="angular/dist/polyfills.js"></script>
+<script type="text/javascript" src="angular/dist/styles.js"></script>
+<script type="text/javascript" src="angular/dist/main.js"></script>
+{% endif %}
