@@ -11,23 +11,23 @@ This website repo was specifically designed to work with GitHub Pages using a wi
 
 ## Development
 ### Compiles "\~/dev/scripts/\*\*/\*.js", "\~/dev/styles/\*\*/\*.scss", and "\~/dev/pages/\*\*/\*.html"
-Install dependencies (dir: "\~/")
+Install dependencies:
 ```
 npm install
 ```
-Development Build
+Development Build:
 ```
 npm run dev
 ```
-Development Build Auto-Compile
+Development Build Auto-Compile:
 ```
 npm run devac
 ```
-Production Build
+Production Build:
 ```
 npm run prd
 ```
-Production Build Auto-Compile
+Production Build Auto-Compile:
 ```
 npm run prdac
 ```
@@ -35,15 +35,15 @@ npm run prdac
 
 
 ## Angular Development
-Install dependencies (dir: "\~/dev/angular")
+Install dependencies:
 ```
-npm install
+npm install --prefix dev/angular
 ```
-Development Build Auto-Compile
+Development Build Auto-Compile:
 ```
 npm run ngdev
 ```
-Production Build
+Production Build:
 ```
 npm run ngprd
 ```
@@ -51,7 +51,7 @@ npm run ngprd
 
 
 ## React Development
-... This section coming soon
+... This section is coming soon
 
 
 
