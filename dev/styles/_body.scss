@@ -44,14 +44,6 @@ body {
         min-height: 300px;
         background-color: $theme_mid_gray;
         word-break: break-word;
-
-        .service-logo {
-            font-size: 175px;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
     }
 
     .container-staged {

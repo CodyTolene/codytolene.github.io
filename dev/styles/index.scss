@@ -5,3 +5,14 @@
 
 @import 'Carousel';
 @import 'GitHubCallout';
+
+.section {
+    .service-logo,
+    .contact-logo {
+        font-size: 175px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
