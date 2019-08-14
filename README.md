@@ -10,8 +10,8 @@ This website repo was specifically designed to work with GitHub Pages using a wi
 
 
 ## Development
-### Compiles "~/dev/scripts/**/*.js", "~/dev/styles/**/*.scss", and "~/dev/pages/**/*.html"
-Install dependencies (dir: "~/")
+### Compiles "~/\dev/\scripts/\**/\*.js", "~/\dev/\styles/\**/\*.scss", and "~/\dev/\pages/\**/\*.html"
+Install dependencies (dir: "~/\")
 ```
 npm install
 ```
@@ -35,7 +35,7 @@ npm run prdac
 
 
 ## Angular Development
-Install dependencies (dir: "~/dev/angular")
+Install dependencies (dir: "~/\dev/\angular")
 ```
 npm install
 ```
