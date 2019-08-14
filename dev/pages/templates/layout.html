@@ -1,15 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <!-- META -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="description" content="{{ metaDesc }}" />
     <meta name="keywords" content="{{ metaKeyw }}" />
     <meta name="author" content="Cody Tolene" />
     <meta name="robots" content="all" />
-    <title>{{ pageTitle }} | Cody Tolene</title>
+    <title>{{ pageTitle }} - Cody Tolene</title>
+    <!-- FAV-ICONS -->
+    {% include "partials/fav-icons.html" %}
     <!-- STYLES -->
     {% include "partials/styles.html" %}
     <!-- GOOGLE TAG MANAGER -->
@@ -17,7 +19,9 @@
 </head>
 <body id="page-top">
     <!-- GITHUB CALLOUT -->
-    {% if activeTitle == 'index' %}{% include 'partials/github.html' %}{% endif %}
+    {% if activeTitle == 'index' %}
+        {% include 'partials/github.html' %}
+    {% endif %}
     <!-- NAVBAR -->
     {% include "partials/navbar.html" %}
     <!-- CONTENT -->
