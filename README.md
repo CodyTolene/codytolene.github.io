@@ -1,6 +1,6 @@
 # Cody Tolene's Personal Website ([View](https://www.codytolene.com))
 ### About
-This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks, technologies, and resources.
+This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks, technologies, and resources. 
 
 
 
@@ -10,8 +10,8 @@ This website repo was specifically designed to work with GitHub Pages using a wi
 
 
 ## Development
-### Compiles '~/dev/scripts/**/*.js', '~/dev/styles/**/*.scss', '~/dev/pages/**/*.html'
-Install dependencies (dir: '~/')
+### Compiles "~/dev/scripts/**/*.js", "~/dev/styles/**/*.scss", and "~/dev/pages/**/*.html"
+Install dependencies (dir: "~/")
 ```
 npm install
 ```
@@ -35,7 +35,7 @@ npm run prdac
 
 
 ## Angular Development
-Install dependencies (dir: '~/dev/angular')
+Install dependencies (dir: "~/dev/angular")
 ```
 npm install
 ```
@@ -87,4 +87,12 @@ npm run ngprd
 - [x] [Varnish](http://varnish-cache.org/)
 - [x] [Webpack](https://webpack.js.org/)
 - [x] [Zone.js](https://github.com/angular/zone.js/)
+
+
+
+## Notes
+If you are considering hosting a GitHub Pages website with this repo, there are a few things to keep in mind:
+- I compiled everything (website html and assets) to the root directory becaue this is a "username.github.io" repo.
+- If this wasn't a "username.github.io" repo, I would change all compilation export directories to be "~/docs" instead instead of "~/".
+[More information about GitHub Pages publishing sources...](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 

@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "../../docs/angular/dist/out-tsc",
+    "outDir": "../../angular/dist/out-tsc",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "sourceMap": true,

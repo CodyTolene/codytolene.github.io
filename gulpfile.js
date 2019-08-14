@@ -31,52 +31,52 @@ var vendorScripts = [
 /**
  * COMPILE SCRIPTS
  * 
- * This function takes all JS within '~/dev/scripts' and compiles them into '~/docs/scripts'.
+ * This function takes all JS within '~/dev/scripts' and compiles them into '~/scripts'.
  * On completion, site scripts will be production ready (minified & uglified).
  */
 async function compileNewScripts() {
-    console.log(`${await getCurrentTime()} Compiling '.js' files within '~/dev/scripts' to '~/docs/scripts' suffixed with '.min'.`);
+    console.log(`${await getCurrentTime()} Compiling '.js' files within '~/dev/scripts' to '~/scripts' suffixed with '.min'.`);
     return await gulp.src('dev/scripts/**/*.js')
         .pipe(uglify({ compress: true, mangle: true })
             .on('error', function (e) { console.log(e); }))
         .pipe(concat('global.min.js'))
-        .pipe(gulp.dest('docs/scripts'));
+        .pipe(gulp.dest('scripts'));
 }
 
 /**
  * COPY VENDOR SCRIPTS
  * 
- * This function takes all vendor scripts within the vendorScripts string array and copys them into '~/docs/scripts'.
+ * This function takes all vendor scripts within the vendorScripts string array and copys them into '~/scripts'.
  */
 async function copyVendorScripts() {
-    console.log(`${await getCurrentTime()} Copying vendor '.js' files within vendorArray to '~/docs/scripts'.`);
+    console.log(`${await getCurrentTime()} Copying vendor '.js' files within vendorArray to '~/scripts'.`);
     return await gulp.src(vendorScripts)
         .pipe(concat('vendor.min.js'))
-        .pipe(gulp.dest('docs/scripts'));
+        .pipe(gulp.dest('scripts'));
 }
 
 /**
  * COMPILE STYLES
  * 
- * This function takes all SCSS within '~/dev/styles' and compiles them into '~/docs/styles'.
+ * This function takes all SCSS within '~/dev/styles' and compiles them into '~/styles'.
  * On completion, site styles will be production ready (minified).
  */
 async function compileNewStyles() {
-    console.log(`${await getCurrentTime()} Compiling '.scss' files within '~/dev/styles' to '~/docs/styles' suffixed with '.min'.`);
+    console.log(`${await getCurrentTime()} Compiling '.scss' files within '~/dev/styles' to '~/styles' suffixed with '.min'.`);
     return await gulp.src('dev/styles/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' })
             .on('error', sass.logError))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('docs/styles'));
+        .pipe(gulp.dest('styles'));
 }
 
 /**
  * COMPILE HTML (Nunjucks)
  * 
- * Take all files within '~/dev/pages' and compile them into '~/docs'
+ * Take all files within '~/dev/pages' and compile them into '~/'
  */
 async function compileMarkup() {
-    console.log(`${await getCurrentTime()} Compiling '.html' files within '~/dev/pages' to '~/docs'.`);
+    console.log(`${await getCurrentTime()} Compiling '.html' files within '~/dev/pages' to '~/'.`);
     return await gulp.src('dev/pages/*.html')
         .pipe(nunjucksRender({
             path: ['dev/pages/templates']
@@ -90,30 +90,30 @@ async function compileMarkup() {
         .pipe(removeEmptyLines({
             removeComments: true
         }))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest('./'));
 }
 
 /**
  * REMOVE OLD SCRIPTS
  * 
- * This function removes all previously compiled JavaScript files from '~/docs/scripts'.
+ * This function removes all previously compiled JavaScript files from '~/scripts'.
  */
 async function removeOldScripts() {
-    console.log(`${await getCurrentTime()} Deleting all '.js' files within '~/docs/scripts'`);
+    console.log(`${await getCurrentTime()} Deleting all '.js' files within '~/scripts'`);
     return await del([
-        'docs/scripts/**/*.js'
+        'scripts/**/*.js'
     ]);
 }
 
 /**
  * REMOVE OLD STYLES
  * 
- * This function removes all previously compiled CSS files from '~/docs/styles'.
+ * This function removes all previously compiled CSS files from '~/styles'.
  */
 async function removeOldStyles() {
-    console.log(`${await getCurrentTime()} Deleting all '.css' files within '~/docs/styles'`);
+    console.log(`${await getCurrentTime()} Deleting all '.css' files within '~/styles'`);
     return await del([
-        'docs/styles/**/*.css'
+        'styles/**/*.css'
     ]);
 }
 
