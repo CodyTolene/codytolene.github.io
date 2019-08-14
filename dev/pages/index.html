@@ -20,35 +20,15 @@
             <li data-target="#homepageCarousel"
                 data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner container-fluid p-0">
             <!-- SLIDE ONE: GALAXY -->
             <div class="carousel-item active">
                 <div id="particles-js">
                     <div class="intro-text">
                         <div class="row">
-                            <div class="col-md-1 d-none d-md-block">
-                                <a class="carousel-control-prev pt-5"
-                                   href="#homepageCarousel"
-                                   role="button"
-                                   data-slide="prev">
-                                    <span class="fas fa-chevron-left"
-                                          aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                            </div>
-                            <div class="col-sm-12 col-md-10">
+                            <div class="col-12 col-md-10 offset-md-1">
                                 <div class="intro-heading text-uppercase">Software<br />Engineer</div>
                                 <div class="intro-body">The sky is the limit.</div>
-                            </div>
-                            <div class="col-md-1 d-none d-md-block">
-                                <a class="carousel-control-next pt-5"
-                                   href="#homepageCarousel"
-                                   role="button"
-                                   data-slide="next">
-                                    <span class="fas fa-chevron-right"
-                                          aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -68,32 +48,12 @@
                         <source src="videos/Words.mp4"
                                 type="video/mp4">
                     </video>
-                    <div class="intro-text it-video">
-                        <div class="row">
-                            <div class="col-md-1 d-none d-md-block">
-                                <a class="carousel-control-prev pt-5"
-                                   href="#homepageCarousel"
-                                   role="button"
-                                   data-slide="prev">
-                                    <span class="fas fa-chevron-left"
-                                          aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                            </div>
-                            <div class="col-sm-12 col-md-10">
-                                <div class="intro-heading text-uppercase">Website<br />Developer</div>
-                                <div class="intro-body">Full-Stack ASP.NET Specialist.</div>
-                            </div>
-                            <div class="col-md-1 d-none d-md-block">
-                                <a class="carousel-control-next pt-5"
-                                   href="#homepageCarousel"
-                                   role="button"
-                                   data-slide="next">
-                                    <span class="fas fa-chevron-right"
-                                          aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
+                </div>
+                <div class="intro-text">
+                    <div class="row">
+                        <div class="col-12 col-md-10 offset-md-1">
+                            <div class="intro-heading text-uppercase">Website<br />Developer</div>
+                            <div class="intro-body">Full-Stack ASP.NET Specialist.</div>
                         </div>
                     </div>
                 </div>
@@ -112,50 +72,31 @@
                         <source src="videos/Love-Coding.mp4"
                                 type="video/mp4">
                     </video>
-                    <div class="intro-text it-video">
-                        <div class="row">
-                            <div class="col-md-1 d-none d-md-block">
-                                <a class="carousel-control-prev pt-5"
-                                   href="#homepageCarousel"
-                                   role="button"
-                                   data-slide="prev">
-                                    <span class="fas fa-chevron-left"
-                                          aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                            </div>
-                            <div class="col-sm-12 col-md-10">
-                                <div class="intro-heading text-uppercase">Tech<br />Enthusiast</div>
-                                <div class="intro-body">Always learning.</div>
-                            </div>
-                            <div class="col-md-1 d-none d-md-block">
-                                <a class="carousel-control-next pt-5"
-                                   href="#homepageCarousel"
-                                   role="button"
-                                   data-slide="next">
-                                    <span class="fas fa-chevron-right"
-                                          aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
+                </div>
+                <div class="intro-text">
+                    <div class="row">
+                        <div class="col-12 col-md-10 offset-md-1">
+                            <div class="intro-heading text-uppercase">Tech<br />Enthusiast</div>
+                            <div class="intro-body">Always learning.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev d-md-none"
+        <!-- SLIDE CONTROLS -->
+        <a class="carousel-control-prev"
            href="#homepageCarousel"
            role="button"
            data-slide="prev">
-            <span class="fas fa-chevron-left"
+            <span class="fas fa-angle-double-left"
                   aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next d-md-none"
+        <a class="carousel-control-next"
            href="#homepageCarousel"
            role="button"
            data-slide="next">
-            <span class="fas fa-chevron-right"
+            <span class="fas fa-angle-double-right"
                   aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -164,10 +105,10 @@
 
 <!-- SERVICES -->
 <section id="services"
-         class="section">
+         class="section pt-0">
     <div class="container">
         <!-- SERVICES: HEAD -->
-        <div class="row pt-4">
+        <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="section-heading text-uppercase">Services</h1>
                 <h3 class="section-subheading text-muted text-light-gray">
@@ -220,8 +161,8 @@
                     <h2>Google Angular</h2>
                 </a>
                 <p>
-                    Using Angular since the early days of AngularJS, I've watched this framework evolve over the 
-                    years with glee. Angular is an MVC framework utilizing TypeScript which gives us developers 
+                    Using Angular since the early days of AngularJS, I've watched this framework evolve over the
+                    years with glee. Angular is an MVC framework utilizing TypeScript which gives us developers
                     a powerful tool set to build superior, interactive web applications.
                 </p>
             </div>
@@ -244,8 +185,8 @@
                     <h2>Cloud Services</h2>
                 </a>
                 <p>
-                    Experienced with all major flagship cloud providers (Google, Microsoft, Amazon), I 
-                    will get you get your website up and running in no time! Cloud services include everything 
+                    Experienced with all major flagship cloud providers (Google, Microsoft, Amazon), I
+                    will get you get your website up and running in no time! Cloud services include everything
                     from hosting a web application to domain registration.
                 </p>
             </div>
@@ -271,7 +212,7 @@
                     <h2>Docker</h2>
                 </a>
                 <p>
-                    Docker is a tool used to wrap web applications into containers before deploying them to a cloud 
+                    Docker is a tool used to wrap web applications into containers before deploying them to a cloud
                     host. Containers are scalable in both location deployment and resource usage to either save money
                     or meet demand. These are generally requested by clients with large enterprise applications.
                 </p>
@@ -295,7 +236,7 @@
                     <h2>HTML5 / CSS3</h2>
                 </a>
                 <p>
-                    The landing pages I create are designed with a mobile-first approach on up; maintaining pixel 
+                    The landing pages I create are designed with a mobile-first approach on up; maintaining pixel
                     perfect precision on all devices with varying shapes and sizes.
                 </p>
             </div>
