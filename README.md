@@ -1,4 +1,4 @@
-# Cody Tolene's Personal Website ([View](https://www.codytolene.com))
+# Cody Tolene's Personal Website ([www.codytolene.com](https://www.codytolene.com))
 ### About
 This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks, technologies, and resources. 
 
@@ -10,7 +10,8 @@ This website repo was specifically designed to work with GitHub Pages using a wi
 
 
 ## Development
-### Compiles "\~/dev/scripts/\*\*/\*.js", "\~/dev/styles/\*\*/\*.scss", and "\~/dev/pages/\*\*/\*.html"
+***Compiles "\~/dev/scripts/\*\*/\*.js", "\~/dev/styles/\*\*/\*.scss", and "\~/dev/pages/\*\*/\*.html"***
+
 Install dependencies:
 ```
 npm install
@@ -35,6 +36,8 @@ npm run prdac
 
 
 ## Angular Development
+**Compiles "\~/development/angular"**
+
 Install dependencies:
 ```
 npm install --prefix dev/angular
