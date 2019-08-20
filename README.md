@@ -1,4 +1,5 @@
-# Cody Tolene's Personal Website ([www.codytolene.com](https://www.codytolene.com))
+# Cody Tolene's Personal Website 
+## [www.codytolene.com](https://www.codytolene.com)
 ### About
 This website repo was specifically designed to work with GitHub Pages using a wide variety of software stacks, technologies, and resources. 
 
@@ -36,7 +37,7 @@ npm run prdac
 
 
 ## Angular Development
-**Compiles "\~/development/angular"**
+***Compiles "\~/development/angular"***
 
 Install dependencies:
 ```
