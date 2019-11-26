@@ -23,10 +23,8 @@
     "Cody Tolene (https://www.codytolene.com)"
   ],
   "scripts": {
-    "dev": "gulp Development",
-    "prd": "gulp Production",
-    "devac": "gulp Auto-Compile-Development",
-    "prdac": "gulp Auto-Compile-Production",
+    "dev": "gulp Auto-Compile",
+    "prd": "gulp Compile",
     "ngdev": "npm run ngdev --prefix dev/angular",
     "ngprd": "npm run ngprod --prefix dev/angular"
   },
