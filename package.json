@@ -36,8 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier --staged && ng lint && npm run test:silent",
-      "pre-push": "ng build --aot true"
+      "pre-commit": "npm run prettier --staged && ng lint && npm run test:silent && ng build --aot true"
     }
   },
   "dependencies": {
