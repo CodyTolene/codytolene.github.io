@@ -26,18 +26,18 @@
     "ng": "ng",
     "start": "ng serve --open",
     "build": "ng build",
-    "build:prod": "ng build --prod",
+    "build:prod": "ng build --prod --aot=true --source-map=false",
     "test": "ng test",
     "test:silent": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pwa": "http-server -p 8080 -c-1 docs",
-    "prettier": "prettier --write e2e/src/**/*.{ts,js,css,scss,html} src/**/*.{ts,js,css,scss,html}"
+    "prettier": "prettier --staged --write e2e/src/**/*.{ts,js,css,scss,html} src/**/*.{ts,js,css,scss,html}"
   },
   "husky": {
     "hooks": {
       "pre-commit": 
-        "npm run prettier --staged && ng lint && npm run test:silent && ng build --aot=true --source-map=false && git add -A"
+        "npm run prettier && ng lint && npm run test:silent && npm run build:prod && git add -A"
     }
   },
   "dependencies": {
