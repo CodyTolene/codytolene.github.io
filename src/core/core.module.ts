@@ -12,7 +12,9 @@ import { CoreComponent } from './core.component';
   imports: [
     BrowserModule,
     CoreRoutesModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
     NgbModule,
   ],
   providers: [],

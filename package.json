@@ -26,11 +26,11 @@
     "ng": "ng",
     "start": "ng serve --open",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pwa": "http-server -p 8080 -c-1 docs",
-    "prettier": "prettier --write src/**/*.{ts,js,css,scss,html}"
+    "prettier": "prettier --write e2e/src/**/*.{ts,js,css,scss,html} src/**/*.{ts,js,css,scss,html}"
   },
   "husky": {
     "hooks": {
@@ -52,6 +52,7 @@
     "@angular/router": "~10.0.9",
     "@angular/service-worker": "~10.0.9",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
+    "bootstrap": "^4.5.0",
     "component": "^1.1.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

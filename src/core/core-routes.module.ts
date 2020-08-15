@@ -1,26 +1,34 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { CoreComponent } from './core.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    component: CoreComponent,
     children: [
       {
+        loadChildren: () =>
+          import('../pages/index/index.module').then(
+            (module) => module.IndexModule,
+          ),
         path: '',
-        loadChildren: () => import('../pages/index/index.module').then((module) => module.IndexModule),
       },
       {
-        path: 'privacy-policy',
         loadChildren: () =>
-          import('../pages/privacy-policy/privacy-policy.module').then((module) => module.PrivacyPolicyModule),
+          import('../pages/privacy-policy/privacy-policy.module').then(
+            (module) => module.PrivacyPolicyModule,
+          ),
+        path: 'privacy-policy',
       },
     ],
+    component: CoreComponent,
+    path: '',
   },
   {
+    loadChildren: () =>
+      import('../pages/not-found/not-found.module').then(
+        (module) => module.NotFoundModule,
+      ),
     path: '404',
-    loadChildren: () => import('../pages/not-found/not-found.module').then((module) => module.NotFoundModule),
   },
   {
     path: '**',
@@ -29,7 +37,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
 })
 export class CoreRoutesModule {}
