@@ -4,16 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: IndexComponent,
-  }
+  },
 ];
 
 @NgModule({
   declarations: [IndexComponent],
-  imports: [
-    RouterModule.forChild(routes),
-  ],
+  imports: [RouterModule.forChild(routes)],
   providers: [],
 })
-export class IndexModule { }
+export class IndexModule {}

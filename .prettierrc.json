@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/prettierrc",
+  "bracketSpacing": true,
+  "printWidth": 120,
+  "proseWrap": "always",
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": "*.svg",
+      "options": { "parser": "angular" }
+    }
+  ]
+}

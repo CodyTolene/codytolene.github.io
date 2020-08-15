@@ -4,16 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: PrivacyPolicyComponent,
-  }
+  },
 ];
 
 @NgModule({
   declarations: [PrivacyPolicyComponent],
-  imports: [
-    RouterModule.forChild(routes),
-  ],
+  imports: [RouterModule.forChild(routes)],
   providers: [],
 })
-export class PrivacyPolicyModule { }
+export class PrivacyPolicyModule {}

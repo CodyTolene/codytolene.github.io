@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   selector: 'pages-privacy-policy',
   templateUrl: './privacy-policy.component.html',
 })
-export class PrivacyPolicyComponent { }
+export class PrivacyPolicyComponent {}

@@ -13,8 +13,8 @@ import { CoreComponent } from './core.component';
     BrowserModule,
     CoreRoutesModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    NgbModule
+    NgbModule,
   ],
   providers: [],
 })
-export class CoreModule { }
+export class CoreModule {}

@@ -4,32 +4,27 @@ import { CoreComponent } from './core.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: CoreComponent,
     children: [
       {
-        path: "",
-        loadChildren: () =>
-          import("../pages/index/index.module")
-            .then(module => module.IndexModule),
+        path: '',
+        loadChildren: () => import('../pages/index/index.module').then((module) => module.IndexModule),
       },
       {
-        path: "privacy-policy",
+        path: 'privacy-policy',
         loadChildren: () =>
-          import("../pages/privacy-policy/privacy-policy.module")
-            .then(module => module.PrivacyPolicyModule),
+          import('../pages/privacy-policy/privacy-policy.module').then((module) => module.PrivacyPolicyModule),
       },
-    ]
+    ],
   },
   {
-    path: "404",
-    loadChildren: () =>
-      import("../pages/not-found/not-found.module")
-        .then(module => module.NotFoundModule),
+    path: '404',
+    loadChildren: () => import('../pages/not-found/not-found.module').then((module) => module.NotFoundModule),
   },
   {
-    path: "**",
-    redirectTo: "404",
+    path: '**',
+    redirectTo: '404',
   },
 ];
 
@@ -37,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class CoreRoutesModule { }
+export class CoreRoutesModule {}

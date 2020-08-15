@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\core",
+  "SelectedNode": "\\.prettierrc.json",
   "PreviewInSolutionExplorer": false
 }

@@ -29,7 +29,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pwa": "http-server -p 8080 -c-1 docs"
+    "pwa": "http-server -p 8080 -c-1 docs",
+    "prettier": "prettier --write src/**/*.{ts,js,css,scss,html}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier --staged && ng lint && npm test",
+      "pre-push": "ng build --aot true"
+    }
   },
   "dependencies": {
     "@angular/animations": "~10.0.9",
@@ -45,9 +52,7 @@
     "@angular/router": "~10.0.9",
     "@angular/service-worker": "~10.0.9",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
-    "bootstrap": "^4.5.0",
     "component": "^1.1.0",
-    "http-server": "^0.12.3",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -60,9 +65,10 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
-    "http-server": "0.12.3",
+    "http-server": "^0.12.3",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
+    "husky": "^4.2.5",
     "karma": "~5.0.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
@@ -72,6 +78,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.9.5"
   }
 }
