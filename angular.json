@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ct": {
+    "codytolene-github-io": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -131,6 +131,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "codytolene-github-io"
 }
