@@ -5,6 +5,10 @@ import { NotFoundComponent } from './not-found.component';
 const routes: Routes = [
   {
     component: NotFoundComponent,
+    data: {
+      description: "Cody Tolene's Portfolio Website",
+      title: '404: Not Found',
+    },
     path: '',
   },
 ];

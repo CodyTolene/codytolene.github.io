@@ -5,6 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     component: IndexComponent,
+    data: {
+      description: "Cody Tolene's Portfolio Website",
+      title: 'Portfolio',
+    },
     path: '',
   },
 ];
