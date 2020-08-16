@@ -8,6 +8,7 @@ import { SwUpdate } from '@angular/service-worker';
 export class CoreComponent {
   public constructor(private readonly serviceWorkerUpdate: SwUpdate) {
     // Update the service worker on every construct
+    // This fixes and issue with GitHub pages 404 redirect into Angular
     this.serviceWorkerUpdate.activateUpdate();
   }
 }
