@@ -1,21 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PrivacyPolicyComponent } from './privacy-policy.component';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  {
-    component: PrivacyPolicyComponent,
-    data: {
-      description: "Cody Tolene's Portfolio Website Privacy Policy",
-      title: 'Privacy Policy',
-    },
-    path: '',
-  },
-];
+import { routesPrivacyPolicy } from './privacy-policy.routes';
 
 @NgModule({
   declarations: [PrivacyPolicyComponent],
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routesPrivacyPolicy)],
   providers: [],
 })
 export class PrivacyPolicyModule {}

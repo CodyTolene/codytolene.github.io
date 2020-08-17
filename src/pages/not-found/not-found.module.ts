@@ -1,21 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found.component';
-
-const routes: Routes = [
-  {
-    component: NotFoundComponent,
-    data: {
-      description: "Cody Tolene's Portfolio Website",
-      title: '404: Not Found',
-    },
-    path: '',
-  },
-];
+import { routesNotFound } from './not-found.routes';
 
 @NgModule({
   declarations: [NotFoundComponent],
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routesNotFound)],
   providers: [],
 })
 export class NotFoundModule {}

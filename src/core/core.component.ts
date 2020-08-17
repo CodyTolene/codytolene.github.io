@@ -11,6 +11,7 @@ import {
   distinctUntilChanged,
 } from 'rxjs/operators';
 import { SEOService } from './seo/seo.service';
+import { defaultPageMeta } from '../shared/constants';
 
 @Component({
   selector: 'app-core',
@@ -54,16 +55,29 @@ export class CoreComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(componentDestroyed(this)))
       .subscribe((routeData) => {
         if (routeData.title) {
-          this.seo.updateTitle(routeData.title, {
-            trailingTitle: 'Cody Tolene',
+          this.seo.setTitle(routeData.title, {
+            trailingTitle: defaultPageMeta.trailingTitle,
           });
         } else {
           throw new Error('Failed to set page title.');
         }
+
         if (routeData.description) {
-          this.seo.updateMetaDescription(routeData.description);
+          this.seo.setDescription(routeData.description);
         } else {
           console.warn('Failed to set page description.');
+        }
+
+        if (routeData.author) {
+          this.seo.setAuthor(routeData.author);
+        } else {
+          console.warn('Failed to set page author.');
+        }
+
+        if (routeData.keywords) {
+          this.seo.setKeywords(routeData.keywords);
+        } else {
+          console.warn('Failed to set page keywords.');
         }
       });
 

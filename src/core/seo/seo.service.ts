@@ -24,7 +24,7 @@ export class SEOService {
 
   /* DYNAMIC PAGE META */
 
-  public updateTitle(
+  public setTitle(
     title: string,
     {
       trailingTitle,
@@ -35,12 +35,16 @@ export class SEOService {
     this.title.setTitle(trailingTitle ? `${title} - ${trailingTitle}` : title);
   }
 
-  public updateMetaDescription(desccription: string): void {
+  public setDescription(desccription: string): void {
     this.meta.updateTag({ name: 'description', content: desccription });
   }
 
-  public updateMetaKeywords(keywords: string[]): void {
+  public setKeywords(keywords: string[]): void {
     this.meta.updateTag({ name: 'keywords', content: keywords.toString() });
+  }
+
+  public setAuthor(author: string): void {
+    this.meta.updateTag({ name: 'author', content: author });
   }
 
   /* GOOGLE ANALYTICS / TAG MANAGER */

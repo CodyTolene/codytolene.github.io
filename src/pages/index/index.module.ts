@@ -1,21 +1,11 @@
 import { NgModule } from '@angular/core';
 import { IndexComponent } from './index.component';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  {
-    component: IndexComponent,
-    data: {
-      description: "Cody Tolene's Portfolio Website",
-      title: 'Portfolio',
-    },
-    path: '',
-  },
-];
+import { RouterModule } from '@angular/router';
+import { routesIndex } from './index.routes';
 
 @NgModule({
   declarations: [IndexComponent],
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routesIndex)],
   providers: [],
 })
 export class IndexModule {}

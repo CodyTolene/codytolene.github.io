@@ -3,6 +3,7 @@ export interface PageMeta {
   description: string;
   keywords: string[];
   title: string;
+  trailingTitle: string;
 }
 
 export const defaultPageMeta: PageMeta = {
@@ -17,5 +18,6 @@ export const defaultPageMeta: PageMeta = {
     'Website',
     'About',
   ],
-  title: 'Portfolio - Cody Tolene',
+  title: 'Portfolio',
+  trailingTitle: 'Cody Tolene',
 };
