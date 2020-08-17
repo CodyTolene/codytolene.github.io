@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     component: PrivacyPolicyComponent,
     data: {
-      description: "Cody Tolene's Portfolio Website",
+      description: "Cody Tolene's Portfolio Website Privacy Policy",
       title: 'Privacy Policy',
     },
     path: '',

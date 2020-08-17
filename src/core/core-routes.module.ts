@@ -1,6 +1,7 @@
 import { CoreComponent } from './core.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SEOService } from './seo/seo.service';
 
 const routes: Routes = [
   {
@@ -39,5 +40,6 @@ const routes: Routes = [
 @NgModule({
   exports: [RouterModule],
   imports: [RouterModule.forRoot(routes)],
+  providers: [SEOService],
 })
 export class CoreRoutesModule {}

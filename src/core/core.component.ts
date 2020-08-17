@@ -10,17 +10,7 @@ import {
   mergeMap,
   distinctUntilChanged,
 } from 'rxjs/operators';
-import { Title } from '@angular/platform-browser';
-
-// https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-interface GTagEvent {
-  page_location: string | null;
-  page_path: string | null;
-  page_title: string | null;
-  send_page_view: boolean | null;
-}
-
-declare let gtag;
+import { SEOService } from './seo/seo.service';
 
 @Component({
   selector: 'app-core',
@@ -31,7 +21,7 @@ export class CoreComponent implements OnInit, OnDestroy {
     private readonly serviceWorkerUpdate: SwUpdate,
     private readonly activatedRoute: ActivatedRoute,
     private readonly router: Router,
-    private readonly title: Title,
+    private readonly seo: SEOService,
   ) {
     if (environment.production) {
       // Update the service worker on every construct
@@ -62,34 +52,33 @@ export class CoreComponent implements OnInit, OnDestroy {
     // Dynamically set page title from data on route
     this.routeDataChanges
       .pipe(takeUntil(componentDestroyed(this)))
-      .subscribe((routeData) =>
-        this.title.setTitle(routeData.title + ' - Cody Tolene'),
-      );
+      .subscribe((routeData) => {
+        if (routeData.title) {
+          this.seo.updateTitle(routeData.title, {
+            trailingTitle: 'Cody Tolene',
+          });
+        } else {
+          throw new Error('Failed to set page title.');
+        }
+        if (routeData.description) {
+          this.seo.updateMetaDescription(routeData.description);
+        } else {
+          console.warn('Failed to set page description.');
+        }
+      });
 
     // Google analytics
     this.routerNavigationEndChanges
       .pipe(takeUntil(componentDestroyed(this)))
-      .subscribe((event) => this.sendGoogleAnalyticsPageView(event));
+      .subscribe((event) =>
+        this.seo.sendGoogleAnalyticsPageView(
+          event.url,
+          event.urlAfterRedirects,
+        ),
+      );
   }
 
   public ngOnDestroy(): void {
     // Needed for `takeUntil(componentDestroyed(this))`
-  }
-
-  private sendGoogleAnalyticsPageView(event: NavigationEnd): void {
-    if (environment.production) {
-      try {
-        const gtagEvent: GTagEvent = {
-          page_location: event.url,
-          page_path: event.urlAfterRedirects,
-          page_title: null,
-          send_page_view: true,
-        };
-        gtag('js', new Date());
-        gtag('config', 'UA-42346076-7', gtagEvent);
-      } catch (error) {
-        console.warn('Error communicating with Google Analytics', error);
-      }
-    }
   }
 }
