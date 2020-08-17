@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
 import { IndexComponent } from './index.component';
-import { defaultPageMeta } from 'src/shared/constants';
+import { DefaultPageMeta } from 'src/shared/constants';
 
 export const routesIndex: Routes = [
   {
     component: IndexComponent,
     data: {
-      author: defaultPageMeta.author,
-      description: defaultPageMeta.description,
-      keywords: defaultPageMeta.keywords,
-      title: defaultPageMeta.title,
+      author: DefaultPageMeta.author,
+      description: DefaultPageMeta.description,
+      keywords: DefaultPageMeta.keywords,
+      title: DefaultPageMeta.title,
     },
     path: '',
   },

@@ -1,14 +1,16 @@
 export interface PageMeta {
   author: string;
   description: string;
+  googleAnalyticsId: string;
   keywords: string[];
   title: string;
   trailingTitle: string;
 }
 
-export const defaultPageMeta: PageMeta = {
+const defaultPageMeta: PageMeta = {
   author: 'Cody Tolene',
   description: "Cody Tolene's Portfolio Website",
+  googleAnalyticsId: 'UA-42346076-7',
   keywords: [
     'Cody',
     'Tolene',
@@ -21,3 +23,5 @@ export const defaultPageMeta: PageMeta = {
   title: 'Portfolio',
   trailingTitle: 'Cody Tolene',
 };
+
+export const DefaultPageMeta: PageMeta = defaultPageMeta;

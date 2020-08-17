@@ -5,7 +5,6 @@ import { Environment } from './environment-type';
 // The list of file replacements can be found in `angular.json`.
 
 export const environment: Environment = {
-  googleAnalyticsId: '', // Not neccessary for dev testing
   production: false,
   version: require('../../package.json').version + '-dev',
 };

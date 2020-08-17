@@ -1,17 +1,21 @@
 import { TargetOptions } from '@angular-builders/custom-webpack';
-import { defaultPageMeta } from './shared/constants';
+import { DefaultPageMeta } from './shared/constants';
 import { environment } from './environments/environment';
 
+/**
+ * Mutate `index.html` with production elements on `ng-build`
+ */
+
 const pageMeta = `
-<title>${defaultPageMeta.title}</title>
-<meta name="description" content="${defaultPageMeta.description}" />
-<meta name="author" content="${defaultPageMeta.author}" />
-<meta name="keywords" content="${defaultPageMeta.keywords.toString()}" />`;
+<title>${DefaultPageMeta.title}</title>
+<meta name="description" content="${DefaultPageMeta.description}" />
+<meta name="author" content="${DefaultPageMeta.author}" />
+<meta name="keywords" content="${DefaultPageMeta.keywords.toString()}" />`;
 
 const pageAnalytics = `<script
   type="text/javascript"
   async
-  src="https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsId}"
+  src="https://www.googletagmanager.com/gtag/js?id=${DefaultPageMeta.googleAnalyticsId}"
 ></script>
 <script type="text/javascript">
   window.dataLayer = window.dataLayer || [];
@@ -40,13 +44,11 @@ module.exports = (_targetOptions: TargetOptions, indexHtml: string) => {
    * Inject Google Analytics script tags.
    * Injected script tags are supplied directly above the closing tag `</head>`.
    */
-  if (environment.production) {
-    const headElementEnd = '</head>';
-    const headElementEndPosition = currentFormattedHtml.indexOf(headElementEnd);
-    slicedTop = currentFormattedHtml.slice(0, headElementEndPosition);
-    slicedBottom = currentFormattedHtml.slice(headElementEndPosition);
-    currentFormattedHtml = `${slicedTop}${pageAnalytics}${slicedBottom}`;
-  }
+  const headElementEnd = '</head>';
+  const headElementEndPosition = currentFormattedHtml.indexOf(headElementEnd);
+  slicedTop = currentFormattedHtml.slice(0, headElementEndPosition);
+  slicedBottom = currentFormattedHtml.slice(headElementEndPosition);
+  currentFormattedHtml = `${slicedTop}${pageAnalytics}${slicedBottom}`;
 
   return currentFormattedHtml;
 };

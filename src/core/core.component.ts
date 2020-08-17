@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { environment } from 'src/environments/environment';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-import { componentDestroyed } from '../shared/utilities';
+import { componentDestroyed } from 'src/shared/utilities';
 import {
   takeUntil,
   filter,
@@ -10,8 +10,8 @@ import {
   mergeMap,
   distinctUntilChanged,
 } from 'rxjs/operators';
-import { SEOService } from './seo/seo.service';
-import { defaultPageMeta } from '../shared/constants';
+import { SEOService } from 'src/services';
+import { DefaultPageMeta } from 'src/shared/constants';
 
 @Component({
   selector: 'app-core',
@@ -56,7 +56,7 @@ export class CoreComponent implements OnInit, OnDestroy {
       .subscribe((routeData) => {
         if (routeData.title) {
           this.seo.setTitle(routeData.title, {
-            trailingTitle: defaultPageMeta.trailingTitle,
+            trailingTitle: DefaultPageMeta.trailingTitle,
           });
         } else {
           throw new Error('Failed to set page title.');
