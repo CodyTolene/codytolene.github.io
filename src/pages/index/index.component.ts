@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.scss'],
   templateUrl: './index.component.html',
 })
-export class IndexComponent {}
+export class IndexComponent {
+  public readonly images = [944, 1011, 984].map(
+    (n) => `https://picsum.photos/id/${n}/1920/1280`,
+  );
+}

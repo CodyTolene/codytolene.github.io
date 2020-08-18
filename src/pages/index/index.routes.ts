@@ -12,5 +12,6 @@ export const routesIndex: Routes = [
       title: DefaultPageMeta.title,
     },
     path: '',
+    pathMatch: 'full',
   },
 ];

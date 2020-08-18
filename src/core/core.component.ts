@@ -15,7 +15,7 @@ import { DefaultPageMeta } from 'src/shared/constants';
 
 @Component({
   selector: 'app-core',
-  template: `<router-outlet></router-outlet>`,
+  templateUrl: './core.component.html',
 })
 export class CoreComponent implements OnInit, OnDestroy {
   public constructor(

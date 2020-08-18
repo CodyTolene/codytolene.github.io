@@ -5,10 +5,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreComponent } from './core.component';
+import { FooterComponent, HeaderComponent } from './page-elements';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   bootstrap: [CoreComponent],
-  declarations: [CoreComponent],
+  declarations: [CoreComponent, FooterComponent, HeaderComponent],
   imports: [
     BrowserModule,
     CoreRoutesModule,

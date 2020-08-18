@@ -12,6 +12,7 @@ const routes: Routes = [
             (module) => module.IndexModule,
           ),
         path: '',
+        pathMatch: 'full',
       },
       {
         loadChildren: () =>
@@ -21,7 +22,6 @@ const routes: Routes = [
         path: 'privacy-policy',
       },
     ],
-    component: CoreComponent,
     path: '',
   },
   {
