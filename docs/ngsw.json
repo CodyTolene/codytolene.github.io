@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598228839233,
+  "timestamp": 1598229534664,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -21,7 +21,7 @@
         "/polyfills.b9b21dc0255185303210.js",
         "/runtime.4053cfec75b5c9af3078.js",
         "/scripts.1a59fc7068b1f54b3e95.js",
-        "/styles.3463983eea88536a4705.css"
+        "/styles.3aaa33923812eb5f4c6b.css"
       ],
       "patterns": []
     },
@@ -42,21 +42,6 @@
         "/07.535b98d8b10c9c1713fb.png",
         "/08.83eb2c7e2892a66afe14.png",
         "/09.2012ae6071a90778f12d.png",
-        "/assets/fonts/fontawesome/5.8.1/fa-brands-400.eot",
-        "/assets/fonts/fontawesome/5.8.1/fa-brands-400.svg",
-        "/assets/fonts/fontawesome/5.8.1/fa-brands-400.ttf",
-        "/assets/fonts/fontawesome/5.8.1/fa-brands-400.woff",
-        "/assets/fonts/fontawesome/5.8.1/fa-brands-400.woff2",
-        "/assets/fonts/fontawesome/5.8.1/fa-regular-400.eot",
-        "/assets/fonts/fontawesome/5.8.1/fa-regular-400.svg",
-        "/assets/fonts/fontawesome/5.8.1/fa-regular-400.ttf",
-        "/assets/fonts/fontawesome/5.8.1/fa-regular-400.woff",
-        "/assets/fonts/fontawesome/5.8.1/fa-regular-400.woff2",
-        "/assets/fonts/fontawesome/5.8.1/fa-solid-900.eot",
-        "/assets/fonts/fontawesome/5.8.1/fa-solid-900.svg",
-        "/assets/fonts/fontawesome/5.8.1/fa-solid-900.ttf",
-        "/assets/fonts/fontawesome/5.8.1/fa-solid-900.woff",
-        "/assets/fonts/fontawesome/5.8.1/fa-solid-900.woff2",
         "/assets/fonts/google/anton/Anton-Regular.ttf",
         "/assets/fonts/google/anton/OFL.txt",
         "/assets/fonts/google/bungee/Bungee-Regular.ttf",
@@ -182,21 +167,6 @@
     "/4.5e673b9f7fe2d312f5df.js": "784593644b1d562032b1689442ff5fbf9dd5ac62",
     "/5.8574d7a93e1261ba7725.js": "778e6522b7b45acb01e0effd04e0e0d0ceff7fec",
     "/6.0c833c1457462c360792.js": "cffa2b1eded033007621281796c1f54870794077",
-    "/assets/fonts/fontawesome/5.8.1/fa-brands-400.eot": "1cd2c2b11826ca1e10bc077d18b2f24257bf88a4",
-    "/assets/fonts/fontawesome/5.8.1/fa-brands-400.svg": "969653fb678dc8196f1698febd64838d845ff3b8",
-    "/assets/fonts/fontawesome/5.8.1/fa-brands-400.ttf": "4f75840965f2020b9e972cf92b0019c17d9e51ed",
-    "/assets/fonts/fontawesome/5.8.1/fa-brands-400.woff": "e046b8b74b6da1ee3a1910072610de5fc717599f",
-    "/assets/fonts/fontawesome/5.8.1/fa-brands-400.woff2": "7f6c682ade204e641aed8f471064c56b6eddc263",
-    "/assets/fonts/fontawesome/5.8.1/fa-regular-400.eot": "6626847cf66ee47e84d94944b4d01ddb2e3366cb",
-    "/assets/fonts/fontawesome/5.8.1/fa-regular-400.svg": "ee422664921cda71c10bc7e7d4acbb55d8836979",
-    "/assets/fonts/fontawesome/5.8.1/fa-regular-400.ttf": "88a545352247dfbb90281dda98110a8daec8d85e",
-    "/assets/fonts/fontawesome/5.8.1/fa-regular-400.woff": "b0b4432c6571662650dc3cbe63fd5ef1eb920b73",
-    "/assets/fonts/fontawesome/5.8.1/fa-regular-400.woff2": "8583a4f0dd12e15a48b3395593307a84d971cc33",
-    "/assets/fonts/fontawesome/5.8.1/fa-solid-900.eot": "94be46c754a1415ed221f78136e45449018da0ed",
-    "/assets/fonts/fontawesome/5.8.1/fa-solid-900.svg": "d5cb48c1f6446a21fef3fe48ff7918736556bc29",
-    "/assets/fonts/fontawesome/5.8.1/fa-solid-900.ttf": "75389055ff16f50e13c46b95da3c59af091f34c1",
-    "/assets/fonts/fontawesome/5.8.1/fa-solid-900.woff": "964d5b16950adecf14e632adf9270772031ecb9d",
-    "/assets/fonts/fontawesome/5.8.1/fa-solid-900.woff2": "a6b003ef506e92d05cde73adf67487d7fd7ec6df",
     "/assets/fonts/google/anton/Anton-Regular.ttf": "97525fddba2ae10203bfa32b153b7b30aed3ed39",
     "/assets/fonts/google/anton/OFL.txt": "24f1579e8e7bc36b1a842f81fc22496fe1ccb8a9",
     "/assets/fonts/google/bungee/Bungee-Regular.ttf": "9dac9ed2f6ba9c26c53eb873b28a40f893eb125f",
@@ -305,13 +275,13 @@
     "/assets/videos/Words.mp4": "f30a46e15059f8acac5087d8c3f71238f0e57022",
     "/assets/videos/Words.webm": "a0c6571406ccd08c58d49e973cc83c1bcd60442d",
     "/favicon.ico": "b6bc9d4e30de301b0c936c290bd9c1ae1b2819cb",
-    "/index.html": "9da535252f0507a115c98f3e3033667112076b90",
+    "/index.html": "8c0ffab16f69f34d2c0c5ed1f8a977ce8d8e65df",
     "/main.b79274012941f7ae11fc.js": "b34f5826e4517a5db75c22e0a074be6780a87d2b",
     "/manifest.webmanifest": "666ea3328c32c029747ef52e7d84a2120edc8b8f",
     "/polyfills.b9b21dc0255185303210.js": "91f4e3fd70316d9cb796b0ec07e8fe7fbbf93b15",
     "/runtime.4053cfec75b5c9af3078.js": "37f6fc6cb37d8f57330ea91378efda4e90e0fc8a",
     "/scripts.1a59fc7068b1f54b3e95.js": "f8212aca5c847e64eb40c30508f2bb9b212c37f3",
-    "/styles.3463983eea88536a4705.css": "d905b1b450907921954ed89749c74525aebf4c5d"
+    "/styles.3aaa33923812eb5f4c6b.css": "6875785afbefcca346e1ec48bc3e0513e992e3b5"
   },
   "navigationUrls": [
     {

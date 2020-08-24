@@ -42,18 +42,19 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/google/roboto/Roboto-Regular.eot"); /* IE9 Compat Modes */
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Regular.eot");
   src: local("Roboto"), local("Roboto-Roboto-Regular"),
-    url("/assets/fonts/google/roboto/Roboto-Regular.eot?#iefix")
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Regular.woff2")
-      format("woff2"),
     /* Super Modern Browsers */
-      url("/assets/fonts/google/roboto/Roboto-Regular.woff") format("woff"),
-    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Regular.ttf")
-      format("truetype"),
+      url("/assets/fonts/google/roboto/Roboto-Regular.woff2") format("woff2"),
+    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Regular.woff")
+      format("woff"),
     /* Safari, Android, iOS */
-      url("/assets/fonts/google/roboto/Roboto-Regular.svg#Roboto") format("svg"); /* Legacy iOS */
+      url("/assets/fonts/google/roboto/Roboto-Regular.ttf") format("truetype"),
+    /* Legacy iOS */
+      url("/assets/fonts/google/roboto/Roboto-Regular.svg#Roboto") format("svg");
 }
 
 // Roboto Light
@@ -61,18 +62,19 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url("/assets/fonts/google/roboto/Roboto-Light.eot"); /* IE9 Compat Modes */
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Light.eot");
   src: local("Roboto Light"), local("Roboto-Light"),
-    url("/assets/fonts/google/roboto/Roboto-Light.eot?#iefix")
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Light.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Light.woff2")
-      format("woff2"),
     /* Super Modern Browsers */
-      url("/assets/fonts/google/roboto/Roboto-Light.woff") format("woff"),
-    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Light.ttf")
-      format("truetype"),
+      url("/assets/fonts/google/roboto/Roboto-Light.woff2") format("woff2"),
+    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Light.woff")
+      format("woff"),
     /* Safari, Android, iOS */
-      url("/assets/fonts/google/roboto/Roboto-Light.svg#Roboto") format("svg"); /* Legacy iOS */
+      url("/assets/fonts/google/roboto/Roboto-Light.ttf") format("truetype"),
+    /* Legacy iOS */ url("/assets/fonts/google/roboto/Roboto-Light.svg#Roboto")
+      format("svg");
 }
 
 // Roboto Bold
@@ -80,18 +82,19 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("/assets/fonts/google/roboto/Roboto-Bold.eot"); /* IE9 Compat Modes */
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Bold.eot");
   src: local("Roboto Bold"), local("Roboto-Bold"),
-    url("/assets/fonts/google/roboto/Roboto-Bold.eot?#iefix")
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Bold.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Bold.woff2")
-      format("woff2"),
     /* Super Modern Browsers */
-      url("/assets/fonts/google/roboto/Roboto-Bold.woff") format("woff"),
+      url("/assets/fonts/google/roboto/Roboto-Bold.woff2") format("woff2"),
     /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Bold.ttf")
       format("truetype"),
     /* Safari, Android, iOS */
-      url("/assets/fonts/google/roboto/Roboto-Bold.svg#Roboto") format("svg"); /* Legacy iOS */
+      url("/assets/fonts/google/roboto/Roboto-Bold.woff") format("woff"),
+    /* Legacy iOS */ url("/assets/fonts/google/roboto/Roboto-Bold.svg#Roboto")
+      format("svg");
 }
 
 // Roboto Medium
@@ -99,16 +102,17 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("/assets/fonts/google/roboto/Roboto-Medium.eot"); /* IE9 Compat Modes */
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Medium.eot");
   src: local("Roboto Medium"), local("Roboto-Medium"),
-    url("/assets/fonts/google/roboto/Roboto-Medium.eot?#iefix")
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Medium.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Medium.woff2")
-      format("woff2"),
     /* Super Modern Browsers */
-      url("/assets/fonts/google/roboto/Roboto-Medium.woff") format("woff"),
-    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Medium.ttf")
-      format("truetype"),
+      url("/assets/fonts/google/roboto/Roboto-Medium.woff2") format("woff2"),
+    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Medium.woff")
+      format("woff"),
     /* Safari, Android, iOS */
-      url("/assets/fonts/google/roboto/Roboto-Medium.svg#Roboto") format("svg"); /* Legacy iOS */
+      url("/assets/fonts/google/roboto/Roboto-Medium.ttf") format("truetype"),
+    /* Legacy iOS */ url("/assets/fonts/google/roboto/Roboto-Medium.svg#Roboto")
+      format("svg");
 }
