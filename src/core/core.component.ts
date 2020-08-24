@@ -1,17 +1,13 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Inject } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-import { componentDestroyed } from 'src/shared/utilities';
-import {
-  takeUntil,
-  filter,
-  map,
-  mergeMap,
-  distinctUntilChanged,
-} from 'rxjs/operators';
+import { componentDestroyed, isNonEmptyString } from 'src/shared/utilities';
+import { takeUntil, filter, map, mergeMap } from 'rxjs/operators';
 import { SEOService } from 'src/services';
 import { DefaultPageMeta } from 'src/shared/constants';
+import { DOCUMENT } from '@angular/common';
+import { WINDOW } from 'src/services/browser/window.services';
 
 @Component({
   selector: 'app-core',
@@ -23,6 +19,8 @@ export class CoreComponent implements OnInit, OnDestroy {
     private readonly activatedRoute: ActivatedRoute,
     private readonly router: Router,
     private readonly seo: SEOService,
+    @Inject(DOCUMENT) private readonly document: Document,
+    @Inject(WINDOW) private readonly window: Window,
   ) {
     if (environment.production) {
       // Update the service worker on every construct
@@ -34,7 +32,7 @@ export class CoreComponent implements OnInit, OnDestroy {
   public readonly routerNavigationEndChanges = this.router.events.pipe(
     map((event) => (event instanceof NavigationEnd ? event : null)),
     filter<NavigationEnd>(Boolean),
-    distinctUntilChanged((previous, current) => previous.url !== current.url),
+    // distinctUntilChanged((previous, current) => previous.url !== current.url),
   );
 
   public readonly routeDataChanges = this.routerNavigationEndChanges.pipe(
@@ -84,12 +82,17 @@ export class CoreComponent implements OnInit, OnDestroy {
     // Google analytics
     this.routerNavigationEndChanges
       .pipe(takeUntil(componentDestroyed(this)))
-      .subscribe((event) =>
+      .subscribe((event) => {
         this.seo.sendGoogleAnalyticsPageView(
           event.url,
           event.urlAfterRedirects,
-        ),
-      );
+        );
+
+        if (!isNonEmptyString(this.window.location.hash)) {
+          // Scroll to the top of page on navigation if no hash in URI
+          this.window.scrollTo(0, 0);
+        }
+      });
   }
 
   public ngOnDestroy(): void {
