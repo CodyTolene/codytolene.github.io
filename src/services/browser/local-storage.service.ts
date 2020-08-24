@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { isNil } from 'lodash';
 
 @Injectable()
 export class LocalStorageService<T> {
@@ -15,7 +14,7 @@ export class LocalStorageService<T> {
     key: K,
     value: string | null,
   ): void {
-    if (isNil(value)) {
+    if (value == null) {
       localStorage.removeItem(key);
     } else {
       localStorage.setItem(key, value);

@@ -3,7 +3,7 @@ div.cookie-consent {
   background-color: rgba(34, 38, 41, 0.9);
   padding: 1.2em;
   border-radius: 5px;
-  max-width: 400px;
+  max-width: 365px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -72,7 +72,7 @@ div.cookie-consent {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   div.cookie-consent {
     max-width: 100%;
     width: 100%;
