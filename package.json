@@ -59,7 +59,7 @@
     "@angular/service-worker": "~10.0.9",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "bootstrap": "^4.5.0",
-    "component": "^1.1.0",
+    "cookieconsent": "^3.1.1",
     "jquery": "^3.5.1",
     "mdbootstrap": "^4.19.1",
     "particles.js": "^2.0.0",
