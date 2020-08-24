@@ -1,0 +1,826 @@
+<header class="header-carousel">
+  <div
+    id="homepageCarousel"
+    class="carousel slide"
+    data-ride="carousel"
+    data-interval="1000000"
+  >
+    <ol class="carousel-indicators">
+      <li data-target="#homepageCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#homepageCarousel" data-slide-to="1"></li>
+      <li data-target="#homepageCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner container-fluid p-0">
+      <!-- SLIDE ONE: GALAXY -->
+      <div class="carousel-item active">
+        <div
+          id="particles-js"
+          style="
+            background: url('assets/images/carousel/Astronomy-1920x1280-opt.webp');
+            background: url('assets/images/carousel/Astronomy-1920x1280-opt.jpg');
+          "
+        >
+          <div class="intro-text">
+            <div class="row">
+              <div class="col-12 col-md-10 offset-md-1">
+                <div class="intro-heading text-uppercase">
+                  Software<br />Engineer
+                </div>
+                <div class="intro-body">The sky is the limit.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDE TWO: VIDEO -->
+      <div class="carousel-item">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video width="320" height="240" loop autoplay muted id="video-2">
+            <source src="assets/videos/Words.webm" type="video/webm" />
+            <source src="assets/videos/Words.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="intro-text">
+          <div class="row">
+            <div class="col-12 col-md-10 offset-md-1">
+              <div class="intro-heading text-uppercase">
+                Website<br />Developer
+              </div>
+              <div class="intro-body">Full-Stack ASP.NET Specialist.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDE THREE: VIDEO -->
+      <div class="carousel-item">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video width="320" height="240" loop autoplay muted id="video-1">
+            <source src="assets/videos/Love-Coding.webm" type="video/webm" />
+            <source src="assets/videos/Love-Coding.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="intro-text">
+          <div class="row">
+            <div class="col-12 col-md-10 offset-md-1">
+              <div class="intro-heading text-uppercase">
+                Tech<br />Enthusiast
+              </div>
+              <div class="intro-body">Always learning.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SLIDE CONTROLS -->
+    <a
+      class="carousel-control-prev"
+      href="#homepageCarousel"
+      role="button"
+      data-slide="prev"
+    >
+      <fa-icon [icon]="faAngleDoubleLeft"></fa-icon>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#homepageCarousel"
+      role="button"
+      data-slide="next"
+    >
+      <fa-icon [icon]="faAngleDoubleRight"></fa-icon>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services" class="section pt-5 pt-lg-0">
+  <div class="container">
+    <!-- SERVICES: HEAD -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="section-heading text-uppercase">Services</h1>
+        <h3 class="section-subheading text-muted text-light-gray">
+          From the back end to the front end, website development is my
+          specialty.
+        </h3>
+      </div>
+    </div>
+    <!-- SERVICES: ROW ONE -->
+    <div class="row mt-md-5">
+      <!-- ASP.NET -->
+      <div class="col-md-4 text-center">
+        <a
+          href="https://dotnet.microsoft.com/"
+          class="service-logo"
+          aria-label="View Microsoft ASP.NET website"
+          title="View Microsoft ASP.NET page"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <div style="font-size: 150px; padding-top: 37px;">
+            <i class="icon-net-core"></i>
+          </div>
+        </a>
+        <a
+          href="https://dotnet.microsoft.com/"
+          class="no-underline"
+          aria-label="View Microsoft ASP.NET website"
+          title="View Microsoft ASP.NET page"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <h2>Microsoft ASP.NET</h2>
+        </a>
+        <p>
+          Microsoft's server-side web application framework ASP.NET Core is the
+          underlying magic that drives a website. I've crafted my career upon
+          ASP.NET technology, and I enjoy every minute I have working with this
+          powerful framework.
+        </p>
+      </div>
+      <!-- ANGULAR -->
+      <div class="col-md-4 text-center">
+        <a
+          href="/angular"
+          class="service-logo"
+          aria-label="View Cody Tolene's Angular page"
+          title="View Cody Tolene's Angular page"
+          target="_self"
+        >
+          <fa-icon [icon]="faAngular"></fa-icon>
+        </a>
+        <a
+          href="/angular"
+          class="no-underline"
+          aria-label="View Cody Tolene's Angular page"
+          title="View Cody Tolene's Angular page"
+          target="_self"
+        >
+          <h2>Google Angular</h2>
+        </a>
+        <p>
+          Using Angular since the early days of AngularJS, I've watched this
+          framework evolve over the years with glee. Angular is an MVC framework
+          utilizing TypeScript which gives us developers a powerful tool set to
+          build superior, interactive web applications.
+        </p>
+      </div>
+      <!-- CLOUD -->
+      <div class="col-md-4 text-center">
+        <a
+          href="https://azure.microsoft.com/"
+          class="service-logo"
+          aria-label="View Microsoft Azure website"
+          title="View Microsoft Azure website"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <fa-icon [icon]="faCloud"></fa-icon>
+        </a>
+        <a
+          href="https://azure.microsoft.com/"
+          class="no-underline"
+          aria-label="View Microsoft Azure website"
+          title="View Microsoft Azure website"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <h2>Cloud Services</h2>
+        </a>
+        <p>
+          Experienced with all major flagship cloud providers (Google,
+          Microsoft, Amazon), I will get you get your website up and running in
+          no time! Cloud services include everything from hosting a web
+          application to domain registration.
+        </p>
+      </div>
+    </div>
+    <!-- SERVICES: ROW TWO -->
+    <div class="row mt-md-5">
+      <!-- DOCKER -->
+      <div class="col-md-4 text-center">
+        <a
+          href="https://www.docker.com/"
+          class="service-logo"
+          aria-label="View Docker website"
+          title="View Docker website"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <fa-icon [icon]="faDocker"></fa-icon>
+        </a>
+        <a
+          href="https://www.docker.com/"
+          class="no-underline"
+          aria-label="View Docker website"
+          title="View Docker website"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <h2>Docker</h2>
+        </a>
+        <p>
+          Docker is a tool used to wrap web applications into containers before
+          deploying them to a cloud host. Containers are scalable in both
+          location deployment and resource usage to either save money or meet
+          demand. These are generally requested by clients with large enterprise
+          applications.
+        </p>
+      </div>
+      <!-- HTML5/CSS3 -->
+      <div class="col-md-4 text-center">
+        <a
+          href="https://en.wikipedia.org/wiki/HTML5"
+          class="service-logo"
+          aria-label="View HTML5 Wikipedia entry"
+          title="View HTML5 Wikipedia entry"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <fa-icon [icon]="faHtml5"></fa-icon>
+        </a>
+        <a
+          href="https://en.wikipedia.org/wiki/HTML5"
+          class="no-underline"
+          aria-label="View HTML5 Wikipedia entry"
+          title="View HTML5 Wikipedia entry"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <h2>HTML5 / CSS3</h2>
+        </a>
+        <p>
+          The landing pages I create are designed with a mobile-first approach
+          on up; maintaining pixel perfect precision on all devices with varying
+          shapes and sizes.
+        </p>
+      </div>
+      <!-- AGILE -->
+      <div class="col-md-4 text-center">
+        <a
+          href="https://en.wikipedia.org/wiki/Agile_software_development"
+          class="service-logo"
+          aria-label="View agile software development Wikipedia entry"
+          title="View agile software development Wikipedia entry"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <fa-icon [icon]="faDev"></fa-icon>
+        </a>
+        <a
+          href="https://en.wikipedia.org/wiki/Agile_software_development"
+          class="no-underline"
+          aria-label="View agile software development Wikipedia entry"
+          title="View agile software development Wikipedia entry"
+          rel="nofollow noreferrer noopener"
+          target="_blank"
+        >
+          <h2>Agile Developer</h2>
+        </a>
+        <p>
+          Utilizing everything from Kanban cards to a pre-compiled workflow, I
+          prefer an efficient and effective workspace. Experienced with Git,
+          Gulp/Grunt, TypeScript, LESS/SCSS, Node.js, Nunjucks/Twig, Angular
+          CLI, and many others for quick and agile development.
+        </p>
+      </div>
+    </div>
+    <!-- SERVICES: FOOT -->
+    <div class="row mt-5 mb-5">
+      <div class="col-12 text-center pt-3">
+        <h3 class="text-light-gray">Reach out and say hello!</h3>
+        <a
+          href="#contact"
+          class="btn btn-lg btn-outline-theme scroll-trigger mt-3"
+        >
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section bg-light text-dark">
+  <div class="container pt-4">
+    <!-- HEAD -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="section-heading text-uppercase text-black">About</h1>
+        <h3 class="section-subheading text-muted">
+          Hi there, I'm Cody. It's nice to meet you!
+        </h3>
+      </div>
+    </div>
+    <!-- MY STORY -->
+    <div class="row mt-5 pt-3">
+      <!-- IMAGE MOBILE -->
+      <div class="col-lg-6 pb-5 d-lg-none text-center">
+        <img
+          src="assets/images/ct/cody.png"
+          class="img-fluid align-self-center"
+          style="max-height: 450px;"
+          alt="Cody Tolene's Vector Portrait"
+        />
+      </div>
+      <!-- INFO -->
+      <div class="col-lg-6 pt-md-3">
+        <h4 class="text-black">My story as a developer</h4>
+        <p>
+          My journey in software development began over 15 years ago during the
+          dot-com boom and what I like to call the "Flash Golden Age" of the
+          internet. It was the late 1990's and early 2000's, I was a teenager
+          heavily influenced by the Indie Flash Developer community with their
+          Flash games and animations, and a huge fanboy of Tom Fulp and
+          Newgrounds. Seeking advice from forums on how to get started with
+          Flash, I began saving money for Macromedia Flash Professional and took
+          up learning ActionScript as soon as I could.
+        </p>
+        <p>
+          By 2006 I was fluent enough with ActionScript 3 to begin creating
+          online Flash games taking up roles for programming, animation, and
+          design (Photoshop). My dream came true, I'd finally joined the
+          community I'd been admiring for those past 7 years; but there was a
+          catch, Flash was starting to die out in the digital world due to
+          security vulnerabilities and eventually lost the race to different
+          media types. In the late 2000's I decided to curb Flash and sign up
+          for college to learn how to program on other platforms using C++, C#,
+          JavaScript, HTML and others. My initial learning interests were in
+          game development, but in college I was creating MySpace templates and
+          Dreamweaver sites on the side which led me to another passion: Web
+          Development!
+        </p>
+      </div>
+      <!-- IMAGE PC -->
+      <div class="col-md-6 pt-5 d-none d-lg-block text-center">
+        <img
+          src="assets/images/ct/cody.png"
+          class="img-fluid align-self-center"
+          style="max-height: 450px;"
+          alt="Cody Tolene's Vector Portrait"
+        />
+      </div>
+    </div>
+    <!-- DEVELOPMENT -->
+    <div class="row mt-3">
+      <!-- WEB DEVELOPMENT -->
+      <div class="col-md-6 pt-md-3">
+        <h4 class="text-black">Web Development</h4>
+        <p>
+          Website development has been the main focus of my career for the past
+          decade and every minute of it has been great. I'm experienced within
+          all areas of web development from creating static Nunjucks
+          brochure/portfolio websites all the way up to global cloud enterprise
+          applications. The technologies I use consistently in web development
+          are Microsoft's ASP.NET and Google's Angular, these two frameworks are
+          an absolute pleasure to work with, a staple in my career path. I've
+          set up and hosted websites on the most popular cloud platforms
+          available using mixtures of the best technologies.
+          <br /><br />
+          <b class="font-weight-bold">Front-end: Presentation layer</b><br />
+          Every website I develop is designed with a mobile-first approach,
+          generally using Twitter's flagship styling library "Bootstrap". I like
+          to implement Angular when possible for engaging user interfaces and
+          progressive web applications. I tend to use a more modern look in my
+          designs with the latest and greatest technologies available, while
+          maintaining polyfills for backwards support depending on the clients
+          needs.
+          <br /><br />
+          <b class="font-weight-bold">Back-end: Business and Data layers</b
+          ><br />
+          Experienced in hosting, databases and data access, business logic and
+          application programming interfaces, I have worked full-spectrum on
+          every aspect of a website. For the back-end I prefer programming with
+          the ASP.NET (4+/Core) frameworks along with a relational SQL database,
+          although I've been working with NoSQL databases a lot as of late.
+        </p>
+      </div>
+      <!-- GAME DEVELOPMENT -->
+      <div class="col-md-6 pt-md-3">
+        <h4 class="text-black">Game Development</h4>
+        <p class="game-quote">
+          <i>
+            "Ah you think <span>darkness is</span> VIDEO GAMES ARE your ally?
+            You merely adopted <span>the dark</span> GAMING. I was born in it,
+            molded by it. I didn't see <span>the light</span> QUALITY HD until I
+            was already a man, by then it was nothing to me but
+            <span>blinding</span> PROGRAMMING!"
+          </i>
+          <br />
+          - <span>Bane</span> Cody
+        </p>
+        <p>
+          Video games have always been an interest of mine and it's what got me
+          into programming early on in life. My childhood consisted mostly of
+          Mario Kart 64 races, Super Smash Bro's beatdowns, and Game Boy Color
+          system link battles; one thing was clear, I had an obsession with
+          electronics. As a child playing games on the NES, SEGA, Et.al., I was
+          always curious of how those great works of art were created. When I
+          was a teen that interest had peaked with the advent of Flash, a
+          platform where indie developers could easily develope their own games
+          without the need of a studio.
+        </p>
+        <p>
+          I had to know how to create my own work of art, I scraped internet
+          forums and began teaching myself how to program. Albeit terrible at
+          first without a mentor, I began that dream of developing games and
+          animations using Flash and ActionScript 3 in the mid 2000's, later
+          progressing to C++ and C# in college. Today I still play around with
+          game development as a hobby using Unity 3D. If only there was more
+          time in life to take on a career in both fields at once!
+        </p>
+      </div>
+    </div>
+    <!-- FOOT -->
+    <div class="row mt-5 mb-5">
+      <div class="col-12 text-center pt-0 pt-md-5">
+        <h3>
+          Work hard, gain XP, level up.<br />
+          <fa-icon
+            [icon]="faGamepad"
+            class="mt-4 text-black"
+            style="font-size: 3em;"
+          ></fa-icon>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="section">
+  <div class="container pt-4">
+    <!-- RESUME: HEAD -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="section-heading text-uppercase">R&eacute;sum&eacute;</h1>
+        <h3 class="section-subheading text-light-gray">
+          What I've worked with over the years.
+        </h3>
+      </div>
+    </div>
+    <!-- RESUME: TECHNOLOGIES -->
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <h2>Technologies</h2>
+      </div>
+      <div class="col-md-8 pt-2">
+        <div class="row">
+          <!-- PREFERENCES -->
+          <div class="col-sm">
+            <h5>Preferences</h5>
+            <ul>
+              <li>Microsoft C#</li>
+              <li>TypeScript / JavaScript</li>
+              <li>Google AngularJS / Angular (v2-10+)</li>
+              <li>ASP.NET 4+ / ASP.NET Core</li>
+              <li>Microsoft Azure Platform</li>
+              <li>Google Cloud Platform</li>
+              <li>Microsoft IIS</li>
+              <li>Transact SQL / MySQL</li>
+              <li>Git</li>
+              <li>Node.js</li>
+              <li>Gulp / Grunt / Webpack</li>
+              <li>Nunjucks</li>
+              <li>Bootstrap 3 & 4</li>
+              <li>Docker</li>
+              <li>HTML5</li>
+              <li>CSS3 / LESS / SCSS</li>
+              <li>VS Pro / VS Code</li>
+              <li>Postman / Fiddler</li>
+            </ul>
+          </div>
+          <!-- OTHER XP -->
+          <div class="col-sm">
+            <h5>Other experience</h5>
+            <ul>
+              <li>C++, AS3, VB</li>
+              <li>Agile Workflows</li>
+              <li>Amazon Web Services (EC2)</li>
+              <li>Kubernetes (limited)</li>
+              <li>Linux</li>
+              <li>DotNetNuke (DNN)</li>
+              <li>Wordpress (limited)</li>
+              <li>NoSQL (limited)</li>
+              <li>Microsoft Suite (Excel, Word, et al.)</li>
+              <li>
+                Adobe Suite (Photoshop, Illustrator, Flash/Animate, et al.)
+              </li>
+              <li>Unity 3D (game development)</li>
+              <li>3DS Max (limited)</li>
+              <li>React (limited)</li>
+              <li>Windows Software Development</li>
+              <li>Batch Script / PowerShell Task Automation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RESUME: WORK XP -->
+    <div class="row mt-md-5">
+      <div class="col-md-4">
+        <h2>Work Experience</h2>
+      </div>
+      <div class="col-md-8 pt-2">
+        <!-- CONTRACTOR: MIRAMAR -->
+        <div class="row pb-2">
+          <div class="col-12">
+            <h5>Full Stack Developer</h5>
+            <a
+              href="http://miramar.tech/"
+              rel="noreferrer nofollow noopener"
+              aria-label="Visit Miramar's website"
+              title="Visit Miramar's website"
+              target="_blank"
+            >
+              Miramar </a
+            >, remote contractor. <strong>October 2019 - Present</strong>
+            <p>
+              <!--TODO: Add sentence describing this job-->
+            </p>
+          </div>
+        </div>
+        <!-- CONTRACTOR: GITHUB -->
+        <div class="row pb-2">
+          <div class="col-12">
+            <h5>Full Stack Developer</h5>
+            <a
+              href="https://github.com/CodyTolene"
+              rel="noreferrer nofollow noopener"
+              aria-label="View Cody Tolene's GitHub profile!"
+              title="View Cody Tolene's GitHub profile!"
+              target="_blank"
+            >
+              GitHub </a
+            >, remote contractor. <strong>July 2019 - Present</strong>
+            <p>
+              <!--TODO: Add sentence describing this job-->
+            </p>
+          </div>
+        </div>
+        <!-- RLWS -->
+        <div class="row pb-2">
+          <div class="col-12">
+            <h5>Full Stack Web Development Specialist</h5>
+            <a
+              href="https://www.ricelake.com"
+              rel="noreferrer nofollow noopener"
+              aria-label="Visit Rice Lake Weighing System's Website"
+              title="Visit Rice Lake Weighing System's Website"
+              target="_blank"
+            >
+              Rice Lake Weighing Systems </a
+            >, Rice Lake, WI. <strong>May 2015 - June 2019</strong>
+            <p>
+              <!--TODO: Add sentence describing this job-->
+            </p>
+          </div>
+        </div>
+        <!-- FREELANCE -->
+        <div class="row pt-2 pb-2">
+          <div class="col-12">
+            <h5>Computer & Network Support Services</h5>
+            <a
+              href="https://en.wikipedia.org/wiki/Freelancer"
+              rel="noreferrer nofollow noopener"
+              aria-label="View freelancer Wikipedia entry"
+              title="View freelancer Wikipedia entry"
+              target="_blank"
+            >
+              Freelancer </a
+            >, Rice Lake, WI. <strong>2012 - 2015</strong>
+            <p>
+              <!--TODO: Add sentence describing this job-->
+            </p>
+          </div>
+        </div>
+        <!-- DATA ANALYST -->
+        <div class="row pt-2 pb-2">
+          <div class="col-12">
+            <h5>Data Analyst</h5>
+            <a
+              href="https://www.crossmark.com/"
+              rel="noreferrer nofollow noopener"
+              aria-label="Visit Crossmark's Website"
+              title="Visit Crossmark's Website"
+              target="_blank"
+            >
+              Crossmark </a
+            >, Varied, WI. <strong>2009 - 2011</strong>
+            <p>
+              <!--TODO: Add sentence describing this job-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RESUME: EDUCATION -->
+    <div class="row mt-md-5">
+      <div class="col-md-4">
+        <h2>Education</h2>
+      </div>
+      <div class="col-md-8 pt-2">
+        <div class="row">
+          <div class="col-12">
+            <h5>Bachelor of Science in Game & Simulation Programming</h5>
+            <a
+              href="https://www.devry.edu/"
+              rel="noreferrer nofollow noopener"
+              aria-label="Visit DeVry University's Website"
+              title="Visit DeVry University's Website"
+              target="_blank"
+            >
+              DeVry University </a
+            >, Chicago, IL. <strong>2008 - 2014</strong>
+            <p>
+              <!--TODO: Add sentence describing this education-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RESUME: FOOT-->
+    <div class="row mt-5 mb-5">
+      <div class="col-12 text-center pt-0 pt-md-5">
+        <h3 class="text-light-gray">
+          Thank's for having a look!<br />
+          <fa-icon
+            [icon]="faCode"
+            class="mt-4 text-white"
+            style="font-size: 3em;"
+          ></fa-icon>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-light text-dark">
+  <div class="container">
+    <!-- CONTACT: HEAD-->
+    <div class="row pt-4">
+      <div class="col-lg-12 text-center">
+        <h1 class="section-heading text-uppercase text-black">Contact</h1>
+        <h3 class="section-subheading text-muted">
+          Drop me a line, I'd love to hear from you!
+        </h3>
+      </div>
+    </div>
+    <!-- CONTACT: ROW ONE -->
+    <div class="row mt-5 mb-5 text-center">
+      <!-- HIRE ME -->
+      <div class="col-md-4">
+        <a
+          href="https://www.upwork.com/o/profiles/users/_~01730338c2e3e61bfc/"
+          class="contact-logo"
+          aria-label="Click here to hire me on UpWork!"
+          title="Click here to hire me on UpWork!"
+          target="_blank"
+          rel="nofollow noreferrer"
+        >
+          <fa-icon [icon]="faLaptopCode"></fa-icon>
+        </a>
+        <a
+          href="https://www.upwork.com/o/profiles/users/_~01730338c2e3e61bfc/"
+          class="no-underline"
+          aria-label="Click here to hire me on UpWork!"
+          title="Click here to hire me on UpWork!"
+          target="_blank"
+          rel="nofollow noreferrer"
+        >
+          <h2>Hire Me!</h2>
+        </a>
+        <p>
+          Need a project done? Hire me using UpWork with no hassle!
+        </p>
+      </div>
+      <!-- EMAIL -->
+      <div class="col-md-4">
+        <a
+          href="email:webmaster@codytolene.com"
+          class="contact-logo"
+          aria-label="Click to send an email using your email client"
+          title="Click to send an email using your email client"
+        >
+          <fa-icon [icon]="faEnvelopeOpenText"></fa-icon>
+        </a>
+        <a
+          href="email:webmaster@codytolene.com"
+          class="no-underline"
+          aria-label="Click to send an email using your email client"
+          title="Click to send an email using your email client"
+        >
+          <h2>webmaster<br />@codytolene.com</h2>
+        </a>
+        <p>
+          Send me an email and I'll follow up with you as soon as possible.
+        </p>
+      </div>
+      <!-- PHONE -->
+      <div class="col-md-4">
+        <a
+          href="tel:7155013915"
+          class="contact-logo"
+          aria-label="Click to call Cody Tolene"
+          title="Click to call Cody Tolene"
+        >
+          <fa-icon [icon]="faPhoneSquare" alt="GitHub"></fa-icon>
+        </a>
+        <a
+          href="tel:7155013915"
+          class="no-underline"
+          aria-label="Click to call Cody Tolene"
+          title="Click to call Cody Tolene"
+        >
+          <h2>(715) 501-3915</h2>
+        </a>
+        <p>
+          If I'm not available to answer please leave a message.
+        </p>
+      </div>
+    </div>
+    <!-- CONTACT: ROW TWO-->
+    <div class="row mt-5 mb-2 text-center">
+      <!-- TWITTER -->
+      <div class="col-md-4">
+        <a
+          href="https://twitter.com/codytolene"
+          class="contact-logo"
+          aria-label="Navigate to Cody Tolene's Twitter page."
+          title="Navigate to Cody Tolene's Twitter page."
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <fa-icon [icon]="faTwitter" alt="Twitter"></fa-icon>
+        </a>
+        <a
+          href="https://twitter.com/codytolene"
+          class="no-underline"
+          aria-label="Navigate to Cody Tolene's Twitter page."
+          title="Navigate to Cody Tolene's Twitter page."
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <h2>Twitter</h2>
+        </a>
+        <p>
+          Follow me on Twitter!
+        </p>
+      </div>
+      <!-- GITHUB -->
+      <div class="col-md-4">
+        <a
+          href="https://github.com/CodyTolene"
+          class="contact-logo"
+          aria-label="Navigate to Cody Tolene's GitHub profile page."
+          title="Navigate to Cody Tolene's GitHub profile page."
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <fa-icon [icon]="faGithub" alt="GitHub"></fa-icon>
+        </a>
+        <a
+          href="https://github.com/CodyTolene"
+          class="no-underline"
+          aria-label="Navigate to Cody Tolene's GitHub profile page."
+          title="Navigate to Cody Tolene's GitHub profile page."
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <h2>GitHub</h2>
+        </a>
+        <p>
+          Fork me on GitHub!
+        </p>
+      </div>
+      <!-- LINKEDIN -->
+      <div class="col-md-4">
+        <a
+          href="https://www.linkedin.com/in/codytolene/"
+          class="contact-logo"
+          aria-label="Navigate to Cody Tolene's LinkedIn profile page."
+          title="Navigate to Cody Tolene's LinkedIn profile page."
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <fa-icon [icon]="faLinkedin" alt="LinkedIn"></fa-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/codytolene/"
+          class="no-underline"
+          aria-label="Navigate to Cody Tolene's LinkedIn profile page."
+          title="Navigate to Cody Tolene's LinkedIn profile page."
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <h2>LinkedIn</h2>
+        </a>
+        <p>
+          Send me a connection request on LinkedIn!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

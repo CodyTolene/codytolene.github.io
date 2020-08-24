@@ -1,0 +1,59 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-angular",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "angular-whitespace": false,
+    "array-type": [ true, "array-simple" ],
+    "ban-ts-ignore": true,
+    "file-name-casing": [ true, "kebab-case" ],
+    "interface-name": [ true, "never-prefix" ],
+    "max-classes-per-file": false,
+    "member-access": [
+      true,
+      "check-accessor",
+      "check-constructor",
+      "check-parameter-property"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "constructor",
+          {
+            "name": "static-field-or-accessor",
+            "kinds": [ "static-field", "static-accessor" ]
+          },
+          {
+            "name": "instance-field-or-accessor",
+            "kinds": [ "instance-field", "instance-accessor" ]
+          },
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "no-any": true,
+    "no-console": false,
+    "no-default-export": true,
+    "no-duplicate-imports": true,
+    "no-empty": true,
+    "no-inferred-empty-object-type": true,
+    "no-object-literal-type-assertion": true,
+    "no-unsafe-any": false,
+    "no-use-before-declare": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": true,
+    "prefer-method-signature": true,
+    "prefer-readonly": true,
+    "typedef": [ true, "call-signature" ],
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ]
+  }
+}
