@@ -2,6 +2,12 @@
 @import "../../shared/styles/_typography.scss";
 
 .section {
+  padding-top: 3rem;
+
+  &#services {
+    padding-top: 4rem;
+  }
+
   .service-logo,
   .contact-logo {
     font-size: 175px;

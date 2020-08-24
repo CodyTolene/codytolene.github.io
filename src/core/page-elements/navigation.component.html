@@ -69,8 +69,11 @@
               [routerLink]="['/']"
               fragment="services"
               data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
+              [attr.data-target]="
+                (isMobileDeviceWindowWidth | async)
+                  ? '#navbarResponsive'
+                  : 'null'
+              "
             >
               Services
             </a>
@@ -81,8 +84,11 @@
               [routerLink]="['/']"
               fragment="about"
               data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
+              [attr.data-target]="
+                (isMobileDeviceWindowWidth | async)
+                  ? '#navbarResponsive'
+                  : 'null'
+              "
             >
               About
             </a>
@@ -93,8 +99,11 @@
               [routerLink]="['/']"
               fragment="resume"
               data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
+              [attr.data-target]="
+                (isMobileDeviceWindowWidth | async)
+                  ? '#navbarResponsive'
+                  : 'null'
+              "
             >
               Resume
             </a>
@@ -105,8 +114,11 @@
               [routerLink]="['/']"
               fragment="contact"
               data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
+              [attr.data-target]="
+                (isMobileDeviceWindowWidth | async)
+                  ? '#navbarResponsive'
+                  : 'null'
+              "
             >
               Contact
             </a>
