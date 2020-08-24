@@ -1,0 +1,82 @@
+div.cookie-consent {
+  color: white;
+  background-color: rgba(34, 38, 41, 0.9);
+  padding: 1.2em;
+  border-radius: 5px;
+  max-width: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  bottom: 1em;
+  left: 1em;
+  position: fixed;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Helvetica, Calibri, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  z-index: 9999;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+  border: 1px dashed #98d049;
+
+  .cookie-consent-message {
+    display: block;
+    margin-bottom: 1em;
+    color: white;
+  }
+
+  .cookie-consent-button {
+    text-align: center;
+    display: inline;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+
+    a {
+      display: inline-block;
+      min-width: 140px;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      color: #000;
+      font-weight: bold;
+      background-color: #98d049;
+      border: 1px solid #61892f;
+      font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      border-radius: 5px;
+      text-align: center;
+      white-space: nowrap;
+      padding: 0.4em 0.8em;
+      font-size: 0.9em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  div.cookie-consent {
+    max-width: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+}

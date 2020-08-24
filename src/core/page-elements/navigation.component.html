@@ -47,7 +47,7 @@
     [class.navbar-shrink]="distanceFromTopOfPage > 100"
   >
     <div class="container">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" [routerLink]="['/']">
         Cody Tolene
       </a>
       <button
@@ -64,16 +64,22 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/#services">Services</a>
+            <a class="nav-link" [routerLink]="['/']" fragment="services"
+              >Services</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#about">About</a>
+            <a class="nav-link" [routerLink]="['/']" fragment="about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#resume">Resume</a>
+            <a class="nav-link" [routerLink]="['/']" fragment="resume"
+              >Resume</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/#contact">Contact</a>
+            <a class="nav-link" [routerLink]="['/']" fragment="contact"
+              >Contact</a
+            >
           </li>
           <li class="nav-item">
             <a

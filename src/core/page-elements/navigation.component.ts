@@ -6,7 +6,7 @@ import {
   Inject,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { WINDOW } from 'src/services/browser/window.services';
+import { WINDOW } from 'src/services/browser';
 
 @Component({
   selector: 'app-navigation',

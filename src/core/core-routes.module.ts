@@ -1,7 +1,7 @@
 import { CoreComponent } from './core.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SEOService } from 'src/services';
+import { SEOService } from 'src/services/seo';
 
 const routes: Routes = [
   {

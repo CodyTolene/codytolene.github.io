@@ -4,10 +4,10 @@ import { environment } from 'src/environments/environment';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { componentDestroyed, isNonEmptyString } from 'src/shared/utilities';
 import { takeUntil, filter, map, mergeMap } from 'rxjs/operators';
-import { SEOService } from 'src/services';
+import { SEOService } from 'src/services/seo';
 import { DefaultPageMeta } from 'src/shared/constants';
 import { DOCUMENT } from '@angular/common';
-import { WINDOW } from 'src/services/browser/window.services';
+import { WINDOW } from 'src/services/browser';
 
 @Component({
   selector: 'app-core',

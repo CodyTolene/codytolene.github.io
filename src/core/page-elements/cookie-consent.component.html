@@ -1,0 +1,35 @@
+<div
+  *ngIf="!acceptedPrivacyPolicy"
+  role="dialog"
+  aria-live="polite"
+  aria-label="Cookie Consent"
+  aria-describedby="Cookie Consent"
+  class="cookie-consent"
+>
+  <!--googleoff: all-->
+  <span class="cookie-consent-message">
+    This website uses cookies to ensure you get the best experience possible.
+    <a
+      aria-label="learn more about cookies"
+      role="button"
+      tabindex="0"
+      class="cc-link"
+      href="/privacy"
+      rel="noopener noreferrer nofollow"
+      target="_blank"
+    >
+      Learn more
+    </a>
+  </span>
+  <div class="cookie-consent-button">
+    <a
+      aria-label="Dismiss Cookie Message"
+      role="button"
+      tabindex="0"
+      (click)="acceptPrivacyPolicy()"
+    >
+      Got It!
+    </a>
+  </div>
+  <!--googleon: all-->
+</div>

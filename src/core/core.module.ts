@@ -5,12 +5,21 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreComponent } from './core.component';
-import { FooterComponent, NavigationComponent } from './page-elements';
-import { WINDOW_PROVIDERS } from 'src/services/browser/window.services';
+import {
+  FooterComponent,
+  NavigationComponent,
+  CookieConsentComponent,
+} from './page-elements';
+import { WINDOW_PROVIDERS } from 'src/services/browser';
 
 @NgModule({
   bootstrap: [CoreComponent],
-  declarations: [CoreComponent, FooterComponent, NavigationComponent],
+  declarations: [
+    CookieConsentComponent,
+    CoreComponent,
+    FooterComponent,
+    NavigationComponent,
+  ],
   imports: [
     BrowserModule,
     CoreRoutesModule,
