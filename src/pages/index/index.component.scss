@@ -39,8 +39,6 @@ $video_header_height: 800px;
     #particles-js {
       height: $video_header_height;
       width: 100%;
-      background: url("../../assets/images/carousel/Astronomy-1920x1280-opt.webp");
-      background: url("../../assets/images/carousel/Astronomy-1920x1280-opt.jpg");
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: center center;
@@ -131,11 +129,6 @@ $video_header_height: 800px;
     margin-top: 56px !important;
 
     .carousel {
-      #particles-js {
-        background: url("../../assets/images/carousel/Astronomy-1920x1280-opt.webp");
-        background: url("../../assets/images/carousel/Astronomy-1920x1280-opt.jpg");
-      }
-
       .carousel-inner {
         .intro-text {
           //width: 100%;

@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve --base-href / --open",
     "build": "ng build && prettier --write docs/index.html",
     "build:prod": "ng build --prod --aot=true --source-map=false && prettier --write docs/index.html",
     "test": "ng test",
