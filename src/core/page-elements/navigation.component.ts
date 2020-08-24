@@ -1,12 +1,7 @@
-import {
-  Component,
-  AfterViewInit,
-  HostListener,
-  OnInit,
-  Inject,
-} from '@angular/core';
+import { Component, HostListener, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { WINDOW } from 'src/services/browser';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -18,7 +13,9 @@ export class NavigationComponent implements OnInit {
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(WINDOW) private readonly window: Window,
   ) {}
+
   public distanceFromTopOfPage = 0;
+  public readonly faBars = faBars;
 
   @HostListener('window:scroll', []) public onScroll(): void {
     this.distanceFromTopOfPage = this.getDistanceFromTopOfPage();

@@ -11,6 +11,7 @@ import {
   CookieConsentComponent,
 } from './page-elements';
 import { WINDOW_PROVIDERS } from 'src/services/browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   bootstrap: [CoreComponent],
@@ -23,6 +24,7 @@ import { WINDOW_PROVIDERS } from 'src/services/browser';
   imports: [
     BrowserModule,
     CoreRoutesModule,
+    FontAwesomeModule,
     NgbModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
