@@ -39,7 +39,12 @@ const routes: Routes = [
 
 @NgModule({
   exports: [RouterModule],
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled',
+      relativeLinkResolution: 'legacy',
+    }),
+  ],
   providers: [SEOService],
 })
 export class CoreRoutesModule {}
