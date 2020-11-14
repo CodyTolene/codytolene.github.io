@@ -62,7 +62,7 @@
     "jquery": "^3.5.1",
     "mdbootstrap": "^4.19.1",
     "particles.js": "^2.0.0",
-    "rxjs": "~6.5.5",
+    "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
