@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1598246866701,
+  "timestamp": 1605339186126,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,17 +11,17 @@
         "ignoreVary": true
       },
       "urls": [
-        "/4.78a4c5b0779fbd9e3d2f.js",
-        "/5.613e2465386efcf231f1.js",
-        "/6.bef571864678be727fde.js",
+        "/4.f0600cc13053f6ee9069.js",
+        "/5.a1a754d03af10aae21d1.js",
+        "/6.5f9cae6c36b8d92bfed9.js",
         "/favicon.ico",
         "/index.html",
-        "/main.46c79829d2f94e5db519.js",
+        "/main.7ddbbee9bb6f1ea33e79.js",
         "/manifest.webmanifest",
-        "/polyfills.b9b21dc0255185303210.js",
-        "/runtime.73885c38e1bffa152b95.js",
+        "/polyfills.0c52e2149d89cdb3a450.js",
+        "/runtime.d29a5df294d68fb12a0f.js",
         "/scripts.16b112204e4d9890c38c.js",
-        "/styles.3aaa33923812eb5f4c6b.css"
+        "/styles.8826a73f7f5517b83ad3.css"
       ],
       "patterns": []
     },
@@ -164,9 +164,9 @@
     "/07.535b98d8b10c9c1713fb.png": "078e49f4fa97e117da76cbef2b492e8cf92d0d45",
     "/08.83eb2c7e2892a66afe14.png": "b3916a95cb81602b7bd41eaefa92eb3a8fd39b70",
     "/09.2012ae6071a90778f12d.png": "4d1c1ec2c710745ddcc43fdd0ae41d3095398a77",
-    "/4.78a4c5b0779fbd9e3d2f.js": "0a3bf56b566286a3e9d3c7ad8d23c0adb547af34",
-    "/5.613e2465386efcf231f1.js": "cb703ecd2095e250c061937ea063e0186efa626c",
-    "/6.bef571864678be727fde.js": "163721225b961101665766f1978be934f4df9da6",
+    "/4.f0600cc13053f6ee9069.js": "ae11a48dbead1caa3abd8698042936343e2a1070",
+    "/5.a1a754d03af10aae21d1.js": "778e6522b7b45acb01e0effd04e0e0d0ceff7fec",
+    "/6.5f9cae6c36b8d92bfed9.js": "4921145aa88e1a040fae3e05e39ad1bfa6728e37",
     "/assets/fonts/google/anton/Anton-Regular.ttf": "97525fddba2ae10203bfa32b153b7b30aed3ed39",
     "/assets/fonts/google/anton/OFL.txt": "24f1579e8e7bc36b1a842f81fc22496fe1ccb8a9",
     "/assets/fonts/google/bungee/Bungee-Regular.ttf": "9dac9ed2f6ba9c26c53eb873b28a40f893eb125f",
@@ -275,13 +275,13 @@
     "/assets/videos/Words.mp4": "f30a46e15059f8acac5087d8c3f71238f0e57022",
     "/assets/videos/Words.webm": "a0c6571406ccd08c58d49e973cc83c1bcd60442d",
     "/favicon.ico": "b6bc9d4e30de301b0c936c290bd9c1ae1b2819cb",
-    "/index.html": "4a843d7f73edcae912fe6ebfc92e3ff59bfe7cd5",
-    "/main.46c79829d2f94e5db519.js": "e7c456cfa64b25b86015ac4ee43433820eb885ed",
+    "/index.html": "8f62ab68d268e806d333c59cbfe7106dd9dac524",
+    "/main.7ddbbee9bb6f1ea33e79.js": "19cd2b0e19208a318d23c72820879a478d8336c6",
     "/manifest.webmanifest": "3f2a15184188f73b3b692372e21f4f257ae21c49",
-    "/polyfills.b9b21dc0255185303210.js": "91f4e3fd70316d9cb796b0ec07e8fe7fbbf93b15",
-    "/runtime.73885c38e1bffa152b95.js": "82794b29d9694c63939c8b582f32f1fd7b5345d7",
-    "/scripts.16b112204e4d9890c38c.js": "fd122f0ba67e56c348d0e88ab072764178191836",
-    "/styles.3aaa33923812eb5f4c6b.css": "6875785afbefcca346e1ec48bc3e0513e992e3b5"
+    "/polyfills.0c52e2149d89cdb3a450.js": "dbc502f030c7bb83c7caa1feee7aff990831f7d9",
+    "/runtime.d29a5df294d68fb12a0f.js": "e9e39b584fd357da72444384ea2943596f9e2a7d",
+    "/scripts.16b112204e4d9890c38c.js": "53227ac60afbbec336ae3bbce4404ff9cb81c367",
+    "/styles.8826a73f7f5517b83ad3.css": "554a4d6cf95c7885d3ec44101e36139aa7b46079"
   },
   "navigationUrls": [
     {
@@ -300,5 +300,6 @@
       "positive": false,
       "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
-  ]
+  ],
+  "navigationRequestStrategy": "performance"
 }

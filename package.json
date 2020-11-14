@@ -2,7 +2,7 @@
   "name": "codytolene-github-io",
   "description": "Cody Tolene's Personal Angular Website",
   "author": "Cody Tolene",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "AGPL-3.0",
   "homepage": "https://www.codytolene.com",
   "private": true,
@@ -35,7 +35,9 @@
     "prettier": "prettier --write e2e/src/**/*.{ts,js,css,scss,html} src/**/*.{ts,js,css,scss,html}"
   },
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "pre-commit": "npm run prettier && ng lint && npm run test:silent && npm run build:prod && gulp CreateGitHub404Page && git add -A"
+    }
   },
   "dependencies": {
     "@angular/animations": "~11.0.0",
