@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { LocalStorageService } from 'src/services/browser/local-storage.service';
 
 interface CookieConsentStorageKeys {
@@ -22,7 +22,17 @@ export class CookieConsentComponent {
     }
   }
 
+  // TODO: Add animations (fade in/fade out)
+  public isTemporarilyHidden = true;
   public acceptedPrivacyPolicy = false;
+
+  @HostListener('window:scroll')
+  public onWindowScroll(): void {
+    const atTop = window.scrollY <= 300;
+    const atBot =
+      window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    this.isTemporarilyHidden = atTop || atBot;
+  }
 
   public acceptPrivacyPolicy(): void {
     this.localStorage.set('acceptedPrivacyPolicy', 'true');
