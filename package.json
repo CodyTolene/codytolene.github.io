@@ -1,99 +1,39 @@
 {
   "name": "codytolene-github-io",
-  "description": "Cody Tolene's Personal Angular Website",
-  "author": "Cody Tolene",
-  "version": "1.1.0",
-  "license": "AGPL-3.0",
-  "homepage": "https://www.codytolene.com",
-  "private": true,
-  "keywords": [
-    "Cody",
-    "Tolene",
-    "Personal",
-    "Website"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CodyTolene/codytolene.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/CodyTolene/codytolene.github.io/issues"
-  },
-  "contributors": [
-    "Cody Tolene (https://www.codytolene.com)"
-  ],
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --base-href / --open",
-    "build": "ng build && prettier --write docs/index.html",
-    "build:prod": "ng build --prod --aot=true --source-map=false && prettier --write docs/index.html",
-    "test": "ng test",
-    "test:silent": "ng test --watch=false",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "pwa": "http-server -p 8080 -c-1 docs",
-    "prettier": "prettier --write e2e/src/**/*.{ts,js,css,scss,html} src/**/*.{ts,js,css,scss,html}"
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run prettier && ng lint && npm run test:silent && npm run build:prod && gulp CreateGitHub404Page && git add -A"
-    }
-  },
+  "private": true,
   "dependencies": {
-    "@angular/animations": "~11.0.0",
-    "@angular/cdk": "^11.0.0",
-    "@angular/common": "~11.0.0",
-    "@angular/compiler": "~11.0.0",
-    "@angular/core": "~11.0.0",
-    "@angular/forms": "~11.0.0",
-    "@angular/localize": "~11.0.0",
-    "@angular/material": "^11.0.0",
-    "@angular/platform-browser": "~11.0.0",
-    "@angular/platform-browser-dynamic": "~11.0.0",
-    "@angular/pwa": "^0.1001.0-next.5",
-    "@angular/router": "~11.0.0",
-    "@angular/service-worker": "~11.0.0",
-    "@fortawesome/angular-fontawesome": "^0.7.0",
-    "@fortawesome/fontawesome-common-types": "^0.2.30",
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-brands-svg-icons": "^5.14.0",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
-    "bootstrap": "^4.5.0",
-    "cookieconsent": "^3.1.1",
-    "jquery": "^3.5.1",
-    "mdbootstrap": "^4.19.1",
-    "particles.js": "^2.0.0",
-    "rxjs": "~6.6.3",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.10.3"
+    "@angular/animations": "~13.3.0",
+    "@angular/common": "~13.3.0",
+    "@angular/compiler": "~13.3.0",
+    "@angular/core": "~13.3.0",
+    "@angular/forms": "~13.3.0",
+    "@angular/platform-browser": "~13.3.0",
+    "@angular/platform-browser-dynamic": "~13.3.0",
+    "@angular/router": "~13.3.0",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "^10.0.0",
-    "@angular-devkit/build-angular": "~0.1100.1",
-    "@angular/cli": "~11.0.1",
-    "@angular/compiler-cli": "~11.0.0",
-    "@types/jasmine": "~3.6.0",
-    "@types/jasminewd2": "~2.0.3",
+    "@angular-devkit/build-angular": "~13.3.5",
+    "@angular/cli": "~13.3.5",
+    "@angular/compiler-cli": "~13.3.0",
+    "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.0",
-    "http-server": "^0.12.3",
-    "gulp": "^4.0.2",
-    "gulp-rename": "^2.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "husky": "^4.2.5",
-    "karma": "~5.1.1",
+    "jasmine-core": "~4.0.0",
+    "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "prettier": "2.0.5",
-    "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "tslint-angular": "^3.0.3",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "~4.0.5"
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.6.2"
   }
 }
