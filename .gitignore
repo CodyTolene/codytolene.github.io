@@ -22,6 +22,7 @@ yarn-error.log
 
 # Visual Studio
 .vs/*
+.vs/slnx.sqlite
 
 # Visual Studio Code
 .vscode/*
