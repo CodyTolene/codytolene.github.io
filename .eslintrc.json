@@ -1,79 +1,39 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json",
-          "e2e/tsconfig.json"
-        ],
+        "project": ["tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
-        "plugin:@angular-eslint/ng-cli-compat",
-        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "mgs",
-            "style": "kebab-case"
-          }
-        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
-            "prefix": "mgs",
+            "prefix": "ct",
             "style": "camelCase"
           }
         ],
-        "@typescript-eslint/array-type": [
+        "@angular-eslint/component-selector": [
           "error",
           {
-            "default": "array-simple"
+            "type": "element",
+            "prefix": "ct",
+            "style": "kebab-case"
           }
-        ],
-        "@typescript-eslint/no-empty-function": "error",
-        "@typescript-eslint/no-explicit-any": "error",
-        "@typescript-eslint/no-unused-vars": [
-          "error",
-          {
-            "argsIgnorePattern": "^_"
-          }
-        ],
-        "@typescript-eslint/prefer-readonly": "error",
-        "@typescript-eslint/member-ordering": [
-          "error",
-          {
-            "default": [
-              "constructor",
-              "static-method",
-              "instance-method"
-            ]
-          }
-        ],
-        "no-duplicate-imports": "error",
-        "no-empty": "error",
-        "prefer-arrow/prefer-arrow-functions": "off"
+        ]
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     }
   ]
