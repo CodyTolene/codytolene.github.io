@@ -2,7 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'ct-core',
-  templateUrl: './core.component.html',
-  styleUrls: ['./core.component.scss'],
+  styles: [],
+  template: `
+    <ct-header></ct-header>
+    <ct-body>
+      <router-outlet></router-outlet>
+    </ct-body>
+    <ct-footer></ct-footer>
+  `,
 })
 export class CoreComponent {}
