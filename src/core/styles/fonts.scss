@@ -1,0 +1,118 @@
+// Montserrat Regular
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/google/montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+}
+
+// Just Another Hand Regular
+@font-face {
+  font-family: "Just Another Hand";
+  src: url("/assets/fonts/google/justanotherhand/JustAnotherHand-Regular.ttf")
+    format("truetype");
+}
+
+// Anton Regular
+@font-face {
+  font-family: "Anton";
+  src: url("/assets/fonts/google/anton/Anton-Regular.ttf") format("truetype");
+}
+
+// Bungee Regular
+@font-face {
+  font-family: "Bungee";
+  src: url("/assets/fonts/google/bungee/Bungee-Regular.ttf") format("truetype");
+}
+
+// Custom NetCore icon
+@font-face {
+  font-family: "netcore";
+  src: url("/assets/fonts/netcore/netcore.eot");
+  src: url("/assets/fonts/netcore/netcore.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/netcore/netcore.woff") format("woff"),
+    url("/assets/fonts/netcore/netcore.ttf") format("truetype"),
+    url("/assets/fonts/netcore/netcore.svg#1557188824") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Roboto Regular
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Regular.eot");
+  src: local("Roboto"), local("Roboto-Roboto-Regular"),
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/google/roboto/Roboto-Regular.woff2") format("woff2"),
+    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Regular.woff")
+      format("woff"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/google/roboto/Roboto-Regular.ttf") format("truetype"),
+    /* Legacy iOS */
+      url("/assets/fonts/google/roboto/Roboto-Regular.svg#Roboto") format("svg");
+}
+
+// Roboto Light
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Light.eot");
+  src: local("Roboto Light"), local("Roboto-Light"),
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/google/roboto/Roboto-Light.woff2") format("woff2"),
+    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Light.woff")
+      format("woff"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/google/roboto/Roboto-Light.ttf") format("truetype"),
+    /* Legacy iOS */ url("/assets/fonts/google/roboto/Roboto-Light.svg#Roboto")
+      format("svg");
+}
+
+// Roboto Bold
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Bold.eot");
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/google/roboto/Roboto-Bold.woff2") format("woff2"),
+    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Bold.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/google/roboto/Roboto-Bold.woff") format("woff"),
+    /* Legacy iOS */ url("/assets/fonts/google/roboto/Roboto-Bold.svg#Roboto")
+      format("svg");
+}
+
+// Roboto Medium
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/google/roboto/Roboto-Medium.eot");
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+    /* IE6-IE8 */ url("/assets/fonts/google/roboto/Roboto-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/google/roboto/Roboto-Medium.woff2") format("woff2"),
+    /* Modern Browsers */ url("/assets/fonts/google/roboto/Roboto-Medium.woff")
+      format("woff"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/google/roboto/Roboto-Medium.ttf") format("truetype"),
+    /* Legacy iOS */ url("/assets/fonts/google/roboto/Roboto-Medium.svg#Roboto")
+      format("svg");
+}
