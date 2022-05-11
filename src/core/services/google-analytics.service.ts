@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
+const enableDebugging = false;
+
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 interface PageViewEvent {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -35,7 +37,7 @@ export class GoogleAnalyticsService {
       } catch (error: unknown) {
         console.warn(error);
       }
-    } else {
+    } else if (enableDebugging) {
       // eslint-disable-next-line no-console
       console.info('event', 'page_view', viewMeta);
     }
