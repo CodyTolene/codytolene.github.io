@@ -9,7 +9,7 @@ async function updateCNAME(): Promise<void> {
 
   // Current list of page urls
   const pageUrls = (
-    await getDataFromFile<PagesJson>('./src/core/pages/pages.json')
+    await getDataFromFile<PagesJson>('./src/core/pages/_pages.json')
   ).pages;
 
   // Generate the CNAME file.

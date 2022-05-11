@@ -3,15 +3,7 @@ import { Component, NgModule } from '@angular/core';
 import { Data, Route, RouterModule } from '@angular/router';
 import { DEFAULT_PAGE_META } from 'src/core/constants/default-page-meta';
 
-const template = `
-  <section>Index page content.</section>
-`;
-
-@Component({
-  selector: 'ct-index-page',
-  styles: [],
-  template,
-})
+@Component({ templateUrl: './index.html' })
 class IndexPageComponent {}
 
 const data: CustomRouteData & Data = {

@@ -11,7 +11,7 @@ async function updateSitemap(): Promise<void> {
   const todaysDate = new Date().toISOString().split('T')[0];
   // Current List of Pages
   const pages = (
-    await getDataFromFile<PagesJson>('./src/core/pages/pages.json')
+    await getDataFromFile<PagesJson>('./src/core/pages/_pages.json')
   ).pages;
   const pageUrls: readonly SitemapUrl[] = pages.map((page) => ({
     loc: page,
