@@ -1,0 +1,45 @@
+@import "./palette";
+
+/**
+ * Import Bootstrap
+ * https://getbootstrap.com/docs/5.0/customize/sass/
+*/
+
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+
+@import "../../../node_modules/bootstrap/scss/functions";
+
+/* Include optiona overrides here */
+
+$body-bg: $theme_dark_gray;
+$body-color: $theme_dark_gray;
+$include-column-box-sizing: true !default;
+
+// NOTE: Consider nything less than 1280 is "mobile/tablet".
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  // Default `xl: 1200px`
+  xxl: 1400px,
+);
+
+/* Include remainder of required Bootstrap stylesheets */
+
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+/* Include optional Bootstrap components */
+
+//@import "../../../node_modules/bootstrap/scss/root";
+//@import "../../../node_modules/bootstrap/scss/reboot";
+//@import "../../../node_modules/bootstrap/scss/type";
+//@import "../../../node_modules/bootstrap/scss/alert";
+@import "../../../node_modules/bootstrap/scss/images";
+//@import "../../../node_modules/bootstrap/scss/containers";
+//@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../../node_modules/bootstrap/scss/bootstrap-utilities";
