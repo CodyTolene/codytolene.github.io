@@ -1,7 +1,5 @@
-// TODO: Use these imports instead.
-//import { readFileSync, writeFileSync } from 'fs';
-const { readFileSync, writeFileSync } = require('fs');
-const domain = 'codytolene';
+import { writeFileSync } from 'fs';
+import { getDataFromFile } from './get-data-from-file';
 
 // Run this method via node (see `../package.json` for usage)
 updateSitemap();
@@ -12,8 +10,9 @@ async function updateSitemap(): Promise<void> {
   // Current Date: YYYY-MM-DD
   const todaysDate = new Date().toISOString().split('T')[0];
   // Current List of Pages
-  const pages = (await getDataFromFile<PagesJson>('./.sitemap/pages.json'))
-    .pages;
+  const pages = (
+    await getDataFromFile<PagesJson>('./src/core/pages/pages.json')
+  ).pages;
   const pageUrls: readonly SitemapUrl[] = pages.map((page) => ({
     loc: page,
     lastmod: todaysDate,
@@ -42,19 +41,36 @@ async function updateSitemap(): Promise<void> {
   generateSitemapIndex('src/sitemap.xml', [
     ...sitemapFilenames.map(
       (sitemapFilename) =>
-        `https://www.${domain}.com/assets/sitemap/${sitemapFilename}`
+        `https://www.codytolene.com/assets/sitemap/${sitemapFilename}`
     ),
   ]);
+
+  // Generate the CNAME file.
+  generateCNAME('src/CNAME', pageUrls);
 
   // Fin
   console.log('Completed updating sitemap.');
 }
 
 /**
+ * Create a new CNAME file that contains all site directories.
+ *
+ * @param fileDirectory Directory of the CNAME file
+ * @param pageUrls Array of sitemap URLs to add to the sitemap.
+ */
+function generateCNAME(
+  fileDirectory: string,
+  siteMapUrls: readonly SitemapUrl[]
+): void {
+  const cnameContent = siteMapUrls.map(({ loc: url }) => `${url}\n`).toString();
+  writeFileSync(fileDirectory, cnameContent);
+}
+
+/**
  * Create a new sitemap index that contains child sitemaps.
  *
- * @param sitemapFileDirectory Directory of the sitemap xml file
- * @returns true when successful
+ * @param fileDirectory Directory of the sitemap xml file
+ * @param sitemapFileDirectories
  */
 function generateSitemapIndex(
   fileDirectory: string,
@@ -107,18 +123,8 @@ function generateSitemapFile(
     `${sitemapUrlsXML.join('\n')}\n` +
     `</urlset>\n`;
 
+  // Note if the directory doesn't pre-exist, this will fail!
   writeFileSync(fileDirectory, sitemapXML);
-}
-
-function getDataFromFile<R>(fileDirectory: string): R {
-  try {
-    const file = readFileSync(fileDirectory, 'utf8');
-    const parsed = JSON.parse(file) as R;
-    return parsed;
-  } catch (error) {
-    console.error(error);
-    throw new Error(`Failed to parse file from "${fileDirectory}". See log.`);
-  }
 }
 
 function chunk<T>(array: readonly T[], chunkSize: number): readonly T[][] {

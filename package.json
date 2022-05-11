@@ -40,7 +40,8 @@
     "start:prod": "ng serve --configuration production --open",
     "test": "ng test",
     "update:angular": "ng update",
-    "update:sitemap": "ts-node ./.sitemap/update-sitemap.ts",
+    "update:cname": "ts-node ./.scripts/update-cname.ts",
+    "update:sitemap": "ts-node ./.scripts/update-sitemap.ts",
     "watch": "ng build --watch --configuration development"
   },
   "dependencies": {
