@@ -1,10 +1,27 @@
 import { CommonModule } from '@angular/common';
+import { AfterViewInit } from '@angular/core';
 import { Component, NgModule } from '@angular/core';
 import { Data, Route, RouterModule } from '@angular/router';
-import { DEFAULT_PAGE_META } from 'src/core/constants/default-page-meta';
+import { DEFAULT_PAGE_META, SPACE_BANNER_OPTIONS } from 'src/core/constants';
 
-@Component({ templateUrl: './index.html' })
-class IndexPageComponent {}
+/** This will be imported via `~/angular.json` */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare let particlesJS: any;
+
+@Component({
+  templateUrl: './index.html',
+  styleUrls: ['./index.scss'],
+})
+class IndexPageComponent implements AfterViewInit {
+  public ngAfterViewInit(): void {
+    // Initialize space banner
+    try {
+      particlesJS('particles', SPACE_BANNER_OPTIONS);
+    } catch (error) {
+      console.warn('Failed to load particles.');
+    }
+  }
+}
 
 const data: CustomRouteData & Data = {
   meta: {

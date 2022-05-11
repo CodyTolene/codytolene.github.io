@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { DEFAULT_PAGE_META } from 'src/core/constants/default-page-meta';
+import { DEFAULT_PAGE_META } from 'src/core/constants';
 
 @Injectable()
 export class MetaService {

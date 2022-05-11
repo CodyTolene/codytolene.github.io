@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { Data, Route, RouterModule } from '@angular/router';
-import { DEFAULT_PAGE_META } from 'src/core/constants/default-page-meta';
+import { DEFAULT_PAGE_META } from 'src/core/constants';
 
 @Component({ templateUrl: './privacy-policy.html' })
 class PrivacyPolicyPageComponent {}

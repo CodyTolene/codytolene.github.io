@@ -1,0 +1,46 @@
+@import "../styles/typography";
+@import "../styles/palette";
+
+.space-banner {
+  width: 100%;
+  height: 800px;
+  background: url("/assets/images/space-banner/space.webp");
+  background: url("/assets/images/space-banner/space.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #particles {
+    width: 100%;
+    height: 800px;
+    max-height: 800px;
+    overflow: hidden;
+    z-index: 1;
+
+    * {
+      z-index: 1;
+    }
+  }
+
+  .message {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    z-index: 0;
+
+    h1,
+    h3 {
+      font-family: $font-family-montserrat;
+    }
+
+    h1 {
+      color: $white;
+    }
+
+    h3 {
+      color: $theme_light_green_light_tint;
+    }
+  }
+}
