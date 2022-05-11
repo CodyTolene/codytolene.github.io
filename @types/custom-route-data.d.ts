@@ -1,0 +1,3 @@
+type CustomRouteData = {
+  meta: PageMeta;
+};

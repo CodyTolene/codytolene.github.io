@@ -1,26 +1,46 @@
 import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Data, Route, RouterModule } from '@angular/router';
+import { DEFAULT_PAGE_META } from 'src/core/constants/default-page-meta';
+
+const template = `
+  <section>Privacy page content.</section>
+`;
 
 @Component({
   selector: 'ct-privacy-policy-page',
   styles: [],
-  template: ` <section>Privacy policy page content.</section> `,
+  template,
 })
 class PrivacyPolicyPageComponent {}
 
+const data: CustomRouteData & Data = {
+  meta: {
+    author: DEFAULT_PAGE_META.author,
+    description: "Cody Tolene's Portfolio Website Privacy Policy",
+    keywords: [
+      ...DEFAULT_PAGE_META.keywords,
+      'conditions',
+      'policy',
+      'privacy',
+      'privacy-policy',
+      'terms',
+    ],
+    title: 'Privacy Policy',
+    trailingTitle: DEFAULT_PAGE_META.trailingTitle,
+  },
+};
+
+const route: Route = {
+  component: PrivacyPolicyPageComponent,
+  data,
+  path: '',
+  pathMatch: 'full',
+};
+
 @NgModule({
   declarations: [PrivacyPolicyPageComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      {
-        component: PrivacyPolicyPageComponent,
-        path: '',
-        pathMatch: 'full',
-      },
-    ]),
-  ],
+  imports: [CommonModule, RouterModule.forChild([route])],
   providers: [],
 })
 export class PrivacyPolicyModule {}
