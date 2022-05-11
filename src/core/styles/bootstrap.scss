@@ -1,5 +1,3 @@
-@import "./palette";
-
 /**
  * Import Bootstrap
  * https://getbootstrap.com/docs/5.0/customize/sass/
@@ -9,11 +7,16 @@
 
 @import "node_modules/bootstrap/scss/functions";
 
-/* Include optiona overrides here */
+/* Include optional overrides here */
 
-$body-bg: $theme_dark_gray;
-$body-color: $theme_dark_gray;
+$body-bg: #222629;
+$body-color: #222629;
 $include-column-box-sizing: true !default;
+
+.container-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 /* NOTE: Consider anything less than 1280 is "mobile/tablet". */
 

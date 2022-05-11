@@ -1,5 +1,4 @@
 @import "../styles/typography";
-@import "../styles/palette";
 
 .space-banner {
   width: 100%;
@@ -16,6 +15,7 @@
     max-height: 800px;
     overflow: hidden;
     z-index: 1;
+    cursor: default;
 
     * {
       z-index: 1;
@@ -36,11 +36,15 @@
     }
 
     h1 {
-      color: $white;
+      color: var(--white);
+      font-size: 2rem;
+      margin: 0;
     }
 
     h3 {
-      color: $theme_light_green_light_tint;
+      color: var(--theme_light_green_light_tint);
+      font-size: 1.25rem;
+      margin: 1rem 0 0 0;
     }
   }
 }
