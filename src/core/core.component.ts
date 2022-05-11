@@ -23,6 +23,7 @@ import { GoogleAnalyticsService } from 'src/core/services/google-analytics.servi
       <router-outlet></router-outlet>
     </ct-body>
     <ct-footer></ct-footer>
+    <ct-screen-size-detector></ct-screen-size-detector>
   `,
   providers: [GoogleAnalyticsService, MetaService],
 })

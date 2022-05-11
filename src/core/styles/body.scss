@@ -1,6 +1,6 @@
 @import "./typography";
 
 body {
-  font-family: $font-family-montserrat;
+  font-family: var(--font-family-montserrat);
   margin: 0;
 }

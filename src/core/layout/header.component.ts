@@ -1,38 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ScreenSizeService } from 'src/core/services/screen-size.service';
 
 @Component({
   selector: 'ct-header',
-  styles: [
-    `
-      :host,
-      header {
-        width: 100%;
-        height: 50px;
-        background: var(--theme_dark_gray);
-        z-index: 999;
-      }
-      header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-
-        .row {
-          height: 50px;
-
-          .links {
-            text-align: end;
-          }
-        }
-      }
-    `,
-  ],
-  template: `
-    <header class="container-fluid">
-      <div class="row">
-        <div class="col-6 col-md-4">CODY TOLENE</div>
-        <div class="col-6 col-md-8 links">Links</div>
-      </div>
-    </header>
-  `,
+  styleUrls: ['./header.component.scss'],
+  templateUrl: './header.component.html',
+  providers: [ScreenSizeService],
 })
-export class HeaderComponent {}
+export class HeaderComponent implements OnInit {
+  public constructor(private readonly screenSizeService: ScreenSizeService) {}
+
+  public ngOnInit(): void {
+    console.log('Running');
+    this.screenSizeService.isMobileChanges.subscribe((isMobile) => {
+      console.log(isMobile);
+    });
+  }
+}
