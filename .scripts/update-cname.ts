@@ -29,7 +29,10 @@ function generateCNAME(
   fileDirectory: string,
   siteMapUrls: readonly string[]
 ): void {
-  const cnameContent = siteMapUrls.map((url) => `${url}\n`).toString();
+  const cnameContent = siteMapUrls
+    .map((url) => `${url}\n`)
+    .join('')
+    .toString();
   writeFileSync(fileDirectory, cnameContent);
 }
 
