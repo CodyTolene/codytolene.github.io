@@ -1,0 +1,86 @@
+@import "@angular/material/theming";
+@import "./typography";
+
+@include mat-core();
+
+@include angular-material-theme(
+  mat-light-theme(
+    // PRIMARY
+    mat-palette(
+        (
+          default: var(--theme_mid_gray),
+          100: var(--theme_light_gray),
+          500: var(--theme_mid_gray),
+          700: var(--theme_dark_gray),
+          contrast: (
+            default: var(--theme_mid_gray),
+          ),
+        )
+      ),
+    // ACCENT
+    mat-palette(
+        (
+          default: var(--theme_light_green),
+          100: var(--theme_light_green_light_tint),
+          500: var(--theme_light_green),
+          700: var(--theme_light_green_dark_tint),
+          contrast: (
+            default: var(--theme_light_green),
+          ),
+        )
+      ),
+    // WARN
+    mat-palette(
+        (
+          default: var(--red),
+          100: var(--yellow),
+          500: var(--red),
+          700: var(--magenta),
+          contrast: (
+            default: var(--red),
+          ),
+        )
+      )
+  )
+);
+
+mat-icon {
+  font-family: "Material Icons";
+}
+
+.mat-menu-content {
+  padding: 0 !important;
+  background-color: var(--theme_light_gray);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+
+    li {
+      padding: 0;
+
+      a {
+        font-weight: 500;
+        padding: 1rem;
+        color: var(--white);
+        transition: 0.35s;
+        transition-property: all;
+        transition-duration: 0.35s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+
+        &:hover {
+          color: var(--theme_light_green_light_tint) !important;
+          text-decoration: overline;
+        }
+
+        &:visited {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

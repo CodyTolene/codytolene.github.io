@@ -8,7 +8,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ScreenSizeService {
   public constructor(public readonly breakpointObserver: BreakpointObserver) {}
   private readonly isMobileSubject = new ReplaySubject<boolean>(1);
@@ -23,7 +23,6 @@ export class ScreenSizeService {
 @Component({
   selector: 'ct-screen-size-detector',
   template: '',
-  providers: [ScreenSizeService],
 })
 export class ScreenSizeDetectorComponent implements OnInit {
   public constructor(
@@ -45,7 +44,6 @@ export class ScreenSizeDetectorComponent implements OnInit {
       ])
       .pipe(untilDestroyed(this))
       .subscribe((state: BreakpointState) => {
-        console.log(state);
         this.screenSizeService.isMobile = state.matches;
       });
   }

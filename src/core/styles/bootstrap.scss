@@ -25,8 +25,9 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1280px,
   // Default `xl: 1200px`
+  // Set to 1280 to work with Angular CDK.
+  xl: 1280px,
   xxl: 1400px,
 );
 
@@ -37,12 +38,15 @@ $grid-breakpoints: (
 
 /* Include optional Bootstrap components */
 
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/bootstrap-utilities";
+
 //@import "node_modules/bootstrap/scss/root";
 //@import "node_modules/bootstrap/scss/reboot";
 //@import "node_modules/bootstrap/scss/type";
 //@import "node_modules/bootstrap/scss/alert";
-@import "node_modules/bootstrap/scss/images";
 //@import "node_modules/bootstrap/scss/containers";
 //@import "node_modules/bootstrap/scss/grid";
-@import "node_modules/bootstrap/scss/bootstrap-grid";
-@import "node_modules/bootstrap/scss/bootstrap-utilities";
+//@import "node_modules/bootstrap/scss/buttons";
+//@import "node_modules/bootstrap/scss/dropdown";

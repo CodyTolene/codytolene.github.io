@@ -1,24 +1,47 @@
 <header class="container-fluid">
   <div class="row">
-    <div class="col-6 col-md-4 offset-md-2">
+    <div class="col-6 col-xl-4 offset-xl-2 logo-container">
       <a class="cody-tolene-logo" [routerLink]="['/']"> Cody Tolene </a>
     </div>
-    <div class="col-6 col-md-4">
+    <div class="col-6 col-xl-4">
       <nav>
-        <ul>
-          <li>
-            <a [routerLink]="['/']" fragment="services"> Services </a>
-          </li>
-          <li>
-            <a [routerLink]="['/']" fragment="about"> About </a>
-          </li>
-          <li>
-            <a [routerLink]="['/']" fragment="resume"> Resume </a>
-          </li>
-          <li>
-            <a [routerLink]="['/']" fragment="contact"> Contact </a>
-          </li>
-        </ul>
+        <ng-container *ngIf="isMobileChanges | async; else defaultTemplate">
+          <ul>
+            <li>
+              <button
+                class="menu"
+                mat-icon-button
+                [matMenuTriggerFor]="beforeMenu"
+              >
+                <mat-icon color="accent" [inline]="true">menu_open</mat-icon>
+              </button>
+            </li>
+          </ul>
+          <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <ng-container
+              *ngTemplateOutlet="defaultLinkTemplate"
+            ></ng-container>
+          </mat-menu>
+        </ng-container>
+        <ng-template #defaultTemplate>
+          <ng-container *ngTemplateOutlet="defaultLinkTemplate"></ng-container>
+        </ng-template>
+        <ng-template #defaultLinkTemplate>
+          <ul>
+            <li mat-menu-item>
+              <a [routerLink]="['/']" fragment="services"> Services </a>
+            </li>
+            <li mat-menu-item>
+              <a [routerLink]="['/']" fragment="about"> About </a>
+            </li>
+            <li mat-menu-item>
+              <a [routerLink]="['/']" fragment="resume"> Resume </a>
+            </li>
+            <li mat-menu-item>
+              <a [routerLink]="['/']" fragment="contact"> Contact </a>
+            </li>
+          </ul>
+        </ng-template>
       </nav>
     </div>
   </div>

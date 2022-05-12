@@ -4,7 +4,7 @@ header {
   height: var(--header-height);
   background: var(--theme_dark_gray);
   z-index: 999;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 header {
@@ -13,19 +13,27 @@ header {
   width: 100%;
 
   .row {
-    height: 50px;
+    height: var(--header-height);
+
+    > div,
+    nav {
+      max-height: var(--header-height);
+    }
   }
 }
 
-.cody-tolene-logo {
-  display: inline-block;
-  font-family: var(--font-family-bungee);
-  font-size: 1.75em;
-  color: var(--theme_light_green_light_tint);
-  line-height: 175%;
-  height: 100%;
-  padding: 0.25rem;
+.logo-container {
+  overflow: hidden;
   white-space: nowrap;
+
+  .cody-tolene-logo {
+    display: inline-block;
+    font-family: var(--font-family-bungee);
+    font-size: 1.75em;
+    color: var(--theme_light_green_light_tint);
+    line-height: 175%;
+    height: 100%;
+  }
 }
 
 nav {
@@ -41,8 +49,6 @@ nav {
     margin-left: auto;
     text-transform: uppercase;
     display: flex;
-    padding-left: 0;
-    margin-bottom: 0;
     list-style: none;
 
     li {
@@ -52,6 +58,15 @@ nav {
       margin-bottom: 0;
       list-style: none;
       display: list-item;
+
+      button.menu {
+        width: var(--header-height);
+        height: var(--header-height);
+
+        mat-icon {
+          font-size: 2rem;
+        }
+      }
 
       a {
         font-weight: 500;
@@ -64,8 +79,12 @@ nav {
         transition-delay: 0s;
 
         &:hover {
-          color: var(--theme_light_green_light_tint);
+          color: var(--theme_light_green_light_tint) !important;
           text-decoration: overline;
+        }
+
+        &:visited {
+          color: var(--white);
         }
       }
     }
