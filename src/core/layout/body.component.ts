@@ -5,11 +5,16 @@ import { Component } from '@angular/core';
   styles: [
     `
       :host {
+        display: block;
         position: relative;
-        top: var(--header-height);
+        width: 100%;
       }
     `,
   ],
-  template: '<router-outlet></router-outlet>',
+  template: `
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  `,
 })
 export class BodyComponent {}

@@ -48,3 +48,34 @@
     }
   }
 }
+
+.gray-background {
+  background-color: var(--theme_mid_gray);
+}
+
+$icon_size: 10rem;
+
+.icon-link {
+  display: inline-block;
+
+  svg {
+    display: block;
+    padding: 2rem;
+    height: $icon_size;
+    max-height: $icon_size;
+    max-width: $icon_size;
+    color: var(--theme_light_green);
+
+    &:hover {
+      color: var(--theme_light_green_light_tint);
+    }
+  }
+
+  i {
+    display: block;
+    padding: 2rem;
+    font-size: $icon_size;
+    max-height: $icon_size;
+    max-width: $icon_size;
+  }
+}

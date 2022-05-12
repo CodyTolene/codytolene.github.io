@@ -1,7 +1,9 @@
 <header class="container-fluid">
   <div class="row">
     <div class="col-6 col-xl-4 offset-xl-2 logo-container">
-      <a class="cody-tolene-logo" [routerLink]="['/']"> Cody Tolene </a>
+      <a class="cody-tolene-logo ps-3 ps-xl-0" [routerLink]="['/']">
+        Cody Tolene
+      </a>
     </div>
     <div class="col-6 col-xl-4">
       <nav>
@@ -29,16 +31,16 @@
         <ng-template #defaultLinkTemplate>
           <ul>
             <li mat-menu-item>
-              <a [routerLink]="['/']" fragment="services"> Services </a>
+              <a href="#services"> Services </a>
             </li>
             <li mat-menu-item>
-              <a [routerLink]="['/']" fragment="about"> About </a>
+              <a href="#about"> About </a>
             </li>
             <li mat-menu-item>
-              <a [routerLink]="['/']" fragment="resume"> Resume </a>
+              <a href="#resume"> Resume </a>
             </li>
             <li mat-menu-item>
-              <a [routerLink]="['/']" fragment="contact"> Contact </a>
+              <a href="#contact"> Contact </a>
             </li>
           </ul>
         </ng-template>

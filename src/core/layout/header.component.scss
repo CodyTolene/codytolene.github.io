@@ -4,7 +4,9 @@ header {
   height: var(--header-height);
   background: var(--theme_dark_gray);
   z-index: 999;
-  //overflow: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
 }
 
 header {
@@ -72,11 +74,6 @@ nav {
         font-weight: 500;
         padding: 1rem;
         color: var(--white);
-        transition: 0.35s;
-        transition-property: all;
-        transition-duration: 0.35s;
-        transition-timing-function: ease;
-        transition-delay: 0s;
 
         &:hover {
           color: var(--theme_light_green_light_tint) !important;
@@ -89,8 +86,4 @@ nav {
       }
     }
   }
-}
-
-a {
-  text-decoration: none;
 }
