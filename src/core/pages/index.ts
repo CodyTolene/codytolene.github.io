@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit } from '@angular/core';
 import { Component, NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { Data, Route, RouterModule } from '@angular/router';
 import { DEFAULT_PAGE_META, SPACE_BANNER_OPTIONS } from 'src/core/constants';
 
@@ -42,7 +43,7 @@ const route: Route = {
 
 @NgModule({
   declarations: [IndexPageComponent],
-  imports: [CommonModule, RouterModule.forChild([route])],
+  imports: [CommonModule, MatButtonModule, RouterModule.forChild([route])],
   providers: [],
 })
 export class IndexModule {}

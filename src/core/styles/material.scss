@@ -13,7 +13,7 @@
           500: var(--theme_mid_gray),
           700: var(--theme_dark_gray),
           contrast: (
-            default: var(--theme_mid_gray),
+            default: var(--black),
           ),
         )
       ),
@@ -25,7 +25,7 @@
           500: var(--theme_light_green),
           700: var(--theme_light_green_dark_tint),
           contrast: (
-            default: var(--theme_light_green),
+            default: var(--theme_dark_gray),
           ),
         )
       ),
@@ -37,7 +37,7 @@
           500: var(--red),
           700: var(--magenta),
           contrast: (
-            default: var(--red),
+            default: var(--theme_dark_gray),
           ),
         )
       )
@@ -82,5 +82,16 @@ mat-icon {
         }
       }
     }
+  }
+}
+
+.mat-stroked-button {
+  &:hover {
+    outline: 0;
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+  }
+
+  &.mat-accent {
+    border: 2px solid var(--theme_light_green);
   }
 }

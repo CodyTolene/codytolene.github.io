@@ -14,6 +14,16 @@
   --theme_mid_gray: #474b4f;
   --theme_light_gray: #6b6e70;
   --theme_light_gray_light_tint: #bfbfbf;
+  --theme_dark_white: #e0e0e0;
+
+  // PAGE BACKGROUNDS
+  --background-darker: var(--theme_dark_gray);
+  --background-dark: var(--theme_mid_gray);
+  --background-light: var(--theme_dark_white);
+
+  // FONT
+  --font-dark: var(--theme_dark_gray);
+  --font-light: var(--theme_dark_white);
 
   // RGB: PRIMARY
   --black: #000000;

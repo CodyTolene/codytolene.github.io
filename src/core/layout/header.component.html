@@ -1,11 +1,11 @@
 <header class="container-fluid">
   <div class="row">
-    <div class="col-6 col-xl-4 offset-xl-2 logo-container">
+    <div class="col-8 col-xl-4 offset-xl-2 logo-container">
       <a class="cody-tolene-logo ps-3 ps-xl-0" [routerLink]="['/']">
         Cody Tolene
       </a>
     </div>
-    <div class="col-6 col-xl-4">
+    <div class="col-4 col-xl-4">
       <nav>
         <ng-container *ngIf="isMobileChanges | async; else defaultTemplate">
           <ul>
@@ -31,16 +31,16 @@
         <ng-template #defaultLinkTemplate>
           <ul>
             <li mat-menu-item>
-              <a href="#services"> Services </a>
+              <a href="#services">Services</a>
             </li>
             <li mat-menu-item>
-              <a href="#about"> About </a>
+              <a href="#about">About</a>
             </li>
             <li mat-menu-item>
-              <a href="#resume"> Resume </a>
+              <a href="#resume">Resume</a>
             </li>
             <li mat-menu-item>
-              <a href="#contact"> Contact </a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </ng-template>
