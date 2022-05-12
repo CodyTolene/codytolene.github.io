@@ -36,13 +36,14 @@
 
     h1 {
       color: var(--white);
-      font-size: 2rem;
+      font-size: 2.25rem;
       margin: 0;
+      text-transform: uppercase;
     }
 
     h3 {
       color: var(--theme_light_green_light_tint);
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       margin: 1rem 0 0 0;
     }
   }
@@ -52,12 +53,24 @@
   background-color: var(--background-light);
 }
 
+.white-text {
+  color: var(--white);
+}
+
+.black-text {
+  color: var(--black);
+}
+
 .light-text {
   color: var(--font-light);
 }
 
 .dark-background {
   background-color: var(--background-dark);
+}
+
+.dark-text {
+  color: var(--font-dark);
 }
 
 $icon_size: 10rem;
@@ -88,16 +101,15 @@ $icon_size: 10rem;
 }
 
 h1.section-header {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--white);
 }
 
 h2.section-sub-header {
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--font-light);
 }
 
 .closer {
