@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
         display: inline-block;
         overflow: hidden;
         white-space: nowrap;
-
         .cody-tolene-logo {
           display: inline-block;
           font-family: var(--font-family-bungee);
@@ -21,7 +20,17 @@ import { Component } from '@angular/core';
     `,
   ],
   template: `
-    <a class="cody-tolene-logo" [routerLink]="['/']"> Cody Tolene </a>
+    <a (click)="scrollTop()" class="cody-tolene-logo" [routerLink]="['/']"
+      >Cody Tolene</a
+    >
   `,
 })
-export class LogoComponent {}
+export class LogoComponent {
+  public scrollTop(): void {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
+}

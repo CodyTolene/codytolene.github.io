@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
           <span>Copyright &copy; Cody Tolene 2019 - {{ currentYear }}</span>
         </div>
         <div class="col-12 pt-1">
-          Trademark images by
+          Trademark images (SVG's) by
           <a
             href="https://fontawesome.com/"
             aria-label="Font Awesome"

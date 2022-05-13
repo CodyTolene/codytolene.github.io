@@ -13,15 +13,12 @@ import { Component } from '@angular/core';
         display: block;
         position: relative;
       }
-
       header {
         position: fixed;
         top: 0;
         width: 100%;
-
         .row {
           height: var(--header-height);
-
           > div,
           ct-navbar {
             height: var(--header-height);
@@ -29,7 +26,6 @@ import { Component } from '@angular/core';
           }
         }
       }
-
       ct-navbar {
         float: right;
       }
