@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio - Cody Tolene</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#222629" />
+    <base href="/" />
+    <style>
+      body {
+        font-family: var(--font-family-montserrat);
+        margin: 0;
+      }
+      :root {
+        --bs-blue: #0d6efd;
+        --bs-indigo: #6610f2;
+        --bs-purple: #6f42c1;
+        --bs-pink: #d63384;
+        --bs-red: #dc3545;
+        --bs-orange: #fd7e14;
+        --bs-yellow: #ffc107;
+        --bs-green: #198754;
+        --bs-teal: #20c997;
+        --bs-cyan: #0dcaf0;
+        --bs-white: #fff;
+        --bs-gray: #6c757d;
+        --bs-gray-dark: #343a40;
+        --bs-gray-100: #f8f9fa;
+        --bs-gray-200: #e9ecef;
+        --bs-gray-300: #dee2e6;
+        --bs-gray-400: #ced4da;
+        --bs-gray-500: #adb5bd;
+        --bs-gray-600: #6c757d;
+        --bs-gray-700: #495057;
+        --bs-gray-800: #343a40;
+        --bs-gray-900: #212529;
+        --bs-primary: #0d6efd;
+        --bs-secondary: #6c757d;
+        --bs-success: #198754;
+        --bs-info: #0dcaf0;
+        --bs-warning: #ffc107;
+        --bs-danger: #dc3545;
+        --bs-light: #f8f9fa;
+        --bs-dark: #212529;
+        --bs-primary-rgb: 13, 110, 253;
+        --bs-secondary-rgb: 108, 117, 125;
+        --bs-success-rgb: 25, 135, 84;
+        --bs-info-rgb: 13, 202, 240;
+        --bs-warning-rgb: 255, 193, 7;
+        --bs-danger-rgb: 220, 53, 69;
+        --bs-light-rgb: 248, 249, 250;
+        --bs-dark-rgb: 33, 37, 41;
+        --bs-white-rgb: 255, 255, 255;
+        --bs-black-rgb: 0, 0, 0;
+        --bs-body-color-rgb: 34, 38, 41;
+        --bs-body-bg-rgb: 34, 38, 41;
+        --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+        --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        --bs-gradient: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0)
+        );
+        --bs-body-font-family: var(--bs-font-sans-serif);
+        --bs-body-font-size: 1rem;
+        --bs-body-font-weight: 400;
+        --bs-body-line-height: 1.5;
+        --bs-body-color: #222629;
+        --bs-body-bg: #222629;
+      }
+      @font-face {
+        font-family: Montserrat;
+        src: url(/assets/fonts/google/montserrat/Montserrat-Regular.ttf)
+          format("truetype");
+      }
+      @font-face {
+        font-family: Just Another Hand;
+        src: url(/assets/fonts/google/justanotherhand/JustAnotherHand-Regular.ttf)
+          format("truetype");
+      }
+      @font-face {
+        font-family: Anton;
+        src: url(/assets/fonts/google/anton/Anton-Regular.ttf)
+          format("truetype");
+      }
+      @font-face {
+        font-family: Bungee;
+        src: url(/assets/fonts/google/bungee/Bungee-Regular.ttf)
+          format("truetype");
+      }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        src: url(/assets/fonts/google/roboto/Roboto-Regular.eot);
+        src: local("Roboto"), local("Roboto-Roboto-Regular"),
+          url(/assets/fonts/google/roboto/Roboto-Regular.eot?#iefix)
+            format("embedded-opentype"),
+          url(/assets/fonts/google/roboto/Roboto-Regular.woff2) format("woff2"),
+          url(/assets/fonts/google/roboto/Roboto-Regular.woff) format("woff"),
+          url(/assets/fonts/google/roboto/Roboto-Regular.ttf) format("truetype"),
+          url(/assets/fonts/google/roboto/Roboto-Regular.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        src: url(/assets/fonts/google/roboto/Roboto-Light.eot);
+        src: local("Roboto Light"), local("Roboto-Light"),
+          url(/assets/fonts/google/roboto/Roboto-Light.eot?#iefix)
+            format("embedded-opentype"),
+          url(/assets/fonts/google/roboto/Roboto-Light.woff2) format("woff2"),
+          url(/assets/fonts/google/roboto/Roboto-Light.woff) format("woff"),
+          url(/assets/fonts/google/roboto/Roboto-Light.ttf) format("truetype"),
+          url(/assets/fonts/google/roboto/Roboto-Light.svg#Roboto) format("svg");
+      }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        src: url(/assets/fonts/google/roboto/Roboto-Bold.eot);
+        src: local("Roboto Bold"), local("Roboto-Bold"),
+          url(/assets/fonts/google/roboto/Roboto-Bold.eot?#iefix)
+            format("embedded-opentype"),
+          url(/assets/fonts/google/roboto/Roboto-Bold.woff2) format("woff2"),
+          url(/assets/fonts/google/roboto/Roboto-Bold.ttf) format("truetype"),
+          url(/assets/fonts/google/roboto/Roboto-Bold.woff) format("woff"),
+          url(/assets/fonts/google/roboto/Roboto-Bold.svg#Roboto) format("svg");
+      }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        src: url(/assets/fonts/google/roboto/Roboto-Medium.eot);
+        src: local("Roboto Medium"), local("Roboto-Medium"),
+          url(/assets/fonts/google/roboto/Roboto-Medium.eot?#iefix)
+            format("embedded-opentype"),
+          url(/assets/fonts/google/roboto/Roboto-Medium.woff2) format("woff2"),
+          url(/assets/fonts/google/roboto/Roboto-Medium.woff) format("woff"),
+          url(/assets/fonts/google/roboto/Roboto-Medium.ttf) format("truetype"),
+          url(/assets/fonts/google/roboto/Roboto-Medium.svg#Roboto)
+            format("svg");
+      }
+      :root {
+        --theme_dark_green: #61892f;
+        --theme_light_green_dark_tint: #7eb62f;
+        --theme_light_green: #86c232;
+        --theme_light_green_light_tint: #98d049;
+        --theme_dark_gray: #222629;
+        --theme_mid_gray: #474b4f;
+        --theme_light_gray: #6b6e70;
+        --theme_light_gray_light_tint: #bfbfbf;
+        --theme_dark_white: #e0e0e0;
+        --background-darker: var(--theme_dark_gray);
+        --background-dark: var(--theme_mid_gray);
+        --background-light: var(--theme_dark_white);
+        --font-dark: var(--theme_dark_gray);
+        --font-light: var(--theme_dark_white);
+        --black: #000000;
+        --white: #ffffff;
+        --red: #ff0000;
+        --green: #00ff00;
+        --blue: #0000ff;
+        --yellow: #ffff00;
+        --magenta: #ff00ff;
+        --cyan: #00ffff;
+        --rose: #ff007f;
+        --orange: #ff7f00;
+        --chart_green: #7fff00;
+        --spring_green: #00ff7f;
+        --blue_azure: #007fff;
+        --violet: #800080;
+        --green_dark: #008000;
+        --blue_dark: #003366;
+        --red_dark: #8b0000;
+        --font-family-bungee: "Bungee", cursive;
+        --font-family-anton: "Anton", sans-serif;
+        --font-family-justanotherhand: "Just Another Hand", Helvetica, Arial,
+          sans-serif;
+        --font-family-montserrat: "Montserrat", Helvetica, Arial, sans-serif;
+        --font-family-roboto: "Roboto", sans-serif;
+        --header-height: 50px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="styles.29833b16bbcb2272.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="styles.29833b16bbcb2272.css"
+    /></noscript>
+  </head>
+  <body>
+    <!-- APP -->
+    <ct-core></ct-core>
+    <!-- NOSCRIPT MESSAGE -->
+    <noscript>
+      Please enable JavaScript to continue using this application.
+    </noscript>
+    <!-- GOOGLE ANALYTICS SCRIPTS -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=UA-42346076-7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-42346076-7", {
+        send_page_view: false, // Not needed for SPA
+      });
+    </script>
+    <!-- REMAINING SCRIPTS -->
+    <script src="runtime.e878416d23dfee34.js" type="module"></script>
+    <script src="polyfills.32dc20fa21a6235a.js" type="module"></script>
+    <script src="scripts.6abb5f509d7a3676.js" defer></script>
+    <script src="main.cf4ecbde23c4263d.js" type="module"></script>
+  </body>
+</html>
