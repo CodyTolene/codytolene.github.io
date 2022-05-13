@@ -1,5 +1,6 @@
 import { writeFileSync } from 'fs';
-import { getDataFromFile } from './get-data-from-file';
+
+const githubCustomDomain = 'www.codytolene.com';
 
 // Run this method via node (see `../package.json` for usage)
 updateCNAME();
@@ -7,13 +8,8 @@ updateCNAME();
 async function updateCNAME(): Promise<void> {
   console.log('Generating and updating CNAME.');
 
-  // Current list of page urls
-  const pageUrls = (
-    await getDataFromFile<PagesJson>('./src/core/pages/_pages.json')
-  ).pages;
-
   // Generate the CNAME file.
-  generateCNAME('src/CNAME', pageUrls);
+  generateCNAME('src/CNAME', githubCustomDomain);
 
   // Fin
   console.log('Completed updating CNAME.');
@@ -23,19 +19,8 @@ async function updateCNAME(): Promise<void> {
  * Create a new CNAME file that contains all site directories.
  *
  * @param fileDirectory Directory of the CNAME file
- * @param pageUrls Array of sitemap URLs to add to the sitemap.
+ * @param domain Domain of directory for custom domain.
  */
-function generateCNAME(
-  fileDirectory: string,
-  siteMapUrls: readonly string[]
-): void {
-  const cnameContent = siteMapUrls
-    .map((url) => `${url}\n`)
-    .join('')
-    .toString();
-  writeFileSync(fileDirectory, cnameContent);
+function generateCNAME(fileDirectory: string, domain: string): void {
+  writeFileSync(fileDirectory, domain + '\n');
 }
-
-type PagesJson = {
-  pages: readonly string[];
-};
