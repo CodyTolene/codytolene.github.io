@@ -1,0 +1,48 @@
+@import "./typography";
+
+body {
+  font-family: var(--font-family-montserrat);
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: var(--theme_light_green);
+    transition: 0.35s;
+    transition-property: all;
+    transition-duration: 0.35s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+    &:hover {
+      color: var(--theme_light_green_light_tint);
+    }
+  }
+}
+
+.white-text {
+  color: var(--white);
+}
+
+.black-text {
+  color: var(--black);
+}
+
+.light-text {
+  color: var(--font-light);
+}
+
+.light-background {
+  background-color: var(--background-light);
+}
+
+.dark-text {
+  color: var(--font-dark);
+}
+
+.dark-background {
+  background-color: var(--background-dark);
+}
+
+.darer-background {
+  background-color: var(--background-darker);
+}

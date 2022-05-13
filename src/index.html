@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
     <meta charset="utf-8" />
-    <meta name="robots" content="all" />
+    <title>Portfolio - Cody Tolene</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link
       rel="icon"
@@ -28,9 +29,27 @@
     <base href="/" />
   </head>
   <body>
-    <app-core></app-core>
+    <!-- APP -->
+    <ct-core></ct-core>
+    <!-- NOSCRIPT MESSAGE -->
     <noscript>
       Please enable JavaScript to continue using this application.
     </noscript>
+    <!-- GOOGLE ANALYTICS SCRIPTS -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-42346076-7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-42346076-7", {
+        send_page_view: false, // Not needed for SPA
+      });
+    </script>
+    <!-- REMAINING SCRIPTS -->
   </body>
 </html>

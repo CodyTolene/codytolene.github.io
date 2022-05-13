@@ -1,41 +1,48 @@
-import { Component, OnDestroy, OnInit, Inject } from '@angular/core';
-import { SwUpdate } from '@angular/service-worker';
-import { environment } from 'src/environments/environment';
-import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-import { componentDestroyed, isNonEmptyString } from 'src/shared/utilities';
-import { takeUntil, filter, map, mergeMap } from 'rxjs/operators';
-import { SEOService } from 'src/services/seo';
-import { DefaultPageMeta } from 'src/shared/constants';
-import { DOCUMENT } from '@angular/common';
-import { WINDOW } from 'src/services/browser';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Data, NavigationEnd, Router } from '@angular/router';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import {
+  distinctUntilChanged,
+  filter,
+  map,
+  mergeMap,
+  shareReplay,
+  startWith,
+} from 'rxjs';
+import { MetaService } from 'src/core/services/meta.service';
+import { isNonEmptyObject } from 'src/core/utilities/type-validation';
+import { GoogleAnalyticsService } from 'src/core/services/google-analytics.service';
 
+@UntilDestroy()
 @Component({
-  selector: 'app-core',
-  templateUrl: './core.component.html',
+  selector: 'ct-core',
+  styles: [],
+  template: `
+    <ct-header></ct-header>
+    <ct-body>
+      <router-outlet></router-outlet>
+    </ct-body>
+    <ct-footer></ct-footer>
+    <ct-screen-size-detector></ct-screen-size-detector>
+  `,
+  providers: [GoogleAnalyticsService, MetaService],
 })
-export class CoreComponent implements OnInit, OnDestroy {
+export class CoreComponent implements OnInit {
   public constructor(
-    private readonly serviceWorkerUpdate: SwUpdate,
     private readonly activatedRoute: ActivatedRoute,
-    private readonly router: Router,
-    private readonly seo: SEOService,
-    @Inject(DOCUMENT) private readonly document: Document,
-    @Inject(WINDOW) private readonly window: Window,
-  ) {
-    if (environment.production) {
-      // Update the service worker on every construct
-      // This fixes and issue with GitHub pages 404 redirect into Angular
-      this.serviceWorkerUpdate.activateUpdate();
-    }
-  }
+    private readonly googleAnalytics: GoogleAnalyticsService,
+    private readonly meta: MetaService,
+    private readonly router: Router
+  ) {}
 
   public readonly routerNavigationEndChanges = this.router.events.pipe(
-    map((event) => (event instanceof NavigationEnd ? event : null)),
-    filter<NavigationEnd>(Boolean),
-    // distinctUntilChanged((previous, current) => previous.url !== current.url),
+    map((event) => event instanceof NavigationEnd),
+    filter((isNavigationEndEvent) => !!isNavigationEndEvent),
+    shareReplay(1)
   );
 
   public readonly routeDataChanges = this.routerNavigationEndChanges.pipe(
+    startWith(null),
     map(() => this.activatedRoute),
     map((route) => {
       while (route.firstChild) {
@@ -45,57 +52,41 @@ export class CoreComponent implements OnInit, OnDestroy {
     }),
     filter((route) => route.outlet === 'primary'),
     mergeMap((route) => route.data),
+    distinctUntilChanged()
   );
 
-  public ngOnInit(): void {
-    // Dynamically set page title from data on route
+  public async ngOnInit(): Promise<void> {
+    // Dynamically set page data and meta on route data changes
     this.routeDataChanges
-      .pipe(takeUntil(componentDestroyed(this)))
+      .pipe(filter(isNonEmptyObject), untilDestroyed(this))
       .subscribe((routeData) => {
-        if (routeData.title) {
-          this.seo.setTitle(routeData.title, {
-            trailingTitle: DefaultPageMeta.trailingTitle,
+        try {
+          // Get data from route
+          const data: (CustomRouteData & Data) | null =
+            (routeData as unknown as CustomRouteData & Data) ?? null;
+          if (!data) {
+            throw new Error('Failed to fetch route data.');
+          }
+
+          // Get meta from route data
+          const meta: PageMeta | null = data.meta ?? null;
+          if (!meta) {
+            throw new Error('Failed to fetch route meta.');
+          }
+
+          // Set page meta
+          this.meta.setPageAuthor(meta.author);
+          this.meta.setPageTitle(meta.title, meta.trailingTitle);
+          this.meta.setPageDescription(meta.description);
+          this.meta.setPageKeywords(meta.keywords);
+        } catch (error: unknown) {
+          console.error(error);
+        } finally {
+          // Track page view in Google Analytics
+          this.googleAnalytics.trackPageView({
+            pageTitle: this.meta.getPageTitle(),
           });
-        } else {
-          throw new Error('Failed to set page title.');
-        }
-
-        if (routeData.description) {
-          this.seo.setDescription(routeData.description);
-        } else {
-          console.warn('Failed to set page description.');
-        }
-
-        if (routeData.author) {
-          this.seo.setAuthor(routeData.author);
-        } else {
-          console.warn('Failed to set page author.');
-        }
-
-        if (routeData.keywords) {
-          this.seo.setKeywords(routeData.keywords);
-        } else {
-          console.warn('Failed to set page keywords.');
         }
       });
-
-    // Google analytics
-    this.routerNavigationEndChanges
-      .pipe(takeUntil(componentDestroyed(this)))
-      .subscribe((event) => {
-        this.seo.sendGoogleAnalyticsPageView(
-          event.url,
-          event.urlAfterRedirects,
-        );
-
-        if (!isNonEmptyString(this.window.location.hash)) {
-          // Scroll to the top of page on navigation if no hash in URI
-          this.window.scrollTo(0, 0);
-        }
-      });
-  }
-
-  public ngOnDestroy(): void {
-    // Needed for `takeUntil(componentDestroyed(this))`
   }
 }

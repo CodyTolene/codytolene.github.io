@@ -1,35 +1,49 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CoreRoutesModule } from './core-routes.module';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from 'src/environments/environment';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserModule } from '@angular/platform-browser';
+import { CoreRoutingModule } from './core-routing.module';
 import { CoreComponent } from './core.component';
+import { BodyComponent } from './layout/body.component';
+import { FooterComponent } from './layout/footer.component';
+import { HeaderComponent } from './layout/header.component';
 import {
-  FooterComponent,
-  NavigationComponent,
-  CookieConsentComponent,
-} from './page-elements';
-import { WINDOW_PROVIDERS } from 'src/services/browser';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+  ScreenSizeDetectorComponent,
+  ScreenSizeService,
+} from './services/screen-size.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LogoComponent } from './components/logo.component';
+import { NavbarComponent } from './components/navbar.component';
+
+const materialModules = [
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatMenuModule,
+  MatSelectModule,
+];
+
+const sharedCoreComponents = [LogoComponent, NavbarComponent];
 
 @NgModule({
-  bootstrap: [CoreComponent],
   declarations: [
-    CookieConsentComponent,
+    BodyComponent,
     CoreComponent,
     FooterComponent,
-    NavigationComponent,
+    HeaderComponent,
+    ScreenSizeDetectorComponent,
+    ...sharedCoreComponents,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    CoreRoutesModule,
-    FontAwesomeModule,
-    NgbModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-    }),
+    CoreRoutingModule,
+    ...materialModules,
   ],
-  providers: [WINDOW_PROVIDERS],
+  providers: [ScreenSizeService],
+  bootstrap: [CoreComponent],
 })
 export class CoreModule {}

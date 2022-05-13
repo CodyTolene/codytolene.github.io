@@ -1,7 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./core/styles/body";
+@import "./core/styles/bootstrap";
+@import "./core/styles/fonts";
+@import "./core/styles/icons";
+@import "./core/styles/material";
 
-@import "./shared/styles/fonts.scss";
-@import "./shared/styles/icons.scss";
-@import "./shared/styles/bootstrap.scss";
-@import "./shared/styles/mdbootstrap.scss";
-@import "./shared/styles/body.scss";
+:root {
+  // SITE THEME
+  --theme_dark_green: #61892f;
+  --theme_light_green_dark_tint: #7eb62f;
+  --theme_light_green: #86c232;
+  --theme_light_green_light_tint: #98d049;
+  --theme_dark_gray: #222629;
+  --theme_mid_gray: #474b4f;
+  --theme_light_gray: #6b6e70;
+  --theme_light_gray_light_tint: #bfbfbf;
+  --theme_dark_white: #e0e0e0;
+
+  // PAGE BACKGROUNDS
+  --background-darker: var(--theme_dark_gray);
+  --background-dark: var(--theme_mid_gray);
+  --background-light: var(--theme_dark_white);
+
+  // FONT
+  --font-dark: var(--theme_dark_gray);
+  --font-light: var(--theme_dark_white);
+
+  // RGB: PRIMARY
+  --black: #000000;
+  --white: #ffffff;
+  --red: #ff0000;
+  --green: #00ff00;
+  --blue: #0000ff;
+
+  // RGB: SECONDARY
+  --yellow: #ffff00;
+  --magenta: #ff00ff;
+  --cyan: #00ffff;
+
+  // RGB: TERTIARY
+  --rose: #ff007f;
+  --orange: #ff7f00;
+  --chart_green: #7fff00;
+  --spring_green: #00ff7f;
+  --blue_azure: #007fff;
+  --violet: #800080;
+
+  // RGB: PRIMARY SHADES
+  --green_dark: #008000;
+  --blue_dark: #003366;
+  --red_dark: #8b0000;
+
+  // Fonts
+  --font-family-bungee: "Bungee", cursive;
+  --font-family-anton: "Anton", sans-serif;
+  --font-family-justanotherhand: "Just Another Hand", Helvetica, Arial,
+    sans-serif;
+  --font-family-montserrat: "Montserrat", Helvetica, Arial, sans-serif;
+  --font-family-roboto: "Roboto", sans-serif;
+
+  // Spacing
+  --header-height: 50px;
+}
