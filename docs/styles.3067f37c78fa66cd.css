@@ -4,12 +4,6 @@
 .font-montserrat {
   font-family: var(--font-family-montserrat);
 }
-.font-justanotherhand {
-  font-family: var(--font-family-justanotherhand);
-}
-.font-anton {
-  font-family: var(--font-family-anton);
-}
 .font-bungee {
   font-family: var(--font-family-bungee);
 }
@@ -7785,15 +7779,6 @@ body a:hover {
     format("truetype");
 }
 @font-face {
-  font-family: Just Another Hand;
-  src: url(/assets/fonts/google/justanotherhand/JustAnotherHand-Regular.ttf)
-    format("truetype");
-}
-@font-face {
-  font-family: Anton;
-  src: url(/assets/fonts/google/anton/Anton-Regular.ttf) format("truetype");
-}
-@font-face {
   font-family: Bungee;
   src: url(/assets/fonts/google/bungee/Bungee-Regular.ttf) format("truetype");
 }
@@ -7893,12 +7878,6 @@ body a:hover {
 }
 .font-montserrat {
   font-family: var(--font-family-montserrat);
-}
-.font-justanotherhand {
-  font-family: var(--font-family-justanotherhand);
-}
-.font-anton {
-  font-family: var(--font-family-anton);
 }
 .font-bungee {
   font-family: var(--font-family-bungee);
