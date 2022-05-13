@@ -49,30 +49,6 @@
   }
 }
 
-.light-background {
-  background-color: var(--background-light);
-}
-
-.white-text {
-  color: var(--white);
-}
-
-.black-text {
-  color: var(--black);
-}
-
-.light-text {
-  color: var(--font-light);
-}
-
-.dark-background {
-  background-color: var(--background-dark);
-}
-
-.dark-text {
-  color: var(--font-dark);
-}
-
 $icon_size: 10rem;
 
 .icon-link {
@@ -109,10 +85,13 @@ h1.section-header {
 h2.section-sub-header {
   font-size: 1.5rem;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 .closer {
   font-size: 1.25rem;
   padding: 0.5rem 4rem;
+}
+
+img.self {
+  max-height: 450px;
 }

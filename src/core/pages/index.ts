@@ -4,6 +4,7 @@ import { Component, NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Data, Route, RouterModule } from '@angular/router';
 import { DEFAULT_PAGE_META, SPACE_BANNER_OPTIONS } from 'src/core/constants';
+import { calculateDateSince } from 'src/core/utilities/calculate-date-since';
 
 /** This will be imported via `~/angular.json` */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,6 +15,13 @@ declare let particlesJS: any;
   styleUrls: ['./index.scss'],
 })
 class IndexPageComponent implements AfterViewInit {
+  public readonly miramarJobLengthDisplay = calculateDateSince(
+    new Date(2019, 9, 10) // Oct 10, 2019
+  );
+  public readonly myGameStackJobLengthDisplay = calculateDateSince(
+    new Date(2020, 11, 26) // Dec 26, 2020
+  );
+
   public ngAfterViewInit(): void {
     // Initialize space banner
     try {

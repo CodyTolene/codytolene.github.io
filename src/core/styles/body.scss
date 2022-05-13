@@ -18,3 +18,31 @@ body {
     }
   }
 }
+
+.white-text {
+  color: var(--white);
+}
+
+.black-text {
+  color: var(--black);
+}
+
+.light-text {
+  color: var(--font-light);
+}
+
+.light-background {
+  background-color: var(--background-light);
+}
+
+.dark-text {
+  color: var(--font-dark);
+}
+
+.dark-background {
+  background-color: var(--background-dark);
+}
+
+.darer-background {
+  background-color: var(--background-darker);
+}

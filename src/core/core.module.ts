@@ -15,6 +15,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LogoComponent } from './components/logo.component';
+import { NavbarComponent } from './components/navbar.component';
 
 const materialModules = [
   MatButtonModule,
@@ -24,6 +26,8 @@ const materialModules = [
   MatSelectModule,
 ];
 
+const sharedCoreComponents = [LogoComponent, NavbarComponent];
+
 @NgModule({
   declarations: [
     BodyComponent,
@@ -31,6 +35,7 @@ const materialModules = [
     FooterComponent,
     HeaderComponent,
     ScreenSizeDetectorComponent,
+    ...sharedCoreComponents,
   ],
   imports: [
     BrowserAnimationsModule,
