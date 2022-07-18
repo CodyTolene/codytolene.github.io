@@ -4,6 +4,6 @@
 npm run update:cname
 npm run update:sitemap
 npm run prettier
+npm run lint
 npm run build:prod
 git add --update
-npm run lint
