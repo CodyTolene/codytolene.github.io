@@ -6,6 +6,7 @@ import {
   filter,
   map,
   mergeMap,
+  Observable,
   shareReplay,
   startWith,
 } from 'rxjs';
@@ -51,11 +52,11 @@ export class CoreComponent implements OnInit {
       return route;
     }),
     filter((route) => route.outlet === 'primary'),
-    mergeMap((route) => route.data),
+    mergeMap((route) => route.data as Observable<Data & CustomRouteData>),
     distinctUntilChanged()
   );
 
-  public async ngOnInit(): Promise<void> {
+  public ngOnInit(): void {
     // Dynamically set page data and meta on route data changes
     this.routeDataChanges
       .pipe(filter(isNonEmptyObject), untilDestroyed(this))
