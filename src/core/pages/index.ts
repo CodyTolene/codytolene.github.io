@@ -15,13 +15,6 @@ declare let particlesJS: any;
   styleUrls: ['./index.scss'],
 })
 class IndexPageComponent implements AfterViewInit {
-  public readonly miramarJobLengthDisplay = calculateDateSince(
-    new Date(2019, 9, 10) // Oct 10, 2019
-  );
-  public readonly myGameStackJobLengthDisplay = calculateDateSince(
-    new Date(2020, 11, 26) // Dec 26, 2020
-  );
-
   public ngAfterViewInit(): void {
     // Initialize space banner
     try {
