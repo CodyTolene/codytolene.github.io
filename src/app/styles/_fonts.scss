@@ -1,0 +1,21 @@
+$font_size_base: 16px;
+
+$font_family: 'Roboto', 'sans-serif';
+
+$font_color_light: var(--black); // Default
+$font_color_dark: var(--white);
+
+$font_xxs: 0.25rem;
+$font_xs: 0.5rem;
+$font_sm: 0.75rem;
+$font_md: 1rem; // Default
+$font_lg: 1.25rem;
+$font_xl: 1.5rem;
+$font_xxl: 2rem;
+
+$font_size_h1: $font_xxl;
+$font_size_h2: $font_xl;
+$font_size_h3: $font_lg;
+$font_size_h4: $font_md; // Default
+$font_size_h5: $font_sm;
+$font_size_h6: $font_xs;

@@ -1,7 +1,10 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Root logs
+/*.log
 
 # Compiled output
-/dist
+/docs
 /tmp
 /out-tsc
 /bazel-out
@@ -20,10 +23,8 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
-# Visual Studio
-.vs/
+# IDE - Visual Studio
 .vs/*
-.vs/slnx.sqlite
 
 # Visual Studio Code
 .vscode/*
@@ -33,11 +34,11 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Husky Local Environment Files
+/.husky/_
+/.husky/_/**/*
+
 # Miscellaneous
-.angular
-.angular/
-.angular/*
-.angular/cache
 /.angular/cache
 .sass-cache/
 /connect.lock
@@ -45,11 +46,24 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-ui-debug.log
-
-# Husky Local Environment Files
-/.husky/_
 
 # System files
 .DS_Store
 Thumbs.db
+
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+*.csr
+*.pem

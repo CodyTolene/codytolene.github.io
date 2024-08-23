@@ -1,0 +1,80 @@
+// Default Roboto font
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  /* IE9 Compatible Modes */
+  src: url('/assets/fonts/google/roboto/Roboto-Regular.eot');
+  src:
+    url('/assets/fonts/google/roboto/Roboto-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/fonts/google/roboto/Roboto-Regular.woff2') format('woff2'),
+    url('/assets/fonts/google/roboto/Roboto-Regular.woff') format('woff'),
+    url('/assets/fonts/google/roboto/Roboto-Regular.ttf') format('truetype'),
+    url('/assets/fonts/google/roboto/Roboto-Regular.svg#Roboto') format('svg');
+}
+
+// Default Material Icons font
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/google/material-icons/material-icons.ttf')
+    format('truetype');
+  font-display: block;
+}
+.material-icons {
+  font-family: 'Material Icons';
+}
+
+// Outlined Material Icons font
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/google/material-icons/material-icons-outlined.otf')
+    format('opentype');
+  font-display: block;
+}
+.material-icons-outlined {
+  font-family: 'Material Icons Outlined';
+}
+
+// Rounded Material Icons font
+@font-face {
+  font-family: 'Material Icons Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/google/material-icons/material-icons-round.otf')
+    format('opentype');
+  font-display: block;
+}
+.material-icons-round {
+  font-family: 'Material Icons Round';
+}
+
+// Sharp Material Icons font
+@font-face {
+  font-family: 'Material Icons Sharp';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/google/material-icons/material-icons-sharp.otf')
+    format('opentype');
+  font-display: block;
+}
+.material-icons-sharp {
+  font-family: 'Material Icons Sharp';
+}
+
+// Two-toned Material Icons font
+@font-face {
+  font-family: 'Material Icons Two Tone';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/google/material-icons/material-icons-two-toned.otf')
+    format('opentype');
+  font-display: block;
+}
+.material-icons-two-tone {
+  font-family: 'Material Icons Two Tone';
+}
