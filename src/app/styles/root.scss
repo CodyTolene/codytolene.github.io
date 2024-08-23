@@ -1,0 +1,63 @@
+@import 'colors';
+
+:root {
+  // Primary Reds
+  --red_lighter: #{$red_lighter};
+  --red_light: #{$red_light};
+  --red: #{$red};
+  --red_dark: #{$red_dark};
+  --red_darker: #{$red_darker};
+
+  // Primary Greens
+  --green_lighter: #{$green_lighter};
+  --green_light: #{$green_light};
+  --green: #{$green};
+  --green_dark: #{$green_dark};
+  --green_darker: #{$green_darker};
+
+  // Primary Blues
+  --blue_lighter: #{$blue_lighter};
+  --blue_light: #{$blue_light};
+  --blue: #{$blue};
+  --blue_dark: #{$blue_dark};
+  --blue_darker: #{$blue_darker};
+
+  // Primary Yellows
+  --yellow_lighter: #{$yellow_lighter};
+  --yellow_light: #{$yellow_light};
+  --yellow: #{$yellow};
+  --yellow_dark: #{$yellow_dark};
+  --yellow_darker: #{$yellow_darker};
+
+  // Grayscale
+  --black: #{$black};
+  --white: #{$white};
+
+  // Grayscale range
+  --gray_lightest: #{$gray_lightest};
+  --gray_lighter: #{$gray_lighter};
+  --gray_light: #{$gray_light};
+  --gray_mid_lighter: #{$gray_mid_lighter};
+  --gray_mid_light: #{$gray_mid_light};
+  --gray_mid: #{$gray_mid};
+  --gray_mid_dark: #{$gray_mid_dark};
+  --gray_mid_darker: #{$gray_mid_darker};
+  --gray_dark: #{$gray_dark};
+  --gray_darker: #{$gray_darker};
+  --gray_darkest: #{$gray_darkest};
+
+  // Theme Primary
+  --theme_primary_lighter: #{$theme_primary_lighter};
+  --theme_primary: #{$theme_primary};
+  --theme_primary_darker: #{$theme_primary_darker};
+
+  // Theme Accent
+  --theme_accent_lighter: #{$theme_accent_lighter};
+  --theme_accent: #{$theme_accent};
+  --theme_accent_darker: #{$theme_accent_darker};
+
+  // Theme Warn
+  --theme_warn_lighter: #{$theme_warn_lighter};
+  --theme_warn: #{$theme_warn};
+  --theme_warn_darker: #{$theme_warn_darker};
+}
