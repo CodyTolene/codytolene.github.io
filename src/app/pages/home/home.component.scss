@@ -1,3 +1,6 @@
+@import 'colors';
+@import 'fonts';
+
 #galaxy {
   align-items: center;
   background: url('/assets/images/galaxy.jpg');
@@ -6,4 +9,58 @@
   height: 800px;
   justify-content: center;
   width: 100%;
+}
+
+#services,
+#about,
+#resume,
+#contact {
+  padding: 2rem 4rem;
+}
+
+#services,
+#resume {
+  background-color: $gray_dark;
+  color: $font_color_dark;
+}
+
+#about,
+#contact {
+  background-color: $gray_lightest;
+}
+
+$gap: 0.25rem;
+
+#services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  > h1,
+  > h2 {
+    align-self: stretch;
+    flex: 0 1 100%;
+    margin-bottom: 1rem;
+    order: 0;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  > div {
+    $padding: 1rem;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(100% / 3 - $gap - ($padding * 2));
+    padding: $padding;
+
+    a {
+      color: $theme_accent;
+    }
+  }
 }

@@ -1,4 +1,50 @@
+@use '@angular/material' as mat;
+
+@import 'colors';
+@import 'fonts';
+@import 'variables';
+@import 'z-indexes';
+
 :host {
-  display: flex;
-  flex-direction: column;
+  background-color: $gray_darker;
+  height: $header_height;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z_index_header;
+
+  header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: $header_height;
+    justify-content: space-around;
+    width: 100%;
+
+    nav > a {
+      color: $font_color_dark;
+      cursor: pointer;
+      margin-left: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $theme_accent;
+        text-decoration: overline;
+      }
+    }
+
+    .logo {
+      color: $theme_accent;
+      font-family: $font_family-bungee;
+      font-size: $font_xxl;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $theme_accent;
+      }
+    }
+  }
 }

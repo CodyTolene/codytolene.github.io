@@ -1,17 +1,95 @@
-// Default Roboto font
+// Roboto Regular
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  /* IE9 Compatible Modes */
-  src: url('/assets/fonts/google/roboto/Roboto-Regular.eot');
+  /* IE9 Compat Modes */
+  src: url('/assets/fonts/roboto/Roboto-Regular.eot');
   src:
-    url('/assets/fonts/google/roboto/Roboto-Regular.eot?#iefix')
+    local('Roboto'),
+    local('Roboto-Roboto-Regular'),
+    /* IE6-IE8 */ url('/assets/fonts/roboto/Roboto-Regular.eot?#iefix')
       format('embedded-opentype'),
-    url('/assets/fonts/google/roboto/Roboto-Regular.woff2') format('woff2'),
-    url('/assets/fonts/google/roboto/Roboto-Regular.woff') format('woff'),
-    url('/assets/fonts/google/roboto/Roboto-Regular.ttf') format('truetype'),
-    url('/assets/fonts/google/roboto/Roboto-Regular.svg#Roboto') format('svg');
+    /* Super Modern Browsers */ url('/assets/fonts/roboto/Roboto-Regular.woff2')
+      format('woff2'),
+    /* Modern Browsers */ url('/assets/fonts/roboto/Roboto-Regular.woff')
+      format('woff'),
+    /* Safari, Android, iOS */ url('/assets/fonts/roboto/Roboto-Regular.ttf')
+      format('truetype'),
+    /* Legacy iOS */ url('/assets/fonts/roboto/Roboto-Regular.svg#Roboto')
+      format('svg');
+}
+
+// Roboto Light
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  /* IE9 Compat Modes */
+  src: url('/assets/fonts/roboto/Roboto-Light.eot');
+  src:
+    local('Roboto Light'),
+    local('Roboto-Light'),
+    /* IE6-IE8 */ url('/assets/fonts/roboto/Roboto-Light.eot?#iefix')
+      format('embedded-opentype'),
+    /* Super Modern Browsers */ url('/assets/fonts/roboto/Roboto-Light.woff2')
+      format('woff2'),
+    /* Modern Browsers */ url('/assets/fonts/roboto/Roboto-Light.woff')
+      format('woff'),
+    /* Safari, Android, iOS */ url('/assets/fonts/roboto/Roboto-Light.ttf')
+      format('truetype'),
+    /* Legacy iOS */ url('/assets/fonts/roboto/Roboto-Light.svg#Roboto')
+      format('svg');
+}
+
+// Roboto Bold
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  /* IE9 Compat Modes */
+  src: url('/assets/fonts/roboto/Roboto-Bold.eot');
+  src:
+    local('Roboto Bold'),
+    local('Roboto-Bold'),
+    /* IE6-IE8 */ url('/assets/fonts/roboto/Roboto-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    /* Super Modern Browsers */ url('/assets/fonts/roboto/Roboto-Bold.woff2')
+      format('woff2'),
+    /* Modern Browsers */ url('/assets/fonts/roboto/Roboto-Bold.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */ url('/assets/fonts/roboto/Roboto-Bold.woff')
+      format('woff'),
+    /* Legacy iOS */ url('/assets/fonts/roboto/Roboto-Bold.svg#Roboto')
+      format('svg');
+}
+
+// Roboto Medium
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  /* IE9 Compat Modes */
+  src: url('/assets/fonts/roboto/Roboto-Medium.eot');
+  src:
+    local('Roboto Medium'),
+    local('Roboto-Medium'),
+    /* IE6-IE8 */ url('/assets/fonts/roboto/Roboto-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    /* Super Modern Browsers */ url('/assets/fonts/roboto/Roboto-Medium.woff2')
+      format('woff2'),
+    /* Modern Browsers */ url('/assets/fonts/roboto/Roboto-Medium.woff')
+      format('woff'),
+    /* Safari, Android, iOS */ url('/assets/fonts/roboto/Roboto-Medium.ttf')
+      format('truetype'),
+    /* Legacy iOS */ url('/assets/fonts/roboto/Roboto-Medium.svg#Roboto')
+      format('svg');
+}
+
+// Bungee Regular
+@font-face {
+  font-family: 'Bungee';
+  src: url('/assets/fonts/bungee/Bungee-Regular.ttf') format('truetype');
 }
 
 // Default Material Icons font
@@ -19,8 +97,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/google/material-icons/material-icons.ttf')
-    format('truetype');
+  src: url('/assets/fonts/material-icons/material-icons.ttf') format('truetype');
   font-display: block;
 }
 .material-icons {
@@ -32,7 +109,7 @@
   font-family: 'Material Icons Outlined';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/google/material-icons/material-icons-outlined.otf')
+  src: url('/assets/fonts/material-icons/material-icons-outlined.otf')
     format('opentype');
   font-display: block;
 }
@@ -45,7 +122,7 @@
   font-family: 'Material Icons Round';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/google/material-icons/material-icons-round.otf')
+  src: url('/assets/fonts/material-icons/material-icons-round.otf')
     format('opentype');
   font-display: block;
 }
@@ -58,7 +135,7 @@
   font-family: 'Material Icons Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/google/material-icons/material-icons-sharp.otf')
+  src: url('/assets/fonts/material-icons/material-icons-sharp.otf')
     format('opentype');
   font-display: block;
 }
@@ -71,7 +148,7 @@
   font-family: 'Material Icons Two Tone';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/google/material-icons/material-icons-two-toned.otf')
+  src: url('/assets/fonts/material-icons/material-icons-two-toned.otf')
     format('opentype');
   font-display: block;
 }

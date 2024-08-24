@@ -1,4 +1,7 @@
+@import 'z-indexes';
+
 :host {
   display: flex;
   flex-direction: column;
+  z-index: $z_index_footer;
 }

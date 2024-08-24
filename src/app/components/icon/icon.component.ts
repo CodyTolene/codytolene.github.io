@@ -8,7 +8,6 @@ import {
   HostBinding,
   Input,
 } from '@angular/core';
-import { ThemePalette } from '@angular/material/core';
 
 import { iconsCustom as customIconNames } from 'src/app/components/icon/icons-custom';
 
@@ -23,7 +22,16 @@ export class IconComponent {
     this.iconsService.initialize();
   }
 
-  @Input() public color: ThemePalette = 'primary';
+  /**
+   * The color variant of the icon.
+   *
+   * @default 'surface'
+   * @see https://material.angular.io/guide/theming#using-component-color-variants
+   */
+  @HostBinding('class')
+  @Input()
+  public color: 'error' | 'primary' | 'secondary' | 'surface' | 'tertiary' =
+    'surface';
 
   @HostBinding('class.inline')
   @Input()
