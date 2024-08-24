@@ -4,8 +4,8 @@
     class="logo"
     i18n="@@headerLogo"
     role="button"
-    tabindex="0"
     routerLink="/"
+    tabindex="0"
     (click)="scrollTop()"
     (keyup)="scrollTop()"
     >Cody Tolene</a
@@ -16,7 +16,7 @@
       i18n="@@headerNavLinkHome"
       role="button"
       tabindex="0"
-      routerLink="/"
+      [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
       (click)="scrollTop()"
       (keyup)="scrollTop()"
       >Intro</a
@@ -26,6 +26,7 @@
       i18n="@@headerNavLinkServices"
       role="button"
       tabindex="0"
+      [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
       (click)="scrollToElementById('services')"
       (keyup)="scrollToElementById('services')"
       >Services</a
@@ -35,6 +36,7 @@
       i18n="@@headerNavLinkAbout"
       role="button"
       tabindex="0"
+      [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
       (click)="scrollToElementById('about')"
       (keyup)="scrollToElementById('about')"
       >About</a
@@ -44,6 +46,7 @@
       i18n="@@headerNavLinkResume"
       role="button"
       tabindex="0"
+      [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
       (click)="scrollToElementById('resume')"
       (keyup)="scrollToElementById('resume')"
       >Resume</a
@@ -53,6 +56,7 @@
       i18n="@@headerNavLinkContact"
       role="button"
       tabindex="0"
+      [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
       (click)="scrollToElementById('contact')"
       (keyup)="scrollToElementById('contact')"
       >Contact</a

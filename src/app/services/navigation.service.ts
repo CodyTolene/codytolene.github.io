@@ -13,6 +13,14 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 export class NavigationService {
   public constructor(private readonly router: Router) {}
 
+  public readonly currentUrl$ = this.router.events.pipe(
+    filter((event) => event instanceof NavigationEnd),
+    map((event) => (event as NavigationEnd).url),
+    startWith(this.router.url),
+    distinctUntilChanged(),
+    shareReplay({ bufferSize: 1, refCount: true }),
+  );
+
   public readonly isNavigating$ = this.router.events.pipe(
     filter(
       (event) =>
