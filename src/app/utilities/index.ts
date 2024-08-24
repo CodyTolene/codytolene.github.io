@@ -1,1 +1,1 @@
-export { scrollIntoView, scrollTop } from './scroll';
+export { scrollToElement, scrollToElementById, scrollTop } from './scroll';

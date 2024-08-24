@@ -1,12 +1,67 @@
 <header>
+  <a
+    aria-hidden="false"
+    class="logo"
+    i18n="@@headerLogo"
+    role="button"
+    tabindex="0"
+    routerLink="/"
+    (click)="scrollTop()"
+    (keyup)="scrollTop()"
+    >Cody Tolene</a
+  >
   <nav>
     <a
+      aria-hidden="false"
       i18n="@@headerNavLinkHome"
+      role="button"
+      tabindex="0"
       routerLink="/"
-      >Home</a
+      (click)="scrollTop()"
+      (keyup)="scrollTop()"
+      >Intro</a
     >
     <a
+      aria-hidden="false"
+      i18n="@@headerNavLinkServices"
+      role="button"
+      tabindex="0"
+      (click)="scrollToElementById('services')"
+      (keyup)="scrollToElementById('services')"
+      >Services</a
+    >
+    <a
+      aria-hidden="false"
+      i18n="@@headerNavLinkAbout"
+      role="button"
+      tabindex="0"
+      (click)="scrollToElementById('about')"
+      (keyup)="scrollToElementById('about')"
+      >About</a
+    >
+    <a
+      aria-hidden="false"
+      i18n="@@headerNavLinkResume"
+      role="button"
+      tabindex="0"
+      (click)="scrollToElementById('resume')"
+      (keyup)="scrollToElementById('resume')"
+      >Resume</a
+    >
+    <a
+      aria-hidden="false"
+      i18n="@@headerNavLinkContact"
+      role="button"
+      tabindex="0"
+      (click)="scrollToElementById('contact')"
+      (keyup)="scrollToElementById('contact')"
+      >Contact</a
+    >
+    <a
+      aria-hidden="false"
       i18n="@@headerNavLinkPrivacyPolicy"
+      role="button"
+      tabindex="0"
       routerLink="/privacy-policy"
       >Privacy Policy</a
     >

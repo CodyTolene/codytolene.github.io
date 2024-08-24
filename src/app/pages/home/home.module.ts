@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
@@ -29,6 +29,7 @@ const PAGE_ROUTE: PageRoute = {
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    NgOptimizedImage,
     RouterModule.forChild([PAGE_ROUTE]),
   ],
 })

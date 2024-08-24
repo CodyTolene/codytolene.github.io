@@ -1,3 +1,5 @@
+import { scrollToElementById, scrollTop } from 'src/app/utilities';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -9,4 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss',
   templateUrl: './header.component.html',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  protected readonly scrollToElementById = scrollToElementById;
+  protected readonly scrollTop = scrollTop;
+}

@@ -17,9 +17,11 @@ export class HomeComponent implements AfterViewInit {
 
   public ngAfterViewInit(): void {
     try {
-      particlesJS('particles', PARTICLE_OPTIONS);
+      particlesJS('galaxy', PARTICLE_OPTIONS);
     } catch (error) {
-      console.warn(`Failed to load particles. Error message: ${error}`);
+      console.warn(
+        `Failed to load galaxy. Error message: ${error || 'Unknown error'}`,
+      );
     }
   }
 }
