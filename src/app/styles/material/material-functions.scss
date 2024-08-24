@@ -3,6 +3,8 @@
 @use 'sass:color';
 @use '@angular/material' as mat;
 
+@import 'fonts';
+
 @function _get-palette-hue($hues, $hue, $prev-hue, $next-hue) {
   $weight: math.div($next-hue - $hue, $next-hue - $prev-hue) * 100%;
   @return color.mix(
@@ -81,6 +83,7 @@
         use-system-variables: true,
       ),
       typography: (
+        plain-family: $font_family,
         use-system-variables: true,
       ),
       density: (
