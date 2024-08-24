@@ -1,8 +1,8 @@
 /**
  * The list of all available Angular Material icons.
  *
- * https://fonts.google.com/icons
- * https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIcons-Regular.codepoints
+ * @see https://fonts.google.com/icons
+ * @see https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIcons-Regular.codepoints
  */
 export const icons = [
   '10k',

@@ -1,0 +1,11 @@
+:host {
+  &.inline {
+    display: inline-block;
+  }
+
+  .mat-icon {
+    font-size: inherit;
+    height: inherit;
+    width: inherit;
+  }
+}
