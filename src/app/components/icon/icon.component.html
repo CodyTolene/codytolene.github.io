@@ -1,0 +1,11 @@
+<mat-icon
+  aria-hidden="false"
+  [class.two-tone-accent]="type === 'two-tone' && color === 'accent'"
+  [class.two-tone-primary]="type === 'two-tone' && color === 'primary'"
+  [class.two-tone-warn]="type === 'two-tone' && color === 'warn'"
+  [color]="color"
+  [fontSet]="iconTypeToFontSet[type]"
+  [inline]="inline"
+  [svgIcon]="isCustom ? name : ''"
+  >{{ name }}</mat-icon
+>
