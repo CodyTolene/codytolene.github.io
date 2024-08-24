@@ -177,7 +177,7 @@ const eslintConfig = tseslint.config(
     },
   },
   {
-    files: ['src/app/**/*.html'],
+    files: ['src/app/**/*.html', 'src/app/**/*.svg'],
     extends: [
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
