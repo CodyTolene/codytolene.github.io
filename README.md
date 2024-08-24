@@ -72,7 +72,7 @@ The following scripts are available for development:
 
 ## Wrapping Up <a name="wrapping-up"></a>
 
-Thanks to all the people and projects that made this possible! I hope you enjoy this project as much as I enjoyed working on it. If you have any questions, please let me know by opening an issue [here][url-new-issue].
+Thanks to all the people and projects that made this possible! I hope you enjoy this project as much as I enjoyed working on it. If you have any questions, please let me know by opening an issue [here][link-url-new-issue].
 
 | Type                                                                      | Info                                                                      |
 | :------------------------------------------------------------------------ | :------------------------------------------------------------------------ |
@@ -84,6 +84,8 @@ Fin. Happy programming friend!
 
 Cody Tolene
 
+<p align="right">[ <a href="#index">Index</a> ]</p>
+
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
@@ -92,7 +94,6 @@ Cody Tolene
 
 [link-angular]: https://angular.io/
 [link-angular-material]: https://material.angular.io/
-[url-btc]: https://explorer.btc.com/btc/address/bc1qfx3lvspkj0q077u3gnrnxqkqwyvcku2nml86wmudy7yf2u8edmqq0a5vnt
 [link-eslint]: https://eslint.org/
 [link-husky]: https://typicode.github.io/husky/
 [link-io-ts]: https://gcanti.github.io/io-ts/
@@ -101,3 +102,5 @@ Cody Tolene
 [link-prettier]: https://prettier.io/
 [link-rxjs]: https://rxjs.dev/
 [link-typescript]: https://www.typescriptlang.org/
+[link-url-new-issue]: https://github.com/CodyTolene/codytolene.github.io/issues
+[url-btc]: https://explorer.btc.com/btc/address/bc1qfx3lvspkj0q077u3gnrnxqkqwyvcku2nml86wmudy7yf2u8edmqq0a5vnt
