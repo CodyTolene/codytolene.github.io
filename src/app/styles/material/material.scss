@@ -1,7 +1,8 @@
 @use '@angular/material' as mat;
 
-@import 'material-palettes';
+@import 'material-dark-palette';
 @import 'material-functions';
+@import 'material-light-palette';
 
 // Import the core styles
 @include mat.core();
@@ -10,7 +11,27 @@
 mat.$theme-legacy-inspection-api-compatibility: false;
 
 // Light theme
-$light-theme: create-theme(parse-palette($light-palette), $type: light);
+$light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: parse-palette($light-palette-primary),
+      tertiary: parse-palette($light-palette-tertiary),
+      use-system-variables: true,
+    ),
+    typography: (
+      plain-family: $font_family,
+      brand-family: $font_family,
+      bold-weight: 700,
+      medium-weight: 500,
+      regular-weight: 300,
+      use-system-variables: true,
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
 
 // Verify light theme validity
 $has-base: mat.theme-has($light-theme, base);
@@ -19,7 +40,27 @@ $has-typography: mat.theme-has($light-theme, typography);
 $has-density: mat.theme-has($light-theme, density);
 
 // Dark theme
-$dark-theme: create-theme(parse-palette($dark-palette), $type: dark);
+$dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: parse-palette($dark-palette-primary),
+      tertiary: parse-palette($dark-palette-tertiary),
+      use-system-variables: true,
+    ),
+    typography: (
+      plain-family: $font_family,
+      brand-family: $font_family,
+      bold-weight: 700,
+      medium-weight: 500,
+      regular-weight: 300,
+      use-system-variables: true,
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
 
 // Verify dark theme validity
 $has-base: mat.theme-has($dark-theme, base);

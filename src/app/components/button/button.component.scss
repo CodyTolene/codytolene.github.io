@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+:host {
+  &.error > button {
+    color: mat.get-theme-color($theme, error);
+  }
+
+  &.primary > button {
+    color: mat.get-theme-color($theme, primary);
+  }
+
+  &.secondary > button {
+    color: mat.get-theme-color($theme, secondary);
+  }
+
+  &.tertiary > button {
+    color: mat.get-theme-color($theme, tertiary);
+  }
+}

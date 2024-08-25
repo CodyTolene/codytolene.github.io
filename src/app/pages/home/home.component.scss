@@ -1,5 +1,8 @@
+@use '@angular/material' as mat;
+
 @import 'colors';
 @import 'fonts';
+@import 'material/material';
 
 #galaxy {
   align-items: center;
@@ -21,7 +24,7 @@
 #services,
 #resume {
   background-color: $gray_dark;
-  color: $font_color_dark;
+  color: mat.get-theme-color($light-theme, text-color);
 }
 
 #about,
