@@ -23,15 +23,12 @@ export class IconComponent {
   }
 
   /**
-   * The color variant of the icon.
+   * The theme color of the icon.
    *
-   * @default 'surface'
+   * @default 'surface' Will inherit the CSS `color` of the parent element.
    * @see https://material.angular.io/guide/theming#using-component-color-variants
    */
-  @HostBinding('class')
-  @Input()
-  public color: 'error' | 'primary' | 'secondary' | 'surface' | 'tertiary' =
-    'surface';
+  @HostBinding('class') @Input() public color: ThemeColor = 'surface';
 
   @HostBinding('class.inline')
   @Input()

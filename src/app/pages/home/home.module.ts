@@ -1,4 +1,4 @@
-import { IconModule } from 'src/app/components';
+import { ButtonModule, IconModule } from 'src/app/components';
 
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -26,6 +26,7 @@ const PAGE_ROUTE: PageRoute = {
 @NgModule({
   declarations: [HomeComponent],
   imports: [
+    ButtonModule,
     CommonModule,
     IconModule,
     MatButtonModule,

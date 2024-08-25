@@ -72,23 +72,3 @@
 @function parse-palette($palette) {
   @return _parse-palette-hues($palette);
 }
-
-@function create-theme($palette, $type: light, $density: 0) {
-  @return mat.define-theme(
-    (
-      color: (
-        theme-type: $type,
-        primary: $palette,
-        tertiary: $palette,
-        use-system-variables: true,
-      ),
-      typography: (
-        plain-family: $font_family,
-        use-system-variables: true,
-      ),
-      density: (
-        scale: $density,
-      ),
-    )
-  );
-}
