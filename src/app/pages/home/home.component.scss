@@ -8,12 +8,7 @@
 $gap: 0.25rem;
 $padding: 1rem;
 
-.particles,
-.particles > canvas {
-  z-index: 0;
-}
-
-.particles {
+@mixin particles {
   height: 100%;
   left: 0;
   pointer-events: none;
@@ -22,14 +17,45 @@ $padding: 1rem;
   width: 100%;
 }
 
-#particle-galaxy-one {
-  align-items: center;
+#intro {
   background: url('/assets/images/galaxy.jpg');
   background: url('/assets/images/galaxy.webp');
-  display: flex;
   height: 800px;
-  justify-content: center;
-  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  #particle-galaxy-one {
+    align-items: center;
+    height: 800px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  > div.section-container {
+    height: auto;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    z-index: 1;
+
+    h1 {
+      color: mat.get-theme-color($ct-theme, primary);
+      font-size: calc($font_xxl + 0.25rem);
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: mat.get-theme-color($ct-theme, on-primary);
+      font-size: $font_xl;
+      margin: 1rem 0 0 0;
+    }
+  }
 }
 
 #services {
@@ -37,6 +63,10 @@ $padding: 1rem;
   background-color: mat.get-theme-color($ct-theme, secondary, 20);
   position: relative;
   z-index: 1;
+
+  #particle-hexagons-one {
+    @include particles;
+  }
 
   > div.section-container {
     display: flex;
@@ -85,6 +115,10 @@ $padding: 1rem;
   position: relative;
   z-index: 1;
 
+  #particle-galaxy-two {
+    @include particles;
+  }
+
   > div.section-container {
     display: flex;
     flex-direction: row;
@@ -124,6 +158,10 @@ $padding: 1rem;
   background-color: mat.get-theme-color($ct-theme, secondary, 20);
   position: relative;
   z-index: 1;
+
+  #particle-hexagons-two {
+    @include particles;
+  }
 
   > div.section-container {
     color: mat.get-theme-color($ct-theme, on-primary);
@@ -165,6 +203,10 @@ $padding: 1rem;
   background-color: mat.get-theme-color($ct-theme, background);
   position: relative;
   z-index: 1;
+
+  #particle-galaxy-three {
+    @include particles;
+  }
 
   > div.section-container {
     display: flex;
