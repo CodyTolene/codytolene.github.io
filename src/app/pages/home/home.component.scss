@@ -8,8 +8,6 @@
   align-items: center;
   background: url('/assets/images/galaxy.jpg');
   background: url('/assets/images/galaxy.webp');
-  border-bottom: 4px solid
-    rgba(mat.get-theme-color($ct-theme, primary, 10), 0.5);
   display: flex;
   height: 800px;
   justify-content: center;
@@ -26,8 +24,6 @@
 #services,
 #resume {
   background-color: mat.get-theme-color($ct-theme, secondary, 20);
-  border-bottom: 4px solid
-    rgba(mat.get-theme-color($ct-theme, primary, 10), 0.5);
   color: mat.get-theme-color($ct-theme, on-primary);
 
   > div a {
@@ -38,8 +34,6 @@
 #about,
 #contact {
   background-color: mat.get-theme-color($ct-theme, background);
-  border-bottom: 4px solid
-    rgba(mat.get-theme-color($ct-theme, primary, 10), 0.5);
 }
 
 $gap: 0.25rem;
