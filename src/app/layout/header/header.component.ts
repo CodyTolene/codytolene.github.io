@@ -1,6 +1,6 @@
 import { firstValueFrom, shareReplay } from 'rxjs';
 import { ButtonModule } from 'src/app/components';
-import { BreakpointEnum } from 'src/app/enumerators';
+import { BreakpointEnum } from 'src/app/enums';
 import { BreakpointService, NavigationService } from 'src/app/services';
 import { scrollToElementById, scrollTop } from 'src/app/utilities';
 

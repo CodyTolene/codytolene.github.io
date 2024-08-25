@@ -1,4 +1,4 @@
-import { ButtonTypeEnum } from 'src/app/enumerators';
+import { ButtonTypeEnum } from 'src/app/enums';
 import { getEnumMember } from 'src/app/utilities';
 
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';

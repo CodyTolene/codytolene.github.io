@@ -1,6 +1,6 @@
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { ReplaySubject, distinctUntilChanged, shareReplay } from 'rxjs';
-import { BreakpointEnum } from 'src/app/enumerators';
+import { BreakpointEnum } from 'src/app/enums';
 
 import {
   BreakpointObserver,
