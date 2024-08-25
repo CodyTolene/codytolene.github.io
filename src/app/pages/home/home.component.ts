@@ -1,4 +1,5 @@
 import { PARTICLE_OPTIONS } from 'src/app/constants';
+import { scrollToElementById } from 'src/app/utilities';
 
 import {
   AfterViewInit,
@@ -23,5 +24,9 @@ export class HomeComponent implements AfterViewInit {
         `Failed to load galaxy. Error message: ${error || 'Unknown error'}`,
       );
     }
+  }
+
+  protected scrollToElementById(id: string): void {
+    scrollToElementById(id);
   }
 }

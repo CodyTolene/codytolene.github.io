@@ -22,14 +22,6 @@ export class IconComponent {
     this.iconsService.initialize();
   }
 
-  /**
-   * The theme color of the icon.
-   *
-   * @default 'surface' Will inherit the CSS `color` of the parent element.
-   * @see https://material.angular.io/guide/theming#using-component-color-variants
-   */
-  @HostBinding('class') @Input() public color: ThemeColor = 'surface';
-
   @HostBinding('class.inline')
   @Input()
   public set inline(value: BooleanInput) {

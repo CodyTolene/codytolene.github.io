@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+
+@import 'material/material-functions';
+@import 'material/material-palette';
+
+// Import the core styles
+@include mat.core();
+
+// No need for legacy m2 API compatibility, use m3.
+mat.$theme-legacy-inspection-api-compatibility: false;
+
+// Theme colors
+$ct-theme: create-theme($palette-primary, $palette-tertiary);
+
+// Verify theme validity
+$has-base: mat.theme-has($ct-theme, base);
+$has-color: mat.theme-has($ct-theme, color);
+$has-typography: mat.theme-has($ct-theme, typography);
+$has-density: mat.theme-has($ct-theme, density);
+
+// Set the default theme
+html {
+  @include mat.all-component-themes($ct-theme);
+  @include mat.system-level-colors($ct-theme);
+  @include mat.system-level-typography($ct-theme);
+}
+
+// Set the default typography hierarchy
+@include mat.typography-hierarchy($ct-theme);
+
+// Import additional styles
+@import 'material/material-additions';
+
+// Import overrides
+@import 'material/material-overrides';

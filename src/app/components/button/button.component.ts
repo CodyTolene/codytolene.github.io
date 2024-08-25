@@ -2,12 +2,7 @@ import { ButtonTypeEnum } from 'src/app/enumerators';
 import { getEnumMember } from 'src/app/utilities';
 
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  HostBinding,
-  Input,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -16,14 +11,6 @@ import {
   templateUrl: './button.component.html',
 })
 export class ButtonComponent {
-  /**
-   * The theme color of the button.
-   *
-   * @default 'primary' The primary color.
-   * @see https://material.angular.io/guide/theming#using-component-color-variants
-   */
-  @HostBinding('class') @Input() public color: ButtonThemeColor = 'primary';
-
   @Input()
   public set disabled(value: BooleanInput) {
     this.#disabled = coerceBooleanProperty(value);
@@ -47,5 +34,3 @@ export class ButtonComponent {
 
   protected readonly ButtonTypeEnum = ButtonTypeEnum;
 }
-
-type ButtonThemeColor = Exclude<ThemeColor, 'surface'>;

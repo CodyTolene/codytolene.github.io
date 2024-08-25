@@ -209,11 +209,15 @@
     </p>
   </div>
 
-  <ct-button
-    i18n="@@buttonContactMe"
-    color="primary"
-    >Contact Me</ct-button
-  >
+  <div>
+    <ct-button
+      i18n="@@buttonContactMe"
+      color="primary"
+      type="stroked"
+      (click)="scrollToElementById('contact')"
+      >Contact Me</ct-button
+    >
+  </div>
 </section>
 
 <!-- ABOUT -->
