@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 
+@import 'breakpoints';
 @import 'colors';
 @import 'fonts';
 @import 'material';
@@ -37,6 +38,7 @@
 }
 
 $gap: 0.25rem;
+$padding: 1rem;
 
 #services {
   display: flex;
@@ -58,8 +60,6 @@ $gap: 0.25rem;
   }
 
   > div {
-    $padding: 1rem;
-
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -73,5 +73,17 @@ $gap: 0.25rem;
         font-size: $font_lg;
       }
     }
+  }
+}
+
+@include tablet {
+  #services > div {
+    flex: 0 1 calc(100% / 2 - $gap - ($padding * 2));
+  }
+}
+
+@include mobile {
+  #services > div {
+    flex: 0 1 100%;
   }
 }
