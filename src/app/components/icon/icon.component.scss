@@ -1,30 +1,6 @@
-@use '@angular/material' as mat;
-
-$theme: mat.define-theme();
-
 :host {
   &.inline {
     display: inline-block;
-  }
-
-  &.error .mat-icon {
-    @include mat.icon-color($theme, $color-variant: error);
-  }
-
-  &.primary .mat-icon {
-    @include mat.icon-color($theme, $color-variant: primary);
-  }
-
-  &.secondary .mat-icon {
-    @include mat.icon-color($theme, $color-variant: secondary);
-  }
-
-  &.surface .mat-icon {
-    @include mat.icon-color($theme, $color-variant: surface);
-  }
-
-  &.tertiary .mat-icon {
-    @include mat.icon-color($theme, $color-variant: tertiary);
   }
 
   .mat-icon {
