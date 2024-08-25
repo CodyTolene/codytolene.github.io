@@ -1,4 +1,8 @@
-import { PARTICLE_OPTIONS } from 'src/app/constants';
+import {
+  PARTICLE_GALAXY_BLACK,
+  PARTICLE_GALAXY_WHITE,
+  PARTICLE_HEXAGONS,
+} from 'src/app/constants';
 import { BreakpointEnum } from 'src/app/enumerators';
 import { BreakpointService } from 'src/app/services';
 import { scrollToElementById } from 'src/app/utilities';
@@ -23,10 +27,14 @@ export class HomeComponent implements AfterViewInit {
 
   public ngAfterViewInit(): void {
     try {
-      particlesJS('galaxy', PARTICLE_OPTIONS);
+      particlesJS('particle-galaxy-one', PARTICLE_GALAXY_WHITE);
+      particlesJS('particle-hexagons-one', PARTICLE_HEXAGONS);
+      particlesJS('particle-galaxy-three', PARTICLE_GALAXY_BLACK);
+      particlesJS('particle-hexagons-two', PARTICLE_HEXAGONS);
+      particlesJS('particle-galaxy-five', PARTICLE_GALAXY_BLACK);
     } catch (error) {
       console.warn(
-        `Failed to load galaxy. Error message: ${error || 'Unknown error'}`,
+        `Failed to load particles! Error message: ${error || 'Unknown error'}`,
       );
     }
   }

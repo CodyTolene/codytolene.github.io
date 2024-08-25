@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PARTICLE_GALAXY_BLACK } from 'src/app/constants';
+
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+} from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -6,4 +12,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './privacy-policy.component.scss',
   templateUrl: './privacy-policy.component.html',
 })
-export class PrivacyPolicyComponent {}
+export class PrivacyPolicyComponent implements AfterViewInit {
+  public ngAfterViewInit(): void {
+    try {
+      particlesJS('particle-galaxy', PARTICLE_GALAXY_BLACK);
+    } catch (error) {
+      console.warn(
+        `Failed to load particles! Error message: ${error || 'Unknown error'}`,
+      );
+    }
+  }
+}

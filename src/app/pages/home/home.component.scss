@@ -8,7 +8,21 @@
 $gap: 0.25rem;
 $padding: 1rem;
 
-#galaxy {
+.particles,
+.particles > canvas {
+  z-index: 0;
+}
+
+.particles {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#particle-galaxy-one {
   align-items: center;
   background: url('/assets/images/galaxy.jpg');
   background: url('/assets/images/galaxy.webp');
@@ -19,136 +33,174 @@ $padding: 1rem;
 }
 
 #services {
-  background-color: mat.get-theme-color($ct-theme, secondary, 20);
   color: mat.get-theme-color($ct-theme, on-primary);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: $gap;
-  padding: 2rem 4rem;
+  background-color: mat.get-theme-color($ct-theme, secondary, 20);
+  position: relative;
+  z-index: 1;
 
-  > h1,
-  > h2 {
-    align-self: stretch;
-    flex: 0 1 100%;
-    margin-bottom: 1rem;
-    order: 0;
-    text-align: center;
-  }
-
-  h2 {
-    margin-bottom: 2rem;
-  }
-
-  > div {
-    align-items: center;
+  > div.section-container {
     display: flex;
-    flex-direction: column;
-    flex: 0 1 calc(100% / 3 - $gap - ($padding * 2));
-    padding: $padding;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap;
+    padding: 2rem 4rem;
 
-    &:last-child {
+    > h1,
+    > h2 {
+      align-self: stretch;
       flex: 0 1 100%;
-
-      ct-button {
-        font-size: $font_lg;
-      }
+      margin-bottom: 1rem;
+      order: 0;
+      text-align: center;
     }
 
-    a {
-      color: mat.get-theme-color($ct-theme, primary);
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    > div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 calc(100% / 3 - $gap - ($padding * 2));
+      padding: $padding;
+
+      &:last-child {
+        flex: 0 1 100%;
+
+        ct-button {
+          font-size: $font_lg;
+        }
+      }
+
+      a {
+        color: mat.get-theme-color($ct-theme, primary);
+      }
     }
   }
 }
 
 #about {
   background-color: mat.get-theme-color($ct-theme, background);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: $gap;
-  padding: 2rem 4rem;
+  position: relative;
+  z-index: 1;
 
-  > h1,
-  > h2 {
-    align-self: stretch;
-    flex: 0 1 100%;
-    margin-bottom: 1rem;
-    order: 0;
-    text-align: center;
-  }
-
-  h2 {
-    margin-bottom: 2rem;
-  }
-
-  > div {
-    align-items: start;
+  > div.section-container {
     display: flex;
-    flex-direction: column;
-    flex: 0 1 calc(100% / 2 - $gap - ($padding * 2));
-    padding: $padding;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap;
+    padding: 2rem 4rem;
 
-    > img {
-      align-self: center;
+    > h1,
+    > h2 {
+      align-self: stretch;
+      flex: 0 1 100%;
+      margin-bottom: 1rem;
+      order: 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    > div {
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 calc(100% / 2 - $gap - ($padding * 2));
+      padding: $padding;
+
+      > img {
+        align-self: center;
+        z-index: 1;
+      }
     }
   }
 }
 
 #resume {
   background-color: mat.get-theme-color($ct-theme, secondary, 20);
-  color: mat.get-theme-color($ct-theme, on-primary);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: $gap;
-  padding: 2rem 4rem;
+  position: relative;
+  z-index: 1;
 
-  > h1,
-  > h2 {
-    align-self: stretch;
-    flex: 0 1 100%;
-    margin-bottom: 1rem;
-    order: 0;
-    text-align: center;
-  }
-
-  h2 {
-    margin-bottom: 2rem;
-  }
-
-  > div,
-  > ul {
-    align-items: start;
+  > div.section-container {
+    color: mat.get-theme-color($ct-theme, on-primary);
     display: flex;
-    flex-direction: column;
-    flex: 0 1 calc(100% / 3 - $gap - ($padding * 2));
-    padding: $padding;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap;
+    padding: 2rem 4rem;
 
-    a {
-      color: mat.get-theme-color($ct-theme, primary);
+    > h1,
+    > h2 {
+      align-self: stretch;
+      flex: 0 1 100%;
+      margin-bottom: 1rem;
+      order: 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    > div,
+    > ul {
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 calc(100% / 3 - $gap - ($padding * 2));
+      padding: $padding;
+
+      a {
+        color: mat.get-theme-color($ct-theme, primary);
+      }
     }
   }
 }
 
 #contact {
   background-color: mat.get-theme-color($ct-theme, background);
-  padding: 2rem 4rem;
+  position: relative;
+  z-index: 1;
+
+  > div.section-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap;
+    padding: 2rem 4rem;
+
+    > h1,
+    > h2 {
+      align-self: stretch;
+      flex: 0 1 100%;
+      margin-bottom: 1rem;
+      order: 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 @include tablet {
-  #services > div {
+  #services > div.section-container > div {
     flex: 0 1 calc(100% / 2 - $gap - ($padding * 2));
   }
-  #about > div,
-  #resume > div,
-  #resume > ul {
+  #about > div.section-container > div,
+  #resume > div.section-container > div,
+  #resume > div.section-container > ul {
     flex: 0 1 100%;
   }
 }
 
 @include mobile {
-  #services > div {
+  #services > div.section-container > div {
     flex: 0 1 100%;
   }
 }

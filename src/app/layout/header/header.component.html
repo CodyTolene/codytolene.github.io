@@ -10,7 +10,6 @@
     (keyup)="scrollTop()"
     >Cody Tolene</a
   >
-
   @switch (breakpointState$ | async) {
     @case (BreakpointEnum.DESKTOP) {
       <ng-container [ngTemplateOutlet]="desktopTemplate" />
