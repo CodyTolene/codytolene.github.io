@@ -5,6 +5,9 @@
 @import 'fonts';
 @import 'material';
 
+$gap: 0.25rem;
+$padding: 1rem;
+
 #galaxy {
   align-items: center;
   background: url('/assets/images/galaxy.jpg');
@@ -15,36 +18,14 @@
   width: 100%;
 }
 
-#services,
-#about,
-#resume,
-#contact {
-  padding: 2rem 4rem;
-}
-
-#services,
-#resume {
+#services {
   background-color: mat.get-theme-color($ct-theme, secondary, 20);
   color: mat.get-theme-color($ct-theme, on-primary);
-
-  > div a {
-    color: mat.get-theme-color($ct-theme, primary);
-  }
-}
-
-#about,
-#contact {
-  background-color: mat.get-theme-color($ct-theme, background);
-}
-
-$gap: 0.25rem;
-$padding: 1rem;
-
-#services {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: $gap;
+  padding: 2rem 4rem;
 
   > h1,
   > h2 {
@@ -73,12 +54,96 @@ $padding: 1rem;
         font-size: $font_lg;
       }
     }
+
+    a {
+      color: mat.get-theme-color($ct-theme, primary);
+    }
   }
+}
+
+#about {
+  background-color: mat.get-theme-color($ct-theme, background);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $gap;
+  padding: 2rem 4rem;
+
+  > h1,
+  > h2 {
+    align-self: stretch;
+    flex: 0 1 100%;
+    margin-bottom: 1rem;
+    order: 0;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  > div {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(100% / 2 - $gap - ($padding * 2));
+    padding: $padding;
+
+    > img {
+      align-self: center;
+    }
+  }
+}
+
+#resume {
+  background-color: mat.get-theme-color($ct-theme, secondary, 20);
+  color: mat.get-theme-color($ct-theme, on-primary);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $gap;
+  padding: 2rem 4rem;
+
+  > h1,
+  > h2 {
+    align-self: stretch;
+    flex: 0 1 100%;
+    margin-bottom: 1rem;
+    order: 0;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  > div,
+  > ul {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(100% / 3 - $gap - ($padding * 2));
+    padding: $padding;
+
+    a {
+      color: mat.get-theme-color($ct-theme, primary);
+    }
+  }
+}
+
+#contact {
+  background-color: mat.get-theme-color($ct-theme, background);
+  padding: 2rem 4rem;
 }
 
 @include tablet {
   #services > div {
     flex: 0 1 calc(100% / 2 - $gap - ($padding * 2));
+  }
+  #about > div,
+  #resume > div,
+  #resume > ul {
+    flex: 0 1 100%;
   }
 }
 
