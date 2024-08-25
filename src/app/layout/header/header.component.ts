@@ -1,27 +1,36 @@
 import { firstValueFrom, shareReplay } from 'rxjs';
-import { NavigationService } from 'src/app/services';
+import { ButtonModule } from 'src/app/components';
+import { BreakpointEnum } from 'src/app/enumerators';
+import { BreakpointService, NavigationService } from 'src/app/services';
 import { scrollToElementById, scrollTop } from 'src/app/utilities';
 
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterModule],
+  imports: [ButtonModule, CommonModule, MatMenuModule, RouterModule],
   selector: 'ct-header',
   standalone: true,
   styleUrl: './header.component.scss',
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  public constructor(private readonly navigationService: NavigationService) {}
+  public constructor(
+    private readonly breakpointService: BreakpointService,
+    private readonly navigationService: NavigationService,
+  ) {}
 
   protected readonly scrollTop = scrollTop;
 
   protected readonly currentUrl$ = this.navigationService.currentUrl$.pipe(
     shareReplay(1),
   );
+
+  protected readonly BreakpointEnum = BreakpointEnum;
+  protected readonly breakpointState$ = this.breakpointService.breakpointState$;
 
   private readonly isNavigating$ = this.navigationService.isNavigating$;
 
