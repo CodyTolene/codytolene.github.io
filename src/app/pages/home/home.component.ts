@@ -29,9 +29,9 @@ export class HomeComponent implements AfterViewInit {
     try {
       particlesJS('particle-galaxy-one', PARTICLE_GALAXY_WHITE);
       particlesJS('particle-hexagons-one', PARTICLE_HEXAGONS);
-      particlesJS('particle-galaxy-three', PARTICLE_GALAXY_BLACK);
+      particlesJS('particle-galaxy-two', PARTICLE_GALAXY_BLACK);
       particlesJS('particle-hexagons-two', PARTICLE_HEXAGONS);
-      particlesJS('particle-galaxy-five', PARTICLE_GALAXY_BLACK);
+      particlesJS('particle-galaxy-three', PARTICLE_GALAXY_BLACK);
     } catch (error) {
       console.warn(
         `Failed to load particles! Error message: ${error || 'Unknown error'}`,
