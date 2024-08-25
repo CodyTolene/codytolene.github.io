@@ -25,16 +25,21 @@
     justify-content: space-around;
     width: 100%;
 
-    nav > a {
-      color: mat.get-theme-color($ct-theme, on-primary);
-      cursor: pointer;
-      margin-left: 1rem;
-      text-decoration: none;
-      text-transform: uppercase;
+    nav {
+      display: flex;
+      flex-direction: row;
 
-      &:hover {
-        color: mat.get-theme-color($ct-theme, primary);
-        text-decoration: overline;
+      > a {
+        color: mat.get-theme-color($ct-theme, on-primary);
+        cursor: pointer;
+        margin-left: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+          color: mat.get-theme-color($ct-theme, primary);
+          text-decoration: overline;
+        }
       }
     }
 

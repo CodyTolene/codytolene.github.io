@@ -47,6 +47,7 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@ngneat/until-destroy": "^10.0.0",
     "io-ts": "^2.2.21",
     "luxon": "^3.5.0",
     "particles.js": "^2.0.0",
