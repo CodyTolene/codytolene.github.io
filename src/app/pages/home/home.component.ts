@@ -3,7 +3,7 @@ import {
   PARTICLE_GALAXY_WHITE,
   PARTICLE_HEXAGONS,
 } from 'src/app/constants';
-import { BreakpointEnum } from 'src/app/enumerators';
+import { BreakpointEnum } from 'src/app/enums';
 import { BreakpointService } from 'src/app/services';
 import { scrollToElementById } from 'src/app/utilities';
 

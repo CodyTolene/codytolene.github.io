@@ -33,7 +33,7 @@ const prettierConfig = {
     '^src/app/constants/(.*)$',
     '^src/app/decorators/(.*)$',
     '^src/app/directives/(.*)$',
-    '^src/app/enumerators/(.*)$',
+    '^src/app/enums/(.*)$',
     '^src/app/guards/(.*)$',
     '^src/app/layout/(.*)$',
     '^src/app/models/(.*)$',
