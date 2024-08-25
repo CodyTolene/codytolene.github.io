@@ -1,4 +1,6 @@
 import { PARTICLE_OPTIONS } from 'src/app/constants';
+import { BreakpointEnum } from 'src/app/enumerators';
+import { BreakpointService } from 'src/app/services';
 import { scrollToElementById } from 'src/app/utilities';
 
 import {
@@ -14,7 +16,10 @@ import {
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements AfterViewInit {
-  protected readonly title = 'Cody Tolene';
+  public constructor(private readonly breakpointService: BreakpointService) {}
+
+  protected readonly BreakpointEnum = BreakpointEnum;
+  protected readonly breakpointState$ = this.breakpointService.breakpointState$;
 
   public ngAfterViewInit(): void {
     try {

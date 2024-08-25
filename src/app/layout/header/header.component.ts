@@ -30,7 +30,8 @@ export class HeaderComponent {
   );
 
   protected readonly BreakpointEnum = BreakpointEnum;
-  protected readonly breakpointState$ = this.breakpointService.breakpointState$;
+  protected readonly breakpointState$ =
+    this.breakpointService.breakpointState$.pipe(shareReplay(1));
 
   private readonly isNavigating$ = this.navigationService.isNavigating$;
 

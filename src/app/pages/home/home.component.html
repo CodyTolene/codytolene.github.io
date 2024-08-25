@@ -226,6 +226,14 @@
   <h1 i18n="@@aboutHeader">About</h1>
   <h2 i18n="@@aboutSubHeader">Hi there, it's nice to meet you!</h2>
 
+  <!-- IMAGE:TABLET/MOBILE -->
+  @if (
+    (breakpointState$ | async) === BreakpointEnum.MOBILE ||
+    (breakpointState$ | async) === BreakpointEnum.TABLET
+  ) {
+    <ng-container [ngTemplateOutlet]="myImageTemplate" />
+  }
+
   <!-- MY STORY -->
   <div>
     <h4 i18n="@@aboutMyStoryHeader">My story as a developer</h4>
@@ -254,16 +262,10 @@
     </p>
   </div>
 
-  <!-- IMAGE -->
-  <div>
-    <img
-      alt="Cody Tolene's Vector Portrait"
-      i18n-alt="@@aboutImageAlt"
-      height="400"
-      width="400"
-      [ngSrc]="'assets/images/cody.png'"
-    />
-  </div>
+  <!-- IMAGE:DESKTOP -->
+  @if ((breakpointState$ | async) === BreakpointEnum.DESKTOP) {
+    <ng-container [ngTemplateOutlet]="myImageTemplate" />
+  }
 
   <!-- WEB DEVELOPMENT -->
   <div>
@@ -557,3 +559,15 @@
     </p>
   </div>
 </section>
+
+<ng-template #myImageTemplate>
+  <div>
+    <img
+      alt="Cody Tolene's Vector Portrait"
+      i18n-alt="@@aboutImageAlt"
+      height="400"
+      width="400"
+      [ngSrc]="'assets/images/cody.png'"
+    />
+  </div>
+</ng-template>
