@@ -1,1 +1,22 @@
-<footer>Copyright &copy; Cody Tolene 2019 - {{ currentYear }}</footer>
+<footer>
+  <a
+    aria-hidden="false"
+    class="logo"
+    role="button"
+    routerLink="/"
+    tabindex="0"
+    (click)="scrollTop()"
+    (keyup)="scrollTop()"
+    >Cody Tolene</a
+  >
+  <p>Copyright &copy; Cody Tolene 2019 - {{ currentYear }}</p>
+  <p>
+    Trademark icons (SVG's) by
+    <a
+      href="https://simpleicons.org"
+      target="_blank"
+      >SimpleIcons</a
+    >
+    &copy;{{ currentYear }}
+  </p>
+</footer>
