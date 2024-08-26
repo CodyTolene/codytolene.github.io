@@ -50,7 +50,6 @@ The following scripts are available for development:
 | ----------------------- | ---------------------------------------------------------- |
 | `build`                 | Builds the project.                                        |
 | `build:prod`            | Builds the project for production.                         |
-| `i18n`                  | Extracts the i18n messages from the code.                  |
 | `lint`                  | Lints the code and reports the issues without fixing them. |
 | `lint:fix`              | Lints the code and fixes the issues.                       |
 | `ng`                    | Angular CLI command.                                       |

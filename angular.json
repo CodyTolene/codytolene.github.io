@@ -77,9 +77,6 @@
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
-        },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
