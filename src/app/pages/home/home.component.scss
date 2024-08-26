@@ -184,8 +184,7 @@ $padding: 1rem;
       margin-bottom: 2rem;
     }
 
-    > div,
-    > ul {
+    > div {
       align-items: start;
       display: flex;
       flex-direction: column;
@@ -194,6 +193,18 @@ $padding: 1rem;
 
       a {
         color: mat.get-theme-color($ct-theme, primary);
+      }
+    }
+
+    > #work-experience,
+    > #projects,
+    > #education {
+      h2 {
+        margin-bottom: 2.5rem;
+      }
+
+      > div {
+        margin-bottom: 1rem;
       }
     }
   }
