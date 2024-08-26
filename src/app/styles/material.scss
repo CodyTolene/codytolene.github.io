@@ -1,16 +1,12 @@
 @use '@angular/material' as mat;
 
-@import 'material/material-functions';
-@import 'material/material-palette';
+@import 'theme';
 
 // Import the core styles
 @include mat.core();
 
 // No need for legacy m2 API compatibility, use m3.
 mat.$theme-legacy-inspection-api-compatibility: false;
-
-// Theme colors
-$ct-theme: create-theme($palette-primary, $palette-tertiary);
 
 // Verify theme validity
 $has-base: mat.theme-has($ct-theme, base);
