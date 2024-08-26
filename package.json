@@ -29,7 +29,6 @@
     "prettier": "prettier --write . --log-level silent",
     "prettier:check": "prettier --check .",
     "start": "ng serve",
-    "test": "ng test",
     "update": "ncu -u",
     "update:check": "ncu",
     "watch": "ng build --watch --configuration development"
