@@ -2,7 +2,6 @@
   <a
     aria-hidden="false"
     class="logo"
-    i18n="@@headerLogo"
     role="button"
     routerLink="/"
     tabindex="0"
@@ -25,7 +24,6 @@
 
 <ng-template #mobileTemplate>
   <ct-button
-    i18n="@@headerMobileMenuButton"
     mat-button
     type="stroked"
     [matMenuTriggerFor]="menu"
@@ -46,7 +44,6 @@
 <ng-template #linksTemplate>
   <a
     aria-hidden="false"
-    i18n="@@headerNavLinkHome"
     mat-menu-item
     tabindex="0"
     [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
@@ -56,7 +53,6 @@
   >
   <a
     aria-hidden="false"
-    i18n="@@headerNavLinkServices"
     mat-menu-item
     tabindex="0"
     [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
@@ -66,7 +62,6 @@
   >
   <a
     aria-hidden="false"
-    i18n="@@headerNavLinkAbout"
     mat-menu-item
     tabindex="0"
     [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
@@ -76,7 +71,6 @@
   >
   <a
     aria-hidden="false"
-    i18n="@@headerNavLinkResume"
     mat-menu-item
     tabindex="0"
     [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
@@ -86,7 +80,6 @@
   >
   <a
     aria-hidden="false"
-    i18n="@@headerNavLinkContact"
     mat-menu-item
     tabindex="0"
     [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
@@ -96,7 +89,6 @@
   >
   <a
     aria-hidden="false"
-    i18n="@@headerNavLinkPrivacyPolicy"
     mat-menu-item
     tabindex="0"
     routerLink="/privacy-policy"
