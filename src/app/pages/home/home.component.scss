@@ -115,6 +115,11 @@ $padding: 1rem;
 
       a {
         color: mat.get-theme-color($ct-theme, primary);
+        text-align: center;
+
+        ct-icon {
+          margin-bottom: 1rem;
+        }
       }
     }
   }
@@ -256,6 +261,24 @@ $padding: 1rem;
     h2 {
       margin-bottom: 2rem;
     }
+
+    > div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 calc(100% / 3 - $gap - ($padding * 2));
+      padding: $padding;
+
+      a {
+        color: mat.get-theme-color($ct-theme, primary);
+        text-align: center;
+        z-index: 2;
+
+        ct-icon {
+          margin-bottom: 1rem;
+        }
+      }
+    }
   }
 }
 
@@ -265,7 +288,8 @@ $padding: 1rem;
   }
   #about > div.section-container > div,
   #resume > div.section-container > div,
-  #resume > div.section-container > ul {
+  #resume > div.section-container > ul,
+  #contact > div.section-container > div {
     flex: 0 1 100%;
   }
 }
@@ -273,5 +297,9 @@ $padding: 1rem;
 @include mobile {
   #services > div.section-container > div {
     flex: 0 1 100%;
+  }
+  #about > div.section-container > div > img {
+    height: auto;
+    width: 80%;
   }
 }

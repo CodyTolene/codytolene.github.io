@@ -1,8 +1,11 @@
+import { scrollTop } from 'src/app/utilities';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [],
+  imports: [RouterModule],
   selector: 'ct-footer',
   standalone: true,
   styleUrl: './footer.component.scss',
@@ -10,4 +13,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class FooterComponent {
   protected readonly currentYear = new Date().getFullYear();
+  protected readonly scrollTop = scrollTop;
 }
