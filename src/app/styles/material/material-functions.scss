@@ -86,6 +86,7 @@
         primary: parse-palette($palette-primary),
         tertiary: parse-palette($palette-tertiary),
         use-system-variables: true,
+        system-variables-prefix: sys,
       ),
       typography: (
         plain-family: $font_family-roboto,
@@ -94,6 +95,7 @@
         medium-weight: 500,
         regular-weight: 300,
         use-system-variables: true,
+        system-variables-prefix: sys,
       ),
       density: (
         scale: 0,
