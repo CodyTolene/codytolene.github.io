@@ -13,7 +13,6 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ButtonModule, CommonModule, MatMenuModule, RouterModule],
   selector: 'ct-header',
-  standalone: true,
   styleUrl: './header.component.scss',
   templateUrl: './header.component.html',
 })

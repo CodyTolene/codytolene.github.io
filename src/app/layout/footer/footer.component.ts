@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterModule],
   selector: 'ct-footer',
-  standalone: true,
   styleUrl: './footer.component.scss',
   templateUrl: './footer.component.html',
 })

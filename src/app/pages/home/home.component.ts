@@ -18,6 +18,7 @@ import {
   selector: 'ct-home',
   styleUrl: './home.component.scss',
   templateUrl: './home.component.html',
+  standalone: false,
 })
 export class HomeComponent implements AfterViewInit {
   public constructor(private readonly breakpointService: BreakpointService) {}

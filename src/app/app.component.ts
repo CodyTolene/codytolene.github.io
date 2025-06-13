@@ -8,6 +8,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   selector: 'ct-app',
   styleUrl: './app.component.scss',
   templateUrl: './app.component.html',
+  standalone: false,
 })
 export class AppComponent implements OnInit {
   public constructor(

@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   selector: 'ct-button',
   styleUrl: './button.component.scss',
   templateUrl: './button.component.html',
+  standalone: false,
 })
 export class ButtonComponent {
   @Input()
