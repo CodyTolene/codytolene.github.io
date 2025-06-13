@@ -24,18 +24,17 @@ export class HeaderComponent {
 
   protected readonly scrollTop = scrollTop;
 
-  protected readonly currentUrl$ = this.navigationService.currentUrl$.pipe(
-    shareReplay(1),
-  );
+  protected readonly currentUrlChanges =
+    this.navigationService.currentUrlChanges.pipe(shareReplay(1));
 
   protected readonly BreakpointEnum = BreakpointEnum;
   protected readonly breakpointState$ =
     this.breakpointService.breakpointState$.pipe(shareReplay(1));
 
-  private readonly isNavigating$ = this.navigationService.isNavigating$;
-
   protected async scrollToElementById(id: string): Promise<void> {
-    const isNavigating = await firstValueFrom(this.isNavigating$);
+    const isNavigating = await firstValueFrom(
+      this.navigationService.isNavigatingChanges,
+    );
     if (isNavigating) {
       await new Promise((resolve) => setTimeout(resolve, 250));
       return this.scrollToElementById(id);

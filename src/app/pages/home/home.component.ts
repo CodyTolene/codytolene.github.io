@@ -1,3 +1,4 @@
+import { ButtonModule, IconModule } from 'src/app/components';
 import {
   PARTICLE_GALAXY_BLACK,
   PARTICLE_GALAXY_WHITE,
@@ -7,18 +8,29 @@ import { BreakpointEnum } from 'src/app/enums';
 import { BreakpointService } from 'src/app/services';
 import { scrollToElementById } from 'src/app/utilities';
 
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
   Component,
 } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    ButtonModule,
+    CommonModule,
+    IconModule,
+    MatButtonModule,
+    MatDividerModule,
+    NgOptimizedImage,
+  ],
   selector: 'ct-home',
   styleUrl: './home.component.scss',
   templateUrl: './home.component.html',
-  standalone: false,
+  standalone: true,
 })
 export class HomeComponent implements AfterViewInit {
   public constructor(private readonly breakpointService: BreakpointService) {}
