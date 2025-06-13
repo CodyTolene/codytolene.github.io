@@ -53,7 +53,7 @@ declare module 'particles.js' {
         opacity: number;
         width: number;
       };
-      move?: {
+      move: {
         enable: boolean;
         speed: number;
         direction: string;
