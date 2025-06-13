@@ -1,7 +1,7 @@
-@import 'z-indexes';
+@use '../../styles/z-indexes' as zin;
 
 :host {
   display: flex;
   flex-direction: column;
-  z-index: $z_index_body;
+  z-index: zin.$z_index_body;
 }

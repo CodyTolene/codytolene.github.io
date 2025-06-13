@@ -1,17 +1,17 @@
 // Root
-@import 'app/styles/root.scss';
+@use 'app/styles/root.scss';
 
 // Body
-@import 'app/styles/body.scss';
+@use 'app/styles/body.scss';
 
 // Headers
-@import 'app/styles/headers.scss';
+@use 'app/styles/headers.scss';
 
 // Fonts
-@import 'app/styles/font-families.scss';
+@use 'app/styles/font-families.scss';
 
 // Angular Material
-@import 'app/styles/material.scss';
+@use 'app/styles/material.scss';
 
 // Particles.js
-@import 'app/styles/particlesjs.scss';
+@use 'app/styles/particlesjs.scss';

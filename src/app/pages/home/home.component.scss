@@ -1,9 +1,8 @@
 @use '@angular/material' as mat;
 
-@import 'breakpoints';
-@import 'colors';
-@import 'fonts';
-@import 'theme';
+@use '../../styles/breakpoints' as bp;
+@use '../../styles/colors' as col;
+@use '../../styles/fonts' as font;
 
 $gap: 0.25rem;
 $padding: 1rem;
@@ -54,23 +53,23 @@ $padding: 1rem;
     z-index: 1;
 
     h1 {
-      color: mat.get-theme-color($ct-theme, primary);
-      font-size: calc($font_xxl + 0.25rem);
+      color: col.$green;
+      font-size: calc(font.$font_xxl + 0.25rem);
       margin: 0;
       text-transform: uppercase;
     }
 
     h3 {
-      color: mat.get-theme-color($ct-theme, on-primary);
-      font-size: $font_xl;
+      color: col.$white;
+      font-size: font.$font_xl;
       margin: 1rem 0 0 0;
     }
   }
 }
 
 #services {
-  color: mat.get-theme-color($ct-theme, on-primary);
-  background-color: mat.get-theme-color($ct-theme, secondary, 20);
+  color: col.$white;
+  background-color: col.$gray_darker;
   position: relative;
   z-index: 1;
 
@@ -109,12 +108,12 @@ $padding: 1rem;
         flex: 0 1 100%;
 
         ct-button {
-          font-size: $font_lg;
+          font-size: font.$font_lg;
         }
       }
 
       a {
-        color: mat.get-theme-color($ct-theme, primary);
+        color: col.$green;
         text-align: center;
 
         ct-icon {
@@ -126,7 +125,7 @@ $padding: 1rem;
 }
 
 #about {
-  background-color: mat.get-theme-color($ct-theme, background);
+  background-color: col.$gray_lightest;
   position: relative;
   z-index: 1;
 
@@ -162,7 +161,7 @@ $padding: 1rem;
       padding: $padding;
 
       > img {
-        $color: mat.get-theme-color($ct-theme, secondary, 20);
+        $color: col.$gray_darker;
         align-self: center;
         border-radius: 50%;
         border: 5px solid $color;
@@ -178,7 +177,7 @@ $padding: 1rem;
 }
 
 #resume {
-  background-color: mat.get-theme-color($ct-theme, secondary, 20);
+  background-color: col.$gray_darker;
   position: relative;
   z-index: 1;
 
@@ -187,7 +186,7 @@ $padding: 1rem;
   }
 
   > div.section-container {
-    color: mat.get-theme-color($ct-theme, on-primary);
+    color: col.$white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -215,7 +214,7 @@ $padding: 1rem;
       padding: $padding;
 
       a {
-        color: mat.get-theme-color($ct-theme, primary);
+        color: col.$green;
       }
     }
 
@@ -234,7 +233,7 @@ $padding: 1rem;
 }
 
 #contact {
-  background-color: mat.get-theme-color($ct-theme, background);
+  background-color: col.$gray_lightest;
   position: relative;
   z-index: 1;
 
@@ -270,7 +269,7 @@ $padding: 1rem;
       padding: $padding;
 
       a {
-        color: mat.get-theme-color($ct-theme, primary);
+        color: col.$green;
         text-align: center;
         z-index: 2;
 
@@ -282,7 +281,7 @@ $padding: 1rem;
   }
 }
 
-@include tablet {
+@include bp.tablet {
   #services > div.section-container > div {
     flex: 0 1 calc(100% / 2 - $gap - ($padding * 2));
   }
@@ -294,7 +293,7 @@ $padding: 1rem;
   }
 }
 
-@include mobile {
+@include bp.mobile {
   #services > div.section-container > div {
     flex: 0 1 100%;
   }

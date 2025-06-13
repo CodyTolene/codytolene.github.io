@@ -1,5 +1,5 @@
-@import 'variables';
+@use './styles/variables' as var;
 
 ct-body {
-  margin-top: $header_height;
+  margin-top: var.$header_height;
 }

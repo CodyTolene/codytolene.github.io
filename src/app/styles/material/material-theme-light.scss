@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+@use './material-palette' as pal;
+
+html {
+  // Light theme
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: pal.$palette-primary,
+        tertiary: pal.$palette-tertiary,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
