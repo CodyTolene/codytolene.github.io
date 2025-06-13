@@ -1,14 +1,29 @@
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { BreakpointService, NavigationService } from 'src/app/services';
 import { scrollTop } from 'src/app/utilities';
 
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
+import { BodyComponent, FooterComponent, HeaderComponent } from './layout';
+
+@UntilDestroy()
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    BodyComponent,
+    CommonModule,
+    FooterComponent,
+    HeaderComponent,
+    RouterModule,
+  ],
+  providers: [HttpClient, NavigationService],
   selector: 'ct-app',
+  standalone: true,
   styleUrl: './app.component.scss',
   templateUrl: './app.component.html',
-  standalone: false,
 })
 export class AppComponent implements OnInit {
   public constructor(
@@ -19,10 +34,12 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     this.breakpointService.initialize();
 
-    this.navigationService.isNavigating$.subscribe((isNavigating) => {
-      if (!isNavigating) {
-        scrollTop();
-      }
-    });
+    this.navigationService.isNavigatingChanges
+      .pipe(untilDestroyed(this))
+      .subscribe((isNavigating) => {
+        if (!isNavigating) {
+          scrollTop();
+        }
+      });
   }
 }

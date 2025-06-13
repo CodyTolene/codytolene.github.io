@@ -1,113 +1,100 @@
 // @ts-check
-
 const eslint = require('@eslint/js');
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
-const prettierPlugin = require('eslint-plugin-prettier');
-const unicornPlugin = require('eslint-plugin-unicorn');
 
-// const importPlugin = require("eslint-plugin-import");
-// const rxjsPlugin = require("eslint-plugin-rxjs");
-// const jsdocPlugin = require('eslint-plugin-jsdoc');
-
-const eslintConfig = tseslint.config(
+module.exports = tseslint.config(
   {
-    files: ['src/app/**/*.ts'],
-    ignores: [
-      '.angular/**/*',
-      '.husky/**/*',
-      '.vscode/**/*',
-      'dist/**/*',
-      'docs/**/*',
-      'node_modules/**/*',
-      'patches/**/*',
-    ],
+    files: ['**/*.ts'],
     extends: [
       eslint.configs.recommended,
-      ...tseslint.configs.strict,
+      ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
     ],
-    plugins: {
-      prettierPlugin,
-      unicornPlugin,
-    },
     processor: angular.processInlineTemplates,
     rules: {
-      '@angular-eslint/component-class-suffix': 'error',
-      '@angular-eslint/component-max-inline-declarations': 'error',
+      // Component selectors should follow given naming rules.
+      // @see http://codelyzer.com/rules/component-selector/
       '@angular-eslint/component-selector': [
         'error',
-        { type: 'element', prefix: 'ct', style: 'kebab-case' },
+        {
+          type: 'element',
+          prefix: 'ct',
+          style: 'kebab-case',
+        },
       ],
-      '@angular-eslint/consistent-component-styles': 'error',
-      '@angular-eslint/contextual-decorator': 'error',
-      '@angular-eslint/contextual-lifecycle': 'error',
-      '@angular-eslint/directive-class-suffix': 'error',
+      // Directive selectors should follow given naming rules.
+      // @see http://codelyzer.com/rules/directive-selector/
       '@angular-eslint/directive-selector': [
         'error',
-        { type: 'attribute', prefix: 'ct', style: 'camelCase' },
+        {
+          type: 'attribute',
+          prefix: 'ct',
+          style: 'camelCase',
+        },
       ],
-      '@angular-eslint/no-async-lifecycle-method': 'error',
-      '@angular-eslint/no-attribute-decorator': 'error',
-      '@angular-eslint/no-conflicting-lifecycle': 'error',
-      '@angular-eslint/no-duplicates-in-metadata-arrays': 'error',
-      '@angular-eslint/no-empty-lifecycle-method': 'error',
-      '@angular-eslint/no-forward-ref': 'error',
-      '@angular-eslint/no-host-metadata-property': [
-        'error',
-        { allowStatic: true },
-      ],
-      '@angular-eslint/no-input-prefix': 'error',
-      '@angular-eslint/no-input-rename': 'error',
-      '@angular-eslint/no-inputs-metadata-property': 'error',
-      '@angular-eslint/no-lifecycle-call': 'error',
-      '@angular-eslint/no-output-native': 'error',
-      '@angular-eslint/no-output-on-prefix': 'error',
-      '@angular-eslint/no-output-rename': 'error',
-      '@angular-eslint/no-outputs-metadata-property': 'error',
-      '@angular-eslint/no-pipe-impure': 'error',
-      '@angular-eslint/no-queries-metadata-property': 'error',
-      '@angular-eslint/pipe-prefix': 'error',
-      '@angular-eslint/prefer-on-push-component-change-detection': 'error',
+      // Prefer to declare @Output as readonly since they are not supposed
+      // to be reassigned.
+      // @see http://codelyzer.com/rules/prefer-output-readonly/
       '@angular-eslint/prefer-output-readonly': ['error'],
-      '@angular-eslint/relative-url-prefix': 'error',
-      '@angular-eslint/require-localize-metadata': 'error',
-      '@angular-eslint/runtime-localize': 'error',
-      '@angular-eslint/sort-lifecycle-methods': 'error',
-      '@angular-eslint/sort-ngmodule-metadata-arrays': 'error',
+      // Enforce use of component selector rules.
+      // @see http://codelyzer.com/rules/component-selector/
       '@angular-eslint/use-component-selector': ['error'],
+      // Disallows using ViewEncapsulation.None.
+      // @see http://codelyzer.com/rules/use-component-view-encapsulation/
       '@angular-eslint/use-component-view-encapsulation': ['error'],
-      '@angular-eslint/use-injectable-provided-in': 'error',
+      // Ensure that components implement life cycle interfaces if they use
+      // them.
+      // @see http://codelyzer.com/rules/use-life-cycle-interface/
       '@angular-eslint/use-lifecycle-interface': ['error'],
-      '@angular-eslint/use-pipe-transform-interface': 'error',
+      // Require consistently using either T[] or Array<T> for arrays.
+      // @see https://typescript-eslint.io/rules/array-type/
       '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+      // Enforce consistent usage of type assertions.
+      // @see https://typescript-eslint.io/rules/consistent-type-assertions/
       '@typescript-eslint/consistent-type-assertions': [
         'error',
-        { assertionStyle: 'as', objectLiteralTypeAssertions: 'never' },
+        {
+          assertionStyle: 'as',
+          objectLiteralTypeAssertions: 'never',
+        },
       ],
+      // Enforce type definitions to consistently use either interface or type.
+      // @see https://typescript-eslint.io/rules/consistent-type-definitions/
       '@typescript-eslint/consistent-type-definitions': 'error',
+      // Require explicit return types on functions and class methods.
+      // @see https://typescript-eslint.io/rules/explicit-function-return-type/
       '@typescript-eslint/explicit-function-return-type': [
         'error',
         { allowExpressions: true },
       ],
+      // Require explicit accessibility modifiers on class properties and methods.
+      // @see https://typescript-eslint.io/rules/explicit-member-accessibility/
       '@typescript-eslint/explicit-member-accessibility': [
         'error',
         { accessibility: 'explicit' },
       ],
+      // Require explicit return and argument types on exported functions' and
+      // classes' public class methods.
+      // @see https://typescript-eslint.io/rules/explicit-module-boundary-types/
       '@typescript-eslint/explicit-module-boundary-types': 'error',
+      // Require a consistent member declaration order.
+      // @see https://typescript-eslint.io/rules/member-ordering/
       '@typescript-eslint/member-ordering': [
         'error',
         {
           default: [
             'constructor',
-            'instance-field',
-            'instance-method',
             'static-field',
+            'instance-field',
             'static-method',
+            'instance-method',
           ],
         },
       ],
+      // Enforce naming conventions for everything across a codebase.
+      // @see https://typescript-eslint.io/rules/naming-convention/
       '@typescript-eslint/naming-convention': [
         'error',
         {
@@ -115,20 +102,40 @@ const eslintConfig = tseslint.config(
           format: ['PascalCase', 'camelCase'],
           modifiers: ['public'],
         },
-        { selector: 'function', format: ['camelCase'] },
+        {
+          selector: 'function',
+          format: ['camelCase'],
+        },
         {
           selector: 'interface',
           format: ['PascalCase'],
-          custom: { regex: '^I[A-Z]', match: false },
+          custom: {
+            regex: '^I[A-Z]',
+            match: false,
+          },
         },
-        { selector: 'enumMember', format: ['UPPER_CASE'] },
+        {
+          selector: 'enumMember',
+          format: ['UPPER_CASE'],
+        },
       ],
+      // Disallow empty functions.
+      // @see https://typescript-eslint.io/rules/no-empty-function/
       '@typescript-eslint/no-empty-function': 'error',
+      // Disallow the declaration of empty interfaces.
+      // @see https://typescript-eslint.io/rules/no-empty-interface/
       '@typescript-eslint/no-empty-interface': 'off',
+      // Disallow the any type.
+      // @see https://typescript-eslint.io/rules/no-explicit-any/
       '@typescript-eslint/no-explicit-any': 'error',
-      '@typescript-eslint/no-extraneous-class': 'off',
+      // Disallow TypeScript namespaces.
+      // @see https://typescript-eslint.io/rules/no-namespace/
       '@typescript-eslint/no-namespace': ['error', { allowDeclarations: true }],
+      // Disallow unused expressions.
+      // @see https://typescript-eslint.io/rules/no-unused-expressions/
       '@typescript-eslint/no-unused-expressions': 'error',
+      // Disallow unused variables.
+      // @see https://typescript-eslint.io/rules/no-unused-vars/
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -137,82 +144,81 @@ const eslintConfig = tseslint.config(
           varsIgnorePattern: '^_',
         },
       ],
+      // Enforce the use of for-of loop over the standard for loop where
+      // possible.
+      // @see https://typescript-eslint.io/rules/prefer-for-of/
       '@typescript-eslint/prefer-for-of': ['warn'],
+      // Enforce using function types instead of interfaces with call
+      // signatures.
+      // @see https://typescript-eslint.io/rules/prefer-function-type/
       '@typescript-eslint/prefer-function-type': ['warn'],
+      // Disallow two overloads that could be unified into one with a union
+      // or an optional/rest parameter.
+      // @see https://typescript-eslint.io/rules/unified-signatures/
       '@typescript-eslint/unified-signatures': 'warn',
+      // Require the use of === and !==
+      // @see https://eslint.org/docs/latest/rules/eqeqeq
       eqeqeq: ['error'],
+      // Require for-in loops to include an if statement
+      // @see https://eslint.org/docs/latest/rules/guard-for-in
       'guard-for-in': ['error'],
-      'import/no-deprecated': 'off',
-      'import/no-unresolved': 'off',
+      // Disallow bitwise operators
+      // @see https://eslint.org/docs/latest/rules/no-bitwise
       'no-bitwise': ['error'],
+      // Disallow the use of arguments.caller or arguments.callee
+      // @see https://eslint.org/docs/latest/rules/no-caller
       'no-caller': ['error'],
+      // Disallow the use of console
+      // @see https://eslint.org/docs/latest/rules/no-console
       'no-console': ['error', { allow: ['warn', 'error'] }],
+      // Disallow duplicate module imports
+      // @see https://eslint.org/docs/latest/rules/no-duplicate-imports
       'no-duplicate-imports': ['error'],
+      // Disallow empty block statements
+      // @see https://eslint.org/docs/latest/rules/no-empty
       'no-empty': 'error',
+      // Disallow the use of eval()
+      // @see https://eslint.org/docs/latest/rules/no-eval
       'no-eval': ['error'],
+      // Disallow new operators with the String, Number, and Boolean objects
+      // @see https://eslint.org/docs/latest/rules/no-new-wrappers
       'no-new-wrappers': ['error'],
+      // Disallow throwing literals as exceptions
+      // @see https://eslint.org/docs/latest/rules/no-throw-literal
       'no-throw-literal': ['error'],
+      // Require let or const instead of var
+      // @see https://eslint.org/docs/latest/rules/no-var
       'no-var': ['error'],
+      // Require or disallow method and property shorthand syntax for object
+      // literals
+      // @see https://eslint.org/docs/latest/rules/object-shorthand
       'object-shorthand': ['error'],
+      // Enforce variables to be declared either together or separately in
+      // functions
+      // @see https://eslint.org/docs/latest/rules/one-var
       'one-var': ['error', 'never'],
+      // Require using arrow functions for callbacks
+      // @see https://eslint.org/docs/latest/rules/prefer-arrow-callback
       'prefer-arrow/prefer-arrow-functions': 'off',
+      // Require const declarations for variables that are never reassigned
+      // after declared
+      // @see https://eslint.org/docs/latest/rules/prefer-const
       'prefer-const': ['error'],
+      // Enforce the consistent use of the radix argument when using
+      // parseInt()
+      // @see https://eslint.org/docs/latest/rules/radix
       radix: ['error'],
-      'rxjs/no-async-subscribe': 'off',
-      'rxjs/no-sharereplay': 'off',
+      // Enforce consistent spacing after the // or /* in a comment
+      // @see https://eslint.org/docs/latest/rules/spaced-comment
       'spaced-comment': ['error', 'always', { block: { balanced: true } }],
-      // '@angular-eslint/prefer-standalone': 'error',
-      // '@angular-eslint/prefer-standalone-component': 'error',
-      // '@typescript-eslint/prefer-readonly': 'error', // Causes issues
-      // 'import/no-default-export': ['error'],
-      // 'jsdoc/check-alignment': ['error'],
-      // 'jsdoc/check-indentation': ['error'],
-      // 'rxjs-angular/prefer-takeuntil': ['error', { alias: ['untilDestroyed'] }],
-      // 'rxjs/no-exposed-subjects': ['error'],
-      // 'rxjs/no-finnish': ['error'],
-      // 'rxjs/no-ignored-replay-buffer': ['error'],
-      // 'rxjs/no-tap': ['error'],
-      // 'rxjs/no-unsafe-takeuntil': ['error', { alias: ['untilDestroyed'] }],
-      // 'unicorn/filename-case': ['error', { case: 'kebabCase' }],
     },
   },
   {
-    files: ['src/app/**/*.html', 'src/app/**/*.svg'],
+    files: ['**/*.html'],
     extends: [
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
     ],
-    rules: {
-      '@angular-eslint/template/alt-text': 'error',
-      '@angular-eslint/template/attributes-order': 'error',
-      '@angular-eslint/template/banana-in-box': 'error',
-      '@angular-eslint/template/button-has-type': 'error',
-      '@angular-eslint/template/click-events-have-key-events': 'error',
-      '@angular-eslint/template/conditional-complexity': 'error',
-      '@angular-eslint/template/cyclomatic-complexity': 'error',
-      '@angular-eslint/template/elements-content': 'error',
-      '@angular-eslint/template/eqeqeq': 'error',
-      '@angular-eslint/template/interactive-supports-focus': 'error',
-      '@angular-eslint/template/label-has-associated-control': 'error',
-      '@angular-eslint/template/mouse-events-have-key-events': 'error',
-      '@angular-eslint/template/no-any': 'error',
-      '@angular-eslint/template/no-autofocus': 'error',
-      '@angular-eslint/template/no-call-expression': 'error',
-      '@angular-eslint/template/no-distracting-elements': 'error',
-      '@angular-eslint/template/no-duplicate-attributes': 'error',
-      '@angular-eslint/template/no-inline-styles': 'error',
-      '@angular-eslint/template/no-interpolation-in-attributes': 'error',
-      '@angular-eslint/template/no-negated-async': 'error',
-      '@angular-eslint/template/no-positive-tabindex': 'error',
-      '@angular-eslint/template/prefer-control-flow': 'error',
-      '@angular-eslint/template/prefer-ngsrc': 'error',
-      '@angular-eslint/template/prefer-self-closing-tags': 'error',
-      '@angular-eslint/template/role-has-required-aria': 'error',
-      '@angular-eslint/template/table-scope': 'error',
-      '@angular-eslint/template/use-track-by-function': 'error',
-      '@angular-eslint/template/valid-aria': 'error',
-    },
+    rules: {},
   },
 );
-
-module.exports = eslintConfig;

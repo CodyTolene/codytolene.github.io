@@ -1,17 +1,20 @@
 import { PARTICLE_GALAXY_BLACK } from 'src/app/constants';
 
+import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
   Component,
 } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CommonModule, RouterModule],
   selector: 'ct-privacy-policy',
+  standalone: true,
   styleUrl: './privacy-policy.component.scss',
   templateUrl: './privacy-policy.component.html',
-  standalone: false,
 })
 export class PrivacyPolicyComponent implements AfterViewInit {
   public ngAfterViewInit(): void {

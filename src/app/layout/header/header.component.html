@@ -46,7 +46,7 @@
     aria-hidden="false"
     mat-menu-item
     tabindex="0"
-    [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
+    [routerLink]="(currentUrlChanges | async) === '/' ? undefined : '/'"
     (click)="scrollTop()"
     (keyup)="scrollTop()"
     >Intro</a
@@ -55,7 +55,7 @@
     aria-hidden="false"
     mat-menu-item
     tabindex="0"
-    [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
+    [routerLink]="(currentUrlChanges | async) === '/' ? undefined : '/'"
     (click)="scrollToElementById('services')"
     (keyup)="scrollToElementById('services')"
     >Services</a
@@ -64,7 +64,7 @@
     aria-hidden="false"
     mat-menu-item
     tabindex="0"
-    [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
+    [routerLink]="(currentUrlChanges | async) === '/' ? undefined : '/'"
     (click)="scrollToElementById('about')"
     (keyup)="scrollToElementById('about')"
     >About</a
@@ -73,7 +73,7 @@
     aria-hidden="false"
     mat-menu-item
     tabindex="0"
-    [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
+    [routerLink]="(currentUrlChanges | async) === '/' ? undefined : '/'"
     (click)="scrollToElementById('resume')"
     (keyup)="scrollToElementById('resume')"
     >Resume</a
@@ -82,7 +82,7 @@
     aria-hidden="false"
     mat-menu-item
     tabindex="0"
-    [routerLink]="(currentUrl$ | async) === '/' ? undefined : '/'"
+    [routerLink]="(currentUrlChanges | async) === '/' ? undefined : '/'"
     (click)="scrollToElementById('contact')"
     (keyup)="scrollToElementById('contact')"
     >Contact</a

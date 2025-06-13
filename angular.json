@@ -15,11 +15,11 @@
       "prefix": "ct",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "docs/codytolene.github.io",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js",
               "@angular/localize/init"
@@ -59,18 +59,24 @@
                   "maximumError": "8kB"
                 }
               ],
+              "outputPath": {
+                "base": "docs",
+                "browser": "",
+                "server": ""
+              },
               "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "codytolene.github.io:build:production"
@@ -80,6 +86,9 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
