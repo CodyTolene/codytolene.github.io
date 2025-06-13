@@ -11,6 +11,7 @@ import {
   selector: 'ct-privacy-policy',
   styleUrl: './privacy-policy.component.scss',
   templateUrl: './privacy-policy.component.html',
+  standalone: false,
 })
 export class PrivacyPolicyComponent implements AfterViewInit {
   public ngAfterViewInit(): void {

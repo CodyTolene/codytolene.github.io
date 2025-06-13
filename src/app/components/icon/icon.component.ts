@@ -16,6 +16,7 @@ import { iconsCustom as customIconNames } from 'src/app/components/icon/icons-cu
   selector: 'ct-icon[name]',
   styleUrl: './icon.component.scss',
   templateUrl: './icon.component.html',
+  standalone: false,
 })
 export class IconComponent {
   public constructor(private readonly iconsService: IconsService) {

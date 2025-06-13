@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterModule],
   selector: 'ct-body',
-  standalone: true,
   styleUrl: './body.component.scss',
   templateUrl: './body.component.html',
 })
