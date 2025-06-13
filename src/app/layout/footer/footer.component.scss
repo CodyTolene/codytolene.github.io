@@ -1,15 +1,14 @@
 @use '@angular/material' as mat;
 
-@import 'fonts';
-@import 'theme';
-@import 'variables';
-@import 'z-indexes';
+@use '../../styles/colors' as col;
+@use '../../styles/fonts' as font;
+@use '../../styles/z-indexes' as zin;
 
 :host {
-  background-color: mat.get-theme-color($ct-theme, secondary, 20);
+  background-color: col.$gray_darker;
   display: flex;
   width: 100%;
-  z-index: $z_index_footer;
+  z-index: zin.$z_index_footer;
 
   > footer {
     align-items: center;
@@ -19,26 +18,26 @@
     width: 100%;
 
     .logo {
-      color: mat.get-theme-color($ct-theme, primary);
+      color: col.$green;
       cursor: pointer;
-      font-family: $font_family-bungee;
-      font-size: $font_xxl;
+      font-family: font.$font_family_bungee;
+      font-size: font.$font_xxl;
       height: 3rem;
       line-height: 4rem;
       text-decoration: none;
       text-transform: uppercase;
 
       &:hover {
-        color: mat.get-theme-color($ct-theme, primary);
+        color: col.$green;
       }
     }
 
     p {
-      color: mat.get-theme-color($ct-theme, on-primary);
+      color: col.$white;
       margin: 0.5rem 0 0 0;
 
       a {
-        color: mat.get-theme-color($ct-theme, primary);
+        color: col.$green;
       }
     }
   }

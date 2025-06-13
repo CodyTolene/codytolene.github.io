@@ -1,63 +1,63 @@
-@import 'colors';
+@use 'colors' as col;
 
 :root {
   // Primary Reds
-  --red_lighter: #{$red_lighter};
-  --red_light: #{$red_light};
-  --red: #{$red};
-  --red_dark: #{$red_dark};
-  --red_darker: #{$red_darker};
+  --red_lighter: #{col.$red_lighter};
+  --red_light: #{col.$red_light};
+  --red: #{col.$red};
+  --red_dark: #{col.$red_dark};
+  --red_darker: #{col.$red_darker};
 
   // Primary Greens
-  --green_lighter: #{$green_lighter};
-  --green_light: #{$green_light};
-  --green: #{$green};
-  --green_dark: #{$green_dark};
-  --green_darker: #{$green_darker};
+  --green_lighter: #{col.$green_lighter};
+  --green_light: #{col.$green_light};
+  --green: #{col.$green};
+  --green_dark: #{col.$green_dark};
+  --green_darker: #{col.$green_darker};
 
   // Primary Blues
-  --blue_lighter: #{$blue_lighter};
-  --blue_light: #{$blue_light};
-  --blue: #{$blue};
-  --blue_dark: #{$blue_dark};
-  --blue_darker: #{$blue_darker};
+  --blue_lighter: #{col.$blue_lighter};
+  --blue_light: #{col.$blue_light};
+  --blue: #{col.$blue};
+  --blue_dark: #{col.$blue_dark};
+  --blue_darker: #{col.$blue_darker};
 
   // Primary Yellows
-  --yellow_lighter: #{$yellow_lighter};
-  --yellow_light: #{$yellow_light};
-  --yellow: #{$yellow};
-  --yellow_dark: #{$yellow_dark};
-  --yellow_darker: #{$yellow_darker};
+  --yellow_lighter: #{col.$yellow_lighter};
+  --yellow_light: #{col.$yellow_light};
+  --yellow: #{col.$yellow};
+  --yellow_dark: #{col.$yellow_dark};
+  --yellow_darker: #{col.$yellow_darker};
 
   // Grayscale
-  --black: #{$black};
-  --white: #{$white};
+  --black: #{col.$black};
+  --white: #{col.$white};
 
   // Grayscale range
-  --gray_lightest: #{$gray_lightest};
-  --gray_lighter: #{$gray_lighter};
-  --gray_light: #{$gray_light};
-  --gray_mid_lighter: #{$gray_mid_lighter};
-  --gray_mid_light: #{$gray_mid_light};
-  --gray_mid: #{$gray_mid};
-  --gray_mid_dark: #{$gray_mid_dark};
-  --gray_mid_darker: #{$gray_mid_darker};
-  --gray_dark: #{$gray_dark};
-  --gray_darker: #{$gray_darker};
-  --gray_darkest: #{$gray_darkest};
+  --gray_lightest: #{col.$gray_lightest};
+  --gray_lighter: #{col.$gray_lighter};
+  --gray_light: #{col.$gray_light};
+  --gray_mid_lighter: #{col.$gray_mid_lighter};
+  --gray_mid_light: #{col.$gray_mid_light};
+  --gray_mid: #{col.$gray_mid};
+  --gray_mid_dark: #{col.$gray_mid_dark};
+  --gray_mid_darker: #{col.$gray_mid_darker};
+  --gray_dark: #{col.$gray_dark};
+  --gray_darker: #{col.$gray_darker};
+  --gray_darkest: #{col.$gray_darkest};
 
   // Theme Primary
-  --theme_primary_lighter: #{$theme_primary_lighter};
-  --theme_primary: #{$theme_primary};
-  --theme_primary_darker: #{$theme_primary_darker};
+  --theme_primary_lighter: #{col.$theme_primary_lighter};
+  --theme_primary: #{col.$theme_primary};
+  --theme_primary_darker: #{col.$theme_primary_darker};
 
   // Theme Accent
-  --theme_accent_lighter: #{$theme_accent_lighter};
-  --theme_accent: #{$theme_accent};
-  --theme_accent_darker: #{$theme_accent_darker};
+  --theme_accent_lighter: #{col.$theme_accent_lighter};
+  --theme_accent: #{col.$theme_accent};
+  --theme_accent_darker: #{col.$theme_accent_darker};
 
   // Theme Warn
-  --theme_warn_lighter: #{$theme_warn_lighter};
-  --theme_warn: #{$theme_warn};
-  --theme_warn_darker: #{$theme_warn_darker};
+  --theme_warn_lighter: #{col.$theme_warn_lighter};
+  --theme_warn: #{col.$theme_warn};
+  --theme_warn_darker: #{col.$theme_warn_darker};
 }

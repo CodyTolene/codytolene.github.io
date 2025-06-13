@@ -1,9 +1,7 @@
 @use '@angular/material' as mat;
 
-@import 'theme';
-
 :host {
-  background-color: mat.get-theme-color($ct-theme, background);
+  background-color: var(--sys-background);
   padding: 1rem;
 }
 
