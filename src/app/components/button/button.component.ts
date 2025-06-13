@@ -2,14 +2,17 @@ import { ButtonTypeEnum } from 'src/app/enums';
 import { getEnumMember } from 'src/app/utilities';
 
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CommonModule, MatButtonModule],
   selector: 'ct-button',
+  standalone: true,
   styleUrl: './button.component.scss',
   templateUrl: './button.component.html',
-  standalone: false,
 })
 export class ButtonComponent {
   @Input()

@@ -1,5 +1,4 @@
 import { firstValueFrom, shareReplay } from 'rxjs';
-import { ButtonModule } from 'src/app/components';
 import { BreakpointEnum } from 'src/app/enums';
 import { BreakpointService, NavigationService } from 'src/app/services';
 import { scrollToElementById, scrollTop } from 'src/app/utilities';
@@ -9,9 +8,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 
+import { ButtonComponent } from 'src/app/components/button/button.component';
+
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ButtonModule, CommonModule, MatMenuModule, RouterModule],
+  imports: [ButtonComponent, CommonModule, MatMenuModule, RouterModule],
   selector: 'ct-header',
   styleUrl: './header.component.scss',
   templateUrl: './header.component.html',
