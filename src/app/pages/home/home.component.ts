@@ -1,4 +1,3 @@
-import { ButtonModule, IconModule } from 'src/app/components';
 import {
   PARTICLE_GALAXY_BLACK,
   PARTICLE_GALAXY_WHITE,
@@ -6,7 +5,11 @@ import {
 } from 'src/app/constants';
 import { BreakpointEnum } from 'src/app/enums';
 import { BreakpointService } from 'src/app/services';
-import { scrollToElementById } from 'src/app/utilities';
+import {
+  adjustSpeed,
+  getRefreshRate,
+  scrollToElementById,
+} from 'src/app/utilities';
 
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import {
@@ -17,12 +20,15 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 
+import { ButtonComponent } from 'src/app/components/button/button.component';
+import { IconComponent } from 'src/app/components/icon/icon.component';
+
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    ButtonModule,
+    ButtonComponent,
     CommonModule,
-    IconModule,
+    IconComponent,
     MatButtonModule,
     MatDividerModule,
     NgOptimizedImage,
@@ -39,7 +45,7 @@ export class HomeComponent implements AfterViewInit {
   protected readonly breakpointState$ = this.breakpointService.breakpointState$;
 
   public ngAfterViewInit(): void {
-    this.getRefreshRate().then((fps) => {
+    getRefreshRate().then((fps) => {
       // console.log(`Estimated refresh rate: ${fps} Hz`);
 
       // Get default particles and options
@@ -53,9 +59,9 @@ export class HomeComponent implements AfterViewInit {
       const phSpeed = ph.particles.move.speed;
 
       // Adjust particle speeds, normalize based on users screen refresh rates
-      pgw.particles.move.speed = this.adjustSpeed(pgwSpeed, fps);
-      pgb.particles.move.speed = this.adjustSpeed(pgbSpeed, fps);
-      ph.particles.move.speed = this.adjustSpeed(phSpeed, fps);
+      pgw.particles.move.speed = adjustSpeed(pgwSpeed, fps);
+      pgb.particles.move.speed = adjustSpeed(pgbSpeed, fps);
+      ph.particles.move.speed = adjustSpeed(phSpeed, fps);
 
       // Run particles
       try {
@@ -72,41 +78,5 @@ export class HomeComponent implements AfterViewInit {
 
   protected scrollToElementById(id: string): void {
     scrollToElementById(id);
-  }
-
-  /**
-   * Particle.js particle movement is tied to `requestAnimationFrame`, which
-   * runs once per screen refresh, so on faster displays, animations happen
-   * more frequently and appear faster than intended.
-   *
-   * This function normalizes the speed of partices based on the current users
-   * refresh rate to normalize the animation fps.
-   */
-  private adjustSpeed(base: number, fps: number): number {
-    return Math.max(base * (60 / fps), 0.1);
-  }
-
-  private getRefreshRate(): Promise<number> {
-    return new Promise((resolve) => {
-      const samples: number[] = [];
-      let last = performance.now();
-
-      const sample = (): void => {
-        const now = performance.now();
-        const delta = now - last;
-        last = now;
-        samples.push(delta);
-
-        if (samples.length < 20) {
-          requestAnimationFrame(sample);
-        } else {
-          const avg = samples.reduce((sum, v) => sum + v, 0) / samples.length;
-          const fps = Math.round(1000 / avg);
-          resolve(fps);
-        }
-      };
-
-      requestAnimationFrame(sample);
-    });
   }
 }

@@ -2,21 +2,24 @@ import { IconsService } from 'src/app/services';
 import { toNumber } from 'src/app/utilities';
 
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
   HostBinding,
   Input,
 } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { iconsCustom as customIconNames } from 'src/app/components/icon/icons-custom';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CommonModule, MatIconModule],
   selector: 'ct-icon[name]',
+  standalone: true,
   styleUrl: './icon.component.scss',
   templateUrl: './icon.component.html',
-  standalone: false,
 })
 export class IconComponent {
   public constructor(private readonly iconsService: IconsService) {
