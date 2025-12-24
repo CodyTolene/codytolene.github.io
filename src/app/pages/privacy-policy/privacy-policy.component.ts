@@ -1,7 +1,6 @@
 import { PARTICLE_GALAXY_BLACK } from 'src/app/constants';
 import { adjustSpeed, getRefreshRate } from 'src/app/utilities';
 
-import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -11,7 +10,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   selector: 'ct-privacy-policy',
   standalone: true,
   styleUrl: './privacy-policy.component.scss',

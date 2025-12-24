@@ -2,7 +2,6 @@ import { IconsService } from 'src/app/services';
 import { toNumber } from 'src/app/utilities';
 
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
-import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -15,7 +14,7 @@ import { iconsCustom as customIconNames } from 'src/app/components/icon/icons-cu
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, MatIconModule],
+  imports: [MatIconModule],
   selector: 'ct-icon[name]',
   standalone: true,
   styleUrl: './icon.component.scss',

@@ -2,7 +2,6 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { BreakpointService, NavigationService } from 'src/app/services';
 import { scrollTop } from 'src/app/utilities';
 
-import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -12,13 +11,7 @@ import { BodyComponent, FooterComponent, HeaderComponent } from './layout';
 @UntilDestroy()
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    BodyComponent,
-    CommonModule,
-    FooterComponent,
-    HeaderComponent,
-    RouterModule,
-  ],
+  imports: [BodyComponent, FooterComponent, HeaderComponent, RouterModule],
   providers: [HttpClient, NavigationService],
   selector: 'ct-app',
   standalone: true,
