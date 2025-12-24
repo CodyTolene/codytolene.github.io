@@ -28,7 +28,7 @@
     "prepare": "husky",
     "prettier": "prettier --write . --log-level silent",
     "prettier:check": "prettier --check .",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "update": "ncu -u",
     "update:check": "ncu",
     "watch": "ng build --watch --configuration development"
