@@ -13,181 +13,170 @@ export class PageMetaService {
   private readonly siteUrl = `https://${APP_DOMAIN}`;
 
   public setAuthor(author: string): void {
-    this.meta.updateTag({ name: 'author', content: author });
+    this.update({ name: 'author', content: author });
   }
 
   public setDescription(description: string): void {
-    this.meta.updateTag({ name: 'description', content: description });
-    // Also update Open Graph and Twitter Card descriptions
-    this.meta.updateTag({ property: 'og:description', content: description });
-    this.meta.updateTag({ name: 'twitter:description', content: description });
+    this.update({ name: 'description', content: description });
+    this.update({ property: 'og:description', content: description });
+    this.update({ name: 'twitter:description', content: description });
   }
 
   public setKeywords(keywords: readonly string[]): void {
-    this.meta.updateTag({ name: 'keywords', content: keywords.join(', ') });
+    this.update({ name: 'keywords', content: keywords.join(', ') });
   }
 
-  public setTitle(title: string): void {
-    const fullTitle = `${title} - ${APP_TITLE}`;
+  public setTitle(pageTitle: string): void {
+    const fullTitle = `${pageTitle} - ${APP_TITLE}`;
     this.title.setTitle(fullTitle);
-    // Also update Open Graph and Twitter Card titles
-    this.meta.updateTag({ property: 'og:title', content: fullTitle });
-    this.meta.updateTag({ name: 'twitter:title', content: fullTitle });
+
+    this.update({ property: 'og:title', content: fullTitle });
+    this.update({ name: 'twitter:title', content: fullTitle });
   }
 
   /**
    * Sets the canonical URL for the current page.
-   * This helps prevent duplicate content issues.
+   * Pass a path like "/projects" to ensure prerendered pages get a stable canonical.
    */
-  public setCanonicalUrl(url?: string): void {
-    const canonicalUrl = url || this.getCurrentUrl();
+  public setCanonicalUrl(pathOrUrl?: string): void {
+    const canonicalUrl = this.toAbsoluteUrl(pathOrUrl) || this.getCurrentUrl();
 
-    // Update or create canonical link
     let canonicalLink = this.document.querySelector(
       'link[rel="canonical"]',
     ) as HTMLLinkElement | null;
+
     if (!canonicalLink) {
       canonicalLink = this.document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
       this.document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute('href', canonicalUrl);
 
-    // Also update Open Graph URL
-    this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
+    canonicalLink.setAttribute('href', canonicalUrl);
+    this.update({ property: 'og:url', content: canonicalUrl });
   }
 
   /**
    * Sets the Open Graph image for social sharing.
    */
-  public setImage(imageUrl: string): void {
-    this.meta.updateTag({ property: 'og:image', content: imageUrl });
-    this.meta.updateTag({ name: 'twitter:image', content: imageUrl });
+  public setImage(imageUrl: string, altText = `${APP_TITLE}`): void {
+    const absoluteImageUrl = this.toAbsoluteUrl(imageUrl) || imageUrl;
+
+    this.update({ property: 'og:image', content: absoluteImageUrl });
+    this.update({ property: 'og:image:secure_url', content: absoluteImageUrl });
+    this.update({ property: 'og:image:alt', content: altText });
+
+    this.update({ name: 'twitter:image', content: absoluteImageUrl });
+    this.update({ name: 'twitter:image:alt', content: altText });
   }
 
   /**
    * Sets the Open Graph type (article, website, etc.).
    */
   public setType(type: 'website' | 'article' = 'website'): void {
-    this.meta.updateTag({ property: 'og:type', content: type });
+    this.update({ property: 'og:type', content: type });
   }
 
   /**
-   * Sets article-specific metadata for news articles.
+   * Apply baseline SEO tags that should exist on every page.
+   * Call this once near app startup (and then override per-page tags as needed).
    */
-  public setArticleMeta(options: {
-    publishedTime?: string;
-    modifiedTime?: string;
-    author?: string;
-    section?: string;
-    tags?: string[];
-  }): void {
-    this.setType('article');
-
-    if (options.publishedTime) {
-      this.meta.updateTag({
-        property: 'article:published_time',
-        content: options.publishedTime,
-      });
-    }
-    if (options.modifiedTime) {
-      this.meta.updateTag({
-        property: 'article:modified_time',
-        content: options.modifiedTime,
-      });
-    }
-    if (options.author) {
-      this.meta.updateTag({
-        property: 'article:author',
-        content: options.author,
-      });
-    }
-    if (options.section) {
-      this.meta.updateTag({
-        property: 'article:section',
-        content: options.section,
-      });
-    }
-    if (options.tags && options.tags.length > 0) {
-      // Remove existing article:tag entries to prevent accumulation
-      this.removeArticleTags();
-      options.tags.forEach((tag) => {
-        this.meta.addTag({ property: 'article:tag', content: tag });
-      });
-    }
-  }
-
-  /**
-   * Removes all article:tag meta elements to prevent accumulation between articles.
-   */
-  private removeArticleTags(): void {
-    const existingTags = this.document.querySelectorAll('meta[property="article:tag"]');
-    existingTags.forEach((tag) => tag.remove());
-  }
-
   public setDefaultTags(): void {
-    const tags = this.getDefaultTags();
-    const existingTags = tags.filter((tag) => {
-      const findBy = tag.name ? `name="${tag.name}"` : `property="${tag.property}"`;
-
-      const existingTag = this.meta.getTag(findBy);
-      return existingTag && existingTag.content === tag.content;
-    });
-
-    if (existingTags.length > 0) {
-      existingTags.forEach((tag) => {
-        const findBy = tag.name ? `name="${tag.name}"` : `property="${tag.property}"`;
-        this.meta.removeTag(findBy);
-      });
+    for (const tag of this.getDefaultTags()) {
+      this.update(tag);
     }
 
-    this.meta.addTags(tags);
-
-    // Set initial canonical URL
+    // Ensure canonical exists even if a page forgets to set it explicitly.
     this.setCanonicalUrl();
   }
 
+  private update(tag: MetaDefinition): void {
+    const selector = this.buildSelector(tag);
+
+    if (selector) {
+      this.meta.updateTag(tag, selector);
+      return;
+    }
+
+    // Fallback for cases where Angular cannot build a selector.
+    // Most tags should hit the selector path above.
+    this.meta.addTag(tag, false);
+  }
+
+  private buildSelector(tag: MetaDefinition): string | null {
+    if (tag.name) {
+      return `name="${tag.name}"`;
+    }
+
+    if ((tag as { property?: string }).property) {
+      const property = (tag as { property: string }).property;
+      return `property="${property}"`;
+    }
+
+    // We intentionally do not manage charset or viewport here.
+    return null;
+  }
+
   private getCurrentUrl(): string {
-    if (typeof window !== 'undefined') {
-      // Get clean URL without query params for canonical
-      const url = new URL(window.location.href);
+    const location = this.document?.location;
+    const href = location?.href;
+
+    if (!href) {
+      return this.siteUrl;
+    }
+
+    // Canonical should not include query params or hash.
+    const url = new URL(href);
+    return `${url.origin}${url.pathname}`;
+  }
+
+  private toAbsoluteUrl(pathOrUrl?: string): string | null {
+    if (!pathOrUrl) {
+      return null;
+    }
+
+    // If already absolute, normalize and strip query/hash for canonical use.
+    if (pathOrUrl.startsWith('http://') || pathOrUrl.startsWith('https://')) {
+      const url = new URL(pathOrUrl);
       return `${url.origin}${url.pathname}`;
     }
-    return this.siteUrl;
+
+    // Treat as path.
+    const normalizedPath = pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`;
+    return `${this.siteUrl}${normalizedPath}`;
   }
 
   private getDefaultTags(): MetaDefinition[] {
+    const defaultTitle = this.title.getTitle() || APP_TITLE;
+    const defaultCanonical = this.getCurrentUrl();
+    const defaultImage = `${this.siteUrl}/images/cody.png`;
+
     return [
       { name: 'robots', content: 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'date', content: new Date().toISOString().split('T')[0] },
-      { charset: 'UTF-8' },
+      { name: 'description', content: META_DESCRIPTION },
       { name: 'theme-color', content: '#252934' },
+
       // Open Graph defaults
-      { property: 'og:title', content: this.title.getTitle() },
+      { property: 'og:title', content: defaultTitle },
       { property: 'og:description', content: META_DESCRIPTION },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: this.getCurrentUrl() },
+      { property: 'og:url', content: defaultCanonical },
       { property: 'og:site_name', content: APP_TITLE },
       { property: 'og:locale', content: 'en_US' },
-      {
-        property: 'og:image',
-        content: `${this.siteUrl}/images/logo/beacon_transparent.png`,
-      },
+      { property: 'og:image', content: defaultImage },
+      { property: 'og:image:secure_url', content: defaultImage },
       { property: 'og:image:type', content: 'image/png' },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: `${APP_TITLE}` },
+
       // Twitter Card defaults
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: this.title.getTitle() },
+      { name: 'twitter:title', content: defaultTitle },
       { name: 'twitter:description', content: META_DESCRIPTION },
-      {
-        name: 'twitter:image',
-        content: `${this.siteUrl}/images/logo/beacon_transparent.png`,
-      },
-      // Google AdSense
-      { name: 'google-adsense-account', content: 'ca-pub-4966893083726404' },
-      // Additional SEO hints
+      { name: 'twitter:image', content: defaultImage },
+      { name: 'twitter:image:alt', content: `${APP_TITLE}` },
+
+      // Bot hints
       {
         name: 'googlebot',
         content: 'index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1',
