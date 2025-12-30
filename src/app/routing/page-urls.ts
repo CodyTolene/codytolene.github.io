@@ -14,3 +14,8 @@ export const PAGE_URLS = (
     }
     return route;
   });
+
+export const PUBLIC_SITEMAP_URLS: ReadonlyArray<(typeof PAGE_URLS)[number]> = [
+  '',
+  'privacy-policy',
+];

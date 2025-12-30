@@ -1,0 +1,22 @@
+# Allow all...
+User-agent: *
+Allow: /
+
+# Except...
+# Disallow: /admin
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Sitemap
+Sitemap: https://codytolene.com/sitemap.xml
+
+# Host
+Host: https://codytolene.com

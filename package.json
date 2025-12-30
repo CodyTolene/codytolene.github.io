@@ -6,6 +6,7 @@
     "build:prod": "ng build --configuration production",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "generate:sitemap": "ts-node --project .scripts/tsconfig.json .scripts/generate-sitemap.ts",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "ng": "ng",
@@ -70,6 +71,7 @@
     "is-ci": "^4.1.0",
     "jsdom": "^27.1.0",
     "prettier": "^3.7.4",
+    "ts-node": "^10.9.2",
     "typescript": "~5.9.2",
     "typescript-eslint": "^8.51.0",
     "vitest": "^4.0.8"

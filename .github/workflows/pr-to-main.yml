@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
-      # - run: npm run generate:sitemap # TODO
+      - run: npm run generate:sitemap
       - run: npm run build:prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
