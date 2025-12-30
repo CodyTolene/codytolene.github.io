@@ -1,12 +1,38 @@
+import {
+  ApplicationConfig,
+  importProvidersFrom,
+  provideBrowserGlobalErrorListeners,
+} from '@angular/core';
+import { ScreenTrackingService } from '@angular/fire/analytics';
 import { MatLuxonDateModule } from '@angular/material-luxon-adapter';
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
+
+import { ROUTES } from './routing';
+
+import {
+  analyticsProvider,
+  appCheckProvider,
+  firebaseAppProvider,
+  performanceProvider,
+} from 'src/app/providers';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes), provideClientHydration(withEventReplay()), importProvidersFrom(MatLuxonDateModule)]
+    provideRouter(
+      [...ROUTES],
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'top',
+        anchorScrolling: 'enabled',
+      }),
+    ),
+    provideClientHydration(withEventReplay()),
+    importProvidersFrom(MatLuxonDateModule),
+    firebaseAppProvider(),
+    analyticsProvider(),
+    ScreenTrackingService,
+    appCheckProvider(),
+    performanceProvider(),
+  ],
 };

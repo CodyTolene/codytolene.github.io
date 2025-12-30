@@ -1,0 +1,29 @@
+name: CI Check for PRs to Master
+
+permissions:
+  checks: write
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build_and_preview:
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      # - run: npm run generate:sitemap # TODO
+      - run: npm run build:prod
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CODY_TOLENE_COM }}
+          expires: 7d
+          projectId: cody-tolene-com

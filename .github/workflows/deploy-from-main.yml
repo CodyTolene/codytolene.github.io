@@ -1,0 +1,26 @@
+name: Deploy to Firebase Hosting
+
+permissions:
+  contents: read
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+      # - run: npm run generate:sitemap # TODO
+      - run: npm run build:prod
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CODY_TOLENE_COM }}
+          channelId: live
+          projectId: cody-tolene-com
