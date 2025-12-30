@@ -1,105 +1,59 @@
-<div align="center">
-  <img align="center" src="src/assets/images/cody.png" />
-  <h3 align="center">Cody Tolene</h3>
-  <a href="https://www.codytolene.com">www.CodyTolene.com</a>
-  <p align="center">
-    Welcome to my personal portfolio website. Created with Angular 18+ and much love!
-  </p>
-</div>
+# Codytolene
 
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
 
-## Index <a name="index"></a>
+## Development server
 
-- [Packages](#packages)
-- [Scripts](#scripts)
-- [Wrapping Up](#wrapping-up)
+To start a local development server, run:
 
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
+```bash
+ng serve
+```
 
-## Packages <a name="packages"></a>
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-The core structure of the project consists of:
+## Code scaffolding
 
-- [Angular][link-angular]
-- [Angular Material][link-angular-material]
-- [ESLint][link-eslint]
-- [Husky][link-husky]
-- [Luxon][link-luxon]
-- [Node.js][link-node-js]
-- [Prettier][link-prettier]
-- [RxJS][link-rxjs]
-- [TypeScript][link-typescript]
-- [io-ts][link-io-ts]
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-<p align="right">[ <a href="#index">Index</a> ]</p>
+```bash
+ng generate component component-name
+```
 
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-## Scripts <a name="scripts"></a>
+```bash
+ng generate --help
+```
 
-The following scripts are available for development:
+## Building
 
-| Script                  | Description                                                |
-| ----------------------- | ---------------------------------------------------------- |
-| `build`                 | Builds the project.                                        |
-| `build:prod`            | Builds the project for production.                         |
-| `lint`                  | Lints the code and reports the issues without fixing them. |
-| `lint:fix`              | Lints the code and fixes the issues.                       |
-| `ng`                    | Angular CLI command.                                       |
-| `postinstall`           | Runs automatically after `npm install`.                    |
-| `prepare`               | Runs automatically before `npm install`.                   |
-| `prettier`              | Formats the code.                                          |
-| `prettier:check`        | Checks if the code is formatted.                           |
-| `start`                 | Starts the development server.                             |
-| `test`                  | Runs the tests.                                            |
-| `update`                | Updates the dependencies.                                  |
-| `update:check`          | Checks for updates of the dependencies.                    |
-| `watch`                 | Builds the project and watches for changes.                |
+To build the project run:
 
-<p align="right">[ <a href="#index">Index</a> ]</p>
+```bash
+ng build
+```
 
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Wrapping Up <a name="wrapping-up"></a>
+## Running unit tests
 
-Thanks to all the people and projects that made this possible! I hope you enjoy this project as much as I enjoyed working on it. If you have any questions, please let me know by opening an issue [here][link-url-new-issue].
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-| Type                                                                      | Info                                                                      |
-| :------------------------------------------------------------------------ | :------------------------------------------------------------------------ |
-| <img width="48" src=".github/images/ng-icons/email.svg" />                | webmaster@codytolene.com                                                  |
-| <img width="48" src=".github/images/simple-icons/buymeacoffee.svg" />     | https://www.buymeacoffee.com/codytolene                                   |
-| <img width="48" src=".github/images/simple-icons/bitcoin-btc-logo.svg" /> | [bc1qfx3lvspkj0q077u3gnrnxqkqwyvcku2nml86wmudy7yf2u8edmqq0a5vnt][url-btc] |
+```bash
+ng test
+```
 
-Fin. Happy programming friend!
+## Running end-to-end tests
 
-Cody Tolene
+For end-to-end (e2e) testing, run:
 
-<p align="right">[ <a href="#index">Index</a> ]</p>
+```bash
+ng e2e
+```
 
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-<!-- LINK REFERENCES -->
+## Additional Resources
 
-[link-angular]: https://angular.io/
-[link-angular-material]: https://material.angular.io/
-[link-eslint]: https://eslint.org/
-[link-husky]: https://typicode.github.io/husky/
-[link-io-ts]: https://gcanti.github.io/io-ts/
-[link-luxon]: https://moment.github.io/luxon/
-[link-node-js]: https://nodejs.org/en/
-[link-prettier]: https://prettier.io/
-[link-rxjs]: https://rxjs.dev/
-[link-typescript]: https://www.typescriptlang.org/
-[link-url-new-issue]: https://github.com/CodyTolene/codytolene.github.io/issues
-[url-btc]: https://explorer.btc.com/btc/address/bc1qfx3lvspkj0q077u3gnrnxqkqwyvcku2nml86wmudy7yf2u8edmqq0a5vnt
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

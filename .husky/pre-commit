@@ -1,2 +1,7 @@
-npx lint-staged
+#!/usr/bin/env sh
+set -e
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run format:check
+npm run lint
 git add --update

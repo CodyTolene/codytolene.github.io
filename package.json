@@ -1,82 +1,73 @@
 {
-  "name": "codytolene.github.io",
-  "project": "codytolene.github.io",
-  "version": "18.0.0",
-  "description": "Cody Tolene's Personal Angular Website",
-  "author": "Cody Tolene",
-  "license": "AGPL-3.0",
-  "homepage": "https://www.codytolene.com",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CodyTolene/codytolene.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/CodyTolene/codytolene.github.io/issues"
-  },
-  "engines": {
-    "node": "^20.13.1",
-    "npm": ">=10.5.2 <11"
-  },
+  "name": "codytolene",
+  "version": "0.0.0",
   "scripts": {
-    "build": "ng build",
-    "build:prod": "ng build --configuration production",
-    "lint": "ng lint",
-    "lint:fix": "eslint --fix",
     "ng": "ng",
-    "postinstall": "is-ci || husky install && patch-package",
-    "prepare": "husky",
-    "prettier": "prettier --write . --log-level silent",
-    "prettier:check": "prettier --check .",
-    "start": "ng serve --open",
-    "update": "ncu -u",
-    "update:check": "ncu",
-    "watch": "ng build --watch --configuration development"
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve:ssr:codytolene": "node dist/codytolene/server/server.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
+    "prepare": "husky install",
+    "postinstall": "is-ci || husky install"
   },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "packageManager": "npm@10.8.2",
   "dependencies": {
     "@angular/animations": "^21.0.6",
-    "@angular/cdk": "21.0.5",
-    "@angular/common": "^21.0.6",
-    "@angular/compiler": "^21.0.6",
-    "@angular/core": "^21.0.6",
-    "@angular/forms": "^21.0.6",
-    "@angular/material": "21.0.5",
-    "@angular/material-luxon-adapter": "21.0.5",
-    "@angular/platform-browser": "^21.0.6",
-    "@angular/platform-browser-dynamic": "^21.0.6",
-    "@angular/router": "^21.0.6",
-    "@ngneat/until-destroy": "^10.0.0",
-    "io-ts": "^2.2.21",
+    "@angular/cdk": "^21.0.5",
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/material": "^21.0.5",
+    "@angular/material-luxon-adapter": "^21.0.5",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/platform-server": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "@angular/ssr": "^21.0.4",
+    "@proangular/ngx-gist": "^21.0.0",
+    "@proangular/ngx-scroll-top": "^21.0.0",
+    "@proangular/pro-form": "^21.0.0",
+    "@proangular/pro-table": "^21.0.0",
+    "express": "^5.1.0",
+    "io-ts": "^2.2.22",
     "luxon": "^3.7.2",
-    "particles.js": "^2.0.0",
-    "rxjs": "~7.8.1",
-    "tslib": "^2.6.3",
-    "zone.js": "~0.15.1"
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular/build": "^21.0.4",
     "@angular/cli": "^21.0.4",
-    "@angular/compiler-cli": "^21.0.6",
-    "@angular/localize": "^21.0.6",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/jasmine": "~5.1.4",
-    "@types/node": "^22.4.2",
+    "@angular/compiler-cli": "^21.0.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/express": "^5.0.1",
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^20.17.19",
     "angular-eslint": "^21.1.0",
-    "eslint": "^9.28.0",
-    "husky": "^9.1.5",
-    "is-ci": "^3.0.1",
-    "jasmine-core": "~5.2.0",
-    "lint-staged": "^15.2.9",
-    "npm-check-updates": "^17.0.6",
-    "patch-package": "^8.0.0",
-    "prettier": "^3.3.3",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.33.1"
-  },
-  "lint-staged": {
-    "*.{ts,html,css,scss}": [
-      "npm run prettier",
-      "npm run lint:fix"
-    ]
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
+    "jsdom": "^27.1.0",
+    "prettier": "^3.7.4",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.51.0",
+    "vitest": "^4.0.8"
   }
 }
