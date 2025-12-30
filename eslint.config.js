@@ -73,10 +73,16 @@ module.exports = tseslint.config(
       '@typescript-eslint/consistent-type-definitions': 'error',
       // Require explicit return types on functions and class methods.
       // @see https://typescript-eslint.io/rules/explicit-function-return-type/
-      '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
+      '@typescript-eslint/explicit-function-return-type': [
+        'error',
+        { allowExpressions: true },
+      ],
       // Require explicit accessibility modifiers on class properties and methods.
       // @see https://typescript-eslint.io/rules/explicit-member-accessibility/
-      '@typescript-eslint/explicit-member-accessibility': ['error', { accessibility: 'explicit' }],
+      '@typescript-eslint/explicit-member-accessibility': [
+        'error',
+        { accessibility: 'explicit' },
+      ],
       // Require explicit return and argument types on exported functions' and
       // classes' public class methods.
       // @see https://typescript-eslint.io/rules/explicit-module-boundary-types/
@@ -217,7 +223,10 @@ module.exports = tseslint.config(
   },
   {
     files: ['**/*.html'],
-    extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
+    extends: [
+      ...angular.configs.templateRecommended,
+      ...angular.configs.templateAccessibility,
+    ],
     rules: {},
   },
 );

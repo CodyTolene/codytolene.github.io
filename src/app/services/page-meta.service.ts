@@ -141,7 +141,9 @@ export class PageMetaService {
     }
 
     // Treat as path.
-    const normalizedPath = pathOrUrl.startsWith('/') ? pathOrUrl : `/${pathOrUrl}`;
+    const normalizedPath = pathOrUrl.startsWith('/')
+      ? pathOrUrl
+      : `/${pathOrUrl}`;
     return `${this.siteUrl}${normalizedPath}`;
   }
 
@@ -179,7 +181,8 @@ export class PageMetaService {
       // Bot hints
       {
         name: 'googlebot',
-        content: 'index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1',
+        content:
+          'index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1',
       },
       { name: 'bingbot', content: 'index, follow' },
     ];

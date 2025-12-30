@@ -7,7 +7,11 @@ import { distinctUntilChanged, filter } from 'rxjs';
 import { Footer, Header, Navbar } from './layout';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
-import { AppUpdateService, PageDataService, PageMetaService } from 'src/app/services';
+import {
+  AppUpdateService,
+  PageDataService,
+  PageMetaService,
+} from 'src/app/services';
 import { isNonEmptyValue, shareSingleReplay } from 'src/app/utilities';
 import { environment } from 'src/environments/environment';
 
@@ -24,7 +28,9 @@ export class App implements OnInit {
   private readonly pageDataService = inject(PageDataService);
   private readonly pageMetaService = inject(PageMetaService);
 
-  protected readonly analytics = environment.isProduction ? inject(Analytics) : null;
+  protected readonly analytics = environment.isProduction
+    ? inject(Analytics)
+    : null;
 
   private readonly pageDataChanges = this.pageDataService.pageDataChanges.pipe(
     filter(isNonEmptyValue),

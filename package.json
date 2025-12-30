@@ -1,6 +1,6 @@
 {
   "name": "codytolene",
-  "version": "0.0.0",
+  "version": "21.0.0",
   "scripts": {
     "build": "ng build --configuration development",
     "build:prod": "ng build --configuration production",
@@ -17,7 +17,7 @@
     "watch": "ng build --watch --configuration development"
   },
   "prettier": {
-    "printWidth": 100,
+    "printWidth": 80,
     "singleQuote": true,
     "overrides": [
       {

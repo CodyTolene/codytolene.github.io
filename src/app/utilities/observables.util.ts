@@ -1,4 +1,10 @@
-import { MonoTypeOperatorFunction, Observable, filter, firstValueFrom, shareReplay } from 'rxjs';
+import {
+  MonoTypeOperatorFunction,
+  Observable,
+  filter,
+  firstValueFrom,
+  shareReplay,
+} from 'rxjs';
 
 import { isNonEmptyValue } from 'src/app/utilities/is-type.util';
 

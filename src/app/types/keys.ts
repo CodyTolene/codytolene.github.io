@@ -22,7 +22,8 @@ export type NestedKeysOfString<T> = T extends Primitive
     :
         | KeysOfString<T>
         | {
-            [P in keyof T & string]: `${P}.${NestedKeysOfString<NonNullable<T[P]>>}`;
+            [P in keyof T &
+              string]: `${P}.${NestedKeysOfString<NonNullable<T[P]>>}`;
           }[keyof T & string];
 
 export type DeepNestedKeysOfString<T, P extends keyof T & string> =

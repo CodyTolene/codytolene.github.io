@@ -15,7 +15,9 @@ export function isNumber(value: unknown): value is number {
 }
 
 export function isStringArray(values: unknown[]): values is string[] {
-  return Array.isArray(values) && values.every((value) => typeof value === 'string');
+  return (
+    Array.isArray(values) && values.every((value) => typeof value === 'string')
+  );
 }
 
 export function isNonEmptyObject<T>(value: T): value is NonNullable<T> {

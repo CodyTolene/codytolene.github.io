@@ -23,5 +23,11 @@
   },
   "prettier.configPath": "prettier.config.js",
   "eslint.experimental.useFlatConfig": true,
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html"]
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ]
 }

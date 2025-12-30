@@ -1,4 +1,8 @@
-import { META_AUTHOR, META_DEFAULT_KEYWORDS, META_DESCRIPTION } from 'src/app/constants';
+import {
+  META_AUTHOR,
+  META_DEFAULT_KEYWORDS,
+  META_DESCRIPTION,
+} from 'src/app/constants';
 import { AppRoute } from 'src/app/types';
 
 export const HOME_PAGE_ROUTE: AppRoute = {

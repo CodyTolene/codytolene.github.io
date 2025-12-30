@@ -6,7 +6,10 @@ import {
 } from '@angular/core';
 import { ScreenTrackingService } from '@angular/fire/analytics';
 import { MatLuxonDateModule } from '@angular/material-luxon-adapter';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import {
+  provideClientHydration,
+  withEventReplay,
+} from '@angular/platform-browser';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { ROUTES } from './routing';
