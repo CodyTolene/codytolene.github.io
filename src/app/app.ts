@@ -17,7 +17,7 @@ import { environment } from 'src/environments/environment';
 
 @UntilDestroy()
 @Component({
-  selector: 'cat-root',
+  selector: 'ct-root',
   imports: [Content, Footer, Header, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',

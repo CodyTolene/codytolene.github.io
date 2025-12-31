@@ -1,18 +1,22 @@
-<div class="logo">CODY TOLENE</div>
-<nav class="navigation">
-  <ul>
-    <li>
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >Home</a
-      >
-    </li>
-    <li>
-      <a [routerLink]="['/', PAGES['Privacy Policy']]" routerLinkActive="active"
-        >Privacy Policy</a
-      >
-    </li>
-  </ul>
-</nav>
+<div class="header-container">
+  <ct-logo />
+  <nav class="navigation">
+    <ul>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/']"
+          routerLinkActive="active"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLink]="['/', PAGES['Privacy Policy']]"
+          routerLinkActive="active"
+          >Privacy Policy</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

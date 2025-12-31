@@ -1,0 +1,14 @@
+@use '../../styles/variables' as var;
+@use '../../styles/colors' as col;
+
+:host {
+  display: block;
+}
+
+a {
+  display: block;
+  color: col.$green;
+  font-family: var.$secondary-font-family;
+  font-size: var.$font-xxl;
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+@use '../../styles/variables' as var;
+
+:host {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var.$page-max-width;
+  padding: 1.5rem;
+  width: 100%;
+}
