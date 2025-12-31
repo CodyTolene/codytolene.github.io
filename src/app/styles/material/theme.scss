@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+@use '../variables' as var;
+
+html {
+  // https://material.angular.dev/guide/theming
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: var.$default-font-family,
+      density: 0,
+    )
+  );
+}

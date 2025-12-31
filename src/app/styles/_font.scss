@@ -1,0 +1,14 @@
+@use 'colors' as col;
+@use 'variables' as var;
+
+@mixin default-font() {
+  color: col.$black;
+  font-family: var.$default-font-family;
+  font-size: var.$font-md;
+}
+
+@mixin default-dark-font() {
+  color: col.$white;
+  font-family: var.$default-font-family;
+  font-size: var.$font-md;
+}

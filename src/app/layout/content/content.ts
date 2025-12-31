@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'footer[cat-footer]',
+  selector: 'main[cat-content]',
   imports: [],
-  templateUrl: './footer.html',
-  styleUrl: './footer.scss',
+  templateUrl: './content.html',
+  styleUrl: './content.scss',
 })
-export class Footer {}
+export class Content {}

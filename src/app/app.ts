@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 
 import { distinctUntilChanged, filter } from 'rxjs';
 
-import { Footer, Header, Navbar } from './layout';
+import { Content, Footer, Header } from './layout';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 import {
@@ -18,7 +18,7 @@ import { environment } from 'src/environments/environment';
 @UntilDestroy()
 @Component({
   selector: 'cat-root',
-  imports: [Footer, Header, Navbar, RouterOutlet],
+  imports: [Content, Footer, Header, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   providers: [AppUpdateService, PageDataService, PageMetaService],
