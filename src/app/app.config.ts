@@ -1,8 +1,8 @@
 import {
   ApplicationConfig,
   importProvidersFrom,
-  provideBrowserGlobalErrorListeners,
   isDevMode,
+  provideBrowserGlobalErrorListeners,
 } from '@angular/core';
 import { ScreenTrackingService } from '@angular/fire/analytics';
 import { MatLuxonDateModule } from '@angular/material-luxon-adapter';
@@ -11,16 +11,18 @@ import {
   withEventReplay,
 } from '@angular/platform-browser';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideServiceWorker } from '@angular/service-worker';
 
 import { ROUTES } from './routing';
 
+import { iconCustomNames } from 'src/app/components';
 import {
   analyticsProvider,
   appCheckProvider,
+  customIconsProvider,
   firebaseAppProvider,
   performanceProvider,
 } from 'src/app/providers';
-import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -39,6 +41,7 @@ export const appConfig: ApplicationConfig = {
     ScreenTrackingService,
     appCheckProvider(),
     performanceProvider(),
+    customIconsProvider(iconCustomNames),
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',

@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+ct-logo {
+  margin-bottom: 4px;
+}
+
 .footer-container {
   box-sizing: border-box;
   color: col.$white;
@@ -23,4 +27,15 @@
   max-width: var.$page-max-width;
   text-align: center;
   width: 100%;
+}
+
+a {
+  color: col.$green;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
