@@ -1,0 +1,11 @@
+# Apply these settings globally to avoid issues with line endings
+# git config --global core.autocrlf false
+# git config --global core.eol lf
+# git config --global core.safecrlf warn
+
+# Normalize text files to LF in the repo and working tree
+* text=auto eol=lf
+
+# Windows scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
