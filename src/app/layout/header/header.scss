@@ -1,0 +1,49 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+:host {
+  background-color: col.$gray;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  height: var.$header-height;
+  position: sticky;
+  top: 0;
+  z-index: var.$z-index-header;
+}
+
+.header-container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var.$page-max-width;
+  padding: 0 1rem;
+  width: 100%;
+
+  > .navigation {
+    ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: col.$white;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: col.$green;
+        text-decoration: overline;
+      }
+
+      &.active {
+        color: col.$green;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@
 const eslint = require('@eslint/js');
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
+const path = require('path');
 
 module.exports = tseslint.config(
   {
@@ -12,6 +13,13 @@ module.exports = tseslint.config(
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
     ],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: path.resolve(__dirname),
+        sourceType: 'module',
+      },
+    },
     processor: angular.processInlineTemplates,
     rules: {
       // Component selectors should follow given naming rules.
@@ -199,7 +207,7 @@ module.exports = tseslint.config(
       'one-var': ['error', 'never'],
       // Require using arrow functions for callbacks
       // @see https://eslint.org/docs/latest/rules/prefer-arrow-callback
-      'prefer-arrow/prefer-arrow-functions': 'off',
+      'prefer-arrow-callback': ['error'],
       // Require const declarations for variables that are never reassigned
       // after declared
       // @see https://eslint.org/docs/latest/rules/prefer-const

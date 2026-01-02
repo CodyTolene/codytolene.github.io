@@ -1,3 +1,3 @@
-export { BreakpointService } from './breakpoint.service';
-export { IconsService } from './icons.service';
-export { NavigationService } from './navigation.service';
+export * from './app-update.service';
+export * from './page-data.service';
+export * from './page-meta.service';

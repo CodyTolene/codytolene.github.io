@@ -1,59 +1,27 @@
-// Primary Reds
-$red_lighter: #f2b9b6;
-$red_light: #efb5b4;
-$red: #d3544f;
-$red_dark: #9b3631;
-$red_darker: #6e2a26;
-
-// Primary Greens
-$green_lighter: #b8e0b3;
-$green_light: #98d049;
-$green: #86c232;
-$green_dark: #4a9d50;
-$green_darker: #2d6f3a;
-
-// Primary Blues
-$blue_lighter: #c0dff9;
-$blue_light: #75b3e4;
-$blue: #4f9edd;
-$blue_dark: #2b6b9a;
-$blue_darker: #1a4a6e;
-
-// Primary Yellows
-$yellow_lighter: #f7f1b3;
-$yellow_light: #f2e8a6;
-$yellow: #e8dc3d;
-$yellow_dark: #c8b300;
-$yellow_darker: #a38c00;
-
-// Grayscale
 $black: #000000;
+$gray: #222629;
+$green: #86c232;
 $white: #ffffff;
 
-// Grayscale range
-$gray_lightest: #fdfbff;
-$gray_lighter: #acacac;
-$gray_light: #949494;
-$gray_mid_lighter: #7f7f7f;
-$gray_mid_light: #6b6b6b;
-$gray_mid: #505050;
-$gray_mid_dark: #3c3c3c;
-$gray_mid_darker: #2a2a2a;
-$gray_dark: #222222;
-$gray_darker: #222629;
-$gray_darkest: #1a1a1a;
+// Neutral UI tokens
+$color-ink: #0b0f14;
+$color-muted: #4e5d6c;
 
-// Theme Primary
-$theme_primary_lighter: $gray_mid_darker;
-$theme_primary: $gray_dark;
-$theme_primary_darker: $gray_darker;
+// Accent tokens
+$color-accent: #ff8a3d;
+$color-accent-2: #1f7a8c;
 
-// Theme Accent
-$theme_accent_lighter: $green_light;
-$theme_accent: $green;
-$theme_accent_darker: $green_dark;
+// Surface tokens
+$color-surface: #f6f1e7;
+$color-surface-2: #ffffff;
+$color-bg: #fdfaf4;
 
-// Theme Warn
-$theme_warn_lighter: $red_light;
-$theme_warn: $red;
-$theme_warn_darker: $red_dark;
+// Lines and overlays
+$color-line: rgba(11, 15, 20, 0.08);
+$color-contrast-section: rgba(255, 255, 255, 0.6);
+
+// Home page specific tones
+$color-cta-text: #2b1607;
+$color-portrait-surface: #f0e4d4;
+$color-hero-glow-warm: rgba(255, 197, 143, 0.35);
+$color-hero-glow-cool: rgba(94, 165, 168, 0.25);

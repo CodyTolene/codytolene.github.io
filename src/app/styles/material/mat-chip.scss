@@ -1,0 +1,14 @@
+mat-chip.chip .mdc-evolution-chip__action {
+  align-items: center;
+}
+
+mat-chip.chip .mdc-evolution-chip__text-label {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.45rem;
+  line-height: 1;
+}
+
+mat-chip.chip ct-icon {
+  display: inline-flex;
+}

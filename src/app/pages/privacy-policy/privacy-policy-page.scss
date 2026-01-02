@@ -1,0 +1,49 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+:host {
+  background:
+    radial-gradient(
+      #{var.$hero-glow-warm-size} circle at 12% 18%,
+      #{col.$color-hero-glow-warm},
+      transparent #{var.$hero-glow-stop}
+    ),
+    radial-gradient(
+      #{var.$hero-glow-cool-size} circle at 88% 10%,
+      #{col.$color-hero-glow-cool},
+      transparent #{var.$hero-glow-stop}
+    ),
+    col.$color-bg;
+
+  color: col.$color-ink;
+  display: block;
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    background:
+      linear-gradient(to right, rgba(col.$green, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(col.$green, 0.045) 1px, transparent 1px);
+    background-size: 46px 46px;
+    content: '';
+    inset: 0;
+    opacity: 0.55;
+    pointer-events: none;
+    position: absolute;
+    mask-image: radial-gradient(
+      circle at 40% 20%,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 62%
+    );
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var.$page-max-width;
+}
+
+#intro {
+  padding-top: clamp(3.25rem, 6vw, var.$hero-padding-top);
+}

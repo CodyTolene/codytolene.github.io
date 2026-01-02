@@ -1,17 +1,11 @@
-// Root
-@use 'app/styles/root.scss';
-
-// Body
-@use 'app/styles/body.scss';
-
-// Headers
-@use 'app/styles/headers.scss';
+// Core
+@use './app/styles/html.scss';
+@use './app/styles/body.scss';
 
 // Fonts
-@use 'app/styles/font-families.scss';
+@use './app/styles/font/bungee.scss';
+@use './app/styles/font/roboto.scss';
+@use './app/styles/font/material-icons.scss';
 
 // Angular Material
-@use 'app/styles/material.scss';
-
-// Particles.js
-@use 'app/styles/particlesjs.scss';
+@use './app/styles/material.scss';

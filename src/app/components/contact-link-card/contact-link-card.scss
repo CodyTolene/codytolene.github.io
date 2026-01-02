@@ -1,0 +1,42 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.contact-link {
+  border-radius: var.$radius-xl;
+  color: inherit;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.contact-card {
+  display: flex;
+  height: 100%;
+}
+
+.contact-content {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  gap: var.$space-md;
+  padding: 1.1rem 1.1rem;
+}
+
+.contact-copy {
+  display: grid;
+  gap: 0.15rem;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    color: col.$color-muted;
+    margin: 0;
+  }
+}

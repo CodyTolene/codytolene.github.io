@@ -1,0 +1,119 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+.role-timeline {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.role-entry {
+  align-items: start;
+  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: minmax(6rem, 8rem) 1.25rem 1fr;
+}
+
+.role-year {
+  padding-top: 0.35rem;
+  text-align: right;
+}
+
+.year-badge {
+  background: rgba(col.$green, 0.08);
+  border: 1px solid rgba(col.$green, 0.35);
+  border-radius: var.$radius-pill;
+  color: col.$green;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  white-space: nowrap;
+}
+
+.role-marker {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.role-marker::before {
+  background: rgba(col.$green, 0.22);
+  bottom: 0;
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+}
+
+.role-dot {
+  background: col.$green;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(col.$green, 0.12);
+  height: 10px;
+  margin-top: 0.65rem;
+  position: relative;
+  width: 10px;
+  z-index: 1;
+}
+
+.role-card {
+  width: 100%;
+}
+
+.role-content {
+  padding: 1rem;
+}
+
+.role-title {
+  margin: 0;
+}
+
+.role-meta {
+  color: col.$color-muted;
+  font-weight: 650;
+  margin: 0.35rem 0 0.5rem;
+}
+
+.role-linkedin {
+  color: col.$color-muted;
+  margin: 0 0 0.75rem;
+}
+
+.role-desc {
+  margin: 0 0 0.25rem;
+}
+
+.role-outcomes {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.15rem 0 0;
+  padding-left: 1.15rem;
+
+  li {
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: var.$bp-lg) {
+  .role-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .role-year {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .role-marker {
+    display: none;
+  }
+
+  .role-card {
+    margin-top: 0.35rem;
+  }
+}

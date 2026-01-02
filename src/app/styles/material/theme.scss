@@ -1,0 +1,170 @@
+@use '@angular/material' as mat;
+@use '../variables' as var;
+@use 'sass:map';
+
+// Green primary
+$cp-green-palette: (
+  0: #000000,
+  10: #1c290a,
+  20: #385115,
+  25: #46651a,
+  30: #547a1f,
+  35: #628e25,
+  40: #70a22a,
+  50: #8ccb34,
+  60: #a3d55d,
+  70: #bae085,
+  80: #d1eaae,
+  90: #e8f5d6,
+  95: #f4faeb,
+  98: #fafdf7,
+  99: #fdfefb,
+  100: #ffffff,
+
+  secondary: (
+    0: #000000,
+    10: #1e2318,
+    20: #3a4531,
+    25: #48573d,
+    30: #566949,
+    35: #647b55,
+    40: #728d61,
+    50: #8fb07a,
+    60: #a5c094,
+    70: #bbd0ae,
+    80: #d1dfc8,
+    90: #e7efe2,
+    95: #f3f7ef,
+    98: #fafcf8,
+    99: #fdfefc,
+    100: #ffffff,
+  ),
+
+  neutral: (
+    0: #000000,
+    4: #0a0a0a,
+    6: #0f0f0f,
+    10: #1a1a1a,
+    12: #1f1f1f,
+    17: #2b2b2b,
+    20: #333333,
+    22: #383838,
+    24: #3d3d3d,
+    25: #404040,
+    30: #4d4d4d,
+    35: #595959,
+    40: #666666,
+    50: #808080,
+    60: #999999,
+    70: #b3b3b3,
+    80: #cccccc,
+    87: #dedede,
+    90: #e6e6e6,
+    92: #ebebeb,
+    94: #f0f0f0,
+    95: #f2f2f2,
+    96: #f5f5f5,
+    98: #fafafa,
+    99: #fdfdfd,
+    100: #ffffff,
+  ),
+
+  neutral-variant: (
+    0: #000000,
+    10: #1b1d18,
+    20: #353a2f,
+    25: #42483b,
+    30: #4f5647,
+    35: #5b6253,
+    40: #676d5f,
+    50: #818778,
+    60: #9aa092,
+    70: #b4b9ac,
+    80: #cdd2c6,
+    90: #e7ebe0,
+    95: #f3f5f0,
+    98: #fafbf8,
+    99: #fdfefb,
+    100: #ffffff,
+  ),
+
+  error: (
+    0: #000000,
+    10: #410002,
+    20: #690005,
+    25: #7e0007,
+    30: #93000a,
+    35: #a80710,
+    40: #ba1a1a,
+    50: #de3730,
+    60: #ff5449,
+    70: #ff897d,
+    80: #ffb4ab,
+    90: #ffdad6,
+    95: #ffedea,
+    98: #fff8f7,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+);
+
+// Light green tertiary (brighter)
+$cp-light-green-palette: (
+  0: #000000,
+  10: #15270d,
+  20: #2a4f1b,
+  25: #356321,
+  30: #417727,
+  35: #4b8b2c,
+  40: #529e2e,
+  50: #6cc04a,
+  60: #8ad06f,
+  70: #a8df94,
+  80: #c2e8b0,
+  90: #e0f4d7,
+  95: #f0faeb,
+  98: #f9fdf7,
+  99: #fdfefb,
+  100: #ffffff,
+
+  secondary: map.get($cp-green-palette, secondary),
+  neutral: map.get($cp-green-palette, neutral),
+  neutral-variant: map.get($cp-green-palette, neutral-variant),
+  error: map.get($cp-green-palette, error),
+);
+
+// Light mode
+html {
+  color-scheme: light;
+
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: $cp-green-palette,
+        tertiary: $cp-light-green-palette,
+      ),
+      typography: var.$default-font-family,
+      density: 0,
+    )
+  );
+}
+
+// Dark mode (automatic)
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+
+//     @include mat.theme(
+//       (
+//         color: (
+//           theme-type: dark,
+//           primary: $cp-green-palette,
+//           tertiary: $cp-light-green-palette,
+//         ),
+//         typography: var.$default-font-family,
+//         density: 0,
+//       )
+//     );
+//   }
+// }

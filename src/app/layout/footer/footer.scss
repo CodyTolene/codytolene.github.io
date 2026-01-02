@@ -1,0 +1,41 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+:host {
+  background-color: col.$gray;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: var.$footer-height;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+ct-logo {
+  margin-bottom: 4px;
+}
+
+.footer-container {
+  box-sizing: border-box;
+  color: col.$white;
+  display: flex;
+  flex-direction: column;
+  font-size: var.$font-xs;
+  margin: 0 auto;
+  max-width: var.$page-max-width;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: col.$green;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
