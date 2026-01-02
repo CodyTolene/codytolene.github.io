@@ -1,0 +1,21 @@
+@if (contactLink(); as contactLink) {
+  <a
+    class="contact-link reveal"
+    [href]="contactLink.href"
+    target="_blank"
+    rel="noopener"
+    matRipple
+  >
+    <mat-card class="panel contact-card" appearance="outlined">
+      <mat-card-content class="contact-content">
+        <ct-icon [name]="contactLink.icon" [size]="36"></ct-icon>
+        <div class="contact-copy">
+          <h3>{{ contactLink.label }}</h3>
+          <p>{{ contactLink.detail }}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </a>
+} @else {
+  Loading contact...
+}

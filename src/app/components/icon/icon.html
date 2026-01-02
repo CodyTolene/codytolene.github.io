@@ -2,8 +2,12 @@
   [attr.aria-label]="ariaLabel() || null"
   [color]="color()"
   [fontIcon]="fontIcon() === 'font' ? name() : ''"
-  [fontSet]="fontIcon() === 'font' ? fontSet : ''"
-  [inline]="inline"
+  [fontSet]="fontIcon() === 'font' ? fontSet() : ''"
+  [inline]="inline()"
+  [style.font-size.px]="size()"
+  [style.height.px]="size()"
+  [style.line-height.px]="size()"
+  [style.width.px]="size()"
   [svgIcon]="fontIcon() === 'svg' ? name() : ''"
   >{{ name() }}</mat-icon
 >

@@ -1,0 +1,32 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  mat-card-content {
+    flex: 1 1 auto;
+    padding: 1.05rem 1.1rem;
+  }
+
+  .stat-value {
+    font-family: var.$secondary-font-family;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.35rem;
+  }
+
+  .stat-label {
+    color: col.$color-muted;
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+}

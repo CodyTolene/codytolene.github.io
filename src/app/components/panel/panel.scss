@@ -1,0 +1,33 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+.panel {
+  background: col.$color-surface-2;
+  border: 1px solid col.$color-line;
+  border-radius: var.$radius-xl;
+  box-shadow: var.$shadow-soft;
+  overflow: hidden;
+  position: relative;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+
+  &:hover {
+    border-color: rgba(col.$green, 0.18);
+    box-shadow:
+      0 0 0 1px rgba(col.$green, 0.18),
+      0 18px 34px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

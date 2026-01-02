@@ -1,0 +1,36 @@
+<mat-card class="panel timeline-card reveal" appearance="outlined" matRipple>
+  <mat-card-content class="timeline-content">
+    <ol class="role-timeline" aria-label="Roles timeline">
+      @for (role of roles(); track trackByTitle($index, role)) {
+        <li class="role-entry">
+          <div class="role-year">
+            <span class="year-badge">{{ role.years }}</span>
+          </div>
+
+          <div class="role-marker" aria-hidden="true">
+            <span class="role-dot"></span>
+          </div>
+
+          <mat-card class="panel role-card" appearance="outlined" matRipple>
+            <mat-card-content class="role-content">
+              <h3 class="role-title">{{ role.title }}</h3>
+              <div class="role-meta">{{ role.meta }}</div>
+
+              <p class="role-linkedin">{{ role.linkedinDescription }}</p>
+
+              @if (role.outcomes?.length) {
+                <ul class="role-outcomes">
+                  @for (outcome of role.outcomes; track outcome) {
+                    <li>{{ outcome }}</li>
+                  }
+                </ul>
+              } @else {
+                <p class="role-desc">{{ role.description }}</p>
+              }
+            </mat-card-content>
+          </mat-card>
+        </li>
+      }
+    </ol>
+  </mat-card-content>
+</mat-card>

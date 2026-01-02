@@ -18,9 +18,7 @@ export function customIconsProvider(
     for (const iconCustomName of iconCustomNames) {
       registry.addSvgIcon(
         iconCustomName,
-        sanitizer.bypassSecurityTrustResourceUrl(
-          `simple-icons/${iconCustomName}.svg`,
-        ),
+        sanitizer.bypassSecurityTrustResourceUrl(`icons/${iconCustomName}.svg`),
       );
     }
   });

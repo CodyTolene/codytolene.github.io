@@ -1,0 +1,12 @@
+<mat-card class="panel stat" appearance="outlined" matRipple>
+  @if (stat(); as stat) {
+    <mat-card-content>
+      <div class="stat-value">{{ stat.title }}</div>
+      <div class="stat-label">{{ stat.description }}</div>
+    </mat-card-content>
+  } @else {
+    <mat-card-content>
+      <p>Loading...</p>
+    </mat-card-content>
+  }
+</mat-card>

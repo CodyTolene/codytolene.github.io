@@ -1,11 +1,11 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
   Signal,
   booleanAttribute,
   computed,
   input,
+  numberAttribute,
 } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { MatIcon } from '@angular/material/icon';
@@ -19,24 +19,39 @@ import { IconCustomName, IconFontSet, IconName } from 'src/app/types';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [MatIcon],
   standalone: true,
-  host: { class: 'mat-icon' },
+  styles: [
+    ':host{display:inline-flex;align-items:center;justify-content:center;}',
+  ],
+  host: {
+    class: 'mat-icon',
+    '[style.font-size.px]': 'size()',
+    '[style.height.px]': 'size()',
+    '[style.line-height.px]': 'size()',
+    '[style.width.px]': 'size()',
+  },
 })
 export class Icon {
   public readonly name = input.required<IconName | IconCustomName>();
 
-  protected readonly ariaLabel = input<string | null>(null);
+  public readonly ariaLabel = input<string | null>(null);
 
-  protected readonly color = input<ThemePalette | null>(null);
+  public readonly color = input<ThemePalette | null>(null);
+
+  public readonly fontSet = input<IconFontSet>('material-icons');
+
+  public readonly inline = input<boolean, boolean | string>(false, {
+    transform: booleanAttribute,
+  });
+
+  public readonly size = input<number, number | string | null>(undefined, {
+    transform: numberAttribute,
+  });
 
   protected fontIcon: Signal<FontIcon> = computed(() =>
     (iconCustomNames as readonly string[]).includes(this.name())
       ? 'svg'
       : 'font',
   );
-
-  @Input() public fontSet: IconFontSet = 'material-icons';
-
-  @Input({ transform: booleanAttribute }) public inline = false;
 }
 
 type FontIcon = 'svg' | 'font';

@@ -1,0 +1,25 @@
+<mat-card class="panel skill-card reveal" appearance="outlined" matRipple>
+  @if (skillGroup(); as group) {
+    <mat-card-header class="skill-card-header">
+      <mat-card-title>{{ group.title }}</mat-card-title>
+      <!-- <mat-card-subtitle>{{ group.items.length }} items</mat-card-subtitle> -->
+    </mat-card-header>
+
+    <mat-card-content class="skill-card-content">
+      <mat-chip-set class="chip-set" aria-label="Skill items">
+        @for (item of group.items; track trackByLabel($index, item)) {
+          <mat-chip class="chip">
+            @if (item.icon) {
+              <ct-icon [name]="item.icon" size="18"></ct-icon>
+            }
+            <span>{{ item.label }}</span>
+          </mat-chip>
+        }
+      </mat-chip-set>
+    </mat-card-content>
+  } @else {
+    <mat-card-content>
+      <p>Loading...</p>
+    </mat-card-content>
+  }
+</mat-card>

@@ -522,6 +522,7 @@ export const iconNames = [
   'data_saver_on',
   'data_thresholding',
   'data_usage',
+  'database',
   'dataset',
   'dataset_linked',
   'date_range',

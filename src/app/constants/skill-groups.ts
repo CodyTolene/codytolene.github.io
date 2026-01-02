@@ -1,0 +1,105 @@
+import { SkillGroup } from 'src/app/types';
+
+export const SKILL_GROUPS: SkillGroup[] = [
+  {
+    title: 'Front-End',
+    items: [
+      { label: 'Angular (modern)', icon: 'angular' },
+      { label: 'TypeScript', icon: 'typescript' },
+      { label: 'RxJS', icon: 'javascript' },
+      { label: 'Angular Material', icon: 'angular' },
+      { label: 'Responsive design', icon: 'css' },
+      { label: 'HTML', icon: 'html5' },
+      { label: 'CSS and Sass', icon: 'sass' },
+      { label: 'React (basics)', icon: 'react' },
+      { label: 'Vue.js (basics)', icon: 'vuedotjs' },
+    ],
+  },
+  {
+    title: 'Back-End',
+    items: [
+      { label: 'Node.js', icon: 'nodedotjs' },
+      { label: 'Express', icon: 'express' },
+      { label: 'ASP.NET Core', icon: 'dotnet' },
+      { label: 'C#', icon: 'csharp' },
+      { label: 'REST APIs', icon: 'dotnet' },
+      { label: 'Auth (OIDC, JWT)', icon: 'dotnet' },
+      { label: 'CLI and scripting', icon: 'terminal' },
+      { label: 'Integration patterns', icon: 'dotnet' },
+    ],
+  },
+  {
+    title: 'Cloud and DevOps',
+    items: [
+      { label: 'Docker', icon: 'docker' },
+      { label: 'CI/CD (GitHub Actions)', icon: 'githubactions' },
+      { label: 'Release workflows', icon: 'github' },
+      { label: 'GitHub tooling', icon: 'refinedgithub' },
+      { label: 'Cloud basics (AWS, GCP)', icon: 'googlecloud' },
+      { label: 'Local dev environments', icon: 'docker' },
+      { label: 'Automation and guardrails', icon: 'githubactions' },
+    ],
+  },
+  {
+    title: 'Data',
+    items: [
+      { label: 'SQL Server and T-SQL', icon: 'ssms' },
+      { label: 'SQLite', icon: 'sqlite' },
+      { label: 'MySQL', icon: 'mysql' },
+      { label: 'Firebase and Firestore', icon: 'firebase' },
+      { label: 'Schema design and migrations', icon: 'sqlite' },
+      { label: 'Query performance and indexing', icon: 'ssms' },
+      { label: 'Pagination and filtering', icon: 'mysql' },
+      { label: 'Data integrity and validation', icon: 'csharp' },
+    ],
+  },
+  {
+    title: 'Testing and Quality',
+    items: [
+      { label: 'Cypress E2E', icon: 'cypress' },
+      { label: 'Unit tests (Jasmine, Karma)', icon: 'jasmine' },
+      { label: 'Test automation in CI', icon: 'githubactions' },
+      { label: 'Regression prevention', icon: 'github' },
+      { label: 'Performance basics', icon: 'javascript' },
+      { label: 'Accessibility basics', icon: 'css' },
+      { label: 'Debugging and profiling', icon: 'pest_control' },
+    ],
+  },
+  {
+    title: 'Architecture',
+    items: [
+      { label: 'Clean boundaries', icon: 'refinedgithub' },
+      { label: 'Typed contracts and DTOs', icon: 'typescript' },
+      { label: 'State and component boundaries', icon: 'angular' },
+      { label: 'Incremental modernization', icon: 'angular' },
+      { label: 'API reliability and versioning', icon: 'dotnet' },
+      { label: 'Consistency over cleverness', icon: 'git' },
+    ],
+  },
+  {
+    title: 'Tooling',
+    items: [
+      { label: 'Git', icon: 'git' },
+      { label: 'GitHub', icon: 'github' },
+      { label: 'GitHub Copilot', icon: 'githubcopilot' },
+      { label: 'Node tooling', icon: 'nodedotjs' },
+      { label: 'Automation scripts', icon: 'javascript' },
+      { label: 'FFmpeg pipelines', icon: 'ffmpeg' },
+      { label: 'Linux basics', icon: 'linux' },
+      { label: 'Docker workflows', icon: 'docker' },
+    ],
+  },
+  {
+    title: 'Devices and Embedded',
+    items: [
+      { label: 'Pip-Boy 3000 Mk V tooling', icon: 'pip-boy-3000-mk-v' },
+      { label: 'Espruino', icon: 'espruino' },
+      { label: 'MicroPython', icon: 'micropython' },
+      { label: 'Raspberry Pi', icon: 'raspberrypi' },
+      { label: 'Python utilities', icon: 'python' },
+      { label: 'C (basics)', icon: 'c' },
+      { label: '3D assets (basics)', icon: '3d' },
+      { label: 'Hardware debugging', icon: 'pest_control' },
+    ],
+  },
+];

@@ -1,0 +1,61 @@
+<mat-card class="panel project-card reveal" appearance="outlined" matRipple>
+  @if (project(); as project) {
+    @if (project.imageUrl) {
+      <div
+        class="project-image-wrap"
+        aria-hidden="true"
+        [style.--project-image]="'url(' + project.imageUrl + ')'"
+      >
+        <img
+          class="project-image"
+          [alt]="project.title + ' project image'"
+          [src]="project.imageUrl"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    }
+
+    <mat-card-header class="project-header">
+      <div class="project-titles">
+        <mat-card-title>{{ project.title }}</mat-card-title>
+        <mat-card-subtitle>{{ project.role }}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+
+    <mat-card-content class="project-content">
+      <p class="project-desc">{{ project.description }}</p>
+
+      <mat-chip-set class="chip-set project-chips" aria-label="Tech stack">
+        @for (tech of project.stack; track trackByLabel($index, tech)) {
+          <mat-chip class="chip">
+            @if (tech.icon) {
+              <ct-icon [name]="tech.icon" size="16"></ct-icon>
+            }
+            <span>{{ tech.label }}</span>
+          </mat-chip>
+        }
+      </mat-chip-set>
+    </mat-card-content>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-actions class="project-actions" align="end">
+      @for (link of project.links; track trackByLabel($index, link)) {
+        <a
+          mat-button
+          color="primary"
+          [href]="link.href"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </mat-card-actions>
+  } @else {
+    <mat-card-content>
+      <p>Loading...</p>
+    </mat-card-content>
+  }
+</mat-card>

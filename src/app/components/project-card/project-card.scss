@@ -1,0 +1,107 @@
+@use '../../styles/colors' as col;
+@use '../../styles/variables' as var;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .project-image-wrap {
+    align-items: center;
+    display: flex;
+    height: 92px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0.75rem 1rem;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      inset: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    // &::before {
+    //   background-image: var(--project-image);
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   filter: blur(14px);
+    //   opacity: 0.1;
+    //   transform: scale(1.08);
+    // }
+
+    // &::after {
+    //   background:
+    //     linear-gradient(
+    //       90deg,
+    //       rgba(0, 0, 0, 0.25),
+    //       transparent 20%,
+    //       transparent 80%,
+    //       rgba(0, 0, 0, 0.25)
+    //     ),
+    //     repeating-linear-gradient(
+    //       90deg,
+    //       rgba(255, 255, 255, 0.12) 0,
+    //       rgba(255, 255, 255, 0.12) 1px,
+    //       transparent 1px,
+    //       transparent 12px
+    //     );
+    //   opacity: 0.35;
+    // }
+
+    img.project-image {
+      display: block;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      width: auto;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .project-header {
+    align-items: center;
+
+    .project-titles {
+      display: grid;
+      gap: 0.15rem;
+    }
+
+    mat-card-subtitle {
+      color: col.$color-muted;
+    }
+  }
+
+  .project-content {
+    flex: 1 1 auto;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
+
+    .project-desc {
+      margin: 0 0 0.95rem;
+    }
+  }
+
+  .project-actions {
+    align-items: center;
+    display: flex;
+    height: 56px;
+    padding: 0 0.75rem;
+    justify-content: space-evenly;
+
+    a[mat-button] {
+      font-weight: 750;
+      margin: 0 0.25rem;
+    }
+  }
+}
