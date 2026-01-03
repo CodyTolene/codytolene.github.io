@@ -1,0 +1,20 @@
+ct-home-page mat-list {
+  .mat-mdc-list-item,
+  .mdc-list-item {
+    height: auto;
+    min-height: 48px;
+    align-items: flex-start;
+  }
+
+  .mdc-list-item__content {
+    overflow: visible;
+  }
+
+  .mdc-list-item__primary-text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    line-height: 1.35;
+    max-width: 100%;
+  }
+}

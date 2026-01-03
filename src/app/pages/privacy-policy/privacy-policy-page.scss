@@ -17,9 +17,14 @@
 
   color: col.$color-ink;
   display: block;
-  padding: 1rem;
+  padding: clamp(3.25rem, 6vw, var.$hero-padding-top) 1rem;
   position: relative;
   width: 100%;
+
+  opacity: 0;
+  transform: translateY(10px);
+  will-change: opacity, transform;
+  animation: pageFadeIn 420ms ease-out forwards;
 
   &::before {
     background:
@@ -44,6 +49,18 @@
   max-width: var.$page-max-width;
 }
 
-#intro {
-  padding-top: clamp(3.25rem, 6vw, var.$hero-padding-top);
+@keyframes pageFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :host {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
 }
