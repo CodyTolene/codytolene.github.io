@@ -92,25 +92,6 @@ export const HOBBY_PROJECTS: Project[] = [
     ],
   },
   {
-    title: 'Pocket Pi',
-    role: 'Hardware utility and app shell',
-    description:
-      'Portable Raspberry Pi Zero 2 W build with a 1.3-inch IPS display, joystick, ' +
-      'buttons and battery module. This guide helps you assemble the hardware and ' +
-      'install Raspberry Pi OS to create a pocket-sized system with clean ' +
-      'navigation and simple workflows.',
-    imageUrl: 'images/projects/pocket-pi_x92.png',
-    stack: [
-      { label: 'Python', icon: 'python' },
-      { label: 'Raspberry Pi', icon: 'raspberrypi' },
-      { label: 'Linux', icon: 'linux' },
-      { label: '3D Print', icon: '3d' },
-    ],
-    links: [
-      { label: 'GitHub', href: 'https://github.com/CodyTolene/Pocket-Pi' },
-    ],
-  },
-  {
     title: 'Pip Converter',
     role: 'Media conversion tooling',
     description:
@@ -255,28 +236,6 @@ export const HOBBY_PROJECTS: Project[] = [
       {
         label: 'GitHub',
         href: 'https://github.com/CodyTolene/Flipper-Zero-Camera-Suite',
-      },
-    ],
-  },
-  {
-    title: 'Stable Diffusion AI',
-    role: 'Tooling and automation experiments',
-    description:
-      'Quick-start guide for running Stable Diffusion using the AUTOMATIC1111 WebUI ' +
-      'on Windows. The guide walks you through installing Python, downloading the ' +
-      'WebUI and models, launching the server and using ControlNet for advanced image ' +
-      'generation techniques.',
-    imageUrl: 'images/projects/stable-diffusion-ai_x92.png',
-    stack: [
-      { label: 'Batch', icon: 'terminal' },
-      { label: 'Tooling', icon: 'refinedgithub' },
-      { label: 'AI', icon: 'googlegemini' },
-      { label: 'LVM', icon: 'visibility' },
-    ],
-    links: [
-      {
-        label: 'GitHub',
-        href: 'https://github.com/CodyTolene/stable-diffusion-qsg',
       },
     ],
   },
