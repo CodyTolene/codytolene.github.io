@@ -2,15 +2,12 @@ import { Project } from 'src/app/types';
 
 export const HOBBY_PROJECTS: Project[] = [
   {
-    title: 'Pip Apps',
+    title: 'Pip-Boy 3000 Mk V Apps',
     role: 'Open-source games and apps',
     description:
-      'Community-driven collection of apps and games for the Pip-Boy 3000 Mk V. ' +
-      'Built with Espruino/JavaScript and Node.js, this fork of the official mod ' +
-      'tool hosts open-source apps and games created by fellow vault dwellers on ' +
-      'pip-boy.com and provides a development environment for constrained ' +
-      'devices.',
-    imageUrl: 'images/projects/pip-apps_x92.png',
+      'A community driven repository of custom applications and games for the ' +
+      'Pip-Boy 3000 Mk V, hosted on pip-boy.com.',
+    imageUrl: 'images/projects/pip-boy-3000-mk-v-apps_x92.png',
     stack: [
       { label: 'JavaScript', icon: 'javascript' },
       { label: 'Node.js', icon: 'nodedotjs' },
@@ -20,7 +17,10 @@ export const HOBBY_PROJECTS: Project[] = [
       { label: 'Embedded', icon: 'memory' },
     ],
     links: [
-      { label: 'GitHub', href: 'https://github.com/CodyTolene/pip-boy-apps' },
+      {
+        label: 'GitHub',
+        href: 'https://github.com/CodyTolene/pip-boy-3000-mk-v-apps',
+      },
     ],
   },
   {
